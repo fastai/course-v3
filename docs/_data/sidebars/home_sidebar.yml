@@ -4,6 +4,9 @@ entries:
     - output: web
       title: Course home
       url: /
+    - output: web
+      title: Jupyter Notebook Tutorial
+      url: /notebook_tutorial.html
     output: web
     title: course v3
   - folderitems:
