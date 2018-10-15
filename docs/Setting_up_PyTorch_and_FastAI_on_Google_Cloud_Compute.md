@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blogging Like a Hacker
+title: PyTorch 1.0.0 and FastAI 1.0.2 Setup for Google Cloud Platform
 ---
 
 # PyTorch 1.0.0 and FastAI 1.0.2 Setup for Google Cloud Platform
