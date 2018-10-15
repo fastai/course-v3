@@ -27,7 +27,7 @@ You can access course materials & do science inside Jupyter Lab.
 
 1. Wait for the server to start (just 1 minute)
 2. Click "Jupyter Lab"
-3. Navigate to "~/fastai-courses/course-v3", "~/fastai-courses/course-v2" or "~/fastai/examples"
+3. Navigate to "\~/fastai-courses/course-v3", "\~/fastai-courses/course-v2" or "\~/fastai/examples"
 4. Open a notebook, & select the "fastai" kernel ("fastai-0.7" for v2 course)
 5. Go nuts
 
