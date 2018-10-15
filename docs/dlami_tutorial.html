@@ -1,0 +1,221 @@
+---
+
+title: Setting up DLAMI
+keywords: 
+sidebar: home_sidebar
+
+
+---
+
+<div class="container" id="notebook-container">
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Welcome-to-DLAMI!">Welcome to DLAMI!<a class="anchor-link" href="#Welcome-to-DLAMI!">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://aws.amazon.com/machine-learning/amis/">DLAMI</a> is basically a virtual machine hosted by Amazon and specially dedicated to Deep Learning tasks. As such, it has convenient features with pre-installed popular deep learning frameworks including Pytorch, Tensorflow and Keras and the necessary CUDA and NVIDIA drivers to accelerate your training.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Setting-up-the-DLAMI">Setting up the DLAMI<a class="anchor-link" href="#Setting-up-the-DLAMI">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Setting up a DLAMI can be daunting but don't worry, we got you covered. In fact, Amazon has a sweet <a href="https://aws.amazon.com/getting-started/tutorials/get-started-dlami/">step by step guide</a> to set it up and we are going to draw heavily from their tutorial.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-1:-Sign-in-or-sign-up">Step 1: Sign in or sign up<a class="anchor-link" href="#Step-1:-Sign-in-or-sign-up">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Visit the <a href="https://aws.amazon.com/">AWS webpage</a> and click on 'Sign In to the Console'.</p>
+<p><img src="images/dlami_tutorial/signin.png" alt="Signin"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you do not have an account, the button to press will say 'Sign up' instead of 'Sign in to the Console'.</p>
+<p><img src="images/dlami_tutorial/signup.png" alt="Signup"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-2:-Create-VPC">Step 2: Create VPC<a class="anchor-link" href="#Step-2:-Create-VPC">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before we launch an instance we have to create a Virtual Private Cloud. Search for VPC in the main search bar. Then click on 'VPCs' and finally 'Actions', 'Create Default VPC'. When you finish you should see a VPC available like you can see in the last picture.</p>
+<p><img src="images/dlami_tutorial/vpc0.png" alt="vpc0">
+<img src="images/dlami_tutorial/vpc1.png" alt="vpc1">
+<img src="images/dlami_tutorial/vpc2.png" alt="vpc2"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-3:-Choose-your-AMI">Step 3: Choose your AMI<a class="anchor-link" href="#Step-3:-Choose-your-AMI">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First click on 'Services' and then 'EC2'.</p>
+<p><img src="images/dlami_tutorial/ec2.png" alt="amiubuntu"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 15.0</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/dlami_tutorial/amiubuntu.png" alt="amiubuntu"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-4:-Choose-your-instance-type-and-launch">Step 4: Choose your instance type and launch<a class="anchor-link" href="#Step-4:-Choose-your-instance-type-and-launch">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Scroll down until you find 'p2.xlarge' and select it. Then press 'Review and Launch'.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/dlami_tutorial/p2.png" alt="p2"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, when in the 'Review' tab press 'Launch'.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/dlami_tutorial/launch.png" alt="launch"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-5:-Save-Key-Pair">Step 5: Save Key Pair<a class="anchor-link" href="#Step-5:-Save-Key-Pair">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the pop-up window's first drop-down menu, select 'create a new key pair' and select a name. <strong>This key represents your access to your instance. If you lose the key, you will have no access to your instance. If someone has your key, he/she can access the instance. It is important that you save it in a secure location.</strong></p>
+<p><img src="images/dlami_tutorial/key.png" alt="key"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-6:-Connect-to-your-instance">Step 6: Connect to your instance<a class="anchor-link" href="#Step-6:-Connect-to-your-instance">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the next window click on 'View Instances'. You will see that you have an instance that says 'running' under 'Instance State'. Amazon charges you by the amount of seconds an instance has been running so you should <strong>always stop an instance when you finish</strong> using it to avoid getting extra charges. More on this, on Step 7.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now copy your Public DNS address, which you will find in the bottom of the page.</p>
+<p><img src="images/dlami_tutorial/pubdns.png" alt="pubdns"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now it's time to connect! Open your command line terminal (if you are in Windows you will need Putty, see <a href="https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-windows.html">here</a> for a tutorial on how to set it up) and type the following commands:</p>
+<p><code>cd ~/Downloads</code> (replace the address with the address in which you located your pem file, ideally not Downloads)</p>
+<p><code>chmod 0400 &lt;your .pem filename&gt;</code> (replace 'your .pem filename' with your .pem filename)</p>
+<p><code>ssh -L localhost:8888:localhost:8888 -i &lt;your .pem filename&gt; ubuntu@&lt;your instance DNS&gt;</code> (replace 'your .pem filename' with your .pem file's name and replace 'your instance DNS' with your Public DNS address)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally run <code>jupyter notebook</code> in your terminal, copy the URL starting with <em>localhost:</em> and paste it in your browser. Voilà! You have your Jupyter Notebook set up! If it is your first time with Jupyter Notebook, refer to our <a href="http://course-v3.fast.ai/dlami_tutorial.html">Jupyter Notebook tutorial</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-7:-Stop-your-intance-when-you-are-done">Step 7: Stop your intance when you are done<a class="anchor-link" href="#Step-7:-Stop-your-intance-when-you-are-done">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When you finish working you must go back to your AWS instance and stop it manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it!</p>
+<p><img src="images/dlami_tutorial/stop.png" alt="stop"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.</p>
+<p><img src="images/dlami_tutorial/terminate.png" alt="terminate"></p>
+
+</div>
+</div>
+</div>
+</div>
+ 
+

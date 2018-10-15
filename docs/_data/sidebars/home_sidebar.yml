@@ -2,16 +2,25 @@ entries:
 - folders:
   - folderitems:
     - output: web
-      title: Course home
-      url: /
-    - output: web
-      title: Jupyter Notebook Tutorial
+      title: Using Jupyter Notebooks
       url: /notebook_tutorial.html
     - output: web
-      title: Terminal Tutorial
+      title: Using the Terminal
       url: /terminal_tutorial.html
     output: web
-    title: course v3
+    title: Tutorials  
+  - folderitems:
+    - output: web
+      title: Setting up DLAMI
+      external_url: /dlami_tutorial.html
+    - output: web
+      title: Setting up GCP
+      external_url:
+    - output: web
+      title: Setting up Salamander
+      external_url: 
+    output: web
+    title: Jupyter Deep Learning Platforms
   - folderitems:
     - output: web
       title: Docs
@@ -21,4 +30,3 @@ entries:
       external_url: https://github.com/fastai/fastai/blob/master/README.md
     output: web
     title: fastai
-
