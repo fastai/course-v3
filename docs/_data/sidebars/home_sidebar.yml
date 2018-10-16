@@ -7,6 +7,9 @@ entries:
     - output: web
       title: Terminal
       url: /terminal_tutorial.html
+    - output: web
+      title: GPU
+      url: /gpu_tutorial.html
     output: web
     title: Tutorials  
   - folderitems:
@@ -15,10 +18,10 @@ entries:
       external_url: /dlami_tutorial.html
     - output: web
       title: GCP
-      external_url: /
+      external_url: /gcp_tutorial.html
     - output: web
       title: Salamander
-      external_url: /
+      external_url: /salamander_tutorial.html
     output: web
     title: Jupyter Deep Learning Platforms
   - folderitems:
