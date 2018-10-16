@@ -52,5 +52,5 @@ You can access course materials & do science inside Jupyter Lab.
 #### How charges work
 
 * You only pay for hardware when your server is turned on
-* Our compute charge tracks the AWS spot price (+26%, and we pick the best availability zones to improve uptime / cost)
+* Salamander's compute charge tracks the AWS spot price (+26%, and it picks the best availability zones to improve uptime / cost)
 * You keep paying for storage until you destroy a server
