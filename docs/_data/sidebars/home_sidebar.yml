@@ -15,13 +15,13 @@ entries:
   - folderitems:
     - output: web
       title: DLAMI
-      external_url: /dlami_tutorial.html
+      url: /dlami_tutorial.html
     - output: web
       title: GCP
-      external_url: /gcp_tutorial.html
+      url: /gcp_tutorial.html
     - output: web
       title: Salamander
-      external_url: /salamander_tutorial.html
+      url: /salamander_tutorial.html
     output: web
     title: Jupyter Deep Learning Platforms
   - folderitems:

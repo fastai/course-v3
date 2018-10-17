@@ -87,3 +87,11 @@ When you finish working you must go back to your AWS instance and stop it manual
 If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
 
 ![terminate](images/dlami_tutorial/terminate.png)
+
+
+
+
+
+## References
+
+https://aws.amazon.com/getting-started/tutorials/get-started-dlami/

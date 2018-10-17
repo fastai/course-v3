@@ -1,56 +1,55 @@
-# Get started with Salamander!
+---
 
-> includes fastai 1.0, pytorch 1.0 & v2 / v3 course material
->
-> K80 = $0.36 per hour, V100 = $1.29 per hour
+title: Salamander
+sidebar: home_sidebar
 
-#### Create an account
 
-1. Go to https://salamander.ai
-2. Click "Get Started"
-3. Enter your email & password; click "Sign Up"
-4. Add your card details
+---
+
+# Welcome to Salamander!
+
+Your Salamander instance comes with fastai V1, PyTorch 1.0 and all fast.ai course materials out of the box.
+
+## Pricing
+
+#### Prices per GPU
+
+Telsa K80: $0.36 per hour
+
+Tesla V100: $1.29 per hour
+
+#### Important considerations
+
+- You only pay for hardware when your server is turned on
+- Salamander's compute charge tracks the AWS spot price (+26%, and it picks the best availability zones to improve uptime / cost)
+- You keep paying for storage until you destroy a server
+
+## Step 1: Create an account
+
+Go to https://salamander.ai and click on 'Get Started'. Enter your email & password and click "Sign Up". Finally, add your credit card details and you are done!
 
 ![](./images/salamander/create_account.png)
 
-#### Create your server
+## Step 2: Create your server
 
-1. Accept the CuDNN license & acknowledgements
-2. Pick your software, hardware & storage size (the defaults work fine btw)
-3. Click "Launch Server"
+First you need to accept the CuDNN license & acknowledgements. Next, pick your software, hardware & storage size (if you do not know what to choose, just keep the default options). To start your server click "Launch Server". The server will take about 1 minute to start up. 
 
 ![](./images/salamander/create_server.png)
 
-#### Access Jupyter Lab
+## Step 3a: Connect to your server via terminal
 
-You can access course materials & do science inside Jupyter Lab.
+To connect first click "Setup Access Key" and generate or upload a key (for more info on generating ssh keys refer to [here](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html)). This key will be added to all of your servers. Copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]`  from the webpage into your terminal and run it. You have accessed your server!
 
-1. Wait for the server to start (just 1 minute)
-2. Click "Jupyter Lab"
-3. Navigate to "\~/fastai-courses/course-v3", "\~/fastai-courses/course-v2" or "\~/fastai/examples"
-4. Open a notebook, & select the "fastai" kernel ("fastai-0.7" for v2 course)
-5. Go nuts
+## ![](/home/chewing/course-v3/docs/images/salamander/connect.png)Step 3b: Access Jupyter Lab via webpage
+
+When the server is up and running you will be able to click on 'Jupyter Lab'. Navigate to your desired folder (e.g. ''~/fastai-courses/course-v3'). Open a notebook, & select the 'fastai' kernel ('fastai-0.7' for v2 course). You're up! If its your first time with Jupyter Notebooks please refer to our [Jupyter Notebooks tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
 
 ![](./images/salamander/jupyter_lab_1.png)
 
 ![](./images/salamander/jupyter_lab_2.png)
 
-#### Connect to your server
 
-1. Click "Setup Access Key"
-2. Generate or upload a key
-3. The key will be added to all of your servers
-4. Copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` into your terminal
 
-![](./images/salamander/connect.png)
+## Step 4: Stop your server when you are not using it
 
-#### Stop your server
-
-* Remember to stop your server when you are not using it!
-* Once stopped, you can replace your server's hardware and / or increase the storage size by clicking "Modify"
-
-#### How charges work
-
-* You only pay for hardware when your server is turned on
-* Salamander's compute charge tracks the AWS spot price (+26%, and it picks the best availability zones to improve uptime / cost)
-* You keep paying for storage until you destroy a server
+Remember to stop your server when you are not using it! You can do this in the webpage. Once stopped, you can replace your server's hardware and / or increase the storage size by clicking 'Modify'.
