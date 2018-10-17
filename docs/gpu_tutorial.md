@@ -21,7 +21,7 @@ It so happens that Deep Learning also requires super fast matrix computations. S
 
 Deep Learning really only cares about the number of Floating Point Operations (FLOPs) per second. GPUs are highly optimized for that. 
 
-![gpu_cpu_comparison.png]()
+![gpu_cpu_comparison](images/gpu_tutorial/gpu_cpu_comparison.png)
 
 In the chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But don't just take our word for it!**  
 
@@ -55,13 +55,13 @@ We recommend you to use an NVIDIA GPU since they are currently the best out ther
 
 You have 3 options to choose from:
 1.  Connect to a GPU-enabled Jupyter Notebook platform:
-    * [Sagemaker](course-v3.fast.ai/sagemaker_tutorial)
-    * [Gradient](course-v3.fast.ai/gradient_tutorial)
-    * [Salamander](course-v3.fast.ai/salamander_tutorial)
+    * [Sagemaker](course-v3.fast.ai/sagemaker_tutorial.html)
+    * [Gradient](course-v3.fast.ai/gradient_tutorial.html)
+    * [Salamander](course-v3.fast.ai/salamander_tutorial.html)
 2. Cloud Server with access to GPU 
-    * [DLAMI](course-v3.fast.ai/dlami_tutorial)
-    * [GCP](course-v3.fast.ai/gcp_tutorial)
-    * [Paperspace](course-v3.fast.ai/paperspace_tutorial)
+    * [DLAMI](course-v3.fast.ai/dlami_tutorial.html)
+    * [GCP](course-v3.fast.ai/gcp_tutorial.html)
+    * [Paperspace](course-v3.fast.ai/paperspace_tutorial.html)
 3. Personal Computer with GPU hardware installed
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
