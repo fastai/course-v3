@@ -1,3 +1,12 @@
+*.bak
+*.log
+*~
+.~*
+.pypirc
+~*
+tmp*
+tags
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,7 +17,9 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+env/
 build/
+conda-dist
 develop-eggs/
 dist/
 downloads/
@@ -23,7 +34,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -45,7 +55,6 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
-.pytest_cache/
 
 # Translations
 *.mo
@@ -54,7 +63,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
 
 # Flask stuff:
 instance/
@@ -81,14 +89,13 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# dotenv
 .env
+
+# virtualenv
 .venv
-env/
 venv/
 ENV/
-env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -102,3 +109,23 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+.vscode
+*.swp
+
+# osx generated files
+.DS_Store
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea
+
+# pytest
+.pytest_cache
+
+# tools/trust-doc-nbs
+examples/.last_checked
+
+# symlinks to fastai
+examples/fastai
