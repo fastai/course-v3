@@ -16,11 +16,20 @@ entries:
     - output: web
       title: GCP
       url: /gcp_tutorial.html
+    output: web
+    title: Deep Learning Servers
+  - folderitems:
+    - output: web
+      title: Gradient
+      url: /gradient_tutorial.html
+    - output: web
+      title: Sagemaker
+      url: /sagemaker_tutorial.html
     - output: web
       title: Salamander
       url: /salamander_tutorial.html
     output: web
-    title: Jupyter Deep Learning Platforms
+    title: Jupyter Notebook Platforms
   - folderitems:
     - output: web
       title: Docs
