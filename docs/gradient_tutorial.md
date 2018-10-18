@@ -3,11 +3,11 @@
 This is a quick guide to starting Part 3 of the fast.ai course Practical Deep Learning for Coders using Gradient Notebooks. With Gradient, you get quick access to a Jupyter instance (Lab or Notebook) without having to set up a virtual machine. Paperspace is a GPU-accelerated cloud platform
 
 ### Summary of Charges
-There are no storage fees associated with using Gradient Notebooks. Users pay hourly usage fees for the time that their Notebooks are Running. The hourly rate is dependent on the Compute Type selected, see all available types [here](https://support.paperspace.com/hc/en-us/articles/360002484474-Gradient-Pricing).  Notebooks must be stopped to end billing. Learn more about Gradient billing [here](https://support.paperspace.com/hc/en-us/articles/360001369914-How-Does-Gradient-Billing-Work-).
+There are no storage fees associated with using Gradient Notebooks. Users pay hourly usage fees for the time that their Notebooks are Running. The hourly rate is dependent on the Compute Type selected, see all available types [here](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types).  Notebooks must be stopped to end billing. Learn more about Gradient billing [here](https://support.paperspace.com/hc/en-us/articles/360001369914-How-Does-Gradient-Billing-Work-).
 
 ## Getting Set Up
 ### Step 1: Create a Paperspace Account
-If you haven't already, you'll need to sign up for Paperspace [here](https://www.paperspace.com/account/signup). Confirm your account using the link in the email you receive from Paperspace. [Sign in to Paperspace](https://www.paperspace.com/account/login).
+If you haven't already, you'll need to sign up for Paperspace [here](https://www.paperspace.com/account/signup). Confirm your account using the link in the email you receive from Paperspace. [Sign in to Paperspace](https://www.paperspace.com/console/notebooks).
 
 ![](./images/gradient/createAccount.png)
 
@@ -59,9 +59,9 @@ The `storage` folder is your [Persistent Storage](https://support.paperspace.com
 The rest of the files in the notebooks directories will be available as Artifacts when your notebook is stopped.
 
 ## Wrapping up
-Paperspace provides $10 of Gradient credit to start you off on your course. This code is to be used for fast.ai students only. In your console, click on Billing in the left-hand menu and enter the promo code at the bottom right. The promo code for this course is: *FASTAIGR45T*.
+Paperspace provides $10 of Gradient credit to start you off on your course. This code is to be used for fast.ai students only. In your console, click on Billing in the left-hand menu and enter the promo code at the bottom right. The promo code for this course is: **FASTAIGR45T**.
 
-Note: If you opt for a Gradient 1 Subscription, promotional credit does not apply. Learn more about Gradient Subscription levels here.
+Note: If you opt for a Gradient 1 Subscription, promotional credit does not apply. [Learn more about Gradient Subscription levels here](https://support.paperspace.com/hc/en-us/articles/360002068913-Gradient-Subscriptions).
 
 Questions or issues related to course content, we recommend posting in the [fast.ai forum](http://forums.fast.ai/).
 
