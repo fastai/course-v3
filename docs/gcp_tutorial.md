@@ -33,9 +33,9 @@ Leave open the tab that is opened after your instance is deployed since we will 
 
 To be able to connect to your instance from your command line you will first need to install the Google Cloud's command line interface (CLI) which you can do by following [this guide](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version). After downloading and extracting the file, run the 'optional' command `./google-cloud-sdk/install.sh`. While running the next command, `./google-cloud-sdk/bin/gcloud init`, a separate tab will open up and you will have to login to your Google account and allow Google Cloud SDK to manage some aspects of your account. Next, when prompted in the command line to choose a cloud project to use, choose the number representing your new project. Finally, select 'N' when prompted to configure a default Compute Region and Zone.
 
-Once your CLI is installed and your instance is up, you can use SSH to connect to it by running the command you will find in the right hand side in your webpage after hitting 'Deploy'. It will look something like this:
+Once your CLI is installed and your instance is up, you can use SSH to connect to it by running the command you will find in the right hand side in your webpage after hitting 'Deploy'. You will need to change '8080:localhost:8080' to '8888:localhost:8888'. It will look something like this:
 
-``gcloud compute ssh --project $PROJECT_NAME --zone $ZONE_NAME $INSTANCE_NAME -- -L 8080:localhost:8080``
+``gcloud compute ssh --project $PROJECT_NAME --zone $ZONE_NAME $INSTANCE_NAME -- -L 8888:localhost:8888``
 
 ![ssh](images/gcp_tutorial/ssh.png)
 
