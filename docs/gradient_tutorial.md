@@ -1,6 +1,6 @@
 # Fast.ai Deep Learning Course v3 on Gradient Notebooks
 
-This is a quick guide to starting v3 of the Fast.AI course Practical Deep Learning for Coders using Gradient Notebooks. With [Gradient](https://www.paperspace.com/gradient), you get quick access to a Jupyter Lab instance without having to set up a virtual machine or doing any complicated installation or configuration.
+This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using Gradient Notebooks. With [Gradient](https://www.paperspace.com/gradient), you get quick access to a Jupyter Lab instance without having to set up a virtual machine or doing any complicated installation or configuration.
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/) is a GPU-accelerated cloud platform. 
 
@@ -35,7 +35,7 @@ VI. Click Create Notebook
 
 When you click Create Notebook, that will start your Notebook and your billing for utilization will begin. To stop billing, you must stop your Notebook. Notebooks will automatically shut down after 12 hours.
 
-You'll be taken to your Notebook details page in your Console, where your Notebook will be created. It will go straight from Pending to Running, and will be ready to use.
+You'll be taken to your Notebook details page in your Console, where your Notebook will be created. It will go straight from Pending to Running, and will be ready to use :star2:.
 
 ### Step 3: Stopping your Notebook
 Under Action, just click stop.  This will end the billing session.
@@ -46,10 +46,6 @@ Under Action, just click stop.  This will end the billing session.
 
 ### Step 4: Restart your Notebook
 Click Start to pick up where you left off, and/or choose a different VM type on which you'd like to run your Notebook. This can be extremely useful when you want to start on a lower-end machine type and then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
-
----
-
-The Compute Type of your Notebook can be changed when you start it. What this means for you is that you can prepare your work inexpensively and add a GPU when you're ready to run your model/algorithm.
 
 ![](./images/gradient/restartNotebook.png)
 
