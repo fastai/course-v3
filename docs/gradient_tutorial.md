@@ -1,5 +1,7 @@
 # Fast.ai Deep Learning Course v3 on Gradient Notebooks
 
+![](./images/gradient/gradientFastAIv3.png)
+
 This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using Gradient Notebooks. With [Gradient](https://www.paperspace.com/gradient), you get quick access to a Jupyter Lab instance without having to set up a virtual machine or doing any complicated installation or configuration.
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/) is a GPU-accelerated cloud platform. 
