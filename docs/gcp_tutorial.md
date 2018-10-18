@@ -80,3 +80,5 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
 + [sudo apt-get update && sudo apt-get install google-cloud-sdk cannot be done (StackOverflow answer)](https://stackoverflow.com/a/47908542/45963)
 
+*Many thanks to Viacheslav Kovalevskyi, Francisco Ingham, and Antonio Rueda Toicen for their contributions to this guide.*
+
