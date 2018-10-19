@@ -46,8 +46,8 @@ Just click "Jupyter Lab" - that's it.
 
 ![](./images/salamander/jupyter_lab_01.png)
 
-You can switch to Jupyter Notebook if you prefer the old interface. Open "Preferences and Account Details" & click "Switch to Jupyter Notebook".
+You can switch to Jupyter Notebook if you prefer the old interface. Open "Preferences and Account Details" & click "Switch to Jupyter Notebook". If you're unfamiliar with Jupyter Notebook please refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
 
-After opening a notebook select the "fastai" kernel ("fastai-0.7" for v2 course). If you're unfamiliar with Jupyter Notebook please refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
+After opening a notebook select the "fastai" kernel ("fastai-0.7" for v2 course).
 
 ![](./images/salamander/jupyter_lab_02.png)
