@@ -83,3 +83,5 @@ On more thing, if you want to update conda, you should write this in the termina
 
 ![add](images/terminal_tutorial/conda_update.png)
 
+## Credits
+*Many thanks to Kevin Martell for his contributions to this guide.*

@@ -71,3 +71,6 @@ You have 3 options to choose from:
 * Building a PC (Option 3) requires environment setup and more up-front money. Obviously a moot point if you already own a gaming PC.  
 
 For [Part 2](http://course.fast.ai/part2.html) of the course, we will go into more specific details and benefits on both building a PC and renting a server.
+
+ ## Credits
+*Many thanks to Andrew Shaw for his contributions to this guide.*

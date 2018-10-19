@@ -81,4 +81,3 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 + [sudo apt-get update && sudo apt-get install google-cloud-sdk cannot be done (StackOverflow answer)](https://stackoverflow.com/a/47908542/45963)
 
 *Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi and Francisco Ingham for their contributions to this guide.*
-
