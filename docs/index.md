@@ -23,8 +23,8 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](gcp_tutorial)
-- [Amazon Web Services EC2](dlami_tutorial)
+- [Google Compute Platform](/gcp_tutorial)
+- [Amazon Web Services EC2](/dlami_tutorial)
 
 ### Jupyter notebook
 
@@ -33,8 +33,6 @@ Once you've finished the above steps, you'll be presented with the Jupyter Noteb
 Your first task, then, is to open the notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. Click `notebook_tutorial.ipynb` and follow the instructions!
 
 When you're done, **remember to shut down your server**.
-
-## Further resources
 
 ### Our forums
 
@@ -49,4 +47,3 @@ We teach how to train [PyTorch](https://pytorch.org/) models using the [fastai](
 Of course, to discuss fastai, you can use our forums, and be sure to look through the [fastai docs](http://docs.fast.ai) too.
 
 Don't worry if you're just starting out&mdash;little, if any, of those docs and forum threads will make any sense to you just now. But come back in a couple of weeks and you might be surprised by how useful you find them...
-

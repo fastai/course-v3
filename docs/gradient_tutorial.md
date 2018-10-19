@@ -15,7 +15,7 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
 
 ## Pricing
 
-The instance we suggest, K80, is [$0.59 an hour](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types). There are no storage fees associated with using Gradient Notebooks. UThe hourly rate is dependent on the Compute Type selected, see all available types [here](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types).  Notebooks must be stopped to end billing. Learn more about Gradient billing [here](https://support.paperspace.com/hc/en-us/articles/360001369914-How-Does-Gradient-Billing-Work-).
+The instance we suggest, K80, is [$0.59 an hour](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types). There are no storage fees associated with using Gradient Notebooks. The hourly rate is dependent on the Compute Type selected, see all available types [here](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types).  Notebooks must be stopped to end billing. Learn more about Gradient billing [here](https://support.paperspace.com/hc/en-us/articles/360001369914-How-Does-Gradient-Billing-Work-).
 
 ## Getting Set Up
 ### Step 1: Create a Paperspace Account
@@ -75,5 +75,6 @@ Questions or issues related to course content, we recommend posting in the [fast
 
 For Paperspace-specific support, check out the rest of the Gradient Help Center or submit a support ticket with [this form](https://support.paperspace.com/hc/en-us/requests/new).
 
-## Credits
+---
+
 *Many thanks to Dillon Erb for writing this tutorial*

@@ -43,5 +43,6 @@ After opening a notebook select the "fastai" kernel.
 
 When you're all done, **don't forget to shut down your instance**, so you don't get charged for all the time it's running in the background. It's not enough to just close your browser or turn off your own computer.
 
-## Credits
+---
+
 *Many thanks to Ashton Six for writing this guide.*
