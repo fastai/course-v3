@@ -28,7 +28,7 @@ Visit https://salamander.ai, click "Get Started", fill-in the form & add your ca
 
 ## Step 2: Create your server
 
-If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
+> If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
 
 Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Click "Launch Server". It'll take about a minute to start.
 
@@ -46,7 +46,7 @@ Just click "Jupyter Lab" - that's it.
 
 ![](./images/salamander/jupyter_lab_01.png)
 
-> You can switch to Jupyter Notebook if you prefer the old interface. Open "Preferences and Account Details" & click "Switch to Jupyter Notebook".
+You can switch to Jupyter Notebook if you prefer the old interface. Open "Preferences and Account Details" & click "Switch to Jupyter Notebook".
 
 After opening a notebook select the "fastai" kernel ("fastai-0.7" for v2 course). If you're unfamiliar with Jupyter Notebook please refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
 
