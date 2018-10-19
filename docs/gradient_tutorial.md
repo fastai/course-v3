@@ -43,7 +43,7 @@ Just click stop.  This will end the billing session.
 
 ![](./images/gradient/stopNotebook.png)
 
- **NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges**
+NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges.
 
 ---
 
