@@ -68,4 +68,4 @@ Note: If you opt for a Gradient 1 Subscription, promotional credit does not appl
 
 Questions or issues related to course content, we recommend posting in the [fast.ai forum](http://forums.fast.ai/).
 
-For Paperspace-specific support, check out the rest of the Gradient Help Center or submit a support ticket with [this form](https://support.paperspace.com/hc/en-us/requests/new).
+For Paperspace-specific support, check out the rest of the [Gradient Help Center](https://support.paperspace.com/hc/en-us/categories/115000426054-Gradient-) or submit a support ticket with [this form](https://support.paperspace.com/hc/en-us/requests/new).
