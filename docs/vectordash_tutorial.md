@@ -37,7 +37,7 @@ Congrats! Your account is now setup.
 ![create_page](images/vectordash_tutorial/create_page.png)
 
 You will be redirected to the instance page. Leave it open since you will need some of the
-information to setup the vectordash command-line-interface in the next step.
+information to setup the vectordash command line interface (CLI) in the next step.
 
 ## Step 3: Connect to your instance
 We highly recommend using the vectordash-cli to interact with your Vectordash instance. With the
