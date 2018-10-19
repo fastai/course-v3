@@ -19,6 +19,9 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: Crestle
+      url: /crestle_tutorial
+    - output: web
       title: Gradient
       url: /gradient_tutorial
     - output: web
