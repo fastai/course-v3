@@ -4,7 +4,6 @@ title: Salamander
 sidebar: home_sidebar
 
 ---
-
 # Welcome to Salamander!
 
 It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, you can jump straight to Jupyter Lab or connect directly via ssh.

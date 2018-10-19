@@ -1,4 +1,11 @@
-# Fast.ai Deep Learning Course v3 on Gradient Notebooks
+---
+
+title: Gradient
+keywords: 
+sidebar: home_sidebar
+
+---
+# Welcome to Gradient!
 
 ![](./images/gradient/gradientFastAIv3.png)
 
@@ -6,8 +13,9 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/) is a GPU-accelerated cloud platform. 
 
-### Summary of Charges
-There are no storage fees associated with using Gradient Notebooks. Users pay hourly usage fees for the time that their Notebooks are Running. The hourly rate is dependent on the Compute Type selected, see all available types [here](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types).  Notebooks must be stopped to end billing. Learn more about Gradient billing [here](https://support.paperspace.com/hc/en-us/articles/360001369914-How-Does-Gradient-Billing-Work-).
+## Pricing
+
+The instance we suggest, K80, is [$0.59 an hour](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types). There are no storage fees associated with using Gradient Notebooks. UThe hourly rate is dependent on the Compute Type selected, see all available types [here](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types).  Notebooks must be stopped to end billing. Learn more about Gradient billing [here](https://support.paperspace.com/hc/en-us/articles/360001369914-How-Does-Gradient-Billing-Work-).
 
 ## Getting Set Up
 ### Step 1: Create a Paperspace Account

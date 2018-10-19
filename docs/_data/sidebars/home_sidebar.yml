@@ -1,8 +1,11 @@
 entries:
 - folders:
   - title: FAQ
-    url: /FAQ
     output: web
+    folderitems:
+    - title: FAQ
+      url: /FAQ
+      output: web 
   - title: Tutorials  
     output: web
     folderitems:
