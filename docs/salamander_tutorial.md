@@ -3,53 +3,51 @@
 title: Salamander
 sidebar: home_sidebar
 
-
 ---
 
 # Welcome to Salamander!
 
-Your Salamander instance comes with fastai V1, PyTorch 1.0 and all fast.ai course materials out of the box.
+It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, you can jump straight to Jupyter Lab or connect directly via ssh.
 
 ## Pricing
 
-#### Prices per GPU
+Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 
-Telsa K80: $0.36 per hour
+- K80: $0.36 per hour
+- V100: $1.32 per hour
 
-Tesla V100: $1.29 per hour
+#### AWS Credits
 
-#### Important considerations
-
-- You only pay for hardware when your server is turned on
-- Salamander's compute charge tracks the AWS spot price (+26%, and it picks the best availability zones to improve uptime / cost)
-- You keep paying for storage until you destroy a server
+If you have an AWS promo code you can redeem 75% of it's value for Salamander credits. Signup, email [support@salamander.ai](mailto:support@salamander.ai) with the subject "AWS CREDITS" & include your promo code in the email body. It will take up to 10 days for the credits to appear in your Salamander account.
 
 ## Step 1: Create an account
 
-Go to https://salamander.ai and click on 'Get Started'. Enter your email & password and click "Sign Up". Finally, add your credit card details and you are done!
+Visit https://salamander.ai, click "Get Started", fill-in the form & add your card details.
 
 ![](./images/salamander/create_account.png)
 
 ## Step 2: Create your server
 
-First you need to accept the CuDNN license & acknowledgements. Next, pick your software, hardware & storage size (if you do not know what to choose, just keep the default options). To start your server click "Launch Server". The server will take about 1 minute to start up. 
+> If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
+
+Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Click "Launch Server" & wait about a minute for the server to start.
 
 ![](./images/salamander/create_server.png)
 
-## Step 3a: Connect to your server via terminal
+## Step 3: Connect to your Server
 
-To connect first click "Setup Access Key" and generate or upload a key. This key will be added to all of your servers. Copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]`  from the webpage into your terminal and run it. You have accessed your server!
+#### via Terminal
 
-## ![](/home/chewing/course-v3/docs/images/salamander/connect.png)Step 3b: Access Jupyter Lab via webpage
+Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter & you're in!
 
-When the server is up and running you will be able to click on 'Jupyter Lab'. Navigate to your desired folder (e.g. ''~/fastai-courses/course-v3'). Open a notebook, & select the 'fastai' kernel ('fastai-0.7' for v2 course). You're up! If its your first time with Jupyter Notebooks please refer to our [Jupyter Notebooks tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
+#### Jupyter Lab via Web
 
-![](./images/salamander/jupyter_lab_1.png)
+Just click "Jupyter Lab" - that's it.
 
-![](./images/salamander/jupyter_lab_2.png)
+![](./images/salamander/jupyter_lab_01.png)
 
+You can switch to Jupyter Notebook if you prefer the old interface - open "Preferences and Account Details" & click "Switch to Jupyter Notebook". If you're unfamiliar with Jupyter Notebook please refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
 
+After opening a notebook select the "fastai" kernel ("fastai-0.7" for v2 course).
 
-## Step 4: Stop your server when you are not using it
-
-Remember to stop your server when you are not using it! You can do this in the webpage. Once stopped, you can replace your server's hardware and / or increase the storage size by clicking 'Modify'.
+![](./images/salamander/jupyter_lab_02.png)
