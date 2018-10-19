@@ -12,7 +12,7 @@ tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environm
 
 ## Pricing
 The current cheapest Vectordash instance comes along with an Nvidia 1060 6GB GPU and costs $0.25 per
-hour.For faster and more efficient training times, you can try the more powerful GPU instances for
+hour. You can try the more powerful GPU instances for
 a few more cents per hour.
 
 ## Step 1: Creating your account
@@ -29,7 +29,7 @@ Congrats! Your account is now setup.
 
 ## Step 2: Start an instance
 1. Go to the [create page](http://vectordash.com/create) to start an instance.
-2. Under One-Click Images, select the Fast.ai image
+2. Under One-click Images, select the fast.ai image
 3. Select the GPU type you want. *Please note the prices that correspond to each type.*
 4. Enter a hostname
 5. Click 'Create Instance'
@@ -37,7 +37,7 @@ Congrats! Your account is now setup.
 ![create_page](images/vectordash_tutorial/create_page.png)
 
 You will be redirected to the instance page. Leave it open since you will need some of the
-information to setup the vectordash command-line-interface in the next step
+information to setup the vectordash command-line-interface in the next step.
 
 ## Step 3: Connect to your instance
 We highly recommend using the vectordash-cli to interact with your Vectordash instance. With the
@@ -49,7 +49,7 @@ one simple command, and more. To install and set it up, follow these steps:
 2. `pip install vectordash -U`
 3. `vectordash login`
     * Email: Vectordash account email
-    * Secret: Vectordash secret token (can be found at vectordash.com/edit/verification)
+    * Secret: Vectordash secret token (can be found [here](http://vectordash.com/edit/verification))
 4. `vectordash list`
 5. `vectordash ssh $INSTANCE_ID`
 
@@ -74,5 +74,5 @@ to read the vectordash-cli documentation, you can find it [here](http://vectorda
 ## Step 5: Stop an instance
 You will be charged if you don't stop the instance while it's 'idle' (e.g. not training a network).
 To stop an instance on Vectordash, go to the [dashboard](http://vectordash.com/dashboard) and click the
-instance you would like to stop. Once on the instance page, click 'Stop Instance'. Please note, stopping
-an instance destroys it completely so make sure you save your files locally or in a remote storage location.
+instance you would like to stop. Once on the instance page, click 'Stop Instance'. *Please note, stopping
+an instance destroys it completely so make sure you save your files locally or in a remote storage location.*
