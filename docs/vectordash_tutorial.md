@@ -76,3 +76,17 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 To stop an instance on Vectordash, go to the [dashboard](http://vectordash.com/dashboard) and click the
 instance you would like to stop. Once on the instance page, click 'Stop Instance'. *Please note, stopping
 an instance destroys it completely so make sure you save your files locally or in a remote storage location.*
+
+![stop_instance](images/vectordash_tutorial/stop_instance.png)
+
+## About Vectordash:
+
+Vectordash is unlike other cloud providers in that we do not own datacenters, but rather we partner with
+existing datacenters with have unused GPU capacity. Not owning any datacenters allows Vectordash to focus
+on providing machine learning practitioners with the fastest and most affordable cloud GPU instances,
+while also costing an order of magnitude less than other cloud providers such as AWS, Google Cloud, and
+Azure. However due to our unique architecture, there are tradeoffs worth mentioning. Vectordash cannot
+provide an uptime SLA guarantee or a security guarantee. We take steps to increase privacy such as
+encrypting your data in transit and at rest, and thoroughly vetting datacenters for reliability and
+security before letting them become a partner. And in the case an error does occur while using
+Vectordash, we will refund you entirely.
