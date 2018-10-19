@@ -9,7 +9,7 @@ This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](http
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/) is a GPU-accelerated cloud platform. 
 
 ##### Summary of Charges
-There are no storage fees associated with Gradient. Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected. See all available types [here].  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
+There are no storage fees associated with Gradient. Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected.  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
 
 ## Step 1: Create an account
 To get started, create an account [here](https://www.paperspace.com/account/signup) and confirm your account by clicking the verification link in your inbox.
