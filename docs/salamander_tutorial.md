@@ -17,7 +17,7 @@ Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 
 ## Step 1: Create an account
 
-Visit https://salamander.ai, click "Get Started", fill-in the form & add your card details.
+Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-in the form & add your card details.
 
 ![](./images/salamander/create_account.png)
 
