@@ -38,7 +38,7 @@ First you need to accept the CuDNN license & acknowledgements. Next, pick your s
 
 ## Step 3a: Connect to your server via terminal
 
-To connect first click "Setup Access Key" and generate or upload a key (for more info on generating ssh keys refer to [here](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html)). This key will be added to all of your servers. Copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]`  from the webpage into your terminal and run it. You have accessed your server!
+To connect first click "Setup Access Key" and generate or upload a key. This key will be added to all of your servers. Copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]`  from the webpage into your terminal and run it. You have accessed your server!
 
 ## ![](/home/chewing/course-v3/docs/images/salamander/connect.png)Step 3b: Access Jupyter Lab via webpage
 

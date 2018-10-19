@@ -10,9 +10,10 @@ sidebar: home_sidebar
 
 [DLAMI](https://aws.amazon.com/machine-learning/amis/) is basically a virtual machine hosted by Amazon and specially dedicated to Deep Learning tasks. As such, it has convenient features with pre-installed popular deep learning frameworks including Pytorch, Tensorflow and Keras and the necessary CUDA and NVIDIA drivers to accelerate your training.
 
-# Setting up the DLAMI
-
 Setting up a DLAMI can be daunting but don't worry, we got you covered. In fact, Amazon has a sweet [step by step guide](https://aws.amazon.com/getting-started/tutorials/get-started-dlami/) to set it up and we are going to draw heavily from their tutorial.
+
+## Pricing
+A `p2.xlarge` instance in Amazon which is what we suggest, is [$0.9 an hour](https://aws.amazon.com/ec2/instance-types/p2/).
 
 ## Step 1: Sign in or sign up
 
@@ -76,9 +77,26 @@ Now it's time to connect! Open your command line terminal (if you are in Windows
 
 `ssh -L localhost:8888:localhost:8888 -i <your .pem filename> ubuntu@<your instance DNS>` (replace 'your .pem filename' with your .pem file's name and replace 'your instance DNS' with your Public DNS address)
 
-Finally run `jupyter notebook` in your terminal, copy the URL starting with _localhost:_ and paste it in your browser. Voilà! You have your Jupyter Notebook set up! If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+## Step 7: Access fast.ai materials
 
-## Step 7: Stop your intance when you are done
+Run `git clone https://github.com/fastai/course-v3` in your terminal to get a folder with all the fast.ai materials. 
+
+Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
+
+`conda install -c pytorch pytorch-nightly cuda92`
+`conda install -c fastai torchvision-nightly`
+
+`conda install -c fastai fastai`
+
+Next move into the directory where you will find the materials for the course by running:
+
+`cd course-v3/nbs`
+
+Finally run `jupyter notebook` in your terminal, copy the URL starting with _localhost:_ and paste it in your browser. Voilà! Now you can experiment yourself with fast.ai lessons! If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+
+If you have any problem while using the `fastai` library try running `conda update -all`.
+
+## Step 8: Stop your instance when you are done
 
 When you finish working you must go back to your AWS instance and stop it manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it!
 
@@ -87,10 +105,6 @@ When you finish working you must go back to your AWS instance and stop it manual
 If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
 
 ![terminate](images/dlami_tutorial/terminate.png)
-
-
-
-
 
 ## References
 
