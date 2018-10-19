@@ -16,10 +16,6 @@ Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 - K80: $0.36 per hour
 - V100: $1.32 per hour
 
-#### AWS Credits
-
-If you have an AWS promo code you can redeem 75% of it's value for Salamander credits. Signup, email [support@salamander.ai](mailto:support@salamander.ai) with the subject "AWS CREDITS" & include your promo code in the email body. It will take up to 10 days for the credits to appear in your Salamander account.
-
 ## Step 1: Create an account
 
 Visit https://salamander.ai, click "Get Started", fill-in the form & add your card details.
@@ -38,16 +34,13 @@ Pick your desired hardware & storage size (if you don't know what to choose, jus
 
 #### via Terminal
 
-Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter & you're in!
+Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter & you're in! Note that if you choose to have Salamander generate a key for you, you shouldn't use it for any other servers.
 
-#### Jupyter Lab via Web
+#### Jupyter Notebook
 
-Just click "Jupyter Lab" - that's it.
+By default Salamander uses *Jupyter Lab* instead of *Jupyter Notebook*. Either works for the course, however since Jeremy uses and recommends Notebook, you might prefer to use it to. To switch to Jupyter Notebook, open "Preferences and Account Details" & click "Switch to Jupyter Notebook". Then click on *notebook_tutorial.ipynb* to learn how to use the notebook interface.
 
-![](./images/salamander/jupyter_lab_01.png)
+After opening a notebook select the "fastai" kernel.
 
-You can switch to Jupyter Notebook if you prefer the old interface - open "Preferences and Account Details" & click "Switch to Jupyter Notebook". If you're unfamiliar with Jupyter Notebook please refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/notebook_tutorial.html).
+When you're all done, **don't forget to shut down your instance**, so you don't get charged for all the time it's running in the background. It's not enough to just close your browser or turn off your own computer.
 
-After opening a notebook select the "fastai" kernel ("fastai-0.7" for v2 course).
-
-![](./images/salamander/jupyter_lab_02.png)

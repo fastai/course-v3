@@ -207,6 +207,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.11.3)
     multipart-post (2.0.0)
+    netrc (0.11.0)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     nokogiri (1.8.4-x64-mingw32)
@@ -241,7 +242,6 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
-    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -249,7 +249,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  wdm (>= 0.1.0)
+  netrc
 
 BUNDLED WITH
    1.16.5

@@ -1,47 +1,39 @@
 entries:
 - folders:
-  - folderitems:
+  - title: FAQ
+    url: /FAQ
+    output: web
+  - title: Tutorials  
+    output: web
+    folderitems:
     - output: web
       title: Terminal
-      url: /terminal_tutorial.html
+      url: /terminal_tutorial
     - output: web
       title: GPU
-      url: /gpu_tutorial.html
+      url: /gpu_tutorial
+  - title: Server setup
     output: web
-    title: Tutorials  
-  - folderitems:
-    - output: web
-      title: DLAMI
-      url: /dlami_tutorial.html
-    - output: web
-      title: GCP
-      url: /gcp_tutorial.html
-    output: web
-    title: Deep Learning Servers
-  - folderitems:
+    folderitems:
     - output: web
       title: Gradient
-      url: /gradient_tutorial.html
-    - output: web
-      title: Sagemaker
-      url: /sagemaker_tutorial.html
+      url: /gradient_tutorial
     - output: web
       title: Salamander
-      url: /salamander_tutorial.html
-    output: web
-    title: Jupyter Notebook Platforms
-  - folderitems:
+      url: /salamander_tutorial
     - output: web
-      title: FAQ
-      url: /FAQ.html
+      title: Google Cloud
+      url: /gcp_tutorial
+    - output: web
+      title: AWS (EC2)
+      url: /dlami_tutorial
+  - title: fastai v1
     output: web
-    title: FAQ
-  - folderitems:
+    folderitems:
     - output: web
       title: Docs
       external_url: http://docs.fast.ai
     - output: web
       title: readme
       external_url: https://github.com/fastai/fastai/blob/master/README.md
-    output: web
-    title: fastai
+
