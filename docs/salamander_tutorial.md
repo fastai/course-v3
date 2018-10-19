@@ -30,7 +30,7 @@ Visit https://salamander.ai, click "Get Started", fill-in the form & add your ca
 
 > If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
 
-Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Click "Launch Server". It'll take about a minute to start.
+Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Click "Launch Server" & wait about a minute for the server to start.
 
 ![](./images/salamander/create_server.png)
 
