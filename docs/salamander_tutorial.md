@@ -7,7 +7,7 @@ sidebar: home_sidebar
 
 # Welcome to Salamander!
 
-It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, You can jump straight to Jupyter Lab or connect directly via ssh.
+It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, you can jump straight to Jupyter Lab or connect directly via ssh.
 
 ## Pricing
 
@@ -28,7 +28,7 @@ Visit https://salamander.ai, click "Get Started", fill-in the form & add your ca
 
 ## Step 2: Create your server
 
-> If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
+If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
 
 Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Click "Launch Server". It'll take about a minute to start.
 
