@@ -38,7 +38,7 @@ When you click Create Notebook, that will start your Notebook and your billing f
 ## Step 3: Start learning Fast.ai!
 You should now have a running fast.ai notebook. It might take a few minutes to provision, but once it's running you just have to click "open" to open up a Jupyter notebook
 
-### Step 4: Stopping your Notebook
+## Step 4: Stopping your Notebook
 Just click stop.  This will end the billing session.
 
 ![](./images/gradient/stopNotebook.png)
