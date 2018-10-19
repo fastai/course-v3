@@ -23,7 +23,7 @@ Cloud computing allows users access to virtual CPU or GPU resources on an hourly
 The project on which you are going to run the image needs to be linked with your billing account. For this navigate to the [billing dashboard](https://console.cloud.google.com/billing/projects), click the '**...**' menu and choose '**change billing account**'.
 
 ## Step 2: Start an instance
-First, go to the [marketplace page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning) of Deep Learning images and click 'launch on compute engine'. Then, select a project, if you want/need to add a new one you can do that with the '+' button on the top right. Finally, select 'Pytorch 1.0 Preview/FastAi 1.0' in the 'Frameworks' section, check 'Install NVIDIA GPU driver automatically on first startup?' and click 'Deploy'.
+First, go to the [marketplace page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning) of Deep Learning images and click 'launch on compute engine'. Then, select a project, if you want/need to add a new one you can do that with the '+' button on the top right. Finally, select 'Pytorch 1.0 Preview/FastAi 1.0' in the 'Frameworks' section, check 'Install NVIDIA GPU driver automatically on first startup?' and click 'Deploy'. For now leave all other fields to their default values, as soon as you are getting more profecient using GCP you can read the GCP documentation for all details. 
 
 ![image_drivers](images/gcp_tutorial/image_drivers.png)
 
@@ -31,7 +31,7 @@ Leave open the tab that is opened after your instance is deployed since we will 
 
 ## Step 3: Connect to your instance
 
-To be able to connect to your instance from your command line you will first need to install the Google Cloud's command line interface (CLI) which you can do by following [this guide](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version). After downloading and extracting the file, run the 'optional' command `./google-cloud-sdk/install.sh`. While running the next command, `./google-cloud-sdk/bin/gcloud init`, a separate tab will open up and you will have to login to your Google account and allow Google Cloud SDK to manage some aspects of your account. Next, when prompted in the command line to choose a cloud project to use, choose the number representing your new project. Finally, select 'N' when prompted to configure a default Compute Region and Zone.
+To be able to connect to your instance from your command line you will first need to install the Google Cloud's command line interface (CLI) which you can do by following [this guide](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version). When prompted in the command line to choose a cloud project to use, choose the number representing your new project. Finally, select 'N' when prompted to configure a default Compute Region and Zone.
 
 Once your CLI is installed and your instance is up, you can use SSH to connect to it by running the command you will find in the right hand side in your webpage after hitting 'Deploy'. You will need to change '8080:localhost:8080' to '8888:localhost:8888'. It will look something like this:
 
@@ -80,5 +80,5 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
 + [sudo apt-get update && sudo apt-get install google-cloud-sdk cannot be done (StackOverflow answer)](https://stackoverflow.com/a/47908542/45963)
 
-*Many thanks to Viacheslav Kovalevskyi, Francisco Ingham, and Antonio Rueda Toicen for their contributions to this guide.*
+*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi and Francisco Ingham for their contributions to this guide.*
 
