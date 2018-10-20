@@ -38,7 +38,7 @@ entries:
     folderitems:
     - output: web
       title: Docs
-      external_url: http://docs.fast.ai
+      external_url: https://docs.fast.ai
     - output: web
       title: readme
       external_url: https://github.com/fastai/fastai/blob/master/README.md
