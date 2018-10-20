@@ -23,8 +23,8 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](gcp_tutorial)
-- [Amazon Web Services EC2](dlami_tutorial)
+- [Google Compute Platform](/gcp_tutorial)
+- [Amazon Web Services EC2](/dlami_tutorial)
 
 ### Jupyter notebook
 
@@ -34,8 +34,6 @@ Your first task, then, is to open the notebook tutorial! To do so, click `docs` 
 
 When you're done, **remember to shut down your server**.
 
-## Further resources
-
 ### Our forums
 
 Got stuck? Want to know more about some topic? Your first port of call should be [forums.fast.ai](https://forums.fast.ai/). There are thousands of students and practitioners asking and answering questions there. That means that it's likely your question has already been answered! So click the little magnifying class in the top right there, and search for the information you need; for instance, if you have some error message, paste a bit of it into the search box.
@@ -44,9 +42,8 @@ The forum software we use is called [Discourse](https://www.discourse.org/about)
 
 ### PyTorch and fastai
 
-We teach how to train [PyTorch](https://pytorch.org/) models using the [fastai](http://docs.fast.ai) library. These two pieces of software are deeply connected&mdash;you can't become really proficient at using fastai if you don't know PyTorch well too. Therefore, you will often need to refer to the [PyTorch docs](https://pytorch.org/docs/stable/index.html). And you may also want to check out the [PyTorch forums](https://discuss.pytorch.org/) (which also happen to use Discourse).
+We teach how to train [PyTorch](https://pytorch.org/) models using the [fastai](https://docs.fast.ai) library. These two pieces of software are deeply connected&mdash;you can't become really proficient at using fastai if you don't know PyTorch well too. Therefore, you will often need to refer to the [PyTorch docs](https://pytorch.org/docs/stable/index.html). And you may also want to check out the [PyTorch forums](https://discuss.pytorch.org/) (which also happen to use Discourse).
 
-Of course, to discuss fastai, you can use our forums, and be sure to look through the [fastai docs](http://docs.fast.ai) too.
+Of course, to discuss fastai, you can use our forums, and be sure to look through the [fastai docs](https://docs.fast.ai) too.
 
 Don't worry if you're just starting out&mdash;little, if any, of those docs and forum threads will make any sense to you just now. But come back in a couple of weeks and you might be surprised by how useful you find them...
-

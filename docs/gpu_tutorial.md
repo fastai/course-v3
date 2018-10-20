@@ -23,7 +23,7 @@ Deep Learning really only cares about the number of Floating Point Operations (F
 
 ![gpu_cpu_comparison](images/gpu_tutorial/gpu_cpu_comparison.png)
 
-In the chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But don't just take our word for it!**  
+In the chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But do not take our word for it!**  
 
 Try running this inside a Jupyter Notebook:
 
@@ -59,7 +59,7 @@ You have 3 options to choose from:
     * [Gradient](course-v3.fast.ai/gradient_tutorial.html)
     * [Salamander](course-v3.fast.ai/salamander_tutorial.html)
 2. Cloud Server with access to GPU 
-    * [DLAMI](course-v3.fast.ai/dlami_tutorial.html)
+    * [DLAMIIt does look good!](course-v3.fast.ai/dlami_tutorial.html)
     * [GCP](course-v3.fast.ai/gcp_tutorial.html)
     * [Paperspace](course-v3.fast.ai/paperspace_tutorial.html)
 3. Personal Computer with GPU hardware installed
@@ -71,3 +71,7 @@ You have 3 options to choose from:
 * Building a PC (Option 3) requires environment setup and more up-front money. Obviously a moot point if you already own a gaming PC.  
 
 For [Part 2](http://course.fast.ai/part2.html) of the course, we will go into more specific details and benefits on both building a PC and renting a server.
+
+---
+
+*Many thanks to Andrew Shaw for writing this guide.*

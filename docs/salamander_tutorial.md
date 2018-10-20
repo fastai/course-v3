@@ -4,7 +4,6 @@ title: Salamander
 sidebar: home_sidebar
 
 ---
-
 # Welcome to Salamander!
 
 It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, you can jump straight to Jupyter Lab or connect directly via ssh.
@@ -18,7 +17,7 @@ Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 
 ## Step 1: Create an account
 
-Visit https://salamander.ai, click "Get Started", fill-in the form & add your card details.
+Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-in the form & add your card details.
 
 ![](./images/salamander/create_account.png)
 
@@ -44,3 +43,6 @@ After opening a notebook select the "fastai" kernel.
 
 When you're all done, **don't forget to shut down your instance**, so you don't get charged for all the time it's running in the background. It's not enough to just close your browser or turn off your own computer.
 
+---
+
+*Many thanks to Ashton Six for writing this guide.*

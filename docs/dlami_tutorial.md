@@ -109,3 +109,7 @@ If you no longer want to use that instance again, you can just terminate it. Thi
 ## References
 
 https://aws.amazon.com/getting-started/tutorials/get-started-dlami/
+
+---
+
+*Many thanks to Francisco Ingham for writing this guide.*
