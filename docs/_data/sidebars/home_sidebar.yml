@@ -1,16 +1,16 @@
 entries:
 - folders:
-  - title: FAQ
-    url: /FAQ
-    output: web
-  - title: Tutorials  
+  - title: Getting started
     output: web
     folderitems:
     - output: web
-      title: Terminal
+      title: Overview
+      url: /
+    - output: web
+      title: Terminal tutorial
       url: /terminal_tutorial
     - output: web
-      title: GPU
+      title: Intro to GPUs
       url: /gpu_tutorial
   - title: Server setup
     output: web
