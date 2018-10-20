@@ -25,7 +25,7 @@ If you do not have an account, the button to press will say 'Sign up' instead of
 
 ![Signup](images/dlami_tutorial/signup.png)
 
-Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over).
+Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
 ## Step 2: Create VPC
 
