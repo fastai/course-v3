@@ -16,15 +16,15 @@ To do nearly everything in this course, you'll need access to a computer with an
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. Click the link for more information on each, and setup instructions. The most important thing to remember: **when you're done, shut down your server**. It's not enough to close your browser, or turn off your own PC. You have to shut the server down using the methods described in the links below. Otherwise, you'll be paying for it until you shut it down!
 
-- [Paperspace Gradient](/gradient_tutorial)
-- [Salamander](salamander_tutorial)
+- [Paperspace Gradient](gradient_tutorial.md)
+- [Salamander](salamander_tutorial.md)
 
 #### Some installation required
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](/gcp_tutorial)
-- [Amazon Web Services EC2](/dlami_tutorial)
+- [Google Compute Platform](gcp_tutorial.md)
+- [Amazon Web Services EC2](dlami_tutorial.md)
 
 ### Jupyter notebook
 
