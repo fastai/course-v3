@@ -27,21 +27,37 @@ If you do not have an account, the button to press will say 'Sign up' instead of
 
 Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
-## Step 2: Create VPC
+## Step 2: Request service limit
 
-Before we launch an instance we have to create a Virtual Private Cloud. Search for VPC in the main search bar. Then click on 'VPCs' and finally 'Actions', 'Create Default VPC'. When you finish you should see a VPC available like you can see in the last picture.
+If you just created your account, you'll need to ask for an increase limit in the instance type we need for the course (default is 0). First click on 'Services' and then 'EC2'.
 
-![vpc0](images/dlami_tutorial/vpc0.png)
-![vpc1](images/dlami_tutorial/vpc1.png)
-![vpc2](images/dlami_tutorial/vpc2.png)
+![amiubuntu](images/dlami_tutorial/ec2.png)
 
-## Step 3: Choose your AMI
+Then on the left bar, choose Limits, then scroll trhough the list until you find p2.xlarge. You can skip this step if your limit is already 1 or more, otherwise click on 'Request limit increase'.
+
+![limit](images/dlami_tutorial/request_limit.png)
+
+Fill the form like below, by selecting 'Service Limit Increase', choose 'EC2 instance', your region, then 'p2.xlarge' and ask for a new limit of 1.
+
+![limit](images/dlami_tutorial/increase_limit.png)
+
+Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automate reply telling you they'll look in your case, then an approval notice (hopefully quickly).
+
+![limit](images/dlami_tutorial/increase_limit2.png)
+
+## Step 3: Launch an instance
 
 First click on 'Services' and then 'EC2'.
 
 ![amiubuntu](images/dlami_tutorial/ec2.png)
 
-Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 15.0
+You can also search for EC2 in the querry bar. 
+
+Once on the EC2 screen, click launch instance.
+
+![launch instance](images/dlami_tutorial/launch_instance.png)
+
+Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 16.0
 
 ![amiubuntu](images/dlami_tutorial/amiubuntu.png)
 
