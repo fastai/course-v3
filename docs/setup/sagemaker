@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /home/ec2-user/SageMaker
 conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 pytorch-nightly fastai cuda92 torchvision-nightly
 source activate envs/fastai
