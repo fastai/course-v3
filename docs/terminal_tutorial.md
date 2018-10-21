@@ -20,6 +20,8 @@ If you are a Linux or a Mac user, you already have access to a bash terminal. Fo
 
 Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. 
 
+Useful tip: you can't paste with Ctrl + V in this terminal, you have to use shift + right click.
+
 ## General explanation of the terminal
 
 ### What is a terminal? 
