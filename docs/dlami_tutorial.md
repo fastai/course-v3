@@ -110,6 +110,8 @@ ssh -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
 ``` 
 (Replace '\<your instance IP\>' with your the IP address of your instance as shown before.)
 
+You may have a question about trusting this address, to chich you should reply 'yes'.
+
 ## Step 6: Access fast.ai materials
 
 Run
