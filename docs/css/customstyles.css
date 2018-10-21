@@ -1280,3 +1280,8 @@ blockquote code {
 h4 code {
         background-color: white;
 }
+.screenshot {
+        max-width: 90% !important;
+        border: 2px solid
+}
+

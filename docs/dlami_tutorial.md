@@ -1,16 +1,14 @@
 ---
 
-title: DLAMI
+title: AWS EC2
 keywords: 
 sidebar: home_sidebar
 
 
 ---
-# Welcome to DLAMI!
+# Welcome to AWS EC2
 
-[DLAMI](https://aws.amazon.com/machine-learning/amis/) is basically a virtual machine hosted by Amazon and specially dedicated to Deep Learning tasks. As such, it has convenient features with pre-installed popular deep learning frameworks including Pytorch, Tensorflow and Keras and the necessary CUDA and NVIDIA drivers to accelerate your training.
-
-Setting up a DLAMI can be daunting but don't worry, we got you covered. In fact, Amazon has a sweet [step by step guide](https://aws.amazon.com/getting-started/tutorials/get-started-dlami/) to set it up and we are going to draw heavily from their tutorial.
+AWS EC2 provides preconfigured machine images called [DLAMI](https://aws.amazon.com/machine-learning/amis/), which are servers hosted by Amazon that are specially dedicated to Deep Learning tasks. Setting up an AWS EC2 instance, even with DLAMI, can be daunting. But don't worry, we got you covered. In fact, Amazon has a sweet [step by step guide](https://aws.amazon.com/getting-started/tutorials/get-started-dlami/) to set it up and we are going to draw heavily from their tutorial.
 
 ## Pricing
 A `p2.xlarge` instance in Amazon which is what we suggest, is [$0.9 an hour](https://aws.amazon.com/ec2/instance-types/p2/).

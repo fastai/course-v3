@@ -16,8 +16,9 @@ To do nearly everything in this course, you'll need access to a computer with an
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. Click the link for more information on each, and setup instructions. The most important thing to remember: **when you're done, shut down your server**. It's not enough to close your browser, or turn off your own PC. You have to shut the server down using the methods described in the links below. Otherwise, you'll be paying for it until you shut it down!
 
-- [Paperspace Gradient](/gradient_tutorial)
-- [Salamander](salamander_tutorial)
+- [Paperspace Gradient](/gradient_tutorial); (instant approval, no installation required)
+- [Salamander](/salamander_tutorial); (instant approval, no installation required)
+- [SageMaker](/sagemaker_tutorial); (requires some installation, and wait for approval)
 
 #### Some installation required
 
