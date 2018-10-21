@@ -41,27 +41,50 @@ Fill the form like below, by selecting 'Service Limit Increase', choose 'EC2 ins
 
 ![limit](images/dlami_tutorial/increase_limit.png)
 
-Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automate reply telling you they'll look in your case, then an approval notice (hopefully quickly).
+Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automate reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
 
 ![limit](images/dlami_tutorial/increase_limit2.png)
 
-## Step 3: Launch an instance
+While you wait, get on the second step.
 
-First click on 'Services' and then 'EC2'.
+## Step 3: Create an ssh key and upload it to AWS
+
+For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](terminal_tutorial.md).
+
+Once in your terminal, type keygen then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
+
+On Windows, you will need to copy this public key in a Windows directory to easily access it. The following line will copy it in 'C:\Temp', feel free to replace Temp with any directory you prefer.
+```
+cp .ssh/id_rsa.pub /mnt/c/Temp/
+```
+
+Once this is done, go back to the AWS console, click on 'Services' and then 'EC2'.
 
 ![amiubuntu](images/dlami_tutorial/ec2.png)
 
-You can also search for EC2 in the querry bar. 
+You can also search for EC2 in the querry bar. Scroll in the left menu until you find 'Key pairs' then click on it.
 
-Once on the EC2 screen, click launch instance.
+![key pair](images/dlami_tutorial/key_pair.png)
+
+On the new screen:
+
+1. Click on the 'Import Key Pair' button
+2. Browse to select the file id_rsa.pub from where you put it (either the '.ssh' folder of your home directory or the folder to where you copied it)
+3. Customize the name of the key if you want, then click 'Import'
+
+![import key](images/dlami_tutorial/import_key.png)
+
+## Step 4: Launch an instance
+
+Note that this fail at the end if you didn't get the approval for p2 instances, so you may have to waif a bit before starting this step. 
+
+Log in to the AWS console then search for EC2 in the querry bar or click 'EC2' in the services. Once on the EC2 screen, click launch instance.
 
 ![launch instance](images/dlami_tutorial/launch_instance.png)
 
 Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 16.0
 
 ![amiubuntu](images/dlami_tutorial/amiubuntu.png)
-
-## Step 4: Choose your instance type and launch
 
 Scroll down until you find 'p2.xlarge' and select it. Then press 'Review and Launch'.
 
@@ -71,48 +94,61 @@ Finally, when in the 'Review' tab press 'Launch'.
 
 ![launch](images/dlami_tutorial/launch.png)
 
-## Step 5: Save Key Pair
-
-In the pop-up window's first drop-down menu, select 'create a new key pair' and select a name. **This key represents your access to your instance. If you lose the key, you will have no access to your instance. If someone has your key, he/she can access the instance. It is important that you save it in a secure location.**
-
+In the pop-up window's first drop-down menu, select the key you created in step 2 then tick the box to acknowledge you have access to the selected private key file then click on 'Launch Instance'
 ![key](images/dlami_tutorial/key.png)
 
-## Step 6: Connect to your instance
+## Step 5: Connect to your instance
 
-In the next window click on 'View Instances'. You will see that you have an instance that says 'running' under 'Instance State'. Amazon charges you by the amount of seconds an instance has been running so you should **always stop an instance when you finish** using it to avoid getting extra charges. More on this, on Step 7.
+In the next window scroll down then click on 'View Instances'. You will see that you have an instance that says 'running' under 'Instance State'. Amazon charges you by the amount of seconds an instance has been running so you should **always stop an instance when you finish** using it to avoid getting extra charges. More on this, on Step 7.
 
-Now copy your Public DNS address, which you will find in the bottom of the page.
+Now copy your instance IP in the IPv4 column.
 
 ![pubdns](images/dlami_tutorial/pubdns.png)
 
-Now it's time to connect! Open your command line terminal (if you are in Windows you will need Putty, see [here](https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-configure-client-windows.html) for a tutorial on how to set it up) and type the following commands:
+It's time to connect! Open your command line [terminal](terminal_tutorial.md) and type the following command:
 
-`cd ~/Downloads` (replace the address with the address in which you located your pem file, ideally not Downloads)
+```
+ssh -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
+``` 
+(Replace '\<your instance IP\>' with your the IP address of your instance as shown before.)
 
-`chmod 0400 <your .pem filename>` (replace 'your .pem filename' with your .pem filename)
+## Step 6: Access fast.ai materials
 
-`ssh -L localhost:8888:localhost:8888 -i <your .pem filename> ubuntu@<your instance DNS>` (replace 'your .pem filename' with your .pem file's name and replace 'your instance DNS' with your Public DNS address)
-
-## Step 7: Access fast.ai materials
-
-Run `git clone https://github.com/fastai/course-v3` in your terminal to get a folder with all the fast.ai materials. 
+Run
+```
+git clone https://github.com/fastai/course-v3
+``` 
+in your terminal to get a folder with all the fast.ai materials. 
 
 Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
 
-`conda install -c pytorch pytorch-nightly cuda92`
-`conda install -c fastai torchvision-nightly`
-
-`conda install -c fastai fastai`
+```
+conda install -c pytorch pytorch-nightly cuda92
+conda install -c fastai torchvision-nightly
+conda install -c fastai fastai
+```
 
 Next move into the directory where you will find the materials for the course by running:
 
-`cd course-v3/nbs`
+```
+cd course-v3/nbs
+```
 
-Finally run `jupyter notebook` in your terminal, copy the URL starting with _localhost:_ and paste it in your browser. Voilà! Now you can experiment yourself with fast.ai lessons! If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+Finally run
+```
+jupyter notebook
+```
+in your terminal, and you can access the notebook at [this page](http://localhost:8888) (localhost:8888).
 
-If you have any problem while using the `fastai` library try running `conda update -all`.
 
-## Step 8: Stop your instance when you are done
+If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+
+If you have any problem while using the `fastai` library try running
+```
+conda update -all
+```
+
+## Step 7: Stop your instance when you are done
 
 When you finish working you must go back to your AWS instance and stop it manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it!
 

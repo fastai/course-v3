@@ -6,6 +6,20 @@ sidebar: home_sidebar
 
 
 ---
+## Getting a terminal on Windows
+
+If you are a Linux or a Mac user, you already have access to a bash terminal. For Windows users, you will need to install it first. We recommand WSL and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate Windows Subsystem for Linux with the following steps:
+
+1. Open the Control Panel
+2. Select 'Programs'
+3. Click on 'Turn Windows features on or off'
+4. Scroll and click next to 'Windows Subsystem for Linux'
+5. Reboot your computer
+
+![add](images/terminal_tutorial/wsl.png)
+
+Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. 
+
 ## General explanation of the terminal
 
 ### What is a terminal? 
@@ -20,6 +34,10 @@ It’s a black screen that allows you to interact directly with your computer wi
 Write in the terminal “cd” and the name of the folder you want to access.
 
 ![add](images/terminal_tutorial/terminal_cd_in.png)
+
+On Windows, you can acces 'C:\' or 'D:\' by adding the prefix /mnt/ :
+
+![add](images/terminal_tutorial/windows_term.png)
 
 #### How to navigate out of folder?
 Write in the terminal “cd ..”
