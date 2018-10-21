@@ -23,7 +23,7 @@ Cloud computing allows users access to virtual CPU or GPU resources on an hourly
 The project on which you are going to run the image needs to be linked with your billing account. For this navigate to the [billing dashboard](https://console.cloud.google.com/billing/projects), click the '**...**' menu and choose '**change billing account**'.
 
 ## Step 2: Start an instance
-First, go to the [marketplace page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning) of Deep Learning images and click 'launch on compute engine'. Then, select a project, if you want/need to add a new one you can do that with the '+' button on the top right. Finally, select 'Pytorch 1.0 Preview/FastAi 1.0' in the 'Frameworks' section, check 'Install NVIDIA GPU driver automatically on first startup?' and click 'Deploy'. For now leave all other fields to their default values, as soon as you are getting more profecient using GCP you can read the GCP documentation for all details. 
+First, go to the [marketplace page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning) of Deep Learning images and click 'launch on compute engine'. Wait a couple of minutes for the next page to load, then, select a project. If you want/need to add a new one you can do that with the '+' button on the top right. Finally, select 'Pytorch 1.0 Preview/FastAi 1.0' in the 'Frameworks' section, check 'Install NVIDIA GPU driver automatically on first startup?' and click 'Deploy'. For now leave all other fields to their default values, as soon as you are getting more profecient using GCP you can read the GCP documentation for all details. 
 
 ![image_drivers](images/gcp_tutorial/image_drivers.png)
 
@@ -31,7 +31,11 @@ Leave open the tab that is opened after your instance is deployed since we will 
 
 ## Step 3: Connect to your instance
 
-To be able to connect to your instance from your command line you will first need to install the Google Cloud's command line interface (CLI) which you can do by following [this guide](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version). When prompted in the command line to choose a cloud project to use, choose the number representing your new project. Finally, select 'N' when prompted to configure a default Compute Region and Zone.
+To be able to connect to your instance, you'll need to install a software from Google. For Windows user, the easiest is [this sdk](https://cloud.google.com/sdk/docs/quickstart-windows) that will also create a terminal you can use.
+
+For other OS, install Google Cloud's command line interface (CLI) which you can do by following [this guide](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version). 
+
+In both cases, When prompted in the command line to choose a cloud project to use, choose the number representing your new project. Finally, select 'N' when prompted to configure a default Compute Region and Zone.
 
 Once your CLI is installed and your instance is up, you can use SSH to connect to it by running the command you will find in the right hand side in your webpage after hitting 'Deploy'. It will look something like this:
 
@@ -39,9 +43,9 @@ Once your CLI is installed and your instance is up, you can use SSH to connect t
 
 ![ssh](images/gcp_tutorial/ssh.png)
 
-Before you are able to connect, Google Cloud will ask you to create an SSH key and authenticate your account. Just follow the prompts, choose a passphrase and save it somewhere safe.
+Before you are able to connect, Google Cloud may ask you to create an SSH key and authenticate your account. Just follow the prompts, choose a passphrase and save it somewhere safe.
 
-If everything went ok, you should now be connected to your GCP instance!
+If everything went ok, you should now be connected to your GCP instance! Cicking the link in your deploy page under 'Access the running Jupyter notebook' will open a new window with jupyter lab. To switch to jupyter notebook replace 'lab' by 'tree' or go at [localhost:8080/tree](http://localhost:8080/tree). Note that this only work while you maintain the ssh connection. 
 
 ## Step 4: Access fast.ai materials
 
@@ -51,7 +55,7 @@ Next move into the directory where you will find the materials for the course by
 
 `cd course-v3/nbs`
 
-Finally run `jupyter notebook` in your terminal, copy the URL starting with _localhost:_ and paste it in your browser. Voilà! Now you can experiment yourself with fast.ai lessons! If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+Finally run `jupyter notebook` in your terminal, as seen above. Voilà! Now you can experiment yourself with fast.ai lessons! If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
 
 If you have any problem while using the `fastai` library try running `conda update -all`.
 
