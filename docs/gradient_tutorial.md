@@ -1,9 +1,5 @@
 ---
-
 title: Gradient
-keywords: 
-sidebar: home_sidebar
-
 ---
 # Welcome to Gradient!
 

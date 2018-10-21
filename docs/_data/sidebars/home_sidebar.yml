@@ -16,16 +16,19 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Gradient
+      title: Gradient (Easy)
       url: /gradient_tutorial
     - output: web
-      title: Salamander
+      title: Salamander (Easy)
       url: /salamander_tutorial
     - output: web
-      title: Google Cloud
+      title: SageMaker (Harder)
+      url: /sagemaker_tutorial
+    - output: web
+      title: Google Cloud (Advanced)
       url: /gcp_tutorial
     - output: web
-      title: AWS (EC2)
+      title: AWS EC2 (Advanced)
       url: /dlami_tutorial
   - title: fastai v1
     output: web
@@ -36,4 +39,3 @@ entries:
     - output: web
       title: readme
       external_url: https://github.com/fastai/fastai/blob/master/README.md
-
