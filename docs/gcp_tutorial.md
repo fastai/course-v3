@@ -31,19 +31,31 @@ Leave open the tab that is opened after your instance is deployed since we will 
 
 ## Step 3: Connect to your instance
 
-To be able to connect to your instance, you'll need to install a software from Google. For Windows user, the easiest is [this sdk](https://cloud.google.com/sdk/docs/quickstart-windows) that will also create a terminal you can use.
+To be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](terminal_tutorial) and follow the same instructions as Ubuntu users. 
 
-For other OS, install Google Cloud's command line interface (CLI) which you can do by following [this guide](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version). 
+To install, follow the instructions [here](https://cloud.google.com/sdk/docs/quickstart-macos) for MacOS (points 1 to 4 then come back) and [there](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu) for Linux or Windows (the four instructions in the gray box).
 
-In both cases, When prompted in the command line to choose a cloud project to use, choose the number representing your new project. Finally, select 'N' when prompted to configure a default Compute Region and Zone.
+In both cases, once the installation is done run this line
+```
+gcloud init
+```
+You will first need to login to your google account then paste a confirmation code. Then you will be prompted for your project (pick the number that matches) and ask if you want to put a default region (choose the same as your instance to make your life easier later).
 
-Once your CLI is installed and your instance is up, you can use SSH to connect to it by running the command you will find in the right hand side in your webpage after hitting 'Deploy'. It will look something like this:
+Once this is done, you can connect to your instance by typing:
+```
+gcloud compute ssh jupyter@{instance_name} -- -L 8080:localhost:8080
+```
 
-``gcloud compute ssh --project $PROJECT_NAME --zone $ZONE_NAME $INSTANCE_NAME -- -L 8080:localhost:8080``
+If your instance isn't in the same zone as what you set up, you'll have to specify it like this:
+```
+gcloud compute ssh --zone {zone_name} jupyter@{instance_name} -- -L 8080:localhost:8080
+```
+
+In any case, you can see the command you need to run under 'Create an ssh connection yo your machine' in the page with the deployment report. Just note that you need to add 'jupyter@' before your instance name to get admin rights on your instance.
 
 ![ssh](images/gcp_tutorial/ssh.png)
 
-Before you are able to connect, Google Cloud may ask you to create an SSH key and authenticate your account. Just follow the prompts, choose a passphrase and save it somewhere safe.
+Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts, choose a passphrase and save it somewhere safe.
 
 If everything went ok, you should now be connected to your GCP instance! Cicking the link in your deploy page under 'Access the running Jupyter notebook' will open a new window with jupyter lab. To switch to jupyter notebook replace 'lab' by 'tree' or go at [localhost:8080/tree](http://localhost:8080/tree). Note that this only work while you maintain the ssh connection. 
 
