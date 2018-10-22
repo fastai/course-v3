@@ -10,28 +10,51 @@ You might be surprised by what you *don't* need to become a top deep learning pr
 
 ### Using a GPU
 
-To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs will generally be around US$0.50 to US$1.25 per hour while you're using it. Here are some great choices:
+To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Plus, the fastai library uses the latest version of pytorch that doesn't support Windows or MacOS yet. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs will generally be around US$0.36 to US$1.26 per hour while you're using it. 
+
+ The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer by the hour. It's not enough to close your browser, or turn off your own PC since what you're paying for isn't on it. You have to shut the server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs until you shut it down!
+
+Here are some great choices of platforms. Click the link for more information on each, and setup instructions.
 
 #### Ready to run options
 
-These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. Click the link for more information on each, and setup instructions. The most important thing to remember: **when you're done, shut down your server**. It's not enough to close your browser, or turn off your own PC. You have to shut the server down using the methods described in the links below. Otherwise, you'll be paying for it until you shut it down!
+These are the easiest to use; they've got all the software, data, and lessons preinstalled for you.
 
-- [Paperspace Gradient](/start/gradient); (instant approval, no installation required)
-- [Salamander](/start/salamander); (instant approval, no installation required)
-- [SageMaker](/start/sagemaker); (requires some installation, and wait for approval)
+- [Paperspace Gradient](/start/gradient); (instant approval, no installation required, $0.59 an hour, $10 free credit)
+- [Salamander](/start/salamander); (instant approval, no installation required, $0.36 an hour, $1 free credit)
+- [SageMaker](/start/sagemaker); (requires some installation, and wait for approval, $1.26 an hour)
 
 #### Some installation required
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](/start/gcp)
-- [Amazon Web Services EC2](/start/dlami)
+- [Google Compute Platform](/start/gcp) ($0.53 an hour, $300 free credit)
+- [Amazon Web Services EC2](/start/dlami) ($0.9 an hour)
+
+**For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
+
+* Notebooks are the easiest way to start writing python code and experimenting with deep learning.  
+* Renting a Cloud Server (Option 2) requires environment configuration and setup.  
+* Building a PC requires environment setup and more up-front money. 
+
+(When we release Part 2 of the course, we will go into more specific details and benefits on both building a PC and renting a server.)
+
 
 ### Jupyter notebook
 
-Once you've finished the above steps, you'll be presented with the Jupyter Notebook screen. This is where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
+Once you've finished the steps in one of the guide above, you'll be presented with a screen like this.
 
-Your first task, then, is to open the notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. Click `start/notebook.ipynb` and follow the instructions!
+![](/images/jupyter.png)
+
+ This is the jupyter notebook environment, where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
+
+Your first task, then, is to open this notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
+
+![](/images/duplicate.png)
+
+You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). This is why we encourage you to play with duplciates of the notebooks. 
+
+Launch you copy of `00_notebook_tutorial.ipynb` and follow the instructions!
 
 When you're done, **remember to shut down your server**.
 

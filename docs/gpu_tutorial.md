@@ -6,7 +6,7 @@ sidebar: home_sidebar
 ---
 ## What is a GPU?
 
-GPUs are specialized hardware originally created to render games in high frame rates. Graphics texturing and shading require highly parallel matrix and vector operations. 
+GPUs are specialized hardware originally created to render games in high frame rates. Graphics texturing and shading require a lot of matrix and vector operations executed in parallel and those chips have been created to take the heat off the CPU while doing that. 
 
 ## Why a GPU?
 
@@ -50,27 +50,6 @@ We recommend you to use an NVIDIA GPU since they are currently the best out ther
 
 3. Highly optimized for deep learning with cuDNN
 
-
-## How to get access to an NVIDIA GPU?
-
-You have 3 options to choose from:
-1.  Connect to a GPU-enabled Jupyter Notebook platform:
-    * [Sagemaker](/start/sagemaker)
-    * [Gradient](/start/gradient)
-    * [Salamander](/start/salamander)
-2. Cloud Server with access to GPU 
-    * [DLAMIIt does look good!](/start/dlami)
-    * [GCP](/start/gcp)
-    * [Paperspace](/start/paperspace)
-3. Personal Computer with GPU hardware installed
-
-**For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
-
-* Notebooks are the easiest way to start writing python code and experimenting with deep learning.  
-* Renting a Cloud Server (Option 2) requires environment configuration and setup.  
-* Building a PC (Option 3) requires environment setup and more up-front money. Obviously a moot point if you already own a gaming PC.  
-
-(When we release Part 2 of the course, we will go into more specific details and benefits on both building a PC and renting a server.)
 
 ---
 
