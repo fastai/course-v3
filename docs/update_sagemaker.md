@@ -51,8 +51,10 @@ This should give you the latest of the course notebooks. If you modified some of
 ### Update the fastai library
 To update the fastai library, open the terminal like before and type
 ``` bash
-conda upgrade fastai
+source activate SageMaker/envs/fastai
+conda update fastai
 ```
+Note that you have to be in the home directory (the one the terminal puts you in when you create it) for this to work.
 
 ### Stop your instance
 When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/sagemaker) and stop your instance manually to avoid getting extra charges. Just pick the notebook you want to stop and click on the 'Stop' button next to its name.
