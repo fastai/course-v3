@@ -55,7 +55,7 @@ Click Start to pick up where you left off, and/or choose a different VM type on 
 ![](./images/gradient/restartNotebook.png)
 
 ### Managing Data
-The `/storage` folder is your [Persistent Storage](https://support.paperspace.com/hc/en-us/articles/360001468133-Persistent-Storage). Files placed here are available across all Notebooks, Jobs, and Linux machines. This repository is perfect for storing datasets, models etc. Note: Persistent Storage is region specific (you'll see the storage region options when creating Notebooks and Jobs).
+The `/storage` folder is your [Persistent Storage](https://support.paperspace.com/hc/en-us/articles/360001468133-Persistent-Storage). Files placed here are available across all Notebooks, Jobs, and Linux VMs. This repository is perfect for storing datasets, models etc. Note: Persistent Storage is region specific (you'll see the storage region options when creating Notebooks and Jobs).
 
 ### Promotional credit
 Paperspace provides $10 of free Gradient° credit. This code is to be used for Fast.ai students only. In your console, click on Billing and enter the promo code at the bottom right. The promo code for this course is: **FASTAIGR45T**.
