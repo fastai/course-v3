@@ -36,9 +36,9 @@ Wait about a minute for the server to start. Once finished, it will look like th
 
 ## Step 3: Open Jupyter Notebook
 
-Click 'Jupyter Notebook' to access the course materials. After Jupyter Notebook loads, click on 'fastai_courses' & then 'course-v3'.
+Click 'Jupyter Notebook' to access the course materials. After Jupyter Notebook loads, click on 'fastai-courses' & then 'course-v3'.
 
-![nb tuto](/images/salamander/final.png)
+![](/images/salamander/final.png)
 
 See [here](index.html) for instructions on running the Jupyter Notebook tutorial. Return to this guide once you're finished and _don't forget to stop your server_.
 
