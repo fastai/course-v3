@@ -43,13 +43,13 @@ If you're comfortable at a command line, these options are fairly easy to get st
 
 Once you've finished the steps in one of the guide above, you'll be presented with a screen like this.
 
-![](/images/jupyter.png)
+<img alt="" src="/images/jupyter.png" class="screenshot">
 
  This is the jupyter notebook environment, where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
 
 Your first task, then, is to open this notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
 
-![](/images/duplicate.png)
+<img alt="" src="/images/duplicate.png" class="screenshot">
 
 You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). But we also want you to try a lot of variations of what is shown in class, which is why we encourage you to use duplicates of the course notebooks. 
 

@@ -20,7 +20,7 @@ Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 
 Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-in the form & add your card details.
 
-![](/images/salamander/create_account.png)
+<img alt="" src="/images/salamander/create_account.png" class="screenshot">
 
 ## Step 2: Create your server
 
@@ -28,17 +28,17 @@ Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-
 
 Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Don't forget to accept the 'cuDNN Software License Agreement' and to check the acknowledgements above "Launch Server" before clicking it.
 
-![](/images/salamander/create_server.png)
+<img alt="" src="/images/salamander/create_server.png" class="screenshot">
 
 Wait about a minute for the server to start. Once finished, it will look like this:
 
-![](/images/salamander/ready.png)
+<img alt="" src="/images/salamander/ready.png" class="screenshot">
 
 ## Step 3: Open Jupyter Notebook
 
 Click 'Jupyter Notebook' to access the course materials. After Jupyter Notebook loads, click on 'fastai_courses' & then 'course-v3'.
 
-![nb tuto](/images/salamander/final.png)
+<img alt="nb tuto" src="/images/salamander/final.png" class="screenshot">
 
 See [here](index.html) for instructions on running the Jupyter Notebook tutorial. Return to this guide once you're finished and _don't forget to stop your server_.
 
@@ -46,7 +46,7 @@ See [here](index.html) for instructions on running the Jupyter Notebook tutorial
 
 When you're all done, **don't forget to shut down your server**, so you don't get charged for the time it's running in the background. It's not enough to just close your browser or turn off your own computer. Go back to [salamander](https://salamander.ai/) and click the 'Stop Server' button next to your server.
 
-![](/images/salamander/stop.png)
+<img alt="" src="/images/salamander/stop.png" class="screenshot">
 
 For more details, & updating the course / fastai library see "[Returning to work](update_salamander.html)".
 

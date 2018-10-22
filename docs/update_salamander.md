@@ -17,18 +17,18 @@ To return to your notebook, the basic steps will be:
 
 Sign in to [salamander](https://salamander.ai/) and choose the instance you want to start, then click on the button 'Start Server'.
 
-![](/images/salamander/start.png)
+<img alt="" src="/images/salamander/start.png" class="screenshot">
 
 Wait about a minute for the server to start. You'll see the status go through several stages (written in orange) until it's ready like this:
 
-![](/images/salamander/ready.png)
+<img alt="" src="/images/salamander/ready.png" class="screenshot">
 
 You can then either ssh to your terminal by copying the content of the second box or click on the 'Jupyter Notebook' button to directly head to your notebooks
 
 ### Update the course repo
  To update the course repo, you will need to be in terminal. If you used the `ssh` method, you're already there, if you clicked on the 'Jupyter Notebook' button, launch a new terminal from the jupyter notebook menu.
 
-![](/images/gradient/terminal.png)
+<img alt="" src="/images/gradient/terminal.png" class="screenshot">
 
 This will open a new window, in which you should run those two instructions:
 
@@ -37,7 +37,7 @@ cd course-v3
 git pull
 ``` 
 
-![](/images/gradient/update.png)
+<img alt="" src="/images/gradient/update.png" class="screenshot">
 
 This should give you the latest of the course notebooks. If you modified some of the notebooks in course-v3/nbs directly, GitHub will probably throw you an error. You should type `git stash` to remove your local changes. Remember you should always work on a copy of the lesson notebooks.
 
@@ -50,7 +50,7 @@ conda update fastai
 ### Stop your instance
 Once you're finished, go back to the [salamander page](https://salamander.ai/) and click on the 'Stop Server' button next to your instance.
 
-![](/images/salamander/stop.png)
+<img alt="" src="/images/salamander/stop.png" class="screenshot">
 
 **It's not enough to just close your browser or turn off your own computer.**
 

@@ -5,7 +5,7 @@ sidebar: home_sidebar
 
 # Welcome to GCP!
 
-![](/images/gcp/logo.jpg)
+<img alt="" src="/images/gcp/logo.jpg" class="screenshot">
 
 This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0.0 and fastai 1.0.2. At the end of this tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environment.
 
@@ -97,11 +97,11 @@ gcloud compute instances create $INSTANCE_NAME \
 
 You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
 
-![](/images/gcp/pending.png)
+<img alt="" src="/images/gcp/pending.png" class="screenshot">
 
 Your instance will be ready when the little icon left to its name turns green.
 
-![](/images/gcp/ready.png)
+<img alt="" src="/images/gcp/ready.png" class="screenshot">
 
 You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
@@ -124,7 +124,7 @@ in your terminal to get a folder with all the fast.ai materials.
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'course-v3' and you should look at something like this
 
-![nb tuto](/images/jupyter.png)
+<img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
 Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
@@ -132,7 +132,7 @@ Go back to the [first page](index.html) to see how to use this jupyter notebook 
 
 **You will be charged if you don't stop** the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop' or click the stop button at the top of the screen.
 
-![gcp-stop-instance](/images/gcp/stop.png)
+<img alt="gcp-stop-instance" src="/images/gcp/stop.png" class="screenshot">
 
 To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_gcp.html).
 

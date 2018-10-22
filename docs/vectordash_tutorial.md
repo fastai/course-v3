@@ -34,7 +34,7 @@ Congrats! Your account is now setup.
 4. Enter a hostname
 5. Click 'Create Instance'
 
-![create_page](images/vectordash_tutorial/create_page.png)
+<img alt="create_page" src="images/vectordash_tutorial/create_page.png" class="screenshot">
 
 You will be redirected to the instance page. Leave it open since you will need some of the
 information to setup the vectordash command line interface (CLI) in the next step.
@@ -53,7 +53,7 @@ one simple command, and more. To install and set it up, follow these steps:
 4. `vectordash list`
 5. `vectordash ssh $INSTANCE_ID`
 
-![vectordash_cli](images/vectordash_tutorial/vectordash_cli.png)
+<img alt="vectordash_cli" src="images/vectordash_tutorial/vectordash_cli.png" class="screenshot">
 
 ## Step 4: Access fast.ai materials
 After you have SSH-ed into to your instance, simply run the following command to access the
@@ -66,7 +66,7 @@ on your local terminal:
 
 `vectordash jupyter $INSTANCE_ID`
 
-![jupyter](images/vectordash_tutorial/jupyter.png)
+<img alt="jupyter" src="images/vectordash_tutorial/jupyter.png" class="screenshot">
 
 If you have any problem while using the fastai library try running `conda update -all`. If you want
 to read the vectordash-cli documentation, you can find it [here](http://vectordash.com/docs/cli).
@@ -77,7 +77,7 @@ To stop an instance on Vectordash, go to the [dashboard](http://vectordash.com/d
 instance you would like to stop. Once on the instance page, click 'Stop Instance'. *Please note, stopping
 an instance destroys it completely so make sure you save your files locally or in a remote storage location.*
 
-![stop_instance](images/vectordash_tutorial/stop_instance.png)
+<img alt="stop_instance" src="images/vectordash_tutorial/stop_instance.png" class="screenshot">
 
 ## About Vectordash:
 
