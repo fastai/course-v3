@@ -3,7 +3,7 @@ title: Gradient
 ---
 # Fast.ai Deep Learning Course v3 on Gradient° Notebooks
 
-![](./images/gradient/gradientFastAIv3.png)
+<img alt="" src="/images/gradient/gradientFastAIv3.png" class="screenshot">
 
 ### Run the Fast.ai Notebook in the cloud in less than 2 minutes 🚀
 
@@ -22,11 +22,11 @@ To get started, create an account [here](https://www.paperspace.com/account/sign
 
 2. Select the *Fast.ai 1.0 / PyTorch 1.0 BETA* base container.
 
-![](./images/gradient/createNotebook.png)
+<img alt="" src="/images/gradient/createNotebook.png" class="screenshot">
 
 3. Select the type of machine you want to run on.
 
-![](./images/gradient/chooseMachineType.png)
+<img alt="" src="/images/gradient/chooseMachineType.png" class="screenshot">
 
 4. Name your Notebook (optional)
 
@@ -34,7 +34,7 @@ To get started, create an account [here](https://www.paperspace.com/account/sign
 
 6. Click Create Notebook
 
-   ![create](/images/gradient/create.png)
+   <img alt="create" src="/images/gradient/create.png" class="screenshot">
 
 Your Notebook will go from Pending to Running, and will be ready to use :star2:.
 
@@ -43,18 +43,18 @@ When you click Create Notebook, that will start your Notebook and your billing f
 ## Step 3: Start learning Fast.ai!
 You should now have a running fast.ai notebook. It might take a few minutes to provision, but once it's running you just have to click "Open" to access your Jupyter notebook.
 
-![ready](/images/gradient/ready.png)
+<img alt="ready" src="/images/gradient/ready.png" class="screenshot">
 
 Next from your your jupyter notebook, click on 'course-v3' and you should look at something like this:
 
-![nb tuto](/images/jupyter.png)
+<img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
 Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step
 
 ## Step 4: Stopping your Notebook
 Just click stop.  This will end the billing session.
 
-![](./images/gradient/stopNotebook.png)
+<img alt="" src="/images/gradient/stopNotebook.png" class="screenshot">
 
 NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges.
 

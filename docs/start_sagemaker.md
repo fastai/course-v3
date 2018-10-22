@@ -16,102 +16,101 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
 
 1. Visit the [AWS webpage](https://aws.amazon.com/) and click on 'Sign In to the Console'. Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up.
 
-    ![stop](/images/aws/signin.png)
+    <img alt="stop" src="/images/aws/signin.png" class="screenshot">
 
     If you do not have an account, the button to press will say 'Sign up' instead of 'Sign in to the Console'. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
 1. Once you have an account and are logged in, click *Services* in the top bar, and type 'sagemaker'. You can then click *Amazon SageMaker*.
 
-   ![sage](/images/sagemaker/01.png)
+   <img alt="sage" src="/images/sagemaker/01.png" class="screenshot">
 
 ### Configuring your notebook instance
 
 1. On the left navigation bar, choose *Lifecycle Configurations*. This is where we set up the script that will create your notebook instance for you, with all software and lessons preinstalled.
 
-    ![lifecycle config](/images/sagemaker/03.png)
+    <img alt="lifecycle config" src="/images/sagemaker/03.png" class="screenshot">
 
 1. Click *Create configuration*.
 
-   ![create config](/images/sagemaker/04.png)
+   <img alt="create config" src="/images/sagemaker/04.png" class="screenshot">
 
 1. Enter *fastai* as the name.
 
-    ![fastai](/images/sagemaker/05.png)
+    <img alt="fastai" src="/images/sagemaker/05.png" class="screenshot">
 
 1. In the *Scripts* section, click *Create notebook*. **NB:** ensure you are in the *Create notebook* section, otherwise your instance will be reconfigured from scratch every time you start it!
 
-    ![create](/images/sagemaker/06.png)
+    <img alt="create" src="/images/sagemaker/06.png" class="screenshot">
 
 1. Paste the following to replace the script shown:
 
     ```bash
     #!/bin/bash
-    set -e
-    wget http://files.fast.ai/setup/sagemaker
-    chown ec2-user sagemaker
-    chmod u+x sagemaker
-    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker &'
+    wget http://course-v3.fast.ai/setup/sagemaker;
+    chown ec2-user sagemaker;
+    chmod u+x sagemaker;
+    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker &';
     ```
 
-    ![script](/images/sagemaker/07.png)
+    <img alt="script" src="/images/sagemaker/07.png" class="screenshot">
 
 1. Click *Create configuration*..
 
-    ![create](/images/sagemaker/08.png)
+    <img alt="create" src="/images/sagemaker/08.png" class="screenshot">
 
 1. On the left navigation bar, choose *Notebook instances*. This is where we create, manage, and access our notebook instances.
 
-    ![notebook instance](/images/sagemaker/08b.png)
+    <img alt="notebook instance" src="/images/sagemaker/08b.png" class="screenshot">
 
 1. Click *Create notebook instance*.
 
-    ![create nb instance](/images/sagemaker/09.png)
+    <img alt="create nb instance" src="/images/sagemaker/09.png" class="screenshot">
 
 1. Enter *fastai* in the name, and in the instance type field choose *p2.xlarge*.
 
-    ![choose p2](/images/sagemaker/10.png)
+    <img alt="choose p2" src="/images/sagemaker/10.png" class="screenshot">
 
 1. In the *IAM Role* section, choose to create a new role, then select *None* for S3 buckets, and choose *Create role*.
 
-   ![role](/images/sagemaker/11.png)
+   <img alt="role" src="/images/sagemaker/11.png" class="screenshot">
 
 1. In the *Lifecycle configuration* section, choose the *fastai* configuration you created earlier.
 
-    ![config](/images/sagemaker/12.png)
+    <img alt="config" src="/images/sagemaker/12.png" class="screenshot">
 
 1. Check that your selections now look like this:
 
-    ![summary](/images/sagemaker/13.png)
+    <img alt="summary" src="/images/sagemaker/13.png" class="screenshot">
 
 1. Once it's entered correctly, click *Create notebook instance* at the bottom of the screen.
 
-    ![click](/images/sagemaker/14.png)
+    <img alt="click" src="/images/sagemaker/14.png" class="screenshot">
 
 1. You will receive a message that the instance is being created.
 
-    ![message](/images/sagemaker/15.png)
+    <img alt="message" src="/images/sagemaker/15.png" class="screenshot">
 
 1. For around 5 minutes it will show as *Pending* and you will not be able to access it.
 
-   ![pending](/images/sagemaker/16.png)
+   <img alt="pending" src="/images/sagemaker/16.png" class="screenshot">
 
 ### Accessing the notebooks
 
 1. After about 5 minutes it will show *InService* and you can click *Open*.
 
-    ![in service](/images/sagemaker/17.png)
+    <img alt="in service" src="/images/sagemaker/17.png" class="screenshot">
 
 1. Your server is now downloading and installing software in the background. You won't be able to see the course notebooks yet. Go get a cup of tea, and come back in 15 minutes.
 
-    ![server](/images/sagemaker/18.png)
+    <img alt="server" src="/images/sagemaker/18.png" class="screenshot">
 
 1. After 15 minutes you should see a new *course-v3* folder has appeared, amongst others.
 
-    ![course](/images/sagemaker/19.png)
+    <img alt="course" src="/images/sagemaker/19.png" class="screenshot">
 
 1. Click on the *course-v3* folder, and your screen should look like this:
 
-    ![nb tuto](/images/jupyter.png)
+    <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
 1. Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
@@ -119,7 +118,7 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
 
 - When you're done, close the notebook tab, and **remember to click stop!** If you don't, you'll keep getting charged until you click the *stop* button.
 
-    ![stop](/images/sagemaker/23.png)
+    <img alt="stop" src="/images/sagemaker/23.png" class="screenshot">
 
   To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_sagemaker.html).
 
