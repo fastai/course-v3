@@ -1,18 +1,18 @@
 ---
 title: Gradient
+sidebar: home_sidebar
 ---
 # Fast.ai Deep Learning Course v3 on Gradient° Notebooks
 
 <img alt="" src="/images/gradient/gradientFastAIv3.png" class="screenshot">
 
-### Run the Fast.ai Notebook in the cloud in less than 2 minutes 🚀
-
-This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](https://www.paperspace.com/gradient), you get quick access to a Jupyter Notebook instance without complicated installs or configuration.
+This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](https://www.paperspace.com/gradient), you get access to a Jupyter Notebook instance without complicated installs or configuration in less than 2 minutes.
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/), a GPU-accelerated cloud platform. 
 
-##### Summary of Charges
- Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected.  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
+## Pricing
+
+Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected.  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
 
 ## Step 1: Create an account
 To get started, create an account [here](https://www.paperspace.com/account/signup) and confirm your account by clicking the verification link in your inbox.
