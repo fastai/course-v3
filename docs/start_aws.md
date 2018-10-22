@@ -74,9 +74,9 @@ On the new screen:
 
 ## Step 4: Launch an instance
 
-Note that this step will fail at the end if you didn't get the approval for p2 instances, so you may have to waif a bit before starting it. 
+Note that this step will fail at the end if you didn't get the approval for p2 instances, so you may have to wait a bit before starting it. 
 
-Log in to the AWS console then search for EC2 in the querry bar or click 'EC2' in the services. Once on the EC2 screen, click launch instance.
+Log in to the AWS console then search for EC2 in the query bar or click 'EC2' in the services. Once on the EC2 screen, click launch instance.
 
 ![launch instance](/images/aws/launch_instance.png)
 
@@ -111,7 +111,7 @@ It's time to connect! Open your command line [terminal](/terminal_tutorial_) and
 
 ```
 ssh -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
-``` 
+```
 (Replace '\<your instance IP\>' with your the IP address of your instance as shown before.)
 
 You may have a question about trusting this address, to which you should reply 'yes'.
@@ -121,7 +121,7 @@ You may have a question about trusting this address, to which you should reply '
 Run
 ``` bash
 git clone https://github.com/fastai/course-v3
-``` 
+```
 in your terminal to get a folder with all the fast.ai materials. 
 
 Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
