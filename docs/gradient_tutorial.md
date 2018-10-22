@@ -41,7 +41,7 @@ VI. Click Create Notebook
 
 When you click Create Notebook, that will start your Notebook and your billing for utilization will begin. To stop billing, you must stop your Notebook. Notebooks will automatically shut down after 12 hours.
 
-You'll be taken to your Notebook details page in your Console, where your Notebook will be created. It will go straight from Pending to Running, and will be ready to use :star2:.
+You'll be taken to your Notebook details page in your Console, where your Notebook will be created. It will go straight from Pending to Running, and will be ready to use.
 
 ### Step 3: Stopping your Notebook
 Under Action, just click stop.  This will end the billing session.

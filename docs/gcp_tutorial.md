@@ -12,7 +12,7 @@ This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0
 
 ## Pricing
 
-A `n1-highmem-2` instance in Google which is what we suggest is $0.1184 per hour. Attaching a Tesla k80 GPU costs $0.45 per hour so both together amount to [$0.684 per hour](https://cloud.google.com/compute/pricing).
+A `n1-highmem-8` preemtible instance in Google which is what we suggest is $0.1per hour. Attaching a P100 GPU costs $0.43 per hour so both together amount to [$0.53 per hour](https://cloud.google.com/compute/pricing).
 
 ## Step 1: Creating your account
 
@@ -22,38 +22,88 @@ Cloud computing allows users access to virtual CPU or GPU resources on an hourly
 
 The project on which you are going to run the image needs to be linked with your billing account. For this navigate to the [billing dashboard](https://console.cloud.google.com/billing/projects), click the '**...**' menu and choose '**change billing account**'.
 
-## Step 2: Start an instance
-First, go to the [marketplace page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning) of Deep Learning images and click 'launch on compute engine'. Wait a couple of minutes for the next page to load, then, select a project. If you want/need to add a new one you can do that with the '+' button on the top right. Finally, select 'Pytorch 1.0 Preview/FastAi 1.0' in the 'Frameworks' section, check 'Install NVIDIA GPU driver automatically on first startup?' and click 'Deploy'. For now leave all other fields to their default values, as soon as you are getting more profecient using GCP you can read the GCP documentation for all details. 
+## Step 2: Install Google CLI
 
-![image_drivers](images/gcp_tutorial/image_drivers.png)
+To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](terminal_tutorial) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
 
-Leave open the tab that is opened after your instance is deployed since we will need to copy some information from it on the next step.  
+To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
+``` bash
+# Create environment variable for correct distribution
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
-## Step 3: Connect to your instance
+# Add the Cloud SDK distribution URI as a package source
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 
-To be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](terminal_tutorial) and follow the same instructions as Ubuntu users. 
+# Import the Google Cloud Platform public key
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
-To install, follow the instructions [here](https://cloud.google.com/sdk/docs/quickstart-macos) for MacOS (points 1 to 4 then come back) and [there](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu) for Linux or Windows (the four instructions in the gray box).
+# Update the package list and install the Cloud SDK
+sudo apt-get update && sudo apt-get install google-cloud-sdk
+```
+You can find more details on the installation process [here](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
+
+To install on MacOS, follow the instructions detailed in points 1 to 4 [here](https://cloud.google.com/sdk/docs/quickstart-macos). .
 
 In both cases, once the installation is done run this line
-```
+``` bash
 gcloud init
 ```
-You will first need to login to your google account then paste a confirmation code. Then you will be prompted for your project (pick the number that matches) and ask if you want to put a default region (choose the same as your instance to make your life easier later).
+
+You should then be prompted with this message:
+```
+To continue, you must log in. Would you like to log in (Y/n)?
+```
+Type Y then copy the link and paste it to your browser. Choose the google account you used duing step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
+
+Then, if you are more than one project, you'll be prompted to choose your project:
+```
+Pick cloud project to use:
+ [1] [my-project-1]
+ [2] [my-project-2]
+ ...
+ Please enter your numeric choice:
+ ```
+Just enter the number next to the project you created on step 1. 
+
+Lastly, you'll be asked if you want to put a default region, choose us-west1-b if you don't have any particular preference.
+
+Once this is done, you should see this message on your terminal:
+```
+gcloud has now been configured!
+You can use [gcloud config] to change more gcloud settings.
+
+Your active configuration is: [default]
+```
+
+## Step 3: Create an instance
+
+To create the instance we recommend, just copy and paste the following command in your terminal. You can change \$INSTANCE_NAME to any name you want for your instance.
+
+```bash
+export IMAGE_FAMILY="pytorch-1-0-cu92-experimental" # or "pytorch-1-0-cpu-experimental" for non-GPU instances
+export ZONE="us-west1-b"
+export INSTANCE_NAME="my-fastai-instance"
+export INSTANCE_TYPE="n1-standard-8"
+gcloud compute instances create $INSTANCE_NAME \
+        --zone=$ZONE \
+        --image-family=$IMAGE_FAMILY \
+        --image-project=deeplearning-platform-release \
+        --maintenance-policy=TERMINATE \
+        --accelerator='type=nvidia-tesla-p100,count=1' \
+        --machine-type=$INSTANCE_TYPE \
+        --boot-disk-size=120GB \
+        --metadata='install-nvidia-driver=True' \
+        --preemtible
+```
+
+You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/instances) (note that this will be the page you have to go to later to start your instance). You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
 Once this is done, you can connect to your instance by typing:
-```
-gcloud compute ssh jupyter@{instance_name} -- -L 8080:localhost:8080
-```
-
-If your instance isn't in the same zone as what you set up, you'll have to specify it like this:
-```
-gcloud compute ssh --zone {zone_name} jupyter@{instance_name} -- -L 8080:localhost:8080
+```bash
+gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 ```
 
-In any case, you can see the command you need to run under 'Create an ssh connection yo your machine' in the page with the deployment report. Just note that you need to add 'jupyter@' before your instance name to get admin rights on your instance.
-
-![ssh](images/gcp_tutorial/ssh.png)
+If you put your default zone to 'us-west1-b' (or changed the zone of your instance to your configuration default), you can skip the '--zone=$ZONE' part.
 
 Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts, choose a passphrase and save it somewhere safe.
 
@@ -61,13 +111,13 @@ If everything went ok, you should now be connected to your GCP instance! Cicking
 
 ## Step 4: Access fast.ai materials
 
-Run `git clone https://github.com/fastai/course-v3` in your terminal to get a folder with all the fast.ai materials. 
+Run 
+```bash
+git clone https://github.com/fastai/course-v3
+``` 
+in your terminal to get a folder with all the fast.ai materials. 
 
-Next move into the directory where you will find the materials for the course by running:
-
-`cd course-v3/nbs`
-
-Finally run `jupyter notebook` in your terminal, as seen above. Voilà! Now you can experiment yourself with fast.ai lessons! If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+Next from your [jupyter notebook](http://localhost:8080/tree), move into the directory 'course-v3/nbs/' where you will find the materials for the course. If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
 
 If you have any problem while using the `fastai` library try running `conda update -all`.
 
@@ -94,4 +144,4 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 
 ---
 
-*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi and Francisco Ingham for their contributions to this guide.*
+*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi, Francisco Ingham and Sylvain Gugger for their contributions to this guide.*

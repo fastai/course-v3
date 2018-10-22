@@ -164,4 +164,4 @@ https://aws.amazon.com/getting-started/tutorials/get-started-dlami/
 
 ---
 
-*Many thanks to Francisco Ingham for writing this guide.*
+*Many thanks to Francisco Ingham and Sylvain Gugger for writing this guide.*
