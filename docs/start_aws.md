@@ -144,8 +144,9 @@ jupyter notebook
 ```
 in your terminal, and you can access the notebook at [localhost:8888](http://localhost:8888).
 
+Click on the *course-v3* folder, then *nbs*, then *dl1*, and finally on *00_notebook_tutorial.ipynb*.
 
-If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/start/aws).
+![nb tuto](/images/sagemaker/20.png)
 
 If you have any problem while using the `fastai` library try the [update page](/update/aws)
 
