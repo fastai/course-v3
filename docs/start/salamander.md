@@ -37,7 +37,7 @@ Click "Setup Access Key" and generate or upload an ssh key - it'll get added to 
 
 #### Jupyter Notebook
 
-By default Salamander uses *Jupyter Lab* instead of *Jupyter Notebook*. Either works for the course, however since Jeremy uses and recommends Notebook, you might prefer to use it to. To switch to Jupyter Notebook, open "Preferences and Account Details" & click "Switch to Jupyter Notebook". Then click on *notebook_tutorial.ipynb* to learn how to use the notebook interface.
+By default Salamander uses *Jupyter Lab* instead of *Jupyter Notebook*. Either works for the course, however since Jeremy uses and recommends Notebook, you might prefer to use it to. To switch to Jupyter Notebook, open "Preferences and Account Details" & click "Switch to Jupyter Notebook". Then click on *start/notebook.ipynb* to learn how to use the notebook interface.
 
 After opening a notebook select the "fastai" kernel.
 

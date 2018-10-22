@@ -1,9 +1,6 @@
 ---
-
 title: GCP
 sidebar: home_sidebar
-
-
 ---
 
 # Welcome to GCP!
@@ -24,7 +21,7 @@ The project on which you are going to run the image needs to be linked with your
 
 ## Step 2: Install Google CLI
 
-To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](terminal_tutorial) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
+To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](start/terminal) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
 
 To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
 ``` bash
@@ -103,11 +100,9 @@ Once this is done, you can connect to your instance by typing:
 gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 ```
 
-If you put your default zone to 'us-west1-b' (or changed the zone of your instance to your configuration default), you can skip the '--zone=$ZONE' part.
+Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts (the passphrase is optional, if you aren't going to be using this key for anything too secure).
 
-Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts, choose a passphrase and save it somewhere safe.
-
-If everything went ok, you should now be connected to your GCP instance! Cicking the link in your deploy page under 'Access the running Jupyter notebook' will open a new window with jupyter lab. To switch to jupyter notebook replace 'lab' by 'tree' or go at [localhost:8080/tree](http://localhost:8080/tree). Note that this only work while you maintain the ssh connection. 
+If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree). Note that this only work while you maintain the ssh connection. 
 
 ## Step 4: Access fast.ai materials
 
@@ -117,17 +112,17 @@ git clone https://github.com/fastai/course-v3
 ``` 
 in your terminal to get a folder with all the fast.ai materials. 
 
-Next from your [jupyter notebook](http://localhost:8080/tree), move into the directory 'course-v3/nbs/' where you will find the materials for the course. If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+Next from your [jupyter notebook](http://localhost:8080/tree), move into the directory 'course-v3/nbs/' where you will find the materials for the course. Now, click on *notebook_tutorial.ipynb* and follow the instructions there; you're now using Jupyter Notebook!
 
 If you have any problem while using the `fastai` library try running `conda update -all`.
 
 ## Step 5: Stop an instance
 
-![stop](images/gcp_tutorial/stop_meme.jpg)
+![stop](images/start/gcp/stop_meme.jpg)
 
 You will be charged if you don't stop the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop'.
 
-![gcp-stop-instance](images/gcp_tutorial/stop_instance.png)
+![gcp-stop-instance](images/start/gcp/stop_instance.png)
 
 
 

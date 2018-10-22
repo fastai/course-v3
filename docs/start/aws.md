@@ -47,7 +47,7 @@ While you wait, get on the second step.
 
 ## Step 3: Create an ssh key and upload it to AWS
 
-For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](terminal_tutorial.md).
+For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](start/terminal.md).
 
 Once in your terminal, type keygen then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
 
@@ -103,7 +103,7 @@ Now copy your instance IP in the IPv4 column.
 
 ![pubdns](images/dlami_tutorial/pubdns.png)
 
-It's time to connect! Open your command line [terminal](terminal_tutorial.md) and type the following command:
+It's time to connect! Open your command line [terminal](start/terminal.md) and type the following command:
 
 ```
 ssh -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
@@ -141,7 +141,7 @@ jupyter notebook
 in your terminal, and you can access the notebook at [this page](http://localhost:8888) (localhost:8888).
 
 
-If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/dlami_tutorial.html).
+If it is your first time with Jupyter Notebook, refer to our [Jupyter Notebook tutorial](http://course-v3.fast.ai/start/aws).
 
 If you have any problem while using the `fastai` library try running
 ```
