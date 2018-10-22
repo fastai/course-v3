@@ -47,7 +47,7 @@ While you wait, get on the third step.
 
 ## Step 3: Create an ssh key and upload it to AWS
 
-For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](/terminal_tutorial).
+For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](/terminal_tutorial.html).
 
 Once in your terminal, type keygen then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
 
@@ -148,7 +148,7 @@ Click on the *course-v3* folder, and your screen should look like this:
 
 ![nb tuto](/images/jupyter.png)
 
-Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 7: Stop your instance when you are done
 
@@ -156,7 +156,7 @@ When you finish working you must go back to your [AWS console](https://us-west-2
 
 ![stop](/images/aws/stop.png)
 
-To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_aws).
+To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_aws.html).
 
 If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
 

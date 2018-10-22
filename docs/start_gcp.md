@@ -17,15 +17,13 @@ A `n1-highmem-8` preemtible instance in Google which is what we suggest is $0.1p
 
 Cloud computing allows users access to virtual CPU or GPU resources on an hourly rate, depending on the hardware configuration. Find more information in the [Google Cloud Platform documentation](https://cloud.google.com/compute/). In case you don't have a GCP account yet, you can create one [here](https://cloud.google.com/), which comes with $300 worth of usage credits for free. 
 
->  **Potential roadblock**: Even though GCP provides a $300 initial credit, you must enable billing to use it. For a new bank account it will take several days for the activation. 
-
-![verify bank](/images/gcp/bank_account.png)
+>  **Potential roadblock**: Even though GCP provides a $300 initial credit, you must enable [billing](https://console.cloud.google.com/billing/) to use it. You can put a credit card or a bank account but the latter will take several days for the activation. 
 
 The project on which you are going to run the image needs to be linked with your billing account. For this navigate to the [billing dashboard](https://console.cloud.google.com/billing/projects), click the '**...**' menu and choose '**change billing account**'.
 
 ## Step 2: Install Google CLI
 
-To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
+To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial.html) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
 
 To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
 ``` bash
@@ -128,7 +126,7 @@ Next from your [jupyter notebook](http://localhost:8080/tree), click on 'course-
 
 ![nb tuto](/images/jupyter.png)
 
-Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 5: Stop an instance
 
@@ -136,7 +134,7 @@ Go back to the [first page](index) to see how to use this jupyter notebook and r
 
 ![gcp-stop-instance](/images/gcp/stop.png)
 
-To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_gcp).
+To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_gcp.html).
 
 ## References
 

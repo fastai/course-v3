@@ -40,7 +40,7 @@ Click 'Jupyter Notebook' to access the course materials. After Jupyter Notebook 
 
 ![nb tuto](/images/salamander/final.png)
 
-See [here](index#jupyter-notebook) for instructions on running the Jupyter Notebook tutorial. Return to this guide once you're finished and _don't forget to stop your server_.
+See [here](index.html) for instructions on running the Jupyter Notebook tutorial. Return to this guide once you're finished and _don't forget to stop your server_.
 
 ## Step 4: Stop your server
 
@@ -48,7 +48,7 @@ When you're all done, **don't forget to shut down your server**, so you don't ge
 
 ![](/images/salamander/stop.png)
 
-For more details, & updating the course / fastai library see "[Returning to work](update_salamander)".
+For more details, & updating the course / fastai library see "[Returning to work](update_salamander.html)".
 
 ## Advanced users: Connect via terminal
 

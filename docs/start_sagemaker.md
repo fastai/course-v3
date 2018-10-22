@@ -113,7 +113,7 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
 
     ![nb tuto](/images/jupyter.png)
 
-1. Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+1. Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ### Shutting down your instance
 
@@ -121,7 +121,7 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
 
     ![stop](/images/sagemaker/23.png)
 
-  To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_sagemaker).
+  To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_sagemaker.html).
 
 ## More help
 
