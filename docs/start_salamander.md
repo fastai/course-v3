@@ -48,9 +48,9 @@ When you're all done, **don't forget to shut down your server**, so you don't ge
 
 ![](/images/salamander/stop.png)
 
-For more details, updating the course / fastai library see "[Returning to work](update_salamander)".
+For more details, & updating the course / fastai library see "[Returning to work](update_salamander)".
 
-## Advances users: Connect via terminal
+## Advanced users: Connect via terminal
 
 Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter and you're in!
 
