@@ -156,7 +156,7 @@ When you finish working you must go back to your [AWS console](https://us-west-2
 
 ![stop](/images/aws/stop.png)
 
-To see how to open it again, update the course or the fastai library, go to the [Returning to worok page](update_aws)
+To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_aws).
 
 If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
 

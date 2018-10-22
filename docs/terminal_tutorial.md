@@ -8,7 +8,9 @@ sidebar: home_sidebar
 ---
 ## Getting a terminal on Windows
 
-If you are a Linux or a Mac user, you already have access to a bash terminal. For Windows users, you will need to install it first. We recommand WSL and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate Windows Subsystem for Linux with the following steps:
+If you are a Linux or a Mac user, you already have access to a bash terminal. For Windows users, you will need to install it first. Note that this is only necessary if you don't use one of the ready-to-run option!
+
+We recommand WSL and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate Windows Subsystem for Linux with the following steps:
 
 1. Open the Control Panel
 2. Select 'Programs'
