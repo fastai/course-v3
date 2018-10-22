@@ -109,23 +109,19 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
 
     ![course](/images/sagemaker/19.png)
 
-1. Click on that *course-v3* folder, then *nbs*, then *dl1*, and finally on *00_notebook_tutorial.ipynb*.
+1. Click on the *course-v3* folder, and your screen should look like this:
 
-    ![nb tuto](/images/sagemaker/20.png)
+    ![nb tuto](/images/jupyter.png)
 
-1. The first time you access this you'll get the following error - simply click the blue *Set Kernel* button to continue.
-
-    ![error](/images/sagemaker/21.png)
-
-1. You're now ready to start using your first notebook! Simply follow the instructions to use the notebook.
-
-    ![ready](/images/sagemaker/22.png)
+1. Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ### Shutting down your instance
 
 - When you're done, close the notebook tab, and **remember to click stop!** If you don't, you'll keep getting charged until you click the *stop* button.
 
     ![stop](/images/sagemaker/23.png)
+
+  To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_sagemaker).
 
 ## More help
 
