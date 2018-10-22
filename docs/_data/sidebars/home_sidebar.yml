@@ -8,25 +8,46 @@ entries:
       url: /
     - output: web
       title: Terminal tutorial
-      url: /terminal_tutorial
+      url: /start/terminal
     - output: web
       title: Intro to GPUs
-      url: /gpu_tutorial
+      url: /start/gpu
   - title: Server setup
     output: web
     folderitems:
     - output: web
+      title: Gradient (Easy)
+      url: /start/gradient
+    - output: web
+      title: Salamander (Easy)
+      url: /start/salamander
+    - output: web
+      title: SageMaker (Harder)
+      url: /start/sagemaker
+    - output: web
+      title: Google Cloud (Advanced)
+      url: /start/gcp
+    - output: web
+      title: AWS EC2 (Advanced)
+      url: /start/aws
+  - title: Returning to work
+    output: web
+    folderitems:
+    - output: web
       title: Gradient
-      url: /gradient_tutorial
+      url: /update/gradient
     - output: web
       title: Salamander
-      url: /salamander_tutorial
+      url: /update/salamander
+    - output: web
+      title: SageMaker
+      url: /update/sagemaker
     - output: web
       title: Google Cloud
-      url: /gcp_tutorial
+      url: /update/gcp
     - output: web
-      title: AWS (EC2)
-      url: /dlami_tutorial
+      title: AWS EC2
+      url: /update/aws
   - title: fastai v1
     output: web
     folderitems:
@@ -36,4 +57,3 @@ entries:
     - output: web
       title: readme
       external_url: https://github.com/fastai/fastai/blob/master/README.md
-
