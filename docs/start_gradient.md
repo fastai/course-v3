@@ -9,10 +9,10 @@ title: Gradient
 
 This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](https://www.paperspace.com/gradient), you get quick access to a Jupyter Notebook instance without complicated installs or configuration.
 
-[Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/) is a GPU-accelerated cloud platform. 
+[Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/), a GPU-accelerated cloud platform. 
 
 ##### Summary of Charges
-Gradient provides persistent storage in the `/storage` directory, currently free of charge.  Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected.  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
+ Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected.  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
 
 ## Step 1: Create an account
 To get started, create an account [here](https://www.paperspace.com/account/signup) and confirm your account by clicking the verification link in your inbox.
@@ -34,12 +34,22 @@ To get started, create an account [here](https://www.paperspace.com/account/sign
 
 6. Click Create Notebook
 
+   ![create](/images/gradient/create.png)
+
 Your Notebook will go from Pending to Running, and will be ready to use :star2:.
 
 When you click Create Notebook, that will start your Notebook and your billing for utilization will begin. To stop billing, you must stop your Notebook. Notebooks will automatically shut down after 12 hours.
 
 ## Step 3: Start learning Fast.ai!
-You should now have a running fast.ai notebook. It might take a few minutes to provision, but once it's running you just have to click "open" to access your Jupyter notebook.
+You should now have a running fast.ai notebook. It might take a few minutes to provision, but once it's running you just have to click "Open" to access your Jupyter notebook.
+
+![ready](/images/gradient/ready.png)
+
+Next from your your jupyter notebook, click on 'course-v3' and you should look at something like this:
+
+![nb tuto](/images/jupyter.png)
+
+Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step
 
 ## Step 4: Stopping your Notebook
 Just click stop.  This will end the billing session.
@@ -48,17 +58,14 @@ Just click stop.  This will end the billing session.
 
 NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges.
 
+For more details, updating the course and the fastai library see "[Returning to work](update_salamander.html)".
+
 ---
 
 ## Additional considerations:
 
-### Restarting your Notebook
-Click Start to pick up where you left off, and/or choose a different VM type on which you'd like to run your Notebook. This can be extremely useful when you want to start on a lower-end machine type and then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
-
-![](./images/gradient/restartNotebook.png)
-
 ### Managing Data
-The `/storage` folder is your [Persistent Storage](https://support.paperspace.com/hc/en-us/articles/360001468133-Persistent-Storage). Files placed here are available across all Notebooks, Jobs, and Linux VMs. This repository is perfect for storing datasets, models etc. Note: Persistent Storage is region specific (you'll see the storage region options when creating Notebooks and Jobs).
+The `/storage` folder is your [Persistent Storage](https://support.paperspace.com/hc/en-us/articles/360001468133-Persistent-Storage). Files placed here are available across all Notebooks, Jobs, and Linux VMs (currently free of charge). This repository is perfect for storing datasets, models etc. Note: Persistent Storage is region specific (you'll see the storage region options when creating Notebooks and Jobs).
 
 ### Promotional credit
 Paperspace provides $10 of free Gradient° credit. This code is to be used for Fast.ai students only. In your console, click on Billing and enter the promo code at the bottom right. The promo code for this course is: **FASTAIGR45T**.
