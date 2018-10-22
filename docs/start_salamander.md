@@ -48,17 +48,6 @@ When you're all done, **don't forget to shut down your instance**, so you don't 
 
 ![](/images/salamander/stop.png)
 
-## Step 4: Update fastai
-
-Everything will be up-to-date once you've created your server. But for new changes you'll need to connect to your server & run this:
-
-```sh
-source activate fastai
-conda update fastai
-cd fastai-courses/course-v3
-git pull
-```
-
 ---
 
 _Many thanks to Ashton Six for writing this guide._
