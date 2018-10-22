@@ -36,13 +36,19 @@ Wait about a minute for the server to start. You'll see the status update severa
 
 ## Step 3: Connect to your Server
 
-#### via Terminal
+#### Jupyter Notebook
+
+Click 'Jupyter Notebook' to access the course materials. Once Jupyter Notebook loads, click on 'fastai_courses' then 'course-v3' and your screen should look like this
+
+![nb tuto](/images/salamander/final.png)
+
+Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+
+#### acces to a Terminal [advanced users]
 
 Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter and you're in! Note that if you choose to have Salamander generate a key for you, you shouldn't use it for any other servers.
 
-#### Jupyter Notebook
-
-Click 'Jupyter Notebook' to access the course materials. Once Jupyter Notebook loads, open "fastai-courses/course-v3/nbs/dl1/00_notebook_tutorial.ipynb".
+## Step4: Stop your instance
 
 When you're all done, **don't forget to shut down your instance**, so you don't get charged for all the time it's running in the background. It's not enough to just close your browser or turn off your own computer. Go back to the [salamander page](https://salamander.ai/) and click on the 'Stop Server' button next to your instance.
 
