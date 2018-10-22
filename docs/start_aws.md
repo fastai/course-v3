@@ -39,7 +39,7 @@ Fill the form like below, by selecting 'Service Limit Increase', choose 'EC2 ins
 
 ![limit](/images/aws/increase_limit.png)
 
-Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automate reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
+Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automatic reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
 
 ![limit](/images/aws/increase_limit2.png)
 
@@ -51,7 +51,7 @@ For this step, you'll need a terminal. This requires an extra installation on Wi
 
 Once in your terminal, type keygen then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
 
-On Windows, you will need to copy this public key in a Windows directory to easily access it. The following line will copy it in 'C:\Temp', feel free to replace Temp with any directory you prefer.
+On Windows, you will need to copy this public key in a Windows directory to easily access it (since it's created in the WSL home folder). The following line will copy it in 'C:\Temp', feel free to replace Temp with any directory you prefer.
 ``` bash
 cp .ssh/id_rsa.pub /mnt/c/Temp/
 ```
@@ -74,7 +74,7 @@ On the new screen:
 
 ## Step 4: Launch an instance
 
-Note that this fail at the end if you didn't get the approval for p2 instances, so you may have to waif a bit before starting this step. 
+Note that this step will fail at the end if you didn't get the approval for p2 instances, so you may have to waif a bit before starting it. 
 
 Log in to the AWS console then search for EC2 in the querry bar or click 'EC2' in the services. Once on the EC2 screen, click launch instance.
 
@@ -144,17 +144,19 @@ jupyter notebook
 ```
 in your terminal, and you can access the notebook at [localhost:8888](http://localhost:8888).
 
-Click on the *course-v3* folder, then *nbs*, then *dl1*, and finally on *00_notebook_tutorial.ipynb*.
+Click on the *course-v3* folder, and your screen should look like this:
 
-![nb tuto](/images/sagemaker/20.png)
+![nb tuto](/images/jupyter.png)
 
-If you have any problem while using the `fastai` library try the [update page](/update/aws)
+Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 7: Stop your instance when you are done
 
 When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/ec2) and stop your instance manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it! 
 
 ![stop](/images/aws/stop.png)
+
+To see how to open it again, update the course or the fastai library, go to the [Returning to worok page](update_aws)
 
 If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
 
