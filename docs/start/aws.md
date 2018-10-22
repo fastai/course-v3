@@ -99,7 +99,11 @@ In the pop-up window's first drop-down menu, select the key you created in step 
 
 In the next window scroll down then click on 'View Instances'. You will see that you have an instance that says 'running' under 'Instance State'. Amazon charges you by the amount of seconds an instance has been running so you should **always stop an instance when you finish** using it to avoid getting extra charges. More on this, on Step 7.
 
-Now copy your instance IP in the IPv4 column.
+You will have to wait a little bit for your instance to be ready while the light under instance state is orange.
+
+![pending](/images/aws/pending.png)
+
+When it turns green, copy your instance IP in the IPv4 column.
 
 ![pubdns](/images/aws/pubdns.png)
 
@@ -110,7 +114,7 @@ ssh -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
 ``` 
 (Replace '\<your instance IP\>' with your the IP address of your instance as shown before.)
 
-You may have a question about trusting this address, to chich you should reply 'yes'.
+You may have a question about trusting this address, to which you should reply 'yes'.
 
 ## Step 6: Access fast.ai materials
 
@@ -147,7 +151,7 @@ If you have any problem while using the `fastai` library try the [update page](/
 
 ## Step 7: Stop your instance when you are done
 
-When you finish working you must go back to your AWS instance and stop it manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it!
+When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/ec2) and stop your instance manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it! 
 
 ![stop](/images/aws/stop.png)
 
