@@ -26,35 +26,35 @@ Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-
 
 > If you already have a Salamander account, we recommend creating a brand new server to get the latest version of fastai
 
-Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Don't forget to accept the 'cuDNN Software License Agreement' and to check the four boxes on top of the button "Launch Server" before clicking it.
+Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Don't forget to accept the 'cuDNN Software License Agreement' and to check the acknowledgements above "Launch Server" before clicking it.
 
 ![](/images/salamander/create_server.png)
 
-Wait about a minute for the server to start. You'll see the status update several times (written in orange) until it's ready like this:
+Wait about a minute for the server to start. Once finished, it will look like this:
 
 ![](/images/salamander/ready.png)
 
-## Step 3: Connect to your Server
+## Step 3: Open Jupyter Notebook
 
-#### Jupyter Notebook
-
-Click 'Jupyter Notebook' to access the course materials. Once Jupyter Notebook loads, click on 'fastai_courses' then 'course-v3' and your screen should look like this
+Click 'Jupyter Notebook' to access the course materials. After Jupyter Notebook loads, click on 'fastai_courses' & then 'course-v3'.
 
 ![nb tuto](/images/salamander/final.png)
 
-Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+See [here](index#jupyter-notebook) for instructions on running the Jupyter Notebook tutorial. Return to this guide once you're finished and _don't forget to stop your server_.
 
-#### acces to a Terminal [advanced users]
+## Step 4: Stop your server
 
-Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter and you're in! Note that if you choose to have Salamander generate a key for you, you shouldn't use it for any other servers.
-
-## Step4: Stop your instance
-
-When you're all done, **don't forget to shut down your instance**, so you don't get charged for all the time it's running in the background. It's not enough to just close your browser or turn off your own computer. Go back to the [salamander page](https://salamander.ai/) and click on the 'Stop Server' button next to your instance.
+When you're all done, **don't forget to shut down your server**, so you don't get charged for the time it's running in the background. It's not enough to just close your browser or turn off your own computer. Go back to [salamander](https://salamander.ai/) and click the 'Stop Server' button next to your server.
 
 ![](/images/salamander/stop.png)
 
-To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_salamander).
+For more details, updating the course / fastai library see "[Returning to work](update_salamander)".
+
+## Advances users: Connect via terminal
+
+Click "Setup Access Key" and generate or upload an ssh key - it'll get added to all of your servers automatically. You can then copy & paste `ssh ubuntu@[xxx.xxx.xxx.xxx]` from the webpage to your terminal. Press enter and you're in!
+
+Note: you should always generate keys yourself if you'd like to use them for several different platforms ([in-depth guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/))
 
 ---
 
