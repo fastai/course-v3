@@ -54,6 +54,8 @@ When you're all done, **don't forget to shut down your instance**, so you don't 
 
 ![](/images/salamander/stop.png)
 
+To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_salamander).
+
 ---
 
 _Many thanks to Ashton Six for writing this guide._

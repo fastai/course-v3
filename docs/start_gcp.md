@@ -5,6 +5,8 @@ sidebar: home_sidebar
 
 # Welcome to GCP!
 
+![](/images/gcp/logo.jpg)
+
 This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0.0 and fastai 1.0.2. At the end of this tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environment.
 
 ## Pricing
@@ -13,7 +15,7 @@ A `n1-highmem-8` preemtible instance in Google which is what we suggest is $0.1p
 
 ## Step 1: Creating your account
 
-Cloud computing allows users access to virtual CPU or GPU resources on an hourly rate, depending on the hardware configuration. Find more information in the [Google Cloud Platform documentation](https://cloud.google.com/compute/). In case you don't have a GCP account yet, you can create one [here](https://cloud.google.com/),  which comes with $300 worth of usage credits for free. 
+Cloud computing allows users access to virtual CPU or GPU resources on an hourly rate, depending on the hardware configuration. Find more information in the [Google Cloud Platform documentation](https://cloud.google.com/compute/). In case you don't have a GCP account yet, you can create one [here](https://cloud.google.com/), which comes with $300 worth of usage credits for free. 
 
 >  **Potential roadblock**: Even though GCP provides a $300 initial credit, you must enable billing to use it. For a new bank account it will take several days for the activation. 
 
@@ -41,7 +43,7 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 ```
 You can find more details on the installation process [here](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
 
-To install on MacOS, follow the instructions detailed in points 1 to 4 [here](https://cloud.google.com/sdk/docs/quickstart-macos). .
+To install on MacOS, follow the instructions detailed in points 1 to 4 [here](https://cloud.google.com/sdk/docs/quickstart-macos).
 
 In both cases, once the installation is done run this line
 ``` bash
@@ -54,7 +56,7 @@ To continue, you must log in. Would you like to log in (Y/n)?
 ```
 Type Y then copy the link and paste it to your browser. Choose the google account you used duing step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
 
-Then, if you are more than one project, you'll be prompted to choose your project:
+Then, if you are more than one project, you'll be prompted to choose one:
 ```
 Pick cloud project to use:
  [1] [my-project-1]
@@ -64,7 +66,7 @@ Pick cloud project to use:
  ```
 Just enter the number next to the project you created on step 1. 
 
-Lastly, you'll be asked if you want to put a default region, choose us-west1-b if you don't have any particular preference.
+Lastly, you'll be asked if you want to put a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
 
 Once this is done, you should see this message on your terminal:
 ```
@@ -105,14 +107,14 @@ Your instance will be ready when the little icon left to its name turns green.
 
 You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
-Once this is done, you can connect to your instance by typing:
+Once this is done, you can connect to your instance from the terminal by typing:
 ```bash
 gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 ```
 
 Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts (the passphrase is optional, if you aren't going to be using this key for anything too secure).
 
-If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree). Note that this only work while you maintain the ssh connection. 
+If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
 
 ## Step 4: Access fast.ai materials
 
@@ -122,15 +124,19 @@ git clone https://github.com/fastai/course-v3
 ``` 
 in your terminal to get a folder with all the fast.ai materials. 
 
-Next from your [jupyter notebook](http://localhost:8080/tree), move into the directory 'course-v3/nbs/' where you will find the materials for the course. Now, click on *notebook_tutorial.ipynb* and follow the instructions there; you're now using Jupyter Notebook!
+Next from your [jupyter notebook](http://localhost:8080/tree), click on 'course-v3' and you should look at something like this
 
-If you have any problem while using the `fastai` library see the [update page](/update/gcp)
+![nb tuto](/images/jupyter.png)
+
+Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 5: Stop an instance
 
 **You will be charged if you don't stop** the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop' or click the stop button at the top of the screen.
 
 ![gcp-stop-instance](/images/gcp/stop.png)
+
+To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_gcp).
 
 ## References
 
