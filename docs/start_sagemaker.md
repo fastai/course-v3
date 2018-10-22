@@ -47,7 +47,7 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
     ```bash
     #!/bin/bash
     set -e
-    wget https://course-v3.fast.ai/setup/sagemaker
+    wget http://files.fast.ai/setup/sagemaker
     chown ec2-user sagemaker
     chmod u+x sagemaker
     sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker &'
