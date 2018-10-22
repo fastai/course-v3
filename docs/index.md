@@ -12,7 +12,7 @@ You might be surprised by what you *don't* need to become a top deep learning pr
 
 To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Plus, the fastai library uses the latest version of pytorch that doesn't support Windows or MacOS yet. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs will generally be around US$0.36 to US$1.26 per hour while you're using it. 
 
- The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer by the hour. It's not enough to close your browser, or turn off your own PC since what you're paying for isn't on it. You have to shut the server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs until you shut it down!
+ The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer, not running something on your own. It's not enough to close your browser, or turn off your own PC, those will merely sever the connection between your device and this distant server, not shut down the thing you're paying. You have to shut this server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs and get surprised with a nasty bill!
 
 Here are some great choices of platforms. Click the link for more information on each, and setup instructions.
 
@@ -39,7 +39,6 @@ If you're comfortable at a command line, these options are fairly easy to get st
 
 (When we release Part 2 of the course, we will go into more specific details and benefits on both building a PC and renting a server.)
 
-
 ### Jupyter notebook
 
 Once you've finished the steps in one of the guide above, you'll be presented with a screen like this.
@@ -52,7 +51,7 @@ Your first task, then, is to open this notebook tutorial! To do so, click `docs`
 
 ![](/images/duplicate.png)
 
-You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). This is why we encourage you to play with duplciates of the notebooks. 
+You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). But we also want you to try a lot of variations of what is shown in class, which is why we encourage you to use duplicates of the course notebooks. 
 
 Launch you copy of `00_notebook_tutorial.ipynb` and follow the instructions!
 
