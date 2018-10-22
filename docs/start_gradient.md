@@ -49,7 +49,11 @@ Once it's ready you'll see the status change to 'Ready' in green color, then cli
 
 ![](/images/gradient/ready.png)
 
-You'll be 
+Click on the *course-v3* folder, and your screen should look like this:
+
+![nb tuto](/images/jupyter.png)
+
+Go back to the [first page](index) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ### Step 3: Stopping your Notebook
 Once you're finished, under Action, just click stop. This will end the billing session.
@@ -58,10 +62,7 @@ Once you're finished, under Action, just click stop. This will end the billing s
 
  **NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges**
 
-### Step 4: Restart your Notebook
-Click Start to pick up where you left off, and/or choose a different VM type on which you'd like to run your Notebook. This can be extremely useful when you want to start on a lower-end machine type and then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
-
-![](/images/gradient/restartNotebook.png)
+To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_gradient).
 
 ## Managing Data
 Fast.ai data files (dogscats) can be found in the 'datasets' folder. Files in this directory are hosted by Paperspace and are read-only. See [Public Datasets](https://support.paperspace.com/hc/en-us/articles/360003092514-Public-Datasets) for more info.
