@@ -17,11 +17,13 @@ Cloud computing allows users access to virtual CPU or GPU resources on an hourly
 
 >  **Potential roadblock**: Even though GCP provides a $300 initial credit, you must enable billing to use it. For a new bank account it will take several days for the activation. 
 
+![verify bank](/images/gcp/bank_account.png)
+
 The project on which you are going to run the image needs to be linked with your billing account. For this navigate to the [billing dashboard](https://console.cloud.google.com/billing/projects), click the '**...**' menu and choose '**change billing account**'.
 
 ## Step 2: Install Google CLI
 
-To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](start/terminal) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
+To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
 
 To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
 ``` bash
@@ -114,13 +116,13 @@ in your terminal to get a folder with all the fast.ai materials.
 
 Next from your [jupyter notebook](http://localhost:8080/tree), move into the directory 'course-v3/nbs/' where you will find the materials for the course. Now, click on *notebook_tutorial.ipynb* and follow the instructions there; you're now using Jupyter Notebook!
 
-If you have any problem while using the `fastai` library try running `conda update -all`.
+If you have any problem while using the `fastai` library see the [update page](/update/gcp)
 
 ## Step 5: Stop an instance
 
-You will be charged if you don't stop the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop'.
+**You will be charged if you don't stop** the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop'.
 
-![gcp-stop-instance]/images/gcp_tutorial/stop_instance.png)
+![gcp-stop-instance](/images/gcp/stop_instance.png)
 
 ## References
 
@@ -133,4 +135,4 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 
 ---
 
-*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi, Francisco Ingham and Sylvain Gugger for their contributions to this guide.*
+*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi and Francisco Ingham for their contributions to this guide.*

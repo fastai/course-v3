@@ -13,9 +13,11 @@ To return to your notebook, the basic steps will be:
 
 ## Step by step guide
 
-1. Do thing...
+1. In your [console notebooks](https://www.paperspace.com/console/notebooks) choose the notebook you want to run and click on the button 'Start' under action.
 
-    <img src="images/sagemaker/01.png" class="screenshot">
+You can choose a different Virtual Machine type on which you'd like to run your Notebook. This can be extremely useful when you want to start on a lower-end machine type, test everything is okay, then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
+
+![](/images/gradient/restartNotebook.png)
 
 1. Run thing...
 

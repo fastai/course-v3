@@ -37,14 +37,22 @@ IV. Name your Notebook.
 
 V. Enter your payment details (if you're new to Paperspace). Even if you have a promo or referral code, all active Paperspace accounts must have a valid credit card on file. You'll be able to enter your promo code later.
 
-VI. Click Create Notebook
+VI. Click Create Notebook +
 
-When you click Create Notebook, that will start your Notebook and your billing for utilization will begin. To stop billing, you must stop your Notebook. Notebooks will automatically shut down after 12 hours.
+![](/images/gradient/create.png)
 
-You'll be taken to your Notebook details page in your Console, where your Notebook will be created. It will go straight from Pending to Running, and will be ready to use.
+When you click Create Notebook, that will start your Notebook and your billing for utilization will begin. There is a setup time of roughly five minutes the first time you launch it, under which you will see it 'pending'.
+
+![](/images/gradient/pending.png)
+
+Once it's ready you'll see the status change to 'Ready' in green color, then click on the open button.
+
+![](/images/gradient/ready.png)
+
+You'll be 
 
 ### Step 3: Stopping your Notebook
-Under Action, just click stop.  This will end the billing session.
+Once you're finished, under Action, just click stop. This will end the billing session.
 
 ![](/images/gradient/stopNotebook.png)
 

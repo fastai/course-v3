@@ -16,7 +16,7 @@ If you are a Linux or a Mac user, you already have access to a bash terminal. Fo
 4. Scroll and click next to 'Windows Subsystem for Linux'
 5. Reboot your computer
 
-![add](images/start/terminal/wsl.png)
+![Turn WSL on](/images/terminal/wsl.png)
 
 Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. 
 
@@ -28,23 +28,23 @@ Useful tip: you can't paste with Ctrl + V in this terminal, you have to use shif
 It’s a black screen that allows you to interact directly with your computer with some lines of code.
 
 
-![add](images/start/terminal/what_is_a_terminal.png)
+![terminal](/images/terminal/what_is_a_terminal.png)
 
 ### Navigating between folders
 
 #### How to navigate into folders?
 Write in the terminal “cd” and the name of the folder you want to access.
 
-![add](images/start/terminal/terminal_cd_in.png)
+![cd](/images/terminal/terminal_cd_in.png)
 
 On Windows, you can acces 'C:\' or 'D:\' by adding the prefix /mnt/ :
 
-![add](images/start/terminal/windows_term.png)
+![mnt](/images/terminal/windows_term.png)
 
 #### How to navigate out of folder?
 Write in the terminal “cd ..”
 
-![add](images/start/terminal/terminal_cd_out.png)
+![nav](/images/terminal/terminal_cd_out.png)
 
 ### Important tips
 
@@ -55,23 +55,23 @@ If there is only one folder or file that starts with the characters you wrote, t
 ### How to create a folder?
 Write in the terminal "mkdir” and add the name of the folder.
 
-![add](images/start/terminal/terminal_mkdir.png)
+![mkdir](/images/terminal/terminal_mkdir.png)
 
 ### How to know where I am?
 By writing “pwd”, the terminal will tell you where you are; in other words, the file directory you are working on.
 
-![add](images/start/terminal/terminal_pwd.png)
+![pwd](/images/terminal/terminal_pwd.png)
 
 ### How to display files?
 Write “ls” in your terminal it will list your files.
 
 
-![add](images/start/terminal/terminal_ls.png)
+![ls](/images/terminal/terminal_ls.png)
 
 ### How to copy a folder?
 Write in the terminal “cp” with the file you want to copy and add the final destination folder where you want to paste it.
 
-![add](images/start/terminal/terminal_cp.png)
+![cp](/images/terminal/terminal_cp.png)
 
 ### Git and conda in terminal
 
@@ -80,28 +80,28 @@ Write in the terminal “cp” with the file you want to copy and add the final 
 Go to this url: https://github.com/fastai/fastai, and copy the git url. Click on the number 1 and 2 to have it on your clipboard.
 
 
-![add](images/start/terminal/git_copy_url.png)
+![clone](/images/terminal/git_copy_url.png)
 
 Then, in order to clone the fastai repo, use the friendly command "git clone” and 
 then paste the url your terminal by pressing <kbd>CTRL</kbd>+<kbd>V</kbd>
 
-![add](images/start/terminal/git_clone_repo_.png)
+![paste](/images/terminal/git_clone_repo_.png)
 
 #### Updating your fastai repository (Downloading the missing files)
 
 When your repo is up-to-date, you should see this message.
 
-![add](images/start/terminal/git_pull_up_to_date.png)
+![pull1](/images/terminal/git_pull_up_to_date.png)
 
 If there are new missing files, you wil see this.
 
-![add](images/start/terminal/git_pull_new_files.png)
+![pull2](/images/terminal/git_pull_new_files.png)
 
 #### Updating Conda 
 
 On more thing, if you want to update conda, you should write this in the terminal "conda update conda" and you are done.
 
-![add](images/start/terminal/conda_update.png)
+![update](/images/terminal/conda_update.png)
 
 ---
 
