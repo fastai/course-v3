@@ -57,4 +57,3 @@ Once you're finished, go back to your [console notebook page](https://www.papers
 ![](/images/gradient/stopNotebook.png)
 
  **NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges.**
-
