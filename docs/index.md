@@ -16,22 +16,22 @@ To do nearly everything in this course, you'll need access to a computer with an
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. Click the link for more information on each, and setup instructions. The most important thing to remember: **when you're done, shut down your server**. It's not enough to close your browser, or turn off your own PC. You have to shut the server down using the methods described in the links below. Otherwise, you'll be paying for it until you shut it down!
 
-- [Paperspace Gradient](/gradient_tutorial); (instant approval, no installation required)
-- [Salamander](/salamander_tutorial); (instant approval, no installation required)
-- [SageMaker](/sagemaker_tutorial); (requires some installation, and wait for approval)
+- [Paperspace Gradient](/start/gradient); (instant approval, no installation required)
+- [Salamander](/start/salamander); (instant approval, no installation required)
+- [SageMaker](/start/sagemaker); (requires some installation, and wait for approval)
 
 #### Some installation required
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](/gcp_tutorial)
-- [Amazon Web Services EC2](/dlami_tutorial)
+- [Google Compute Platform](/start/gcp)
+- [Amazon Web Services EC2](/start/dlami)
 
 ### Jupyter notebook
 
 Once you've finished the above steps, you'll be presented with the Jupyter Notebook screen. This is where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
 
-Your first task, then, is to open the notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. Click `notebook_tutorial.ipynb` and follow the instructions!
+Your first task, then, is to open the notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. Click `start/notebook.ipynb` and follow the instructions!
 
 When you're done, **remember to shut down your server**.
 

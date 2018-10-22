@@ -118,15 +118,9 @@ If you have any problem while using the `fastai` library try running `conda upda
 
 ## Step 5: Stop an instance
 
-![stop](images/start/gcp/stop_meme.jpg)
-
 You will be charged if you don't stop the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop'.
 
-![gcp-stop-instance](images/start/gcp/stop_instance.png)
-
-
-
-
+![gcp-stop-instance]/images/gcp_tutorial/stop_instance.png)
 
 ## References
 

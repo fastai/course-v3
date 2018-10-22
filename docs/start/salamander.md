@@ -19,7 +19,7 @@ Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 
 Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-in the form & add your card details.
 
-![](./images/salamander/create_account.png)
+![](/images/salamander/create_account.png)
 
 ## Step 2: Create your server
 
@@ -27,7 +27,7 @@ Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-
 
 Pick your desired hardware & storage size (if you don't know what to choose, just keep the default options). Click "Launch Server" & wait about a minute for the server to start.
 
-![](./images/salamander/create_server.png)
+![](/images/salamander/create_server.png)
 
 ## Step 3: Connect to your Server
 

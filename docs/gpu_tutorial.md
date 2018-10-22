@@ -21,7 +21,7 @@ It so happens that Deep Learning also requires super fast matrix computations. S
 
 Deep Learning really only cares about the number of Floating Point Operations (FLOPs) per second. GPUs are highly optimized for that. 
 
-![gpu_cpu_comparison](images/gpu_tutorial/gpu_cpu_comparison.png)
+![gpu_cpu_comparison](/images/gpu_tutorial/gpu_cpu_comparison.png)
 
 In the chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But do not take our word for it!**  
 
@@ -55,13 +55,13 @@ We recommend you to use an NVIDIA GPU since they are currently the best out ther
 
 You have 3 options to choose from:
 1.  Connect to a GPU-enabled Jupyter Notebook platform:
-    * [Sagemaker](course-v3.fast.ai/sagemaker_tutorial.html)
-    * [Gradient](course-v3.fast.ai/gradient_tutorial.html)
-    * [Salamander](course-v3.fast.ai/salamander_tutorial.html)
+    * [Sagemaker](/start/sagemaker)
+    * [Gradient](/start/gradient)
+    * [Salamander](/start/salamander)
 2. Cloud Server with access to GPU 
-    * [DLAMIIt does look good!](course-v3.fast.ai/dlami_tutorial.html)
-    * [GCP](course-v3.fast.ai/gcp_tutorial.html)
-    * [Paperspace](course-v3.fast.ai/paperspace_tutorial.html)
+    * [DLAMIIt does look good!](/start/dlami)
+    * [GCP](/start/gcp)
+    * [Paperspace](/start/paperspace)
 3. Personal Computer with GPU hardware installed
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
@@ -70,7 +70,7 @@ You have 3 options to choose from:
 * Renting a Cloud Server (Option 2) requires environment configuration and setup.  
 * Building a PC (Option 3) requires environment setup and more up-front money. Obviously a moot point if you already own a gaming PC.  
 
-For [Part 2](http://course.fast.ai/part2.html) of the course, we will go into more specific details and benefits on both building a PC and renting a server.
+(When we release Part 2 of the course, we will go into more specific details and benefits on both building a PC and renting a server.)
 
 ---
 

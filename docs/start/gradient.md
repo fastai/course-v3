@@ -3,7 +3,7 @@ title: Gradient
 ---
 # Welcome to Gradient!
 
-![](./images/gradient/gradientFastAIv3.png)
+![](/images/gradient/gradientFastAIv3.png)
 
 This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using Gradient Notebooks. With [Gradient](https://www.paperspace.com/gradient), you get quick access to a Jupyter Lab instance without having to set up a virtual machine or doing any complicated installation or configuration.
 
@@ -17,7 +17,7 @@ The instance we suggest, K80, is [$0.59 an hour](https://support.paperspace.com/
 ### Step 1: Create a Paperspace Account
 If you haven't already, you'll need to sign up for Paperspace [here](https://www.paperspace.com/account/signup). Confirm your account using the link in the email you receive from Paperspace. [Sign in to Paperspace](https://www.paperspace.com/console/notebooks).
 
-![](./images/gradient/createAccount.png)
+![](/images/gradient/createAccount.png)
 
 ### Step 2: Access Gradient & Create Notebook
 I. On the left-hand side of your Console under Gradient, select Notebooks.
@@ -26,12 +26,12 @@ II. Select the *Fast.ai 1.0 / PyTorch 1.0 BETA* base container.
 
 **Note: for Pro users, learn more about this docker container at the [paperspace/fastai-docker repo](https://github.com/Paperspace/fastai-docker/tree/fastai/pytorch1.0)**
 
-![](./images/gradient/createNotebook.png)
+![](/images/gradient/createNotebook.png)
 
 
 III. Select your Compute Type.
 
-![](./images/gradient/chooseMachineType.png)
+![](/images/gradient/chooseMachineType.png)
 
 IV. Name your Notebook.
 
@@ -46,14 +46,14 @@ You'll be taken to your Notebook details page in your Console, where your Notebo
 ### Step 3: Stopping your Notebook
 Under Action, just click stop.  This will end the billing session.
 
-![](./images/gradient/stopNotebook.png)
+![](/images/gradient/stopNotebook.png)
 
  **NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges**
 
 ### Step 4: Restart your Notebook
 Click Start to pick up where you left off, and/or choose a different VM type on which you'd like to run your Notebook. This can be extremely useful when you want to start on a lower-end machine type and then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
 
-![](./images/gradient/restartNotebook.png)
+![](/images/gradient/restartNotebook.png)
 
 ## Managing Data
 Fast.ai data files (dogscats) can be found in the 'datasets' folder. Files in this directory are hosted by Paperspace and are read-only. See [Public Datasets](https://support.paperspace.com/hc/en-us/articles/360003092514-Public-Datasets) for more info.

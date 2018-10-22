@@ -17,11 +17,11 @@ A `p2.xlarge` instance in Amazon which is what we suggest, is [$0.9 an hour](htt
 
 Visit the [AWS webpage](https://aws.amazon.com/) and click on 'Sign In to the Console'.
 
-![Signin](images/dlami_tutorial/signin.png)
+![Signin]/images/dlami_tutorial/signin.png)
 
 If you do not have an account, the button to press will say 'Sign up' instead of 'Sign in to the Console'.
 
-![Signup](images/dlami_tutorial/signup.png)
+![Signup]/images/dlami_tutorial/signup.png)
 
 Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
@@ -29,19 +29,19 @@ Next, enter your credentials if you are signing in or e-mail, account name and p
 
 If you just created your account, you'll need to ask for an increase limit in the instance type we need for the course (default is 0). First click on 'Services' and then 'EC2'.
 
-![amiubuntu](images/dlami_tutorial/ec2.png)
+![amiubuntu]/images/dlami_tutorial/ec2.png)
 
 Then on the left bar, choose Limits, then scroll trhough the list until you find p2.xlarge. You can skip this step if your limit is already 1 or more, otherwise click on 'Request limit increase'.
 
-![limit](images/dlami_tutorial/request_limit.png)
+![limit]/images/dlami_tutorial/request_limit.png)
 
 Fill the form like below, by selecting 'Service Limit Increase', choose 'EC2 instance', your region, then 'p2.xlarge' and ask for a new limit of 1.
 
-![limit](images/dlami_tutorial/increase_limit.png)
+![limit]/images/dlami_tutorial/increase_limit.png)
 
 Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automate reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
 
-![limit](images/dlami_tutorial/increase_limit2.png)
+![limit]/images/dlami_tutorial/increase_limit2.png)
 
 While you wait, get on the second step.
 
@@ -58,11 +58,11 @@ cp .ssh/id_rsa.pub /mnt/c/Temp/
 
 Once this is done, go back to the AWS console, click on 'Services' and then 'EC2'.
 
-![amiubuntu](images/dlami_tutorial/ec2.png)
+![amiubuntu]/images/dlami_tutorial/ec2.png)
 
 You can also search for EC2 in the querry bar. Scroll in the left menu until you find 'Key pairs' then click on it.
 
-![key pair](images/dlami_tutorial/key_pair.png)
+![key pair]/images/dlami_tutorial/key_pair.png)
 
 On the new screen:
 
@@ -70,7 +70,7 @@ On the new screen:
 2. Browse to select the file id_rsa.pub from where you put it (either the '.ssh' folder of your home directory or the folder to where you copied it)
 3. Customize the name of the key if you want, then click 'Import'
 
-![import key](images/dlami_tutorial/import_key.png)
+![import key]/images/dlami_tutorial/import_key.png)
 
 ## Step 4: Launch an instance
 
@@ -78,22 +78,22 @@ Note that this fail at the end if you didn't get the approval for p2 instances, 
 
 Log in to the AWS console then search for EC2 in the querry bar or click 'EC2' in the services. Once on the EC2 screen, click launch instance.
 
-![launch instance](images/dlami_tutorial/launch_instance.png)
+![launch instance]/images/dlami_tutorial/launch_instance.png)
 
 Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 16.0
 
-![amiubuntu](images/dlami_tutorial/amiubuntu.png)
+![amiubuntu]/images/dlami_tutorial/amiubuntu.png)
 
 Scroll down until you find 'p2.xlarge' and select it. Then press 'Review and Launch'.
 
-![p2](images/dlami_tutorial/p2.png)
+![p2]/images/dlami_tutorial/p2.png)
 
 Finally, when in the 'Review' tab press 'Launch'.
 
-![launch](images/dlami_tutorial/launch.png)
+![launch]/images/dlami_tutorial/launch.png)
 
 In the pop-up window's first drop-down menu, select the key you created in step 2 then tick the box to acknowledge you have access to the selected private key file then click on 'Launch Instance'
-![key](images/dlami_tutorial/key.png)
+![key]/images/dlami_tutorial/key.png)
 
 ## Step 5: Connect to your instance
 
@@ -101,7 +101,7 @@ In the next window scroll down then click on 'View Instances'. You will see that
 
 Now copy your instance IP in the IPv4 column.
 
-![pubdns](images/dlami_tutorial/pubdns.png)
+![pubdns]/images/dlami_tutorial/pubdns.png)
 
 It's time to connect! Open your command line [terminal](start/terminal.md) and type the following command:
 
@@ -152,11 +152,11 @@ conda update -all
 
 When you finish working you must go back to your AWS instance and stop it manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it!
 
-![stop](images/dlami_tutorial/stop.png)
+![stop]/images/dlami_tutorial/stop.png)
 
 If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
 
-![terminate](images/dlami_tutorial/terminate.png)
+![terminate]/images/dlami_tutorial/terminate.png)
 
 ## References
 
