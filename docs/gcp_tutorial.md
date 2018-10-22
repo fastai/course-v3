@@ -23,11 +23,27 @@ Cloud computing allows users access to virtual CPU or GPU resources on an hourly
 The project on which you are going to run the image needs to be linked with your billing account. For this navigate to the [billing dashboard](https://console.cloud.google.com/billing/projects), click the '**...**' menu and choose '**change billing account**'.
 
 ## Step 2: Start an instance
-First, go to the [marketplace page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning) of Deep Learning images and click 'launch on compute engine'. Wait a couple of minutes for the next page to load, then, select a project. If you want/need to add a new one you can do that with the '+' button on the top right. Finally, select 'Pytorch 1.0 Preview/FastAi 1.0' in the 'Frameworks' section, check 'Install NVIDIA GPU driver automatically on first startup?' and click 'Deploy'. For now leave all other fields to their default values, as soon as you are getting more profecient using GCP you can read the GCP documentation for all details. 
+First, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](terminal_tutorial) and follow the same instructions as Ubuntu users. 
 
-![image_drivers](images/gcp_tutorial/image_drivers.png)
+Now you can create the instance with the following command:
 
-Leave open the tab that is opened after your instance is deployed since we will need to copy some information from it on the next step.  
+```bash
+export IMAGE_FAMILY="pytorch-1-0-cu92-experimental" # or "pytorch-1-0-cpu-experimental" for non-GPU instances
+export ZONE="us-west1-b"
+export INSTANCE_NAME="my-fastai-instance"
+export INSTANCE_TYPE="n1-standard-8"
+gcloud compute instances create $INSTANCE_NAME \
+        --zone=$ZONE \
+        --image-family=$IMAGE_FAMILY \
+        --image-project=deeplearning-platform-release \
+        --maintenance-policy=TERMINATE \
+        --accelerator='type=nvidia-tesla-v100,count=1' \
+        --machine-type=$INSTANCE_TYPE \
+        --boot-disk-size=120GB \
+        --metadata='install-nvidia-driver=True'
+```
+
+Read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
 ## Step 3: Connect to your instance
 
