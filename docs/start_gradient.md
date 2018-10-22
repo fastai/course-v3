@@ -3,7 +3,7 @@ title: Gradient
 ---
 # Fast.ai Deep Learning Course v3 on Gradient° Notebooks
 
-<img alt="" src="./images/gradient/gradientFastAIv3.png" class="screenshot">
+<img alt="" src="/images/gradient/gradientFastAIv3.png" class="screenshot">
 
 ### Run the Fast.ai Notebook in the cloud in less than 2 minutes 🚀
 
@@ -22,11 +22,11 @@ To get started, create an account [here](https://www.paperspace.com/account/sign
 
 2. Select the *Fast.ai 1.0 / PyTorch 1.0 BETA* base container.
 
-<img alt="" src="./images/gradient/createNotebook.png" class="screenshot">
+<img alt="" src="/images/gradient/createNotebook.png" class="screenshot">
 
 3. Select the type of machine you want to run on.
 
-<img alt="" src="./images/gradient/chooseMachineType.png" class="screenshot">
+<img alt="" src="/images/gradient/chooseMachineType.png" class="screenshot">
 
 4. Name your Notebook (optional)
 
@@ -54,7 +54,7 @@ Go back to the [first page](index.html) to see how to use this jupyter notebook 
 ## Step 4: Stopping your Notebook
 Just click stop.  This will end the billing session.
 
-<img alt="" src="./images/gradient/stopNotebook.png" class="screenshot">
+<img alt="" src="/images/gradient/stopNotebook.png" class="screenshot">
 
 NOTE: you *will* be charged for the time that your notebook is running. You must stop the notebook to stop incurring charges.
 
