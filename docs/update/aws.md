@@ -15,7 +15,7 @@ To return to your notebook, the basic steps will be:
 
 ### Start your instance
 
-Log in to the AWS consle [console notebooks](https://aws.amazon.com/console/) then click on the EC2 link (it should be in your history, otherwise find it in the 'Services' on the left or type EC2 in the search bar). Once on this page, either click on 'Instances' in the left menu or on the 'Running Instances' link.
+Log in to the [AWS console](https://aws.amazon.com/console/) then click on the EC2 link (it should be in your history, otherwise find it in the 'Services' on the left or type EC2 in the search bar). Once on this page, either click on 'Instances' in the left menu or on the 'Running Instances' link.
 
 ![](/images/aws/instance.png)
 

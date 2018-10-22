@@ -92,10 +92,18 @@ gcloud compute instances create $INSTANCE_NAME \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=120GB \
         --metadata='install-nvidia-driver=True' \
-        --preemtible
+        --preemptible
 ```
 
-You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/instances) (note that this will be the page you have to go to later to start your instance). You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
+You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
+
+![](/images/gcp/pending.png)
+
+Your instance will be ready when the little icon left to its name turns green.
+
+![](/images/gcp/ready.png)
+
+You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
 Once this is done, you can connect to your instance by typing:
 ```bash
@@ -120,9 +128,9 @@ If you have any problem while using the `fastai` library see the [update page](/
 
 ## Step 5: Stop an instance
 
-**You will be charged if you don't stop** the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop'.
+**You will be charged if you don't stop** the instance while it's 'idle' (e.g. not training a network). To stop an instance out of Google Cloud's online interface go [here](https://console.cloud.google.com/compute/instances), click the '...' icon to the right of the instance and choose 'Stop' or click the stop button at the top of the screen.
 
-![gcp-stop-instance](/images/gcp/stop_instance.png)
+![gcp-stop-instance](/images/gcp/stop.png)
 
 ## References
 
