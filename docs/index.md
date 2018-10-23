@@ -29,7 +29,7 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
 - [Google Compute Platform](/start_gcp.html) ($0.53 an hour, $300 free credit)
-- [Amazon Web Services EC2](/start_dlami.html) ($0.9 an hour)
+- [Amazon Web Services EC2](/start_aws.html) ($0.9 an hour)
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
 
