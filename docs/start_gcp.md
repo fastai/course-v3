@@ -114,7 +114,7 @@ Before you are able to connect, Google Cloud may ask you to create an SSH key. J
 
 If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
 
-**Note on preemptible instances:** Please notice we are running a preemptible instance (notice the '--preemptible' parameter in our command). A preemptible GCP instance is cheaper than traditional instances but it has two main disadvantages:
+**Note on preemptible instances:** Please notice we are running a preemptible instance (notice the '--preemptible' parameter in our command). A [preemptible GCP instance](https://cloud.google.com/compute/docs/instances/preemptible) is cheaper than traditional instances but it has two main disadvantages:
 
 1. It can be preempted (stopped) with a 30 second notice at any time due to high demand.
 2. It will always be stopped after 24 hours of continuous running.
