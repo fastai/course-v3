@@ -16,10 +16,6 @@ Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
 - K80: $0.36 per hour
 - V100: $1.32 per hour
 
-#### AWS Credits
-
-If you have an AWS promo code you can redeem 75% of it's value for Salamander credits. Signup, email [support@salamander.ai](mailto:support@salamander.ai) with the subject "AWS CREDITS" & include your promo code in the email body. It will take up to 24 hours for the credits to appear in your Salamander account.
-
 ## Step 1: Create an account
 
 Visit [https://salamander.ai](https://salamander.ai), click "Get Started", fill-in the form & add your card details.
