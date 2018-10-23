@@ -61,7 +61,7 @@ Pick cloud project to use:
  [2] [my-project-2]
  ...
  Please enter your numeric choice:
- ```
+```
 Just enter the number next to the project you created on step 1. 
 
 Lastly, you'll be asked if you want to put a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
@@ -114,12 +114,21 @@ Before you are able to connect, Google Cloud may ask you to create an SSH key. J
 
 If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
 
+**Note on preemptible instances:** Please notice we are running a preemptible instance (notice the '--preemptible' parameter in our command). A preemptible GCP instance is cheaper than traditional instances but it has two main disadvantages:
+
+1. It can be preempted (stopped) with a 30 second notice at any time due to high demand.
+2. It will always be stopped after 24 hours of continuous running.
+
+If your instance is stopped, your saved data will be kept safe but if you are running a model, the progress will be lost.
+
+These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $0.68 an hour.
+
 ## Step 4: Access fast.ai materials
 
 Run 
 ```bash
 git clone https://github.com/fastai/course-v3
-``` 
+```
 in your terminal to get a folder with all the fast.ai materials. 
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'course-v3' and you should look at something like this
