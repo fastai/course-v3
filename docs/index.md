@@ -47,7 +47,7 @@ Once you've finished the steps in one of the guide above, you'll be presented wi
 
  This is the jupyter notebook environment, where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
 
-Your first task, then, is to open this notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
+Your first task, then, is to open this notebook tutorial! To do so, click `nbs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
 
 <img alt="" src="/images/duplicate.png" class="screenshot">
 
