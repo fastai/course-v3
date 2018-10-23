@@ -90,7 +90,7 @@ gcloud compute instances create $INSTANCE_NAME \
         --maintenance-policy=TERMINATE \
         --accelerator='type=nvidia-tesla-p100,count=1' \
         --machine-type=$INSTANCE_TYPE \
-        --boot-disk-size=120GB \
+        --boot-disk-size=200GB \
         --metadata='install-nvidia-driver=True' \
         --preemptible
 ```
