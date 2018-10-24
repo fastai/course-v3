@@ -8,7 +8,7 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
 
 ## Pricing
 
-The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  Instances must be stopped to end billing.
+The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  You will need to explicitely request a limit request to use this instance, [here](https://course-v3.fast.ai/start_aws.html#step-2-request-service-limit ) Instances must be stopped to end billing.
 
 ## Getting Set Up
 
@@ -66,9 +66,9 @@ The instance we suggest, p2.xlarge, is $1.26 an hour. The hourly rate is depende
 
     <img alt="create nb instance" src="/images/sagemaker/09.png" class="screenshot">
 
-1. Enter *fastai* in the name, and in the instance type field choose *p2.xlarge*.
+1. Enter *fastai* in the name, and in the instance type field choose *ml.p2.xlarge*.
 
-    <img alt="choose p2" src="/images/sagemaker/10.png" class="screenshot">
+    <img alt="choose ml.p2" src="/images/sagemaker/10.png" class="screenshot">
 
 1. In the *IAM Role* section, choose to create a new role, then select *None* for S3 buckets, and choose *Create role*.
 
