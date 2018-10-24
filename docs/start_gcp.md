@@ -11,29 +11,30 @@ This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0
 
 ## Pricing
 
+GCP charges separately for the base CPU platform, and the GPU. We have two recommended configurations, *standard*, and *budget*. Note that all prices assume you are using *preemptible instances* (see below for details).
+
 ### Standard Compute
 
-A `n1-highmem-8` preemptible instance in Google which is what we suggest is $0.12 per hour. Attaching a P4 GPU costs $0.26 per hour so both together amount to **[$0.38 per hour](https://cloud.google.com/compute/pricing)**. 
+The base platform we suggest is called `n1-highmem-8`, and costs $0.12 per hour. Attaching a P4 GPU costs $0.26 per hour so both together amount to **$0.38 per hour**. 
 
 ### Budget Compute
 
-If you have a tight budget you might want to go with a cheaper setup. In this case, we suggest a n1-highmem-4` preemptible instance ($0.09 per hour) with a K80 GPU ($0.14 per hour), with a total of **[$0.23 per hour](https://cloud.google.com/compute/pricing)**. 
+If you have a tight budget you might want to go with a cheaper setup. In this case, we suggest a `n1-highmem-4` instance ($0.09 per hour) with a K80 GPU ($0.14 per hour), with a total of **$0.23 per hour**. 
 
 According to our benchmarks, a K80 is 84% slower than a P4 so this setup will roughly double your training time. If this is ok with you, you must follow the budget commands when creating your instance.
 
 ### Storage
 
-In both cases, by getting our suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of [$9.6 a month](https://cloud.google.com/compute/pricing)**.
+In both cases, by getting our suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of $9.60 a month**.
 
 ### How much will you use this course
 
-Considering that the course requires 80 hours of homework plus the 2 hours of working through each lesson, we calculated roughly how much you would spend in the course with each of the setups.
+Considering that the course requires, over 2 months, 80 hours of homework plus the 2 hours of working through each lesson, we calculated roughly how much you would spend in the course with each of the setups.
 
-*Standard Compute* + *Storage*: (80+2\*7)\*$0.38 + $9.6*2 =  **$54.92**
+- *Standard Compute* + *Storage*: (80+2\*7)\*$0.38 + $9.6*2 =  **$54.92**
+- *Budget Compute* + *Storage*: (80+2\*7)\*$0.23 + $9.6*2 =  **$40.82**
 
-*Budget Compute* + *Storage*: (80+2\*7)\*$0.23 + $9.6*2 =  **$40.82**
-
-Even if you were to work on the course twice the time that we suggest as minimum, your expenditure would amount to **$90.64** which is less than 1/3 of the credits GCP gives you. Considering this, **we strongly suggest to go for the Standard Compute option**.
+Even if you were to work on the course twice the time that we suggest as minimum, your expenditure would amount to **$90.64** which is less than 1/3 of the credits GCP gives you. Therefore we suggest to go for the Standard Compute option.
 
 ## Step 1: Creating your account
 
@@ -145,7 +146,9 @@ Before you are able to connect, Google Cloud may ask you to create an SSH key. J
 
 If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
 
-**Note on preemptible instances:** Please notice we are running a preemptible instance (notice the '--preemptible' parameter in our command). A [preemptible GCP instance](https://cloud.google.com/compute/docs/instances/preemptible) is cheaper than traditional instances but it has two main disadvantages:
+### Preemptible instances:
+
+Please note we are running a preemptible instance (notice the '--preemptible' parameter in our command). A [preemptible GCP instance](https://cloud.google.com/compute/docs/instances/preemptible) is cheaper than traditional instances but it has two main disadvantages:
 
 1. It can be preempted (stopped) with a 30 second notice at any time due to high demand.
 2. It will always be stopped after 24 hours of continuous running.
