@@ -103,9 +103,9 @@ On more thing, if you want to update conda, you should write this in the termina
 
 ### Windows 10
 
-If you are a Linux or a Mac user, you already have access to a bash terminal, so you can skip to the next step. For Windows users, you will need to install it first. Note that this is only necessary if you don't use one of the ready-to-run option!
+For Windows users, you will need to install a terminal with the bash shell (Mac and Linux already have one). Note that this is only necessary if you don't use one of the ready-to-run Jupyter options for the course.
 
-We recommand WSL and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate Windows Subsystem for Linux with the following steps:
+We recommand Windows Subsystem for Linux (WSL) and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate WSL with the following steps:
 
 1. Open the Control Panel
 2. Select 'Programs'
