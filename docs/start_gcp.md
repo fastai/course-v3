@@ -11,7 +11,29 @@ This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0
 
 ## Pricing
 
-A `n1-highmem-8` preemptible instance in Google which is what we suggest is $0.12 per hour. Attaching a P4 GPU costs $0.26 per hour so both together amount to [$0.38 per hour](https://cloud.google.com/compute/pricing). We suggest getting a 200GB Standard Disk which costs an additional $9.6 a month.
+### Standard Compute
+
+A `n1-highmem-8` preemptible instance in Google which is what we suggest is $0.12 per hour. Attaching a P4 GPU costs $0.26 per hour so both together amount to **[$0.38 per hour](https://cloud.google.com/compute/pricing)**. 
+
+### Budget Compute
+
+If you have a tight budget you might want to go with a cheaper setup. In this case, we suggest a n1-highmem-4` preemptible instance ($0.09 per hour) with a K80 GPU ($0.14 per hour), with a total of **[$0.23 per hour](https://cloud.google.com/compute/pricing)**. 
+
+According to our benchmarks, a K80 is 84% slower than a P4 so this setup will roughly double your training time. If this is ok with you, you must follow the budget commands when creating your instance.
+
+### Storage
+
+In both cases, by getting our suggested 200GB Standard Disk storage size, there will be an **additional charge of [$9.6 a month](https://cloud.google.com/compute/pricing)**.
+
+### How much will you use this course
+
+Considering that the course requires 80 hours of homework plus the 2 hours of working through each lesson, we calculated roughly how much you would spend in the course with each of the setups.
+
+*Standard Compute* + *Storage*: (80+2\*7)\*$0.38 + $9.6*2 =  **$54.92**
+
+*Budget Compute* + *Storage*: (80+2\*7)\*$0.23 + $9.6*2 =  **$40.82**
+
+Even if you were to work on the course twice the time that we suggest as minimum, your expenditure would amount to **$90.64** which is less than 1/3 of the credits GCP gives you. Considering this, **we strongly suggest to go for the Standard Compute option**.
 
 ## Step 1: Creating your account
 
@@ -76,19 +98,21 @@ Your active configuration is: [default]
 
 ## Step 3: Create an instance
 
-To create the instance we recommend, just copy and paste the following command in your terminal. You can change \$INSTANCE_NAME to any name you want for your instance.
+To create the instance we recommend, just copy and paste the following command in your terminal. You can change \$INSTANCE_NAME to any name you want for your instance. 
+
+If you choose the budget compute option, please replace the values of the parameters on the lines with a 'budget:' comment (e.g. replace "n1-highmem-8" by "n1-highmem-4").
 
 ```bash
 export IMAGE_FAMILY="pytorch-1-0-cu92-experimental" # or "pytorch-1-0-cpu-experimental" for non-GPU instances
-export ZONE="us-west2-b"
+export ZONE="us-west2-b" # budget: "us-west1-b"
 export INSTANCE_NAME="my-fastai-instance"
-export INSTANCE_TYPE="n1-highmem-8"
+export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"
 gcloud compute instances create $INSTANCE_NAME \
         --zone=$ZONE \
         --image-family=$IMAGE_FAMILY \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-		--accelerator='type=nvidia-tesla-p4,count=1' \
+		--accelerator='type=nvidia-tesla-p4,count=1' \ # budget: 'type=nvidia-tesla-k80,count=1'
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
         --metadata='install-nvidia-driver=True' \
