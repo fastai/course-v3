@@ -1,32 +1,15 @@
 ---
-
 title: Terminal
 keywords: 
 sidebar: home_sidebar
-
-
 ---
-## Getting a terminal on Windows
 
-If you are a Linux or a Mac user, you already have access to a bash terminal. For Windows users, you will need to install it first. Note that this is only necessary if you don't use one of the ready-to-run option!
-
-We recommand WSL and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate Windows Subsystem for Linux with the following steps:
-
-1. Open the Control Panel
-2. Select 'Programs'
-3. Click on 'Turn Windows features on or off'
-4. Scroll and click next to 'Windows Subsystem for Linux'
-5. Reboot your computer
-
-<img alt="Turn WSL on" src="/images/terminal/wsl.png" class="screenshot">
-
-Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. 
+> NB: Windows users should look at the guide at the end of this document to install a terminal. Mac and Linux users already have one.
 
 ## General explanation of the terminal
 
 ### What is a terminal? 
 It’s a black screen that allows you to interact directly with your computer with some lines of code.
-
 
 <img alt="terminal" src="/images/terminal/what_is_a_terminal.png" class="screenshot">
 
@@ -116,4 +99,26 @@ On more thing, if you want to update conda, you should write this in the termina
 
 ---
 
-*Many thanks to Kevin Martell for writing this guide.*
+## Getting a terminal on Windows
+
+### Windows 10
+
+For Windows users, you will need to install a terminal with the bash shell (Mac and Linux already have one). Note that this is only necessary if you don't use one of the ready-to-run Jupyter options for the course.
+
+We recommand Windows Subsystem for Linux (WSL) and the [Ubuntu App](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6#activetab=pivot:overviewtab) for Windows 10 users. To install it, note that you first need to activate WSL with the following steps:
+
+1. Open the Control Panel
+2. Select 'Programs'
+3. Click on 'Turn Windows features on or off'
+4. Scroll and click next to 'Windows Subsystem for Linux'
+5. Reboot your computer
+
+<img alt="Turn WSL on" src="/images/terminal/wsl.png" class="screenshot">
+
+Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. Note that this is a full Ubuntu installation running inside Windows! So when installing software for use in this environment, you should follow steps for Ubuntu, not for Windows.
+
+### Windows XP, 7, and 8
+
+For older versions of Windows, we recommend installing [Cygwin](https://www.cygwin.com/). If you're using Google Cloud, you should install the Windows version, not the Ubuntu version.
+
+*Many thanks to Kevin Martell for writing the first draft of this guide.*
