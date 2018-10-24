@@ -41,7 +41,12 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 ```
 You can find more details on the installation process [here](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
 
-To install on MacOS, follow the instructions detailed in points 1 to 4 [here](https://cloud.google.com/sdk/docs/quickstart-macos).
+To install Google CLI on MacOS, in the terminal run
+
+``` 
+curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
+```
 
 In both cases, once the installation is done run this line
 ``` bash
@@ -160,10 +165,11 @@ To see how to open it again, update the course or the fastai library, go to the 
 + [Setting up PyTorch and Fast.ai in GCP](https://blog.kovalevskyi.com/google-compute-engine-now-has-images-with-pytorch-1-0-0-and-fastai-1-0-2-57c49efd74bb)
 + [Launching a PyTorch Deep Learning VM Instance](https://cloud.google.com/deep-learning-vm/docs/pytorch_start_instance)
 + [Google Cloud SDK Quickstart for Debian and Ubuntu](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
++ [Using the Google Cloud SDK installer](https://cloud.google.com/sdk/docs/downloads-interactive)
 + [Installing the latest Cloud SDK version](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version)
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
 + [sudo apt-get update && sudo apt-get install google-cloud-sdk cannot be done (StackOverflow answer)](https://stackoverflow.com/a/47908542/45963)
 
 ---
 
-*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi and Francisco Ingham for their contributions to this guide.*
+*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi, Francisco Ingham, and Jeff Hale for their contributions to this guide.*
