@@ -6,7 +6,7 @@ sidebar: home_sidebar
 
 ---
 # Welcome to Crestle.ai!
-![](./images/crestle/landing_page.png)
+<img alt="" src="/images/crestle/landing_page.png" class="screenshot">
 
 [Crestle.ai](https://www.crestle.ai/) is an effortless infrastructure for deep learning. Once you sign up you should be able to spin up a GPU enabled Jupyter notebook within a minute. There is no setup required on your part.
 
@@ -14,7 +14,7 @@ sidebar: home_sidebar
 
 crestle.ai comes bundled with fast.ai course setup, including all the datasets (~35 GB) required as part of the course. You can just dive right into the relevant notebook and start training!
 
-![](./images/crestle/jupyter_fast_ai_repo.png)
+<img alt="" src="/images/crestle/jupyter_fast_ai_repo.png" class="screenshot">
 
 ## Pricing
 
@@ -28,19 +28,19 @@ Our goal is to keep the costs as low as possible for students and fast.ai practi
 
 You also get 1 hour of free GPU usage when you sign up.
 
-![](./images/crestle/pricing.png)
+<img alt="" src="/images/crestle/pricing.png" class="screenshot">
 
 ## Getting started
 
 ### Step 1: Create a crestle.ai account
 Sign up for Crestle [here](https://www.crestle.ai/). Verify your email by clicking on the link Crestle emails you. Once you have verified, you can sing in to your account.
 
-![](./images/crestle/signup.png)
+<img alt="" src="/images/crestle/signup.png" class="screenshot">
 
 ### Step 2: Start your Jupyter notebook
 Once you login you can start your Jupyter notebook with a press of a button. You will not be billed until you start your Jupyter notebook.
 
-![](./images/crestle/start_jupyter.png)
+<img alt="" src="/images/crestle/start_jupyter.png" class="screenshot">
 
 ### Step 3: Navigate to fast.ai course
 Once you start the notebook your GPU instance should be ready within a minute. We have already setup fast.ai for you. The directory structure available for you out of the box is as below:
@@ -51,17 +51,17 @@ Once you start the notebook your GPU instance should be ready within a minute. W
         - course-v3
 ```
 
-![](./images/crestle/jupyter_fast_ai_repo.png)
+<img alt="" src="/images/crestle/jupyter_fast_ai_repo.png" class="screenshot">
 
 ### Step 4: The datasets are already there - start coding!
 
 We have already mounted the [datasets](http://course.fast.ai/datasets) required for this course. You don't have to download them. This is about 35 GB worth of data ready for you to train your models on.
 
-![](./images/crestle/datasets.png)
+<img alt="" src="/images/crestle/datasets.png" class="screenshot">
 
 You can navigate into the relevant notebook and start building.
 
-![](./images/crestle/lesson1.png)
+<img alt="" src="/images/crestle/lesson1.png" class="screenshot">
 
 ### Step 5: Stop the instance when you are done
 
@@ -69,7 +69,7 @@ You need to **stop the instance** when you are done. This ensures you are not ch
 
 Shutting down your instance will backup and snapshot the data from your home directory and will be avaible for you the next time you launch the instance.
 
-![](./images/crestle/stop_jupyter.png)
+<img alt="" src="/images/crestle/stop_jupyter.png" class="screenshot">
 
 ## What is installed?
 
