@@ -20,16 +20,16 @@ Here are some great choices of platforms. Click the link for more information on
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you.
 
-- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour, $10 free credit)
-- [Salamander](/start_salamander.html); (instant approval, no installation required, $0.36 an hour, $1 free credit)
-- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour)
+- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour + storage, $10 free credit)
+- [Salamander](/start_salamander.html); (instant approval, no installation required, $0.36 an hour + storage, $1 free credit)
+- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour + storage)
 
 #### Some installation required
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](/start_gcp.html) ($0.53 an hour, $300 free credit)
-- [Amazon Web Services EC2](/start_aws.html) ($0.9 an hour)
+- [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
+- [Amazon Web Services EC2](/start_aws.html) ($0.9 an hour + storage)
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
 

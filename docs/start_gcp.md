@@ -23,7 +23,7 @@ According to our benchmarks, a K80 is 84% slower than a P4 so this setup will ro
 
 ### Storage
 
-In both cases, by getting our suggested 200GB Standard Disk storage size, there will be an **additional charge of [$9.6 a month](https://cloud.google.com/compute/pricing)**.
+In both cases, by getting our suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of [$9.6 a month](https://cloud.google.com/compute/pricing)**.
 
 ### How much will you use this course
 
@@ -112,12 +112,14 @@ export IMAGE_FAMILY="pytorch-1-0-cu92-experimental" # or "pytorch-1-0-cpu-experi
 export ZONE="us-west2-b" # budget: "us-west1-b"
 export INSTANCE_NAME="my-fastai-instance"
 export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"
+
+# budget: 'type=nvidia-tesla-k80,count=1'
 gcloud compute instances create $INSTANCE_NAME \
         --zone=$ZONE \
         --image-family=$IMAGE_FAMILY \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-		--accelerator='type=nvidia-tesla-p4,count=1' \ # budget: 'type=nvidia-tesla-k80,count=1'
+		--accelerator='type=nvidia-tesla-p4,count=1' \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
         --metadata='install-nvidia-driver=True' \
@@ -160,15 +162,9 @@ You should make sure Github is configured and pull from the repository. You can 
 
 `cd tutorials/fastai`
 
-`git config --global user.name <your_username>`
-
-`git config --global user.email <your_Github_email>`
+`git checkout .`
 
 `git pull`
-
-Remember to replace your username and e-mail where they correspond.
-
-<img alt="git config" src="/images/gcp/git_config.png" class="screenshot">
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
 
