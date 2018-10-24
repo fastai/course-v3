@@ -123,7 +123,23 @@ If your instance is stopped, your saved data will be kept safe but if you are ru
 
 These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $0.68 an hour.
 
-## Step 4: Access fast.ai materials
+## Step 4: Configure Github and access fast.ai materials
+
+Now your command line which should show a prompt along the lines of `jupyter@my-fastai-instance:`
+
+You should make sure Github is configured and pull from the repository. You can do this by typing the following lines:
+
+`cd tutorials/fastai`
+
+`git config --global user.name <your_username>`
+
+`git config --global user.email <your_Github_email>`
+
+`git pull`
+
+Remember to replace your username and e-mail where they correspond.
+
+<img alt="git config" src="/images/gcp/git_config.png" class="screenshot">
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
 

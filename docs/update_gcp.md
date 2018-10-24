@@ -37,11 +37,11 @@ Once this is done, you can access your jupyter notebook at [localhost:8080/tree]
  To update the course repo, go in your terminal and run those two instructions:
 
 ``` bash
-cd course-v3
+cd tutorials/fastai
 git pull
-``` 
+```
 
-<img alt="" src="/images/gradient/update.png" class="screenshot">
+<img alt="git pull" src="/images/gcp/git_pull.png" class="screenshot">
 
 This should give you the latest of the course notebooks. If you modified some of the notebooks in course-v3/nbs directly, GitHub will probably throw you an error. You should type `git stash` to remove your local changes. Remember you should always work on a copy of the lesson notebooks.
 
