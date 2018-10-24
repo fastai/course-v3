@@ -4,7 +4,7 @@ keywords:
 sidebar: home_sidebar
 ---
 
-- NB: Windows users should look at the guide at the end of this document to install a terminal. Mac and Linux users already have one.
+> NB: Windows users should look at the guide at the end of this document to install a terminal. Mac and Linux users already have one.
 
 ## General explanation of the terminal
 
