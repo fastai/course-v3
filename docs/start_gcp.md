@@ -194,6 +194,6 @@ To see how to open it again, update the course or the fastai library, go to the 
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
 + [sudo apt-get update && sudo apt-get install google-cloud-sdk cannot be done (StackOverflow answer)
 
-*Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi and Francisco Ingham for their contributions to this guide.*
+
 =======
 *Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi, Francisco Ingham, and Jeff Hale for their contributions to this guide.*
