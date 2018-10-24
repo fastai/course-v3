@@ -11,7 +11,7 @@ This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0
 
 ## Pricing
 
-A `n1-highmem-8` preemtible instance in Google which is what we suggest is $0.1per hour. Attaching a P100 GPU costs $0.43 per hour so both together amount to [$0.53 per hour](https://cloud.google.com/compute/pricing).
+A `n1-highmem-8` preemptible instance in Google which is what we suggest is $0.12 per hour. Attaching a P4 GPU costs $0.26 per hour so both together amount to [$0.38 per hour](https://cloud.google.com/compute/pricing). We suggest getting a 200GB Standard Disk which costs an additional $9.6 a month.
 
 ## Step 1: Creating your account
 
@@ -80,15 +80,15 @@ To create the instance we recommend, just copy and paste the following command i
 
 ```bash
 export IMAGE_FAMILY="pytorch-1-0-cu92-experimental" # or "pytorch-1-0-cpu-experimental" for non-GPU instances
-export ZONE="us-west1-b"
+export ZONE="us-west2-b"
 export INSTANCE_NAME="my-fastai-instance"
-export INSTANCE_TYPE="n1-standard-8"
+export INSTANCE_TYPE="n1-highmem-8"
 gcloud compute instances create $INSTANCE_NAME \
         --zone=$ZONE \
         --image-family=$IMAGE_FAMILY \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-        --accelerator='type=nvidia-tesla-p100,count=1' \
+		--accelerator='type=nvidia-tesla-p4,count=1' \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
         --metadata='install-nvidia-driver=True' \
@@ -125,13 +125,7 @@ These characteristics make preemptible instances a nice option for beginners, si
 
 ## Step 4: Access fast.ai materials
 
-Run 
-```bash
-git clone https://github.com/fastai/course-v3
-```
-in your terminal to get a folder with all the fast.ai materials. 
-
-Next from your [jupyter notebook](http://localhost:8080/tree), click on 'course-v3' and you should look at something like this
+Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
 
 <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
