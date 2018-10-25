@@ -52,7 +52,7 @@ entries:
       title: AWS EC2
       url: /update_aws.html
     - output: web
-      title: AWS EC2
+      title: Crestle
       url: /update_crestle.html
   - title: fastai v1
     output: web
