@@ -46,7 +46,7 @@ The project on which you are going to run the image needs to be linked with your
 
 ## Step 2: Install Google CLI
 
-To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial.html) and follow the same instructions as Ubuntu users (remember you paste with shift + right click in the terminal). 
+To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial.html) and follow the same instructions as Ubuntu users (see the link to learn how to paste into your terminal). 
 
 To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
 ``` bash
@@ -120,10 +120,10 @@ gcloud compute instances create $INSTANCE_NAME \
         --image-family=$IMAGE_FAMILY \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-        --accelerator='type=nvidia-tesla-p4,count=1' \
+        --accelerator="type=nvidia-tesla-p4,count=1" \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
-        --metadata='install-nvidia-driver=True' \
+        --metadata="install-nvidia-driver=True" \
         --preemptible
 ```
 
