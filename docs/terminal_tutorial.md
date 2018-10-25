@@ -115,7 +115,11 @@ We recommand Windows Subsystem for Linux (WSL) and the [Ubuntu App](https://www.
 
 <img alt="Turn WSL on" src="/images/terminal/wsl.png" class="screenshot">
 
-Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. Note that this is a full Ubuntu installation running inside Windows! So when installing software for use in this environment, you should follow steps for Ubuntu, not for Windows.
+Once this is done, you just have to install Ubuntu from the Windows Store and launch the app. Note that this is a full Ubuntu installation running inside Windows! So when installing software for use in this environment, you should follow steps for Ubuntu, not for Windows. It's very useful to be able to copy/paste with keyboard shortcuts in your WSL terminal; here's how to enable that:
+
+1. Right click on the title bar
+2. Click “Properties”
+3. Check “Use ctrl+shift+c/v as Copy/Paste”.
 
 ### Windows XP, 7, and 8
 
