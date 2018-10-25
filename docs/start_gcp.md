@@ -192,6 +192,6 @@ To see how to open it again, update the course or the fastai library, go to the 
 + [Installing the latest Cloud SDK version](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version)
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
 
-=======
+---
 
 *Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi, Francisco Ingham, and Jeff Hale for their contributions to this guide.*
