@@ -120,7 +120,7 @@ gcloud compute instances create $INSTANCE_NAME \
         --image-family=$IMAGE_FAMILY \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-		--accelerator='type=nvidia-tesla-p4,count=1' \
+        --accelerator='type=nvidia-tesla-p4,count=1' \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
         --metadata='install-nvidia-driver=True' \
@@ -191,8 +191,7 @@ To see how to open it again, update the course or the fastai library, go to the 
 + [Using the Google Cloud SDK installer](https://cloud.google.com/sdk/docs/downloads-interactive)
 + [Installing the latest Cloud SDK version](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version)
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
-+ [sudo apt-get update && sudo apt-get install google-cloud-sdk cannot be done (StackOverflow answer)
-
 
 =======
+
 *Many thanks to Marcel Ackermann, Antonio Rueda Toicen, Viacheslav Kovalevskyi, Francisco Ingham, and Jeff Hale for their contributions to this guide.*
