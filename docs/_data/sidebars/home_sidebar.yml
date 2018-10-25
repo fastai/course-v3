@@ -1,35 +1,59 @@
 entries:
 - folders:
-  - title: FAQ
-    output: web
-    folderitems:
-    - title: FAQ
-      url: /FAQ
-      output: web 
-  - title: Tutorials  
+  - title: Getting started
     output: web
     folderitems:
     - output: web
-      title: Terminal
-      url: /terminal_tutorial
+      title: Overview
+      url: /index.html
     - output: web
-      title: GPU
-      url: /gpu_tutorial
+      title: Terminal tutorial
+      url: /terminal_tutorial.html
+    - output: web
+      title: Intro to GPUs
+      url: /gpu_tutorial.html
   - title: Server setup
     output: web
     folderitems:
     - output: web
+      title: Gradient (Easy)
+      url: /start_gradient.html
+    - output: web
+      title: Salamander (Easy)
+      url: /start_salamander.html
+    - output: web
+      title: SageMaker (Harder)
+      url: /start_sagemaker.html
+    - output: web
+      title: Google Cloud (Advanced)
+      url: /start_gcp.html
+    - output: web
+      title: AWS EC2 (Advanced)
+      url: /start_aws.html
+    - output: web
+      title: Crestle.ai (testing)
+      url: /start_crestle.html
+  - title: Returning to work
+    output: web
+    folderitems:
+    - output: web
       title: Gradient
-      url: /gradient_tutorial
+      url: /update_gradient.html
     - output: web
       title: Salamander
-      url: /salamander_tutorial
+      url: /update_salamander.html
+    - output: web
+      title: SageMaker
+      url: /update_sagemaker.html
     - output: web
       title: Google Cloud
-      url: /gcp_tutorial
+      url: /update_gcp.html
     - output: web
-      title: AWS (EC2)
-      url: /dlami_tutorial
+      title: AWS EC2
+      url: /update_aws.html
+    - output: web
+      title: Crestle
+      url: /update_crestle.html
   - title: fastai v1
     output: web
     folderitems:
@@ -39,4 +63,3 @@ entries:
     - output: web
       title: readme
       external_url: https://github.com/fastai/fastai/blob/master/README.md
-
