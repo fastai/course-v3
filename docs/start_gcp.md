@@ -157,7 +157,7 @@ If your instance is stopped, your saved data will be kept safe but if you are ru
 
 These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $0.68 an hour.
 
-## Step 4: Configure Github and access fast.ai materials
+## Step 4: Access fast.ai materials and update packages
 
 Now your command line which should show a prompt along the lines of `jupyter@my-fastai-instance:`
 
@@ -173,7 +173,17 @@ Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutoria
 
 <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
-Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+Now click on 'New' in the upper right corner of your screen and 'Terminal':
+
+<img alt="terminal" src="/images/terminal.png" class="screenshot">
+
+This will open a new window with a terminal. You should type the following commands to update your packages:
+
+`conda update conda`
+
+`conda install -c fastai fastai`
+
+Once you have run these two commands close the window and go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 5: Stop an instance
 

@@ -53,7 +53,17 @@ Once you start the notebook your GPU instance should be ready within a minute. W
 
 <img alt="" src="/images/crestle/jupyter_fast_ai_repo.png" class="screenshot">
 
-### Step 4: The datasets are already there - start coding!
+### Step 4: Update your packages
+
+Before you start working you will need to update your packages. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'. Once you click on 'Terminal' you should type the following commands:
+
+`conda update conda`
+
+ `conda install -c fastai fastai`
+
+<img alt="terminal" src="/images/terminal.png" class="screenshot">
+
+### Step 5: The datasets are already there - start coding!
 
 We have already mounted the [datasets](http://course.fast.ai/datasets) required for this course. You don't have to download them. This is about 35 GB worth of data ready for you to train your models on.
 
@@ -63,7 +73,7 @@ You can navigate into the relevant notebook and start building.
 
 <img alt="" src="/images/crestle/lesson1.png" class="screenshot">
 
-### Step 5: Stop the instance when you are done
+### Step 6: Stop the instance when you are done
 
 You need to **stop the instance** when you are done. This ensures you are not charged for time you are not spending training or coding. The stop button is located the top. You will be able to start your Jupyter instance as described in Step 2 any time.
 

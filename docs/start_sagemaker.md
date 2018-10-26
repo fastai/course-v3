@@ -139,7 +139,19 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 1. Click on the *course-v3* folder, and your screen should look like this:
 
     <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
-    
+
+1. On the upper right corner of your screen click on 'New' and 'Terminal'. A new window will open up.
+
+    <img alt="terminal" src="/images/terminal.png" class="screenshot">
+
+     You will need to type the following commands:
+
+    `conda update conda`
+
+    `conda install -c fastai fastai`
+
+    Once you have run these two commands close the window. 
+
 1. When you start the notebook, if prompted (not expected if all is well) to select a kernel choose *Python 3*. If you aren't prompted, you can verify the kernel name on the top right hand side, you can change the attahed kernel through the menu *Kernel > Change Kernel*
 
 1. Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.

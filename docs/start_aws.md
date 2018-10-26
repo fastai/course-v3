@@ -127,6 +127,7 @@ in your terminal to get a folder with all the fast.ai materials.
 Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
 
 ``` bash
+conda update conda
 conda install -c pytorch pytorch-nightly cuda92
 conda install -c fastai torchvision-nightly
 conda install -c fastai fastai
