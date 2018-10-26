@@ -12,19 +12,19 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
 
 1. xxx
 
-    <img alt="stop" src="/images/aws/01.png" class="screenshot">
+    <img alt="stop" src="/images/colab/01.png" class="screenshot">
 
 1. xxx
 
-    <img alt="stop" src="/images/aws/02.png" class="screenshot">
+    <img alt="stop" src="/images/colab/02.png" class="screenshot">
 
 1. xxx
 
-    <img alt="stop" src="/images/aws/03.png" class="screenshot">
+    <img alt="stop" src="/images/colab/03.png" class="screenshot">
 
 1. xxx
 
-    <img alt="stop" src="/images/aws/04.png" class="screenshot">
+    <img alt="stop" src="/images/colab/04.png" class="screenshot">
 
     ...details...
 
