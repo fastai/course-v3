@@ -21,7 +21,7 @@ It so happens that Deep Learning also requires super fast matrix computations. S
 
 Deep Learning really only cares about the number of Floating Point Operations (FLOPs) per second. GPUs are highly optimized for that. 
 
-<img alt="gpu_cpu_comparison" src="/images/gpu_tutorial/gpu_cpu_comparison.png" class="screenshot">
+<img alt="gpu_cpu_comparison" src="/images/gpu/gpu_cpu_comparison.png" class="screenshot">
 
 In the chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But do not take our word for it!**  
 
@@ -49,7 +49,6 @@ We recommend you to use an NVIDIA GPU since they are currently the best out ther
 2. Native Pytorch support for CUDA
 
 3. Highly optimized for deep learning with cuDNN
-
 
 ---
 
