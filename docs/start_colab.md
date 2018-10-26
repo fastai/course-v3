@@ -35,11 +35,11 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
     !curl http://course-v3.fast.ai/setup/colab | bash
     ```
 
-    <img alt="create" src="/images/sagemaker/05.png" class="screenshot">
+    <img alt="create" src="/images/colab/05.png" class="screenshot">
 
 1. xxx
 
-    <img alt="create" src="/images/sagemaker/06.png" class="screenshot">
+    <img alt="create" src="/images/colab/06.png" class="screenshot">
 
 ### Saving your work
 
