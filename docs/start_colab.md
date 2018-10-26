@@ -37,17 +37,13 @@ If you are returning to work and have previously completed the steps below, plea
 
     <img alt="create" src="/images/colab/05.png" class="screenshot">
 
-    If you a face a pop-up saying 'Warning: This notebook was not authored by Google' you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
+1. If you a face a pop-up saying 'Warning: This notebook was not authored by Google' you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
 
     <img alt="stop" src="/images/colab/02.png" class="screenshot">
 
-    On the new window click 'Yes'.
+1. On the new window click 'Yes'.
 
     <img alt="stop" src="/images/colab/08.png" class="screenshot">
-
-2. When using Google Colab you are sharing the GPU memory with other users so although you are using an 8GB Tesla K80 GPU, you will usually have less memory available.  This means that you will need to decrease your batch size to avoid memory errors. Just edit the batch size line in the notebook to your desired batch size:
-
-    <img alt="create" src="/images/colab/06.png" class="screenshot">
 
 ### Step 3: Saving your work
 
@@ -60,3 +56,4 @@ Click on 'SAVE A COPY IN DRIVE'. This will open up a new tab with the same file,
 ## More help
 
 For questions or issues related to course content, we recommend posting in the [fast.ai forum](http://forums.fast.ai/).
+
