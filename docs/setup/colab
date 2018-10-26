@@ -3,7 +3,8 @@ pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cu92/torch
 pip install pillow==4.1.1 fastai --upgrade
 git clone https://github.com/fastai/course-v3 2> /dev/null || (cd course-v3 ; git pull)
 
-echo 'tmpfs /dev/shm tmpfs defaults,size=12g 0 0' >> /etc/fstab
+sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=12g 0 0' -i /etc/fstab
+# echo 'tmpfs /dev/shm tmpfs defaults,size=12g 0 0' >> /etc/fstab
 mount -o remount /dev/shm
 
 mkdir -p /root/.torch/models
