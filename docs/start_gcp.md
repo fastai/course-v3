@@ -163,27 +163,23 @@ Now your command line which should show a prompt along the lines of `jupyter@my-
 
 You should make sure Github is configured and pull from the repository. You can do this by typing the following lines:
 
-`cd tutorials/fastai`
+``` basg
+cd tutorials/fastai
+git checkout .
+git pull
+```
 
-`git checkout .`
+You should also update the fastai library:
 
-`git pull`
+``` bash
+sudo /opt/anaconda3/bin/conda update fastai
+```
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
 
 <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
-Now click on 'New' in the upper right corner of your screen and 'Terminal':
-
-<img alt="terminal" src="/images/terminal.png" class="screenshot">
-
-This will open a new window with a terminal. You should type the following commands to update your packages:
-
-`conda update conda`
-
-`conda install -c fastai fastai`
-
-Once you have run these two commands close the window and go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+Now go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 5: Stop an instance
 

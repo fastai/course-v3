@@ -144,13 +144,14 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     <img alt="terminal" src="/images/terminal.png" class="screenshot">
 
-     You will need to type the following commands:
+     You will need to type the following commands to update the fastai library:
 
-    `conda update conda`
+    ``` bash
+    source activate SageMaker/envs/fastai
+    conda update fastai
+    ```
 
-    `conda install -c fastai fastai`
-
-    Once you have run these two commands close the window. 
+    Once you have run these two commands close the terminal window. 
 
 1. When you start the notebook, if prompted (not expected if all is well) to select a kernel choose *Python 3*. If you aren't prompted, you can verify the kernel name on the top right hand side, you can change the attahed kernel through the menu *Kernel > Change Kernel*
 
