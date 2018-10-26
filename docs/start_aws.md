@@ -136,7 +136,7 @@ conda install -c fastai fastai
 Next move into the directory where you will find the materials for the course by running:
 
 ``` bash
-cd course-v3/nbs
+cd course-v3/nbs/dl1
 ```
 
 Finally run
@@ -145,11 +145,12 @@ jupyter notebook
 ```
 in your terminal, and you can access the notebook at [localhost:8888](http://localhost:8888).
 
-Click on the *course-v3* folder, and your screen should look like this:
-
-<img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
-
 Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+
+If you have any problem while using the `fastai` library try running
+```
+conda update fastai
+```
 
 ## Step 7: Stop your instance when you are done
 
@@ -159,9 +160,7 @@ When you finish working you must go back to your [AWS console](https://us-west-2
 
 To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_aws.html).
 
-If you no longer want to use that instance again, you can just terminate it. This means you will never be able to access the information in it, so be careful. To terminate an instance just choose terminate instead of stop.
-
-<img alt="terminate" src="/images/aws/terminate.png" class="screenshot">
+Note that you should press *Stop*, not *Terminate*. If you press *Terminate* it will remove your instance entirely and you will lose your work.
 
 ## References
 
@@ -169,4 +168,4 @@ https://aws.amazon.com/getting-started/tutorials/get-started-dlami/
 
 ---
 
-*Many thanks to Francisco Ingham for writing this guide.*
+*Many thanks to Francisco Ingham for writing the initial version of this guide.*
