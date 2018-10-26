@@ -18,7 +18,7 @@ crestle.ai comes bundled with fast.ai course setup, including all the datasets (
 
 ## Pricing
 
-Crestle uses AWS [p2.xlarge _spot_](https://aws.amazon.com/ec2/instance-types/p2/) instances to provision a GPU instance. Using spot instance allows us to keep the costs low. We are hosted on multiple AWS regions thus providing a better guarantee on availability of instances.
+Crestle uses Google Cloud Platform's [n1-highmem-8](https://cloud.google.com/compute/docs/machine-types) instances to provision a GPU instance. Using spot instance allows us to keep the costs low. We are hosted on multiple GCP regions thus providing a better guarantee on availability of instances.
 Every GPU-enabled notebook is backed by a dedicated [NVIDIA Tesla K80 GPU](https://www.nvidia.com/en-us/data-center/tesla-k80/).
 
 Our goal is to keep the costs as low as possible for students and fast.ai practitioners. At the time of this writing we are charging:
