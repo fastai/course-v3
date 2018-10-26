@@ -9,6 +9,8 @@ sidebar: home_sidebar
 
 It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, you can jump straight to Jupyter Notebook or connect directly via ssh.
 
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_salamander.html) section.
+
 ## Pricing
 
 Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:

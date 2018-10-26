@@ -4,7 +4,11 @@ keywords:
 sidebar: home_sidebar
 ---
 
-This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using AWS SageMaker. **NB: There is a temporary issue where data downloaded for training models, and saved models, are not saved after you shut down your instance. This will be resolved in a couple of weeks.**
+This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using AWS SageMaker. 
+
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_sagemaker.html) section.
+
+**NB: There is a temporary issue where data downloaded for training models, and saved models, are not saved after you shut down your instance. This will be resolved in a couple of weeks.**
 
 ## Pricing
 

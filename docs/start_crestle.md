@@ -10,6 +10,8 @@ sidebar: home_sidebar
 
 [Crestle.ai](https://www.crestle.ai/) is an effortless infrastructure for deep learning. Once you sign up you should be able to spin up a GPU enabled Jupyter notebook within a minute. There is no setup required on your part.
 
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_crestle.html) section.
+
 ## Using crestle.ai for fast.ai v3 course
 
 crestle.ai comes bundled with fast.ai course setup, including all the datasets (~35 GB) required as part of the course. You can just dive right into the relevant notebook and start training!
