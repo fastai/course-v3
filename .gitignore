@@ -128,4 +128,4 @@ Thumbs.db
 examples/.last_checked
 
 # symlinks to fastai
-examples/fastai
+nbs/dl1/fastai
