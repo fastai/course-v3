@@ -166,7 +166,7 @@ Now your command line which should show a prompt along the lines of `jupyter@my-
 You should make sure Github is configured and pull from the repository. You can do this by typing the following lines:
 
 ``` basg
-cd tutorials/fastai
+cd tutorials/fastai/course-v3
 git checkout .
 git pull
 ```
