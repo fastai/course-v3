@@ -2,7 +2,7 @@
 if [ ! -d "$DIRECTORY" ]; then
         pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cu92/torch_nightly.html --upgrade
 
-        sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=12g 0 0' -i /etc/fstab
+        sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=1g 0 0' -i /etc/fstab
         # echo 'tmpfs /dev/shm tmpfs defaults,size=12g 0 0' >> /etc/fstab
         mount -o remount /dev/shm
 
