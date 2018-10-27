@@ -22,7 +22,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
 1. Visit the [AWS webpage](https://aws.amazon.com/) and click on 'Sign In to the Console'. Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up.
 
-    <img alt="stop" src="/images/aws/signin.png" class="screenshot">
+    <img alt="signin" src="/images/aws/signin.png" class="screenshot">
 
     If you do not have an account, the button to press will say 'Sign up' instead of 'Sign in to the Console'. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
@@ -41,23 +41,23 @@ EU (Frankfurt) Region | eu-central-1 | [![CloudFormation](/images/aws/cfn-launch
 
 1. This will open the AWS CloudFormation web console with the template to create the AWS resources already loaded as per the screenshot below. You only need to enter 3 input parameters: one for the Notebook instance type (default value is *ml.p2.xlarge*), another for the fastai libaray version (default value is *1.0*) and finally your email address to receive an notification email when the fastai library is installed on your notebook instance and ready for use. Tick the option box to acknowledge that IAM resources will be created and then click the *Create* button to create the stack.
 
-    <img alt="stop" src="/images/sagemaker/cfn_create_stack.png" class="screenshot">
+    <img alt="create_stack" src="/images/sagemaker/cfn_create_stack.png" class="screenshot">
 
 You will see the following CloudFormation page showing the stack is being created.
 
-<img alt="stop" src="/images/sagemaker/cfn_stack_detail_in_progress.png" class="screenshot">
+<img alt="in_progress" src="/images/sagemaker/cfn_stack_detail_in_progress.png" class="screenshot">
 
 1. While your Cloudformation stack is creating the AWS resources, you will receive an SNS subscription confirmation email to the email address supplied in the input parameters to the CloudFormation stack similar to the screenshot below. Once you receive the email, click the *Confirm subscription* link. You need to do this to receive the notification email when the fast.ai library has been installed correctly. 
 
-    <img alt="stop" src="/images/sagemaker/confirm_sub.png" class="screenshot">
+    <img alt="confirm_sub" src="/images/sagemaker/confirm_sub.png" class="screenshot">
 
 1. Wait for up to 15 minutes to have the fast.ai library and dependencies installed on the SageMaker notebook instance. When it has done you will receive an email with a *tinyurl.com* link to open the Jupyter console of the notebook instance as per the screenshot below. 
 
-    <img alt="stop" src="/images/sagemaker/email_notification_ready.png" class="screenshot">
+    <img alt="email" src="/images/sagemaker/email_notification_ready.png" class="screenshot">
 
 1. You should now have the Jupyter console opened with a screen similar to the one shown below.
 
-    <img alt="stop" src="/images/sagemaker/jupyter_nb.png" class="screenshot">
+    <img alt="jupyter" src="/images/sagemaker/jupyter_nb.png" class="screenshot">
 
 1. When you start the notebook, if prompted (not expected if all is well) to select a kernel choose *Python 3*. If you aren't prompted, you can verify the kernel name on the top right hand side, you can change the attahed kernel through the menu *Kernel > Change Kernel*
 
