@@ -1,0 +1,54 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/python?view=vsts
+
+# Capabilities and limitations:
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=vsts&tabs=yaml#capabilities-and-limitations
+# - Provide at least 10 GB of storage for your source and build outputs.
+# - Can run jobs for up to 360 minutes (6 hours).
+
+# Notes on pipeline definitions:
+#
+# the number after @ in task definition indicates the azure internal version of the specific task, e.g:
+# - task: CondaEnvironment@1
+# means use azure's CondaEnvironment's version 1, so need to check the docs for each specific task's desired (usually latest) version. If later 1.2 is released then use:
+# - task: CondaEnvironment@1.2
+# instead
+#
+# job name must match r'\w+' (no '-', but '_' ok)
+#
+# Build environments: Available vmImage values: 'Ubuntu-16.04', 'macOS-10.13', 'VS2017-Win2016'
+#
+
+jobs:
+
+##################
+### nbstripout ###
+##################
+
+
+- job: 'nbstripout_config'
+
+  pool:
+    vmImage: 'Ubuntu-16.04'
+
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.6'
+      architecture: 'x64'
+
+    # check that notebooks are stripped out. if they aren't that means the committer doesn't have the correct configuration for the stripout filter.
+  - script: |
+      echo "Check we are starting with clean git checkout"
+      if [ -n "$(git status -uno -s)" ]; then echo "git status is not clean"; false; fi
+
+      echo "Trying to strip out notebooks"
+      tools/fastai-nbstripout -d nbs/dl1/*ipynb
+
+      echo "Check that strip out was unnecessary"
+      git status -s # display the status to see which nbs need cleaning up
+      if [ -n "$(git status -uno -s)" ]; then echo -e "!!! Detected unstripped out notebooks\n!!!Remember to run tools/run-after-git-clone"; false; fi
+    displayName: 'Detect unstripped out notebook commits'
+    continueOnError: false
