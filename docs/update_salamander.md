@@ -48,7 +48,7 @@ To update the fastai library, open the terminal like before and type
 
 ```bash
 source activate fastai
-conda update fastai
+conda install -c fastai fastai
 ```
 
 ### Stop your instance

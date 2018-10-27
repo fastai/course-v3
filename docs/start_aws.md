@@ -151,7 +151,7 @@ Go back to the [first page](index.html) to see how to use this jupyter notebook 
 
 If you have any problem while using the `fastai` library try running
 ```
-conda update fastai
+conda install -c fastai fastai
 ```
 
 ## Step 7: Stop your instance when you are done

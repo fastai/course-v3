@@ -174,7 +174,7 @@ git pull
 You should also update the fastai library:
 
 ``` bash
-sudo /opt/anaconda3/bin/conda update fastai
+sudo /opt/anaconda3/bin/conda install -c fastai fastai
 ```
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this

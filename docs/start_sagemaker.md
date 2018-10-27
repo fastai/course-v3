@@ -152,7 +152,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     ``` bash
     source activate SageMaker/envs/fastai
-    conda update fastai
+    conda install -c fastai fastai
     ```
 
     Once you have run these two commands close the terminal window. 

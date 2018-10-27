@@ -54,7 +54,7 @@ Once you click on 'Terminal' a new window should open with a terminal. Type:
 
 ``` bash
 source activate fastai
-conda update fastai
+conda install -c fastai fastai
 ```
 
 Now you should close the terminal window.
