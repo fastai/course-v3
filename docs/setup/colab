@@ -13,7 +13,7 @@ if [ ! -d course-v3 ]; then
         git clone https://github.com/fastai/course-v3
 fi
 
-pip install pillow==4.1.1 fastai --upgrade
+pip install pillow fastai --upgrade
 cd course-v3
 git pull
 
