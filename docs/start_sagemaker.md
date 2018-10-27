@@ -44,7 +44,6 @@ EU (Frankfurt) Region | eu-central-1 | [![CloudFormation](/images/aws/cfn-launch
     <img alt="create_stack" src="/images/sagemaker/cfn_create_stack.png" class="screenshot">
 
 You will see the following CloudFormation page showing the stack is being created.
-
     <img alt="in_progress" src="/images/sagemaker/cfn_stack_detail_in_progress.png" class="screenshot">
 
 1. While your Cloudformation stack is creating the AWS resources, you will receive an SNS subscription confirmation email to the email address supplied in the input parameters to the CloudFormation stack similar to the screenshot below. Once you receive the email, click the *Confirm subscription* link. You need to do this to receive the notification email when the fast.ai library has been installed correctly. 
