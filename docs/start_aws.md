@@ -51,7 +51,7 @@ While you wait, get on the third step.
 
 For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](/terminal_tutorial.html).
 
-Once in your terminal, type keygen then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
+Once in your terminal, type `ssh-keygen` then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
 
 On Windows, you will need to copy this public key in a Windows directory to easily access it (since it's created in the WSL home folder). The following line will copy it in 'C:\Temp', feel free to replace Temp with any directory you prefer.
 ``` bash
