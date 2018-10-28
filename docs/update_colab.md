@@ -23,7 +23,7 @@ If you want to open a new course notebook you have not worked on before, click o
 To update packages and the course repo, create a code cell in your notebook and run:
 
 ```bash
-!curl http://course-v3.fast.ai/setup/colab_update | bash
+!curl http://course-v3.fast.ai/setup/colab | bash
 ```
 
 <img alt="" src="/images/colab/07.png" class="screenshot">
