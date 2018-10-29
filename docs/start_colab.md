@@ -32,7 +32,7 @@ If you are returning to work and have previously completed the steps below, plea
 1. Before you start using your notebook, you need to install the necessary packages. You can do this by creating a code cell, and running:
 
     ```bash
-     !curl http://course-v3.fast.ai/setup/colab | bash
+     !curl https://course-v3.fast.ai/setup/colab | bash
     ```
 
     <img alt="create" src="/images/colab/05.png" class="screenshot">
