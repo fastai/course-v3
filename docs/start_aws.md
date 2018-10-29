@@ -33,7 +33,7 @@ If you just created your account, you'll need to ask for an increase limit in th
 
 <img alt="amiubuntu" src="/images/aws/ec2.png" class="screenshot">
 
-Then on the left bar, choose Limits, then scroll trhough the list until you find p2.xlarge. You can skip this step if your limit is already 1 or more, otherwise click on 'Request limit increase'.
+Then on the left bar, choose Limits, then scroll through the list until you find p2.xlarge. You can skip this step if your limit is already 1 or more, otherwise click on 'Request limit increase'.
 
 <img alt="limit" src="/images/aws/request_limit.png" class="screenshot">
 
@@ -51,14 +51,19 @@ While you wait, get on the third step.
 
 For this step, you'll need a terminal. This requires an extra installation on Windows which is all described in this [separate tutorial](/terminal_tutorial.html).
 
-Once in your terminal, type keygen then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
+Once in your terminal, type 'ssh-keygen' then press return three times. This will create a directory named .ssh/ with two files in it, 'id_rsa' and 'id_rsa.pub'. The first one is your private key and you should keep it safe, the second one is your public key, that you will transmit to people you want to securely communicate with (in our case AWS).
 
 On Windows, you will need to copy this public key in a Windows directory to easily access it (since it's created in the WSL home folder). The following line will copy it in 'C:\Temp', feel free to replace Temp with any directory you prefer.
 ``` bash
 cp .ssh/id_rsa.pub /mnt/c/Temp/
 ```
 
-Once this is done, go back to the AWS console, click on 'Services' and then 'EC2'.
+Once you have made your ssh key, go back to the AWS console and make sure you are in the region in which you have requested your service limit increase. You can tell where you are by looking at the web address of your console. 
+  For example https://us-west-2.console.aws.amazon.com/ is the Oregon region
+  While:      https://ap-south-1.console.aws.amazon.com/ is the Mumbai region
+You can change your region by choosing from the dropdown list to the right of your username in the top right corner of your screen.
+
+Again, click on 'Services' and then 'EC2'.
 
 <img alt="amiubuntu" src="/images/aws/ec2.png" class="screenshot">
 
