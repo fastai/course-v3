@@ -45,6 +45,14 @@ If you are returning to work and have previously completed the steps below, plea
 
     <img alt="stop" src="/images/colab/08.png" class="screenshot">
 
+1. Delete, if any, cells that contain:
+
+    ```bash
+    %reload_ext autoreload
+    %autoreload 2
+    %matplotlib inline
+    ```
+
 ### Step 3: Saving your work
 
 If you opened a notebook from Github, you will need to save your work to Google Drive. You can do this by clicking on 'File' and then 'Save'. You should see a pop-up with the following message:

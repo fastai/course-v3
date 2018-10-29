@@ -23,12 +23,20 @@ If you want to open a new course notebook you have not worked on before, click o
 To update packages and the course repo, create a code cell in your notebook and run:
 
 ```bash
-!curl http://course-v3.fast.ai/setup/colab_update | bash
+!curl http://course-v3.fast.ai/setup/colab | bash
 ```
 
 <img alt="" src="/images/colab/07.png" class="screenshot">
 
 Colab terminates your instance after 90 minutes of idle time or after 12 hours of runtime (see [here](https://help.clouderizer.com/running-on-cloud/google-colab/google-colab-faqs)). This script will check if your instance has been terminated and install packages and clone repository again if it has. If it has not (you have been away for less than 90 minutes) the script will just update the packages and repository.
+
+If your notebook has these cells in the top you should delete them before you start working:
+
+```bash
+%reload_ext autoreload
+%autoreload 2
+%matplotlib inline
+```
 
 ### Step 3: Saving your work
 

@@ -1,9 +1,9 @@
 #!/bin/bash
-if [ ! -d "$DIRECTORY" ]; then
+if [ ! -d course-v3 ]; then
+        pip install pillow==4.1.1 --upgrade
         pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cu92/torch_nightly.html --upgrade
 
-        sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=12g 0 0' -i /etc/fstab
-        # echo 'tmpfs /dev/shm tmpfs defaults,size=12g 0 0' >> /etc/fstab
+        sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=1g 0 0' -i /etc/fstab
         mount -o remount /dev/shm
 
         mkdir -p /root/.torch/models
@@ -14,7 +14,7 @@ if [ ! -d "$DIRECTORY" ]; then
         git clone https://github.com/fastai/course-v3
 fi
 
-pip install pillow==4.1.1 fastai --upgrade
+pip install fastai --upgrade
 cd course-v3
 git pull
 

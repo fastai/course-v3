@@ -166,7 +166,7 @@ Now your command line which should show a prompt along the lines of `jupyter@my-
 You should make sure Github is configured and pull from the repository. You can do this by typing the following lines:
 
 ``` basg
-cd tutorials/fastai
+cd tutorials/fastai/course-v3
 git checkout .
 git pull
 ```
@@ -174,7 +174,7 @@ git pull
 You should also update the fastai library:
 
 ``` bash
-sudo /opt/anaconda3/bin/conda update fastai
+sudo /opt/anaconda3/bin/conda install -c fastai fastai
 ```
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
