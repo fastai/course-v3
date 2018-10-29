@@ -110,6 +110,10 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     <img alt="config" src="/images/sagemaker/12.png" class="screenshot">
 
+1. In the *Volume Size in GB - optional* section, enter a volume size between 15 and 25 GB (we recommend 25 GB).
+
+    <img alt="config" src="/images/sagemaker/24.png" class="screenshot">
+
 1. Check that your selections now look like this:
 
     <img alt="summary" src="/images/sagemaker/13.png" class="screenshot">
