@@ -22,6 +22,9 @@ entries:
       title: Salamander (Easy)
       url: /start_salamander.html
     - output: web
+      title: FloydHub (Easy)
+      url: /start_floydhub.html
+    - output: web
       title: Colab (Harder)
       url: /start_colab.html
     - output: web
@@ -45,6 +48,9 @@ entries:
     - output: web
       title: Salamander
       url: /update_salamander.html
+    - output: web
+      title: FloydHub
+      url: /update_floydhub.html
     - output: web
       title: Colab
       url: /update_colab.html
