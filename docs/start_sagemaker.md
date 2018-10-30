@@ -8,56 +8,158 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_sagemaker.html) section.
 
-We will use [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to provision the AWS resources needed including the SageMaker notebook instance and associated Notebook Lifecycle Configs, IAM role and an SNS topic. The SNS topic is used to alert you when the SageMaker Notebook has all the necessary fast.ai libraries installed and is ready for use.
-
 **NB: There is a temporary issue where data downloaded for training models, and saved models, are not saved after you shut down your instance. This will be resolved in a couple of weeks.**
 
 ## Pricing
 
-The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  You will need to explicitely request a limit request to use this instance or the ml.p3.2xlarge instance, [here](https://course-v3.fast.ai/start_aws.html#step-2-request-service-limit ) Instances must be stopped to end billing.
+The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  You will need to explicitely request a limit request to use this instance, [here](https://course-v3.fast.ai/start_aws.html#step-2-request-service-limit ) Instances must be stopped to end billing.
 
 ## Getting Set Up
 
-### Creating the AWS resources via CloudFormation
+### Accessing SageMaker
 
 1. Visit the [AWS webpage](https://aws.amazon.com/) and click on 'Sign In to the Console'. Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up.
 
-    <img alt="signin" src="/images/aws/signin.png" class="screenshot">
+    <img alt="stop" src="/images/aws/signin.png" class="screenshot">
 
     If you do not have an account, the button to press will say 'Sign up' instead of 'Sign in to the Console'. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
-1. Once you have an account and are logged in, click the *Launch Stack* button for the closest region to where you live in the table below. 
+1. Once you have an account and are logged in, click *Services* in the top bar, and type 'sagemaker'. You can then click *Amazon SageMaker*.
 
-    Region | Name | Launch link
-    --- | --- | ---
-    US West (Oregon) Region | us-west-2 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    US East (N. Virginia) Region | us-east-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    US East (Ohio) Region | us-east-2 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    Asia Pacific (Tokyo) Region | ap-northeast-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-northeast-1.console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    Asia Pacific (Seoul) Region | ap-northeast-2 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    Asia Pacific (Sydney) Region | ap-southeast-2 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-southeast-2.console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    EU (Ireland) Region | eu-west-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
-    EU (Frankfurt) Region | eu-central-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fcfn.yml&stackName=FastaiSageMakerNbStack)
+   <img alt="sage" src="/images/sagemaker/01.png" class="screenshot">
 
-1. This will open the AWS CloudFormation web console with the template to create the AWS resources already loaded as per the screenshot below. You only need to enter 3 input parameters: one for the Notebook instance type (default value is *ml.p2.xlarge*), another for the fastai libaray version (default value is *1.0*) and finally your email address to receive an notification email when the fastai library is installed on your notebook instance and ready for use. Tick the option box to acknowledge that IAM resources will be created and then click the *Create* button to create the stack.
+### Configuring your notebook instance
 
-    <img alt="create_stack" src="/images/aws/cfn_create_stack.png" class="screenshot">
+1. On the left navigation bar, choose *Lifecycle Configurations*. This is where we set up the script that will create your notebook instance for you, with all software and lessons preinstalled.
 
-1. You will see the following CloudFormation page showing the stack is being created.
+    <img alt="lifecycle config" src="/images/sagemaker/03.png" class="screenshot">
 
-    <img alt="in_progress" src="/images/aws/cfn_stack_detail_in_progress.png" class="screenshot">
+1. Click *Create configuration*.
 
-1. While your Cloudformation stack is creating the AWS resources, you will receive an SNS subscription confirmation email to the email address supplied in the input parameters to the CloudFormation stack similar to the screenshot below. Once you receive the email, click the *Confirm subscription* link. You need to do this to receive the notification email when the fast.ai library has been installed correctly. 
+   <img alt="create config" src="/images/sagemaker/04.png" class="screenshot">
 
-    <img alt="confirm_sub" src="/images/aws/confirm_sub.png" class="screenshot">
+1. Enter *fastai* as the name.
 
-1. Wait for up to 15 minutes to have the fast.ai library and dependencies installed on the SageMaker notebook instance. When it has done you will receive an email with a *tinyurl.com* link to open the Jupyter console of the notebook instance as per the screenshot below. 
+    <img alt="fastai" src="/images/sagemaker/05.png" class="screenshot">
 
-    <img alt="email" src="/images/aws/email_notification_ready.png" class="screenshot">
+1. In the *Scripts* section, click *Start notebook*. 
 
-1. You should now have the Jupyter console opened with a screen similar to the one shown below.
+    <img alt="create" src="/images/sagemaker/06.png" class="screenshot">
 
-    <img alt="jupyter" src="/images/aws/jupyter_nb.png" class="screenshot">
+1. Paste the following to replace the script shown:
+
+    ```bash
+    #!/bin/bash
+    set -e
+
+    echo "Creating fast.ai conda enviornment"
+    cat > /home/ec2-user/fastai-setup.sh << EOF
+    #!/bin/bash
+    cd /home/ec2-user/SageMaker
+    source activate envs/fastai
+    echo "Finished creating fast.ai conda environment"
+    ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+    EOF
+
+    chown ec2-user:ec2-user /home/ec2-user/fastai-setup.sh
+    chmod 755 /home/ec2-user/fastai-setup.sh
+
+    sudo -i -u ec2-user bash << EOF
+    echo "Creating fast.ai conda env in background process."
+    nohup /home/ec2-user/fastai-setup.sh &
+    EOF
+    ```
+
+1. In the *Scripts* section, click *Create notebook*. **NB:** ensure you are in the *Create notebook* section, otherwise your instance will be reconfigured from scratch every time you start it!
+
+    <img alt="create" src="/images/sagemaker/06.png" class="screenshot">
+
+1. Paste the following to replace the script shown:
+
+    ```bash
+    #!/bin/bash
+    wget http://course-v3.fast.ai/setup/sagemaker;
+    chown ec2-user sagemaker;
+    chmod u+x sagemaker;
+    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker &';
+    ```
+
+    <img alt="script" src="/images/sagemaker/07.png" class="screenshot">
+
+1. Click *Create configuration*..
+
+    <img alt="create" src="/images/sagemaker/08.png" class="screenshot">
+
+1. On the left navigation bar, choose *Notebook instances*. This is where we create, manage, and access our notebook instances.
+
+    <img alt="notebook instance" src="/images/sagemaker/08b.png" class="screenshot">
+
+1. Click *Create notebook instance*.
+
+    <img alt="create nb instance" src="/images/sagemaker/09.png" class="screenshot">
+
+1. Enter *fastai* in the name, and in the instance type field choose *ml.p2.xlarge*.
+
+    <img alt="choose ml.p2" src="/images/sagemaker/10.png" class="screenshot">
+
+1. In the *IAM Role* section, choose to create a new role, then select *None* for S3 buckets, and choose *Create role*.
+
+   <img alt="role" src="/images/sagemaker/11.png" class="screenshot">
+
+1. In the *Lifecycle configuration* section, choose the *fastai* configuration you created earlier.
+
+    <img alt="config" src="/images/sagemaker/12.png" class="screenshot">
+
+1. In the *Volume Size in GB - optional* section, enter a volume size between 15 and 25 GB (we recommend 25 GB).
+
+    <img alt="config" src="/images/sagemaker/24.png" class="screenshot">
+
+1. Check that your selections now look like this:
+
+    <img alt="summary" src="/images/sagemaker/13.png" class="screenshot">
+
+1. Once it's entered correctly, click *Create notebook instance* at the bottom of the screen.
+
+    <img alt="click" src="/images/sagemaker/14.png" class="screenshot">
+
+1. You will receive a message that the instance is being created.
+
+    <img alt="message" src="/images/sagemaker/15.png" class="screenshot">
+
+1. For around 5 minutes it will show as *Pending* and you will not be able to access it.
+
+   <img alt="pending" src="/images/sagemaker/16.png" class="screenshot">
+
+### Accessing the notebooks
+
+1. After about 5 minutes it will show *InService* and you can click *Open*.
+
+    <img alt="in service" src="/images/sagemaker/17.png" class="screenshot">
+
+1. Your server is now downloading and installing software in the background. You won't be able to see the course notebooks yet. Go get a cup of tea, and come back in 15 minutes.
+
+    <img alt="server" src="/images/sagemaker/18.png" class="screenshot">
+
+1. After 15 minutes you should see a new *course-v3* folder has appeared, amongst others.
+
+    <img alt="course" src="/images/sagemaker/19.png" class="screenshot">
+
+1. Click on the *course-v3* folder, and your screen should look like this:
+
+    <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
+
+1. On the upper right corner of your screen click on 'New' and 'Terminal'. A new window will open up.
+
+    <img alt="terminal" src="/images/terminal.png" class="screenshot">
+
+     You will need to type the following commands to update the fastai library:
+
+    ``` bash
+    source activate SageMaker/envs/fastai
+    conda install -c fastai fastai
+    ```
+
+    Once you have run these two commands close the terminal window. 
 
 1. When you start the notebook, if prompted (not expected if all is well) to select a kernel choose *Python 3*. If you aren't prompted, you can verify the kernel name on the top right hand side, you can change the attahed kernel through the menu *Kernel > Change Kernel*
 
@@ -70,10 +172,6 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
     <img alt="stop" src="/images/sagemaker/23.png" class="screenshot">
 
   To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_sagemaker.html).
-
-### Troubleshooting installation problems
-
-- If you do not receive a notifcation email after more than 15 minutes then there may have been a problem installing the fast.ai libraries and dependencies on your notebook instance. To troubleshoot, open the [AWS console](https://aws.amazon.com/console/) then click on the **CloudWatch** link (type *cloudwatch* in the search bar). Once you are in the CloudWatch console, navigate to *Logs -> /aws/sagemaker/NotebookInstances -> fastai/LifecycleConfigOnStart* or *fastai/LifecycleConfigOnCreate* to view the output of the installation scripts.
 
 ## More help
 
