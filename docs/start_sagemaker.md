@@ -8,8 +8,6 @@ This is a quick guide to starting v3 of the fast.ai course Practical Deep Learni
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_sagemaker.html) section.
 
-**NB: There is a temporary issue where data downloaded for training models, and saved models, are not saved after you shut down your instance. This will be resolved in a couple of weeks.**
-
 ## Pricing
 
 The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  You will need to explicitely request a limit request to use this instance, [here](https://course-v3.fast.ai/start_aws.html#step-2-request-service-limit ) Instances must be stopped to end billing.
