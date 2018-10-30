@@ -25,6 +25,7 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 - [Salamander](/start_salamander.html); (instant approval, no installation required, $0.36 an hour + storage, $1 free credit)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
 - [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour + storage)
+- [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
 
 #### Some installation required
 
