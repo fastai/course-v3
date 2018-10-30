@@ -1,7 +1,33 @@
 #!/bin/bash
 set -e
-wget https://course-v3.fast.ai/setup/sagemaker
-chown ec2-user sagemaker
-chmod u+x sagemaker
-sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker &'
+cd /home/ec2-user/SageMaker
+# create symlinks to EBS volume
+mkdir /home/ec2-user/SageMaker/.torch && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
+mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai /home/ec2-user/.fastai
 
+# install the fastai library and dependencies
+conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 pytorch-nightly fastai cuda92 torchvision-nightly
+source activate envs/fastai
+
+# install the ipython kernel
+ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+
+# clone the course notebooks
+git clone https://github.com/fastai/course-v3.git /home/ec2-user/SageMaker/course-v3
+
+# install a custom start script which can be modified
+cat > custom-start-script.sh <<EOF
+#!/bin/bash
+set -e
+cd /home/ec2-user/SageMaker/course-v3
+
+set +e
+# update the course repo
+git pull
+EOF
+chmod u+x custom-start-script.sh
+
+# put a empty file so start script knows if already run create script
+touch /home/ec2-user/.fastai/create_complete
+
+echo "Finished running onCreate script"

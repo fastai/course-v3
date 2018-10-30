@@ -51,23 +51,10 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
     ```bash
     #!/bin/bash
     set -e
-
-    echo "Creating fast.ai conda enviornment"
-    cat > /home/ec2-user/fastai-setup.sh << EOF
-    #!/bin/bash
-    cd /home/ec2-user/SageMaker
-    source activate envs/fastai
-    echo "Finished creating fast.ai conda environment"
-    ipython kernel install --name 'fastai' --display-name 'Python 3' --user
-    EOF
-
-    chown ec2-user:ec2-user /home/ec2-user/fastai-setup.sh
-    chmod 755 /home/ec2-user/fastai-setup.sh
-
-    sudo -i -u ec2-user bash << EOF
-    echo "Creating fast.ai conda env in background process."
-    nohup /home/ec2-user/fastai-setup.sh &
-    EOF
+    wget https://course-v3.fast.ai/setup/sagemaker-start
+    chown ec2-user sagemaker-start
+    chmod u+x sagemaker-start
+    sudo -H -u ec2-user -i bash -c './sagemaker-start'
     ```
 
 1. In the *Scripts* section, click *Create notebook*. **NB:** ensure you are in the *Create notebook* section, otherwise your instance will be reconfigured from scratch every time you start it!
@@ -78,10 +65,11 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     ```bash
     #!/bin/bash
-    wget http://course-v3.fast.ai/setup/sagemaker;
-    chown ec2-user sagemaker;
-    chmod u+x sagemaker;
-    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker &';
+    set -e
+    wget https://course-v3.fast.ai/setup/sagemaker-create
+    chown ec2-user sagemaker-create
+    chmod u+x sagemaker-create
+    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker-create &'
     ```
 
     <img alt="script" src="/images/sagemaker/07.png" class="screenshot">
@@ -143,23 +131,6 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 1. After 15 minutes you should see a new *course-v3* folder has appeared, amongst others.
 
     <img alt="course" src="/images/sagemaker/19.png" class="screenshot">
-
-1. Click on the *course-v3* folder, and your screen should look like this:
-
-    <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
-
-1. On the upper right corner of your screen click on 'New' and 'Terminal'. A new window will open up.
-
-    <img alt="terminal" src="/images/terminal.png" class="screenshot">
-
-     You will need to type the following commands to update the fastai library:
-
-    ``` bash
-    source activate SageMaker/envs/fastai
-    conda install -c fastai fastai
-    ```
-
-    Once you have run these two commands close the terminal window. 
 
 1. When you start the notebook, if prompted (not expected if all is well) to select a kernel choose *Python 3*. If you aren't prompted, you can verify the kernel name on the top right hand side, you can change the attahed kernel through the menu *Kernel > Change Kernel*
 
