@@ -17,7 +17,7 @@ To return to your notebook, the basic steps will be:
 
 1. `vectordash ssh $INSTANCE_ID`
 
-<img alt="vectordash_cli" src="/home/chewing/course-v3/docs/images/vectordash_tutorial/vectordash_cli.png" class="screenshot">
+<img alt="vectordash_cli" src="/home/chewing/course-v3/docs/images/vectordash/vectordash_cli.png" class="screenshot">
 
 ### Update the course repo
 
@@ -50,4 +50,4 @@ You will be charged if you don't stop the instance while it's 'idle' (e.g. not t
 To stop an instance on Vectordash, go to the [dashboard](http://vectordash.com/dashboard) and click the instance you would like to stop. Once on the instance page, click 'Stop Instance'. *Please note, stopping
 an instance destroys it completely so make sure you save your files locally or in a remote storage location.*
 
-<img alt="stop_instance" src="/home/chewing/course-v3/docs/images/vectordash_tutorial/stop_instance.png" class="screenshot">
+<img alt="stop_instance" src="/home/chewing/course-v3/docs/images/vectordash/stop_instance.png" class="screenshot">
