@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 cd /home/ec2-user/SageMaker
 
 # update the fastai library
