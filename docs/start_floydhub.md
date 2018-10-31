@@ -84,7 +84,7 @@ Anything you save in the `/floyd/home` directory will be persisted, which means 
 
 Questions or issues related to course content, we recommend posting in the [fast.ai forum](http://forums.fast.ai/).
 
-For FloydHub-specific support, check out the rest of the [FloydHub forum](https://forum.floydhub.com), or [email FloydHub support](mailto://support@floydhub.com).
+For FloydHub-specific support, check out the rest of the [FloydHub forum](https://forum.floydhub.com), or [email FloydHub support](mailto:support@floydhub.com).
 
 ---
 

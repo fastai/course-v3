@@ -37,7 +37,7 @@ Once this is done, you can access your jupyter notebook at [localhost:8080/tree]
  To update the course repo, go in your terminal and run those two instructions:
 
 ``` bash
-cd tutorials/fastai
+cd tutorials/fastai/course-v3
 git pull
 ```
 

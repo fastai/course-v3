@@ -7,9 +7,9 @@ sidebar: home_sidebar
 To return to your notebook, the basic steps will be:
 
 1. Start your instance
-1. Update the course repo
-1. Update the fastai library
 1. When done, shut down your instance
+
+Your instance will run a script when started to update the fastai library and get the latest notebooks from the GitHub repository [here](https://github.com/fastai/course-v3).
 
 ## Step by step guide
 
@@ -32,29 +32,10 @@ When it turns green, just click on 'Open' and you'll be back to your notebooks.
 
 <img alt="ready" src="/images/sagemaker/17.png" class="screenshot">
 
-### Update the course repo
-To update the course repo, launch a new terminal from the jupyter notebook menu.
+### Running custom code on notebook instance start
+The SageMaker notebook will contain a custom script that will be run each time the notebook instance is started. The script can be at the path `/home/ec2-user/SageMaker/custom-start-script.sh`.
 
-<img alt="" src="/images/gradient/terminal.png" class="screenshot">
-
-This will open a new window, in which you should run those two instructions:
-
-``` bash
-cd SageMaker/course-v3
-git pull
-``` 
-
-<img alt="" src="/images/gradient/update.png" class="screenshot">
-
-This should give you the latest of the course notebooks. If you modified some of the notebooks in course-v3/nbs directly, GitHub will probably throw you an error. You should type `git stash` to remove your local changes. Remember you should always work on a copy of the lesson notebooks.
-
-### Update the fastai library
-To update the fastai library, open the terminal like before and type
-``` bash
-source activate SageMaker/envs/fastai
-conda install -c fastai fastai
-```
-Note that you have to be in the home directory (the one the terminal puts you in when you create it) for this to work.
+The default behaviour is to update the fastai courses GitHub repository.
 
 ### Stop your instance
 When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/sagemaker) and stop your instance manually to avoid getting extra charges. Just pick the notebook you want to stop and click on the 'Stop' button next to its name.
