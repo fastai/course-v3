@@ -1,12 +1,15 @@
 #!/bin/bash
 set -e
 cd /home/ec2-user/SageMaker
-# create symlinks if not existing
-[ ! -L "/home/ec2-user/.torch" ] && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
-[ ! -L "/home/ec2-user/.fastai" ] && ln -s /home/ec2-user/SageMaker/.fastai /home/ec2-user/.fastai
 
 # update the fastai library
 if [ -f "/home/ec2-user/.fastai/create_complete" ]; then
+    echo "Setting up environment"
+    # create symlinks if not existing
+    mkdir -p /home/ec2-user/SageMaker/.torch
+    mkdir -p /home/ec2-user/SageMaker/.fastai
+    [ ! -L "/home/ec2-user/.torch" ] && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
+    [ ! -L "/home/ec2-user/.fastai" ] && ln -s /home/ec2-user/SageMaker/.fastai /home/ec2-user/.fastai
     # update the fastai library
     source activate envs/fastai
     conda update -yq fastai
