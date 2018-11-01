@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+#set -e
+set -x
 # create symlinks if not existing
 [ ! -L "/home/ec2-user/.torch" ] && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
 [ ! -L "/home/ec2-user/.fastai" ] && ln -s /home/ec2-user/SageMaker/.fastai /home/ec2-user/.fastai
@@ -20,3 +21,4 @@ else
     echo "Still running create script..Exiting"
 fi
 echo "Finished running onStart script"
+
