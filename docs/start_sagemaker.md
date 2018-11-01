@@ -48,11 +48,10 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     ```bash
     #!/bin/bash
-    set -e
-    wget https://course-v3.fast.ai/setup/sagemaker-start
-    chown ec2-user sagemaker-start
-    chmod u+x sagemaker-start
-    sudo -H -u ec2-user -i bash -c './sagemaker-start'
+    wget https://course-v3.fast.ai/setup/sagemaker-start;
+    chown ec2-user sagemaker-start;
+    chmod u+x sagemaker-start;
+    sudo -H -u ec2-user -i bash -c './sagemaker-start';
     ```
 
 1. In the *Scripts* section, click *Create notebook*. **NB:** ensure you are in the *Create notebook* section, otherwise your instance will be reconfigured from scratch every time you start it!
@@ -63,11 +62,10 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     ```bash
     #!/bin/bash
-    set -e
-    wget https://course-v3.fast.ai/setup/sagemaker-create
-    chown ec2-user sagemaker-create
-    chmod u+x sagemaker-create
-    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker-create &'
+    wget https://course-v3.fast.ai/setup/sagemaker-create;
+    chown ec2-user sagemaker-create;
+    chmod u+x sagemaker-create;
+    sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker-create &';
     ```
 
     <img alt="script" src="/images/sagemaker/07.png" class="screenshot">

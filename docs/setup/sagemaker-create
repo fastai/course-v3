@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 cd /home/ec2-user/SageMaker
 # create symlinks to EBS volume
 mkdir /home/ec2-user/SageMaker/.torch && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
@@ -7,8 +7,9 @@ mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai
 
 # install the fastai library and dependencies
 conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 pytorch-nightly fastai cuda92 torchvision-nightly
-source activate envs/fastai
+echo "Finished installing environment"
 
+source activate envs/fastai
 # install the ipython kernel
 ipython kernel install --name 'fastai' --display-name 'Python 3' --user
 
