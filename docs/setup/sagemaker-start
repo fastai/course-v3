@@ -20,9 +20,5 @@ if [ -f "/home/ec2-user/.fastai/create_complete" ]; then
 else
     echo "Still running create script..Exiting"
 fi
-<<<<<<< HEAD
-echo "Finished running onStart script"
-=======
 echo "Finished running onStart script"
 
->>>>>>> upstream/master
