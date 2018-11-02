@@ -39,11 +39,11 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
 1. This will open the AWS CloudFormation web console with the template to create the AWS resources already loaded as per the screenshot below. Tick the option box to acknowledge that IAM resources will be created and then click the *Create* button to create the stack.
 
-    <img alt="create_stack" src="/images/sagemaker/create_stack.png" class="screenshot">
+    <img alt="create stack" src="/images/sagemaker/create_stack.png" class="screenshot">
 
 1. You will see the following CloudFormation page showing the stack is being created. Take note of the Notebook Lifecycle Config resource and IAM role created by CloudFormation. You will need these values when manually creating the SageMaker Notebook instance.
 
-    <img alt="stack_complete" src="/images/sagemaker/stack_complete.png" class="screenshot">
+    <img alt="stack complete" src="/images/sagemaker/stack_complete.png" class="screenshot">
 
 1. Once the stack reaches the *CREATE_COMPLETE* state then open the AWS web console and click *Services* in the top bar, and type 'sagemaker'. You can then click *Amazon SageMaker*.
 

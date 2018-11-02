@@ -2,20 +2,20 @@
 #set -e
 set -x
 # create symlinks if not existing
+echo "Creating symlinks"
 [ ! -L "/home/ec2-user/.torch" ] && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
 [ ! -L "/home/ec2-user/.fastai" ] && ln -s /home/ec2-user/SageMaker/.fastai /home/ec2-user/.fastai
 
-# update the fastai library
+# check if the onCreate script has finished running
 if [ -f "/home/ec2-user/.fastai/create_complete" ]; then
-    echo "Updating fastai environment"
+    echo "Install the ipython fastai kernel"
     cd /home/ec2-user/SageMaker
-    # update the fastai library
     source activate envs/fastai
-    conda update -yq fastai
     # install the ipython kernel
     ipython kernel install --name 'fastai' --display-name 'Python 3' --user
 
     # run the custom script
+    echo "Running the custom start script"
     ./custom-start-script.sh
 else
     echo "Still running create script..Exiting"
