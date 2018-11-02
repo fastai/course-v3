@@ -1,0 +1,45 @@
+Description: "Creates SageMaker IAM role and Lifecyle config resources to run the fast.ai course on a SageMaker notebook instance."
+Resources:
+  SageMakerIamRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          -
+            Effect: Allow
+            Principal:
+              Service: sagemaker.amazonaws.com
+            Action: sts:AssumeRole
+      Path: "/"
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess"
+      
+  FastaiNbLifecycleConfig:
+    Type: "AWS::SageMaker::NotebookInstanceLifecycleConfig"
+    Properties:
+      OnCreate:
+        - Content:
+            Fn::Base64: 
+              !Sub |
+                #!/bin/bash
+                wget -N https://course-v3.fast.ai/setup/sagemaker-create
+                chown ec2-user sagemaker-create
+                chmod u+x sagemaker-create
+                sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker-create &'
+                
+      OnStart:
+        - Content:
+            Fn::Base64:
+              !Sub |          
+                #!/bin/bash
+                wget -N https://course-v3.fast.ai/setup/sagemaker-start
+                chown ec2-user sagemaker-start
+                chmod u+x sagemaker-start
+                sudo -H -u ec2-user -i bash -c './sagemaker-start'
+
+Outputs:
+  LifecycleConfigName:
+    Value: !GetAtt FastaiNbLifecycleConfig.NotebookInstanceLifecycleConfigName  
+  IAMRole:
+    Value: !GetAtt SageMakerIamRole.Arn
