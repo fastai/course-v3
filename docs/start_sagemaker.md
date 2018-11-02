@@ -48,7 +48,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     ```bash
     #!/bin/bash
-    wget https://course-v3.fast.ai/setup/sagemaker-start;
+    wget -N https://course-v3.fast.ai/setup/sagemaker-start;
     chown ec2-user sagemaker-start;
     chmod u+x sagemaker-start;
     sudo -H -u ec2-user -i bash -c './sagemaker-start';
@@ -62,7 +62,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     ```bash
     #!/bin/bash
-    wget https://course-v3.fast.ai/setup/sagemaker-create;
+    wget -N https://course-v3.fast.ai/setup/sagemaker-create;
     chown ec2-user sagemaker-create;
     chmod u+x sagemaker-create;
     sudo -H -u ec2-user -i bash -c 'nohup ./sagemaker-create &';

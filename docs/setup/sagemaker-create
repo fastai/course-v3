@@ -1,5 +1,7 @@
 #!/bin/bash
 #set -e
+set -x
+
 cd /home/ec2-user/SageMaker
 # create symlinks to EBS volume
 mkdir /home/ec2-user/SageMaker/.torch && ln -s /home/ec2-user/SageMaker/.torch /home/ec2-user/.torch
@@ -9,21 +11,13 @@ mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai
 conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 pytorch-nightly fastai cuda92 torchvision-nightly
 echo "Finished installing environment"
 
-source activate envs/fastai
-# install the ipython kernel
-ipython kernel install --name 'fastai' --display-name 'Python 3' --user
-
 # clone the course notebooks
 git clone https://github.com/fastai/course-v3.git /home/ec2-user/SageMaker/course-v3
 
 # install a custom start script which can be modified
 cat > custom-start-script.sh <<EOF
 #!/bin/bash
-set -e
 cd /home/ec2-user/SageMaker/course-v3
-
-set +e
-# update the course repo
 git pull
 EOF
 chmod u+x custom-start-script.sh
@@ -31,4 +25,9 @@ chmod u+x custom-start-script.sh
 # put a empty file so start script knows if already run create script
 touch /home/ec2-user/.fastai/create_complete
 
+source activate envs/fastai
+# install the ipython kernel
+ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+
 echo "Finished running onCreate script"
+
