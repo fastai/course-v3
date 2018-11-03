@@ -73,6 +73,8 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
    <img alt="pending" src="/images/sagemaker/16.png" class="screenshot">
 
+1. It will take around 10 minutes to fully setup your notebook instance with the fastai library. You will know when it is ready when the Jupyter kernel name *Python 3* is available.
+
 ### Shutting down your instance
 
 - When you're done, close the notebook tab, and **remember to click stop!** If you don't, you'll keep getting charged until you click the *stop* button.

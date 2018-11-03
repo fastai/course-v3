@@ -19,7 +19,7 @@ git clone https://github.com/fastai/course-v3.git /home/ec2-user/SageMaker/cours
 
 # install a custom start script which can be modified
 echo "Install the custom start script"
-cat > custom-start-script.sh <<EOF
+cat > custom-start-script.sh <<\EOF
 #!/bin/bash
 if [ ! "$CONDA_DEFAULT_ENV" = "fastai" ]; then
     echo "Activate fastai conda environment"
