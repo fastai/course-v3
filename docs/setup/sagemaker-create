@@ -37,7 +37,7 @@ chmod u+x custom-start-script.sh
 
 # install the ipython kernel
 echo "Install the ipython fastai kernel"
-ln -s /home/ec2/SageMaker/envs/fastai/ /home/ec2/anaconda3/envs/
+ln -s /home/ec2-user/SageMaker/envs/fastai/ /home/ec2-user/anaconda3/envs/
 #source activate fastai
 ipython kernel install --name 'fastai' --display-name 'Python 3' --user
 

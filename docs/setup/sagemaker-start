@@ -10,7 +10,7 @@ echo "Creating symlinks"
 if [ -f "/home/ec2-user/.fastai/create_complete" ]; then
     echo "Install the ipython fastai kernel"
     cd /home/ec2-user/SageMaker
-    [ ! -L "/home/ec2-user/anaconda3/envs/fastai" ] && ln -s /home/ec2/SageMaker/envs/fastai/ /home/ec2/anaconda3/envs/
+    [ ! -L "/home/ec2-user/anaconda3/envs/fastai" ] && ln -s /home/ec2-user/SageMaker/envs/fastai/ /home/ec2-user/anaconda3/envs/
     # install the ipython kernel
     #source activate fastai
     ipython kernel install --name 'fastai' --display-name 'Python 3' --user
