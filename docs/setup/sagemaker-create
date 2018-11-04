@@ -23,11 +23,11 @@ cat > custom-start-script.sh <<\EOF
 #!/bin/bash
 if [ ! "$CONDA_DEFAULT_ENV" = "fastai" ]; then
     echo "Activate fastai conda environment"
-    cd /home/ec2-user/SageMaker
-    source activate envs/fastai
+    #cd /home/ec2-user/SageMaker
+    source activate fastai
 fi
 echo "Updating fastai library"
-conda update -y fastai
+conda install -y -c fastai fastai
 echo "Getting latest version of course"
 cd /home/ec2-user/SageMaker/course-v3
 git pull
@@ -37,8 +37,12 @@ chmod u+x custom-start-script.sh
 
 # install the ipython kernel
 echo "Install the ipython fastai kernel"
-source activate envs/fastai
+ln -s /home/ec2/SageMaker/envs/fastai/ /home/ec2/anaconda3/envs/
+#source activate fastai
 ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+
+echo "Running the custom start script"
+./custom-start-script.sh
 
 # put a empty file so start script knows if already run create script
 touch /home/ec2-user/.fastai/create_complete
