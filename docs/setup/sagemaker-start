@@ -13,7 +13,7 @@ if [ -f "/home/ec2-user/.fastai/create_complete" ]; then
     [ ! -L "/home/ec2-user/anaconda3/envs/fastai" ] && ln -s /home/ec2-user/SageMaker/envs/fastai/ /home/ec2-user/anaconda3/envs/
     # install the ipython kernel
     #source activate fastai
-    #ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+    ipython kernel install --name 'fastai' --user
 
     # run the custom script
     echo "Running the custom start script"
