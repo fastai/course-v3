@@ -39,7 +39,7 @@ chmod u+x custom-start-script.sh
 echo "Install the ipython fastai kernel"
 ln -s /home/ec2-user/SageMaker/envs/fastai/ /home/ec2-user/anaconda3/envs/
 #source activate fastai
-ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+#ipython kernel install --name 'fastai' --display-name 'Python 3' --user
 
 echo "Running the custom start script"
 ./custom-start-script.sh
