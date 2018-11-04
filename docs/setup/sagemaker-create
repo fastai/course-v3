@@ -10,7 +10,7 @@ mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai
 # install the fastai library and dependencies
 echo "Install the fastai library and dependencies in new conda enviornment"
 cd /home/ec2-user/SageMaker
-conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 pytorch-nightly fastai cuda92 torchvision-nightly
+conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 jupyter pytorch-nightly fastai cuda92 torchvision-nightly
 echo "Finished installing environment"
 
 # clone the course notebooks
