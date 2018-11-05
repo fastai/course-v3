@@ -27,6 +27,8 @@ Open up a terminal and `cd` into the directory you created in Step 3, and type t
 ``` bash
 tar -xvf app.zip
 ```
+(Alternatively, you can right click the app.zip file and unzip using the appropriate software on your Operating System)
+
 This should create a directory called **app** in your original directory.
 
 ## Step 5: Copy and paste your trained model file into the project
