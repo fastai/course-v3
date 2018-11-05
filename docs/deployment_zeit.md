@@ -9,6 +9,8 @@ sidebar: home_sidebar
 
 This is quick guide to deploy your trained models using the [Now](https://zeit.co/now) service from [Zeit](https://zeit.co/).
 
+This guide comes with a starter app deploying Jeremy's Bear Image Classification model form Lesson 2.
+
 ## Step 1: Create an account and setup Now
 For this course's purposes, the free version ([OSS](https://zeit.co/pricing)) should suffice. To get started, create an account [here](https://zeit.co/signup).
 
@@ -34,7 +36,7 @@ This should create a directory called **app** in your original directory.
 ## Step 5: Copy and paste your trained model file into the project
 Locate the **stage-X.pth** you had saved while training the model in your jupyter notebook. Copy and paste it at `app/models` (in the **models** directory inside the **app** directory that was created in Step 4).
 
-Use Jeremy's bear model from Lesson1/2, if you want to just test the deployment initially - download the trained model file from [here](https://www.dropbox.com/s/6zt99q2t3z38zus/stage-2.pth?dl=0).
+Use Jeremy's bear model from Lesson 2, if you want to just test the deployment initially - download the trained model file from [here](https://www.dropbox.com/s/6zt99q2t3z38zus/stage-2.pth?dl=0).
 
 ## Step 6: Customize the app for your model
 1. Open up the file **server.py** inside the **app** directory and update `classes = ['black', 'grizzly', 'teddys']` to the classes you are expecting from your model
@@ -44,14 +46,14 @@ Use Jeremy's bear model from Lesson1/2, if you want to just test the deployment 
 ## Step 7: Deploy
 On the terminal, make sure you are in the local directory you created in Step 3.
 
-To kick off deployment, in the terminal type
+To kick off deployment, type in the terminal:
 ```bash
 now
 ```
 
 Copy the url that Now assigns the project (shown on the terminal) - example [https://deployml-copied-url.now.sh](https://deployml-copied-url.now.sh)
 
-When the deployment finishes and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal
+When the deployment finishes and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
 ```
 now alias https://deployml-copied-url.now.sh what-you-want
 ```
@@ -59,3 +61,24 @@ now alias https://deployml-copied-url.now.sh what-you-want
 
 ## Step 8: Test and share the URL of your working app
 Go to the full URL which the `HOSTURL` variable has from Step 6.3. (example: `'https://what-you-want.now.sh'`) and test.
+
+---
+
+## Local server
+In case you want to run the app server locally, make these changes to the above steps:
+
+### Step 6.3
+Update the `HOSTURL` variable to `'http://localhost:5042'`
+
+### Step 7
+Instead of
+```bash
+now
+```
+type in the terminal:
+```bash
+python app/server.py serve
+```
+
+### Step 8
+Go to [http://localhost:5042/](http://localhost:5042/) and test.
