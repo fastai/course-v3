@@ -1,0 +1,59 @@
+---
+title: Zeit
+sidebar: home_sidebar
+---
+
+# Deploying Fastai models on Zeit (previously known as now.sh)
+
+<img alt="" src="/images/zeit/zeit_now.png" class="screenshot">
+
+This is quick guide to deploy your trained models using the [Now](https://zeit.co/now) service from [Zeit](https://zeit.co/).
+
+## Step 1: Create an account and setup Now
+For this course's purposes, the free version ([OSS](https://zeit.co/pricing)) should suffice. To get started, create an account [here](https://zeit.co/signup).
+
+## Step 2: Download the desktop app
+From [here](https://zeit.co/download). Follow installation instructions, this should install the CLI (command line interface) also.
+
+## Step 3: Grab starter pack for deployment of your trained model
+Create a new directory on your local machine (example `my-project`), and copy all 4 files from [here](https://github.com/fastai/course-v3/tree/master/docs/production/zeit) to that directory
+1. **app.zip**
+2. **Dockerfile**
+3. **now.json**
+4. **requirements.txt**
+
+## Step 4: Unzip the app
+Open up a terminal and `cd` into the directory you created in Step 3, and type the following
+``` bash
+tar -xvf app.zip
+```
+This should create a directory called **app** in your original directory.
+
+## Step 5: Copy and paste your trained model file into the project
+Locate the **stage-X.pth** you had saved while training the model in your jupyter notebook. Copy and paste it at `app/models` (in the **models** directory inside the **app** directory that was created in Step 4).
+
+Use Jeremy's bear model from Lesson1/2, if you want to just test the deployment initially - download the trained model file from [here](https://www.dropbox.com/s/6zt99q2t3z38zus/stage-2.pth?dl=0).
+
+## Step 6: Customize the app for your model
+1. Open up the file **server.py** inside the **app** directory and update `classes = ['black', 'grizzly', 'teddys']` to the classes you are expecting from your model
+2. In the same file, make sure this line `learn.load('stage-2')` has the name of the trained model file you copied in Step 5
+3. Open up the file **client.js** inside the `app/static` directory and update the variable `HOSTURL` to `'https://what-you-want.now.sh'` (Note: replace 'what-you-want' with something unique for your app)
+
+## Step 7: Deploy
+On the terminal, make sure you are in the local directory you created in Step 3.
+
+To kick off deployment, in the terminal type
+```bash
+now
+```
+
+Copy the url that Now assigns the project (shown on the terminal) - example [https://deployml-copied-url.now.sh](https://deployml-copied-url.now.sh)
+
+When the deployment finishes and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal
+```
+now alias https://deployml-copied-url.now.sh what-you-want
+```
+(**Note:** 'what-you-want' above is the unique name you decided for your app in Step 6.3)
+
+## Step 8: Test and share the URL of your working app
+Go to the full URL which the `HOSTURL` variable has from Step 6.3. (example: `'https://what-you-want.now.sh'`) and test.
