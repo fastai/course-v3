@@ -157,7 +157,7 @@ Please note we are running a preemptible instance (notice the '--preemptible' pa
 
 If your instance is stopped, your saved data will be kept safe but if you are running a model, the progress will be lost.
 
-These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $0.68 an hour.
+These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $1.29 an hour.
 
 ## Step 4: Access fast.ai materials and update packages
 
