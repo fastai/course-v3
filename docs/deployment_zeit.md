@@ -37,7 +37,9 @@ Right click the app.zip file and unzip using the appropriate software on your Op
 This should create a directory called **app** in your original directory.
 
 ## Step 5: Upload your trained model file
-Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the share link for the file and generate a download link using [https://rawdownload.now.sh/](https://rawdownload.now.sh/).
+Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file.
+
+**Note:** the download link is the one which starts the file download directly - and is normally different than the share link which presents you with a view to download the file (use [https://rawdownload.now.sh/](https://rawdownload.now.sh/) if needed)
 
 If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2,  - download the trained model file from [here](https://www.dropbox.com/s/y4kl2gv1akv7y4i/stage-2.pth?raw=1).
 
@@ -62,7 +64,7 @@ now alias https://myproject-xxxxxxxxxx.now.sh https://something-cool.now.sh
 ```
 (**Note:** `https://something-cool.now.sh` above is the unique url you decided for your app in Step 6.3)
 
-## Step 8: Test and share the URL of your working app
+## Step 8: Test the URL of your working app
 Copy and paste [https://something-cool.now.sh](https://something-cool.now.sh) in your browser and test your app.
 
 ---
