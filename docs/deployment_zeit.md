@@ -37,7 +37,7 @@ Right click the app.zip file and unzip using the appropriate software on your Op
 This should create a directory called **app** in your original directory.
 
 ## Step 5: Upload your trained model file
-Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Share the file and copy the share link.
+Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the share link for the file and generate a download link using [https://rawdownload.now.sh/](https://rawdownload.now.sh/).
 
 If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2,  - download the trained model file from [here](https://www.dropbox.com/s/y4kl2gv1akv7y4i/stage-2.pth?raw=1).
 
