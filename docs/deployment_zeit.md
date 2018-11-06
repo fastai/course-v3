@@ -14,34 +14,37 @@ This guide comes with a starter app deploying Jeremy's Bear Image Classification
 ## Step 1: Create an account and setup Now
 For this course's purposes, the free version ([OSS](https://zeit.co/pricing)) should suffice. To get started, create an account [here](https://zeit.co/signup).
 
-## Step 2: Download the desktop app
-From [here](https://zeit.co/download). Follow installation instructions, this should install the CLI (command line interface) also.
+Make sure you accept the confirmation email they sent you.
+
+## Step 2: Install Now's Desktop app or CLI (Command Line Interface)
+From [here](https://zeit.co/download). The Desktop app will download the CLI also.
+
+If on your Operating System, the Desktop app is not installing successfully - try skipping it and directly download the CLI with
+```bash
+sudo npm install -g now
+```
 
 ## Step 3: Grab starter pack for deployment of your trained model
-Create a new directory on your local machine (example `my-project`), and copy all 4 files from [here](https://github.com/fastai/course-v3/tree/master/docs/production/zeit) to that directory
+Create a new directory on your local machine (for example `my-project`), and copy all 4 files from [here](https://github.com/fastai/course-v3/tree/master/docs/production/zeit) to that directory
 1. **app.zip**
 2. **Dockerfile**
 3. **now.json**
 4. **requirements.txt**
 
 ## Step 4: Unzip the app
-Open up a terminal and `cd` into the directory you created in Step 3, and type the following
-``` bash
-tar -xvf app.zip
-```
-(Alternatively, you can right click the app.zip file and unzip using the appropriate software on your Operating System)
+Right click the app.zip file and unzip using the appropriate software on your Operating System.
 
 This should create a directory called **app** in your original directory.
 
 ## Step 5: Copy and paste your trained model file into the project
 Locate the **stage-X.pth** you had saved while training the model in your jupyter notebook. Copy and paste it at `app/models` (in the **models** directory inside the **app** directory that was created in Step 4).
 
-Use Jeremy's bear model from Lesson 2, if you want to just test the deployment initially - download the trained model file from [here](https://www.dropbox.com/s/6zt99q2t3z38zus/stage-2.pth?dl=0).
+If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2,  - download the trained model file from [here](https://www.dropbox.com/s/6zt99q2t3z38zus/stage-2.pth?raw=1).
 
 ## Step 6: Customize the app for your model
 1. Open up the file **server.py** inside the **app** directory and update `classes = ['black', 'grizzly', 'teddys']` to the classes you are expecting from your model
 2. In the same file, make sure this line `learn.load('stage-2')` has the name of the trained model file you copied in Step 5
-3. Open up the file **client.js** inside the `app/static` directory and update the variable `HOSTURL` to `'https://what-you-want.now.sh'` (Note: replace 'what-you-want' with something unique for your app)
+3. Open up the file **client.js** inside the `app/static` directory and update the variable `HOSTURL` to something unique for your app - for example `'https://what-you-want.now.sh'` (Note: In the starter app, this variable is set to `'https://deploy-ml-demo.now.sh'`)
 
 ## Step 7: Deploy
 On the terminal, make sure you are in the local directory you created in Step 3.
