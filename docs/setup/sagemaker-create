@@ -35,13 +35,28 @@ echo "Finished running custom start script"
 EOF
 chmod u+x custom-start-script.sh
 
+# install a standard start script which is run each time the instance is started
+echo "Install the standard start script"
+cat > /home/ec2-user/SageMaker/.fastai/std-start-script.sh <<EOF
+#!/bin/bash
 # install the ipython kernel
 echo "Install the ipython fastai kernel"
+cd /home/ec2-user/SageMaker
 source activate envs/fastai
 ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+echo "Install jupyter nbextension"
+source /home/ec2-user/anaconda3/bin/activate JupyterSystemEnv
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextensions install --user
+echo "Rebooting server"
+sudo reboot
+EOF
+chmod u+x /home/ec2-user/SageMaker/.fastai/std-start-script.sh
 
 # put a empty file so start script knows if already run create script
 touch /home/ec2-user/.fastai/create_complete
 
-echo "Finished running onCreate script"
+echo "Running standard start script"
+/home/ec2-user/SageMaker/.fastai/std-start-script.sh
 
+echo "Finished running onCreate script"
