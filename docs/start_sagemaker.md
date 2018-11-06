@@ -24,7 +24,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
     If you do not have an account, the button to press will say 'Sign up' instead of 'Sign in to the Console'. If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied (if you have free credits you will not be charged until they are over). Note that you will also need to provide a phone number that will be called to verify your identity.
 
-1. Once you have an account and are logged in we are ready to create the SageMaker Notebook Lifecycle Configuration and IAM role that will be both linked to the SageMaker Notebook Instance. Click the *Launch Stack* button for the closest region to where you live in the table below. 
+1. Once you have an account and are logged in we are ready to create the SageMaker Notebook Lifecycle Configuration and IAM role that will be both linked to the SageMaker Notebook Instance. Click the *Launch Stack* button for the closest region to where you live **in the table below** . 
 
     Region | Name | Launch link
     --- | --- | ---
@@ -73,7 +73,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
    <img alt="pending" src="/images/sagemaker/16.png" class="screenshot">
 
-1. It will take around 10 minutes to fully setup your notebook instance with the fastai library. You will know when it is ready when the Jupyter kernel name *Python 3* is available.
+1. It will take around 10 minutes to fully setup your notebook instance with the fastai library. You will know when it is ready when the Jupyter kernel name *Python 3* is available and a 'course-v3' folder appears in your Jupyter Notebook window.
 
 ### Shutting down your instance
 
