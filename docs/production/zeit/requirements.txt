@@ -5,3 +5,4 @@ starlette
 uvicorn
 python-multipart
 aiofiles
+aiohttp
