@@ -25,7 +25,7 @@ sudo npm install -g now
 ```
 
 ## Step 3: Grab starter pack for deployment of your trained model
-Create a new directory on your local machine (for example `my-project`), and copy all 4 files from [here](https://github.com/fastai/course-v3/tree/master/docs/production/zeit) to that directory
+Create a new directory on your local machine (for example `myproject`), and copy all 4 files from [here](https://github.com/fastai/course-v3/tree/master/docs/production/zeit) to that directory
 1. **app.zip**
 2. **Dockerfile**
 3. **now.json**
@@ -44,7 +44,7 @@ If you want to just test the deployment initially, you can use Jeremy's bear cla
 ## Step 6: Customize the app for your model
 1. Open up the file **server.py** inside the **app** directory and update `classes = ['black', 'grizzly', 'teddys']` to the classes you are expecting from your model
 2. In the same file, make sure this line `learn.load('stage-2')` has the name of the trained model file you copied in Step 5
-3. Open up the file **client.js** inside the `app/static` directory and update the variable `HOSTURL` to something unique for your app - for example `'https://what-you-want.now.sh'` (Note: In the starter app, this variable is set to `'https://deploy-ml-demo.now.sh'`)
+3. Open up the file **client.js** inside the `app/static` directory and update the variable `HOSTURL` to something unique for your app - for example `'https://something-cool.now.sh'` (Note: In the starter app, this variable is set to `'https://deploy-ml-demo.now.sh'`)
 
 ## Step 7: Deploy
 On the terminal, make sure you are in the local directory you created in Step 3.
@@ -54,16 +54,16 @@ To kick off deployment, type in the terminal:
 now
 ```
 
-Copy the url that Now assigns the project (shown on the terminal) - example [https://deployml-copied-url.now.sh](https://deployml-copied-url.now.sh)
+Copy the url that Now assigns the project (shown on the terminal right after the above command) - example [https://myproject-xxxxxxxxxx.now.sh](https://myproject-xxxxxxxxxx.now.sh)
 
-When the deployment finishes and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
+When the **deployment finishes** and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
 ```
-now alias https://deployml-copied-url.now.sh what-you-want
+now alias https://myproject-xxxxxxxxxx.now.sh https://something-cool.now.sh
 ```
-(**Note:** 'what-you-want' above is the unique name you decided for your app in Step 6.3)
+(**Note:** `https://something-cool.now.sh` above is the unique url you decided for your app in Step 6.3)
 
 ## Step 8: Test and share the URL of your working app
-Go to the full URL which the `HOSTURL` variable has from Step 6.3. (example: `'https://what-you-want.now.sh'`) and test.
+Copy and paste [https://something-cool.now.sh](https://something-cool.now.sh) in your browser and test your app.
 
 ---
 
@@ -84,4 +84,4 @@ python app/server.py serve
 ```
 
 ### Step 8
-Go to [http://localhost:5042/](http://localhost:5042/) and test.
+Copy and paste [http://localhost:5042/](http://localhost:5042/) in your browser and test your app.
