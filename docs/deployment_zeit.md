@@ -30,7 +30,7 @@ If you want to just test the deployment initially, you can use Jeremy's bear cla
 
 ## Customize the app for your model
 
-1. Open up the file `server.py` inside the `zeit` directory and update the `model_file_url` variable with the url copied above
+1. Open up the file `server.py` inside the `app` directory and update the `model_file_url` variable with the url copied above
 1. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you are expecting from your model
 
 ## Deploy
@@ -65,11 +65,6 @@ Go to `$NAME`.now.sh in your browser and test your app.
 ## Local server
 In case you want to run the app server locally, make these changes to the above steps:
 
-### Step 4
-Update the `HOSTURL` variable to `'http://localhost:5042'`
-
-### Step 5
-
 Instead of
 
 ```bash
@@ -82,7 +77,4 @@ type in the terminal:
 python app/server.py serve
 ```
 
-### Step 6
-
-Copy and paste [http://localhost:5042/](http://localhost:5042/) in your browser and test your app.
-
+Go to [http://localhost:5042/](http://localhost:5042/) to test your app.
