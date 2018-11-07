@@ -71,7 +71,7 @@ entries:
     folderitems:
     - output: web
       title: Zeit
-      url: /zeit_deployment.html
+      url: /deployment_zeit.html
   - title: fastai v1
     output: web
     folderitems:
