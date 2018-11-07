@@ -35,21 +35,21 @@ tar xf zeit.tgz
 cd zeit
 ```
 
-## Step 5: Upload your trained model file
+## Step 3: Upload your trained model file
 Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file. **Note:** the download link is the one which starts the file download directly&mdash;and is normally different than the share link which presents you with a view to download the file (use [https://rawdownload.now.sh/](https://rawdownload.now.sh/) if needed)
 
 If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2; download the trained model file from [here](https://www.dropbox.com/s/y4kl2gv1akv7y4i/stage-2.pth?raw=1).
 
-## Step 6: Customize the app for your model
+## Step 4: Customize the app for your model
 
-1. Open up the file `server.py` inside the `zeit` directory and update the `model_file_url` variable with the url copied from Step 5
+1. Open up the file `server.py` inside the `zeit` directory and update the `model_file_url` variable with the url copied from Step 3
 1. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you are expecting from your model
 1. Open up the file `client.js` inside the `app/static` directory and update the variable `HOSTURL` to something unique for your app&mdash;for example `'https://something-cool.now.sh'` (Note: In the starter app, this variable is set to `'https://deploy-ml-demo.now.sh'`)
 
-## Step 7: Deploy
-On the terminal, make sure you are in the local directory you created in Step 3.
+## Step 5: Deploy
 
-To kick off deployment, type in the terminal:
+On the terminal, make sure you are in the `zeit` directory. To kick off deployment, type in the terminal:
+
 ```bash
 now
 ```
@@ -60,9 +60,9 @@ When the **deployment finishes** and it shows *"> Success! Deployment ready"* on
 ```
 now alias https://myproject-xxxxxxxxxx.now.sh https://something-cool.now.sh
 ```
-(**Note:** `https://something-cool.now.sh` above is the unique url you decided for your app in Step 6.3)
+(**Note:** `https://something-cool.now.sh` above is the unique url you decided for your app in Step 4.)
 
-## Step 8: Test the URL of your working app
+## Step 6: Test the URL of your working app
 Copy and paste [https://something-cool.now.sh](https://something-cool.now.sh) in your browser and test your app.
 
 ---
@@ -70,19 +70,24 @@ Copy and paste [https://something-cool.now.sh](https://something-cool.now.sh) in
 ## Local server
 In case you want to run the app server locally, make these changes to the above steps:
 
-### Step 6.3
+### Step 4
 Update the `HOSTURL` variable to `'http://localhost:5042'`
 
-### Step 7
+### Step 5
+
 Instead of
+
 ```bash
 now
 ```
+
 type in the terminal:
+
 ```bash
 python app/server.py serve
 ```
 
-### Step 8
+### Step 6
+
 Copy and paste [http://localhost:5042/](http://localhost:5042/) in your browser and test your app.
 
