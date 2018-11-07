@@ -1,11 +1,7 @@
 ---
-title: Zeit
+title: "Deploying on Zeit"
 sidebar: home_sidebar
 ---
-
-# Deploying Fastai models on Zeit
-
-*(previously known as now.sh)*
 
 <img alt="" src="/images/zeit/zeit_now.png" class="screenshot">
 
@@ -38,7 +34,7 @@ cd zeit
 ## Step 3: Upload your trained model file
 Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file. **Note:** the download link is the one which starts the file download directly&mdash;and is normally different than the share link which presents you with a view to download the file (use [https://rawdownload.now.sh/](https://rawdownload.now.sh/) if needed)
 
-If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2; download the trained model file from [here](https://www.dropbox.com/s/y4kl2gv1akv7y4i/stage-2.pth?raw=1).
+If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2, you can skip this step, since that model's weights URL is already filled in the sample app.
 
 ## Step 4: Customize the app for your model
 
