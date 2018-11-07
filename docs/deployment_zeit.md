@@ -78,3 +78,7 @@ python app/server.py serve
 ```
 
 Go to [http://localhost:5042/](http://localhost:5042/) to test your app.
+
+---
+
+*Thanks to Navjot Matharu for the initial version of this guide, and Simon Willison for sample code.*
