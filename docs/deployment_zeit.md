@@ -14,7 +14,7 @@ sudo apt install npm # if not already installed
 sudo npm install -g now
 ```
 
-## Grab starter pack for deployment of your trained model
+## Grab starter pack for model deployment
 
 ```bash
 wget https://github.com/fastai/course-v3/raw/master/docs/production/zeit.tgz
@@ -56,7 +56,7 @@ now scale $NAME.now.sh sfo 1
 
 (**Note:** replace `something-cool` above with some unique name that you choose, and `xxx` with the URL shown in the `now` output.)
 
-## Step 6: Test the URL of your working app
+## Test the URL of your working app
 
 Go to `$NAME`.now.sh in your browser and test your app.
 
