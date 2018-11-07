@@ -7,14 +7,16 @@ sidebar: home_sidebar
 
 This is quick guide to deploy your trained models using the [Now](https://zeit.co/now) service from [Zeit](https://zeit.co/).  This guide comes with a starter app deploying Jeremy's Bear Image Classification model form Lesson 2.
 
-## Install Now's CLI (Command Line Interface)
+## One-time setup
+
+### Install Now's CLI (Command Line Interface)
 
 ```bash
 sudo apt install npm # if not already installed
 sudo npm install -g now
 ```
 
-## Grab starter pack for model deployment
+### Grab starter pack for model deployment
 
 ```bash
 wget https://github.com/fastai/course-v3/raw/master/docs/production/zeit.tgz
@@ -22,18 +24,20 @@ tar xf zeit.tgz
 cd zeit
 ```
 
-## Upload your trained model file
+## Per-project setup
+
+### Upload your trained model file
 
 Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file. **Note:** the download link is the one which starts the file download directly&mdash;and is normally different than the share link which presents you with a view to download the file (use [https://rawdownload.now.sh/](https://rawdownload.now.sh/) if needed)
 
 If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2, you can skip this step, since that model's weights URL is already filled in the sample app.
 
-## Customize the app for your model
+### Customize the app for your model
 
 1. Open up the file `server.py` inside the `app` directory and update the `model_file_url` variable with the url copied above
 1. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you are expecting from your model
 
-## Deploy
+### Deploy
 
 On the terminal, make sure you are in the `zeit` directory, then type:
 
@@ -56,13 +60,12 @@ now scale $NAME.now.sh sfo 1
 
 (**Note:** replace `something-cool` above with some unique name that you choose, and `xxx` with the URL shown in the `now` output.)
 
-## Test the URL of your working app
+### Test the URL of your working app
 
 Go to `$NAME`.now.sh in your browser and test your app.
 
----
+## Local testing
 
-## Local server
 In case you want to run the app server locally, make these changes to the above steps:
 
 Instead of
@@ -82,3 +85,4 @@ Go to [http://localhost:5042/](http://localhost:5042/) to test your app.
 ---
 
 *Thanks to Navjot Matharu for the initial version of this guide, and Simon Willison for sample code.*
+
