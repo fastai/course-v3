@@ -27,7 +27,7 @@ if [ ! "$CONDA_DEFAULT_ENV" = "fastai" ]; then
     source activate envs/fastai
 fi
 echo "Updating fastai library"
-conda update -y fastai
+conda install -y -c fastai fastai
 echo "Getting latest version of course"
 cd /home/ec2-user/SageMaker/course-v3
 git pull
