@@ -47,11 +47,7 @@ now
 
 The first time you run this, it will prompt for your email address and create your Now account for you. After your account is created, run it again to deploy your project.
 
-Every time you deploy with `now` it'll create a unique **deployment URL** for the app. It has a format of `xxx.now.sh`
-
-> It's shown while you are deploying the app and it'll get copied to your clipboard as well.
-
-When the **deployment finishes** and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
+Every time you deploy with `now` it'll create a unique **deployment URL** for the app. It has a format of `xxx.now.sh`, and is shown while you are deploying the app. When the **deployment finishes** and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
 
 ```
 export NAME='changeme:this-is-your-name-for-the-url'
