@@ -66,6 +66,12 @@ entries:
     - output: web
       title: Crestle
       url: /update_crestle.html
+  - title: Production
+    output: web
+    folderitems:
+    - output: web
+      title: Zeit
+      url: /deployment_zeit.html
   - title: fastai v1
     output: web
     folderitems:
