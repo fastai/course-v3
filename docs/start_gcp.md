@@ -125,6 +125,7 @@ gcloud compute instances create $INSTANCE_NAME \
         --accelerator="type=nvidia-tesla-p4,count=1" \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
+        --boot-disk-type="pd-ssd" \
         --metadata="install-nvidia-driver=True" \
         --preemptible
 ```
