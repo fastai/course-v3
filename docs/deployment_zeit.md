@@ -47,18 +47,23 @@ now
 
 The first time you run this, it will prompt for your email address and create your Now account for you. After your account is created, run it again to deploy your project.
 
-Copy the url that Now assigns the project (shown on the terminal right after the above command)&mdash;example `https://xxxxxxxxxx.now.sh`. **NB**: The URL is shown at the very top of the large amount of output, so you will need to scroll up to see it.
-
-When the **deployment finishes** and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
+Every time you deploy with `now` it'll create a unique **deployment URL** for the app. It has a format of `xxx.now.sh`, and is shown while you are deploying the app. When the **deployment finishes** and it shows *"> Success! Deployment ready"* on the terminal, type in the terminal:
 
 ```
-export URL='xxx'
-export NAME='something-cool'
-now alias $URL $NAME
+export NAME='changeme:this-is-your-name-for-the-url'
+now alias $NAME
+```
+
+This will alias the above mentioned deployment URL to `$NAME.now.sh`. You can do this everytime after you deployed. With that, you have a single URL for your app.
+
+### Scaling
+
+By default all deployment goes to sleep after some inactive time. This is not good for the latest version of your app. So do this:
+
+```
+# You only need to do this once.
 now scale $NAME.now.sh sfo 1
 ```
-
-(**Note:** replace `something-cool` above with some unique name that you choose, and `xxx` with the URL shown in the `now` output.)
 
 ### Test the URL of your working app
 
