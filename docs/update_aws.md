@@ -52,7 +52,7 @@ You can then access your notebooks at [localhost:8888](http://localhost:8888).
 ``` bash
 cd course-v3
 git pull
-``` 
+```
 
 <img alt="" src="/images/gradient/update.png" class="screenshot">
 
@@ -61,7 +61,8 @@ This should give you the latest of the course notebooks. If you modified some of
 ### Update the fastai library
 To update the fastai library, while you're in the terminal  type
 ``` bash
-conda update fastai
+conda update conda
+conda install -c fastai fastai
 ```
 
 ### Stop your instance

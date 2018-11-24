@@ -9,6 +9,8 @@ sidebar: home_sidebar
 
 It takes about 1 minute to signup & launch a Salamander server. The servers include everything you need to complete the fastai v3 course. Once launched, you can jump straight to Jupyter Notebook or connect directly via ssh.
 
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_salamander.html) section.
+
 ## Pricing
 
 Salamander tracks the AWS _spot_ price +26%. Prices at time of writing:
@@ -42,7 +44,22 @@ Click 'Jupyter Notebook' to access the course materials. After Jupyter Notebook 
 
 See [here](index.html) for instructions on running the Jupyter Notebook tutorial. Return to this guide once you're finished and _don't forget to stop your server_.
 
-## Step 4: Stop your server
+## Step 4: Update the fastai library
+
+Before you start working you will need to update the fastai library. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'.
+
+<img alt="terminal" src="/images/terminal.png" class="screenshot">
+
+Once you click on 'Terminal' a new window should open with a terminal. Type:
+
+``` bash
+source activate fastai
+conda install -c fastai fastai
+```
+
+Now you should close the terminal window.
+
+## Step 5: Stop your server
 
 When you're all done, **don't forget to shut down your server**, so you don't get charged for the time it's running in the background. It's not enough to just close your browser or turn off your own computer. Go back to [salamander](https://salamander.ai/) and click the 'Stop Server' button next to your server.
 

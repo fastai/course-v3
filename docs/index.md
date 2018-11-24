@@ -20,16 +20,19 @@ Here are some great choices of platforms. Click the link for more information on
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you.
 
-- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour, $10 free credit)
-- [Salamander](/start_salamander.html); (instant approval, no installation required, $0.36 an hour, $1 free credit)
-- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour)
+- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour + storage, $10 free credit)
+- [Crestle](/start_crestle.html); (instant approval, no installation required, Free compute until Nov-15th-2018. After that $0.30 an hour for compute + storage costs from Jan-1-2019)
+- [Salamander](/start_salamander.html); (instant approval, no installation required, $0.36 an hour + storage, $1 free credit)
+- [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
+- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour + storage)
+- [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
 
 #### Some installation required
 
 If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
 
-- [Google Compute Platform](/start_gcp.html) ($0.53 an hour, $300 free credit)
-- [Amazon Web Services EC2](/start_dlami.html) ($0.9 an hour)
+- [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
+- [Amazon Web Services EC2](/start_aws.html) ($0.9 an hour + storage)
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
 
@@ -47,7 +50,7 @@ Once you've finished the steps in one of the guide above, you'll be presented wi
 
  This is the jupyter notebook environment, where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
 
-Your first task, then, is to open this notebook tutorial! To do so, click `docs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
+Your first task, then, is to open this notebook tutorial! To do so, click `nbs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
 
 <img alt="" src="/images/duplicate.png" class="screenshot">
 

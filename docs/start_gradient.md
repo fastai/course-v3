@@ -10,6 +10,8 @@ This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](http
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/), a GPU-accelerated cloud platform. 
 
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_gradient.html) section.
+
 ## Pricing
 
 Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected.  Notebooks must be stopped to end billing. See below for free GPU credit! 💰
@@ -40,7 +42,21 @@ Your Notebook will go from Pending to Running, and will be ready to use :star2:.
 
 When you click Create Notebook, that will start your Notebook and your billing for utilization will begin. To stop billing, you must stop your Notebook. Notebooks will automatically shut down after 12 hours.
 
-## Step 3: Start learning Fast.ai!
+## Step 3 : Update the fastai library
+
+Before you start working you will need to update the fastai library. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'.
+
+<img alt="terminal" src="/images/terminal.png" class="screenshot">
+
+Once you click on 'Terminal' a new window should open with a terminal. Type:
+
+``` bash
+pip install fastai --upgrade 
+```
+
+Now you should close the terminal window.
+
+## Step 4: Start learning Fast.ai!
 You should now have a running fast.ai notebook. It might take a few minutes to provision, but once it's running you just have to click "Open" to access your Jupyter notebook.
 
 <img alt="ready" src="/images/gradient/ready.png" class="screenshot">
@@ -51,7 +67,7 @@ Next from your your jupyter notebook, click on 'course-v3' and you should look a
 
 Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step
 
-## Step 4: Stopping your Notebook
+## Step 5: Stopping your Notebook
 Just click stop.  This will end the billing session.
 
 <img alt="" src="/images/gradient/stopNotebook.png" class="screenshot">
