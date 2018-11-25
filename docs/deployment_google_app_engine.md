@@ -42,7 +42,7 @@ Push your customized app directory to GitHub & ***copy the repo URL***
 
 ## Deploy
 
-To begin, Open Google Cloud Dashboard, Click ***Click Create*** Project and then name your new GCP project. Enable billing in your new GCP project by creating a new billing account or setting an existing one. You will be shown following screen:
+To begin, Open Google Cloud Dashboard, Click ***Create Project*** and then name your new GCP project. Enable billing in your new GCP project by creating a new billing account or setting an existing one. You will be shown following screen:
 <img alt="" src="https://cdn-images-1.medium.com/max/1440/1*J_JfUCxs-WAfsNJsW_gXjQ.png" class="screenshot">
 
 After creating a new project, you will be presented with GCP Dashboard page, Go to the far right corner of the page and click ***Activate Cloud Shell***.
