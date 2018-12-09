@@ -87,9 +87,9 @@ Log in to the AWS console then search for EC2 in the query bar or click 'EC2' in
 
 <img alt="launch instance" src="/images/aws/launch_instance.png" class="screenshot">
 
-Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 16.0
+Search for 'ubuntu' and select the first option: Ubuntu Server 18.04 LTS
 
-<img alt="amiubuntu" src="/images/aws/amiubuntu.png" class="screenshot">
+<img alt="amiubuntu" src="/images/aws/ami_ubuntu_18.png" class="screenshot">
 
 Scroll down until you find 'p2.xlarge' and select it. Then press 'Review and Launch'.
 
@@ -131,13 +131,31 @@ git clone https://github.com/fastai/course-v3
 ```
 in your terminal to get a folder with all the fast.ai materials. 
 
-Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
+Then run these commands to install the necessary packages and cuda drivers for experimenting with fast.ai and PyTorch:
 
 ``` bash
+# Cuda Drivers
+wget https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64
+sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64
+sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
+
+# CUDA Check
+nvidia-smi
+
+# Anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
+bash Anaconda3-5.3.0-Linux-x86_64.sh -b
+
+# Update Environment Variables (.profile)
+export CONDA_HOME=/home/ubuntu/anaconda3
+export PATH=$CONDA_HOME/bin:$PATH
+
+# Install Fast.AI
 conda update conda
-conda install -c pytorch pytorch-nightly cuda92
-conda install -c fastai torchvision-nightly
-conda install -c fastai fastai
+conda upgrade --all --yes
+conda install -c pytorch -c fastai fastai --yes
 ```
 
 Next move into the directory where you will find the materials for the course by running:
