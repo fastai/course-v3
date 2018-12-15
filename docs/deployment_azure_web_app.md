@@ -1,20 +1,20 @@
 ---
-title: "Deploying on AWS BeanStalk"
+title: "Deploying on Azure Web App for Containers"
 sidebar: home_sidebar
 ---
 
-# AWS Elastic Beanstalk Deployment
+# Azure Web App for Containers Deployment
 
-This is a quick guide to deploy your trained models using AWS Elastic Beanstalk. This guide comes with a starter app deploying Jeremy's Bear Image Classification model form Lesson 2.
+This is a quick guide to deploy your trained models using Azure Web App for Containers. This guide comes with a starter app deploying Jeremy's Bear Image Classification model form Lesson 2.
 
-## Grab AWS Elastic Beanstalk starter pack for model deployment
+## Grab Azure Web App for Containers starter pack for model deployment
 
 ```bash
-wget https://github.com/fastai/course-v3/raw/master/docs/production/aws-beanstalk.zip
+wget https://github.com/fastai/course-v3/raw/master/docs/production/azure-web-app.zip
 
-unzip aws-beanstalk.zip
+unzip azure-web-app.zip
 
-cd aws-beanstalk.zip
+cd azure-web-app.zip
 ```
 
 ## Per-project setup
@@ -38,7 +38,7 @@ with the classes you are expecting from your model.
 
 ## Deploy
 
-To begin, Open AWS Elastic Beanstalk Console, Click ***Create New Application*** and then add details for your demo application name & description and click “create”. You will be presented with new screen for creating new environment
+To begin, Open Azure Web App for Containers Console on portal.azure.com, Click ***Create New Application*** and then add details for your demo application name & description and click “create”. You will be presented with new screen for creating new environment
 <img alt="" src="https://cdn-images-1.medium.com/max/1600/1*quAQHRvOIMAk0Mk65HZFlw.png" class="screenshot">
 
 
