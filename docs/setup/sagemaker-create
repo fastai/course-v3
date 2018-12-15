@@ -10,7 +10,7 @@ mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai
 # install the fastai library and dependencies
 echo "Install the fastai library and dependencies in new conda enviornment"
 cd /home/ec2-user/SageMaker
-conda create -mqyp envs/fastai -c pytorch -c fastai fastai
+conda create -mqyp envs/fastai -c pytorch -c fastai fastai ipykernel
 echo "Finished installing environment"
 
 # clone the course notebooks
@@ -43,7 +43,7 @@ cat > /home/ec2-user/SageMaker/.fastai/std-start-script.sh <<EOF
 echo "Install the ipython fastai kernel"
 cd /home/ec2-user/SageMaker
 source activate envs/fastai
-ipython kernel install --name 'fastai' --display-name 'Python 3' --user
+python -m ipykernel install --name 'fastai' --display-name 'Python 3' --user
 echo "Install jupyter nbextension"
 source /home/ec2-user/anaconda3/bin/activate JupyterSystemEnv
 pip install jupyter_contrib_nbextensions
