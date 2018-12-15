@@ -27,7 +27,7 @@ if [ ! "$CONDA_DEFAULT_ENV" = "fastai" ]; then
     source activate envs/fastai
 fi
 echo "Updating fastai library"
-conda install -y -c fastai fastai
+conda update -y -c fastai fastai
 echo "Getting latest version of course"
 cd /home/ec2-user/SageMaker/course-v3
 git pull
@@ -48,8 +48,8 @@ echo "Install jupyter nbextension"
 source /home/ec2-user/anaconda3/bin/activate JupyterSystemEnv
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextensions install --user
-echo "Rebooting server"
-sudo reboot
+echo "Restarting jupyter notebook server"
+pkill -f jupyter-notebook
 EOF
 chmod u+x /home/ec2-user/SageMaker/.fastai/std-start-script.sh
 
