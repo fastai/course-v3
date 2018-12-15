@@ -10,7 +10,7 @@ mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai
 # install the fastai library and dependencies
 echo "Install the fastai library and dependencies in new conda enviornment"
 cd /home/ec2-user/SageMaker
-conda create -mqyp envs/fastai -c pytorch -c fastai python=3.6 jupyter pytorch-nightly fastai cuda92 torchvision-nightly
+conda create -mqyp envs/fastai -c pytorch -c fastai fastai
 echo "Finished installing environment"
 
 # clone the course notebooks
@@ -27,7 +27,7 @@ if [ ! "$CONDA_DEFAULT_ENV" = "fastai" ]; then
     source activate envs/fastai
 fi
 echo "Updating fastai library"
-conda update -y -c fastai fastai
+conda install -y -c fastai fastai
 echo "Getting latest version of course"
 cd /home/ec2-user/SageMaker/course-v3
 git pull
