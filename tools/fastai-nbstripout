@@ -71,7 +71,8 @@ for filename in args.files:
 
 # implied textconv mode
 if not args.files and input_stream:
-    s = json.load(input_stream)
+    try: s = json.load(input_stream)
+    except: raise Exception(f'failed to load {input_stream}')
     clean_nb(s)
     x = json.dumps(s, sort_keys=True, indent=1, ensure_ascii=False)
     output_stream.write(x)
