@@ -3,7 +3,7 @@ title: "Deploying on Render"
 sidebar: home_sidebar
 ---
 
-<img alt="Render" src="/images/render/render.png" width="100" height="100" class="screenshot">
+<img alt="Render" src="/images/render/render.png" class="screenshot">
 
 This is quick guide to deploy your trained models on [Render](https://render.com) in just a few clicks. It comes with a [starter app](https://github.com/render-examples/fastai-v3-render/tree/master) that uses Jeremy's Bear Image Classification model from Lesson 2.
 
@@ -33,19 +33,23 @@ Upload your trained model file (for example `stage-2.pth`) to a cloud service li
 
 1. Edit the file `server.py` inside the `app` directory and update the `model_file_url` variable with the URL copied above.
 2. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you expect from your model.
-3. **Make sure to commit and push your changes to your GitHub repository.**
 
-### Deploy
+### Commit and push your changes to GitHub.
 
-1. Create a new **Web Service** on Render and use the repository you created above. You will need to grant Render permission to access your repo in this step.
+Make sure to keep the GitHub repo you created above current. Render integrates with your GitHub repo and automatically builds and deploys changes every time you push a change.
 
-2. On the deployment screen, pick a name for your service and use `Docker` for the runtime environment.
+## Deploy
 
-3. Click `Save Web Service`. That's it! Your service will begin building and should be live in a few minutes at the URL displayed in your Render dashboard. You can follow its progress in the deploy logs.
+1. Create a new **Web Service** on Render and use the repo you created above. You will need to grant Render permission to access your repo in this step.
 
-### Test your app
+2. On the deployment screen, pick a name for your service and use `Docker` for the Environment.
 
-Your app's URL will be displayed in the dashboard and will look like `https://service-name.app.render.com`. You can also look at the logs for the service in the dashboard.
+3. Click **Save Web Service**. That's it! Your service will begin building and should be live in a few minutes at the URL displayed in your Render dashboard. You can follow its progress in the deploy logs.
+
+
+## Test your app
+
+Your app's URL will look like `https://service-name.app.render.com`. You can also monitor the service logs as you test your app.
 
 ## Local testing
 
