@@ -70,6 +70,9 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: Render
+      url: /deployment_render.html
+    - output: web
       title: Zeit
       url: /deployment_zeit.html
     - output: web
