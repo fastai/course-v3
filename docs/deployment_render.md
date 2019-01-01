@@ -17,7 +17,7 @@ Fork https://github.com/render-examples/fastai-v3 into your GitHub account.
 
 ### Create a Render account
 
-Sign up for Render at https://render.com using invite code `fastai-v3`.
+Sign up at [Render](https://dashboard.render.com/register?i=fastai-v3) using invite code `fastai-v3`.
 
 ## Per-project setup
 
