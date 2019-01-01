@@ -3,7 +3,7 @@ title: "Deploying on Render"
 sidebar: home_sidebar
 ---
 
-<img alt="Render" src="/images/render/render.png" class="screenshot">
+<img alt="Render" src="/images/render/render.png" height="100" width="100" class="screenshot">
 
 This is quick guide to deploy your trained models on [Render](https://render.com) in just a few clicks. It comes with a [starter app](https://github.com/render-examples/fastai-v3-render/tree/master) that uses Jeremy's Bear Image Classification model from Lesson 2.
 
