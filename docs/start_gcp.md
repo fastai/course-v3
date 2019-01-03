@@ -111,7 +111,7 @@ To create the instance we recommend, just copy and paste the following command i
 If you choose the budget compute option, please replace the values of the parameters on the lines with a 'budget:' comment (e.g. replace "n1-highmem-8" by "n1-highmem-4").
 
 ```bash
-export IMAGE_FAMILY="pytorch-1-0-cu92-experimental" # or "pytorch-1-0-cpu-experimental" for non-GPU instances
+export IMAGE_FAMILY="pytorch-latest-gpu" # or "pytorch-latest-cpu" for non-GPU instances
 export ZONE="us-west2-b" # budget: "us-west1-b"
 export INSTANCE_NAME="my-fastai-instance"
 export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"
