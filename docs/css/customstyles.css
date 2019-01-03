@@ -1411,6 +1411,7 @@ h4 code {
     border: 2px solid
 }
 
-.render-logo {
-    width: 109px;
+.provider-logo {
+    width: 100px;
+    height: 100px;
 }
