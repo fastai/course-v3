@@ -3,7 +3,7 @@ title: "Deploying on Render"
 sidebar: home_sidebar
 ---
 
-<img alt="Render" src="/images/render/render.png" height="100" width="100" class="screenshot">
+<img alt="Render" src="/images/render/render.png" class="provider-logo">
 
 This is quick guide to deploy your trained models on [Render](https://render.com) in just a few clicks. It comes with a [starter repo](https://github.com/render-examples/fastai-v3) that uses Jeremy's Bear Image Classification model from Lesson 2.
 
@@ -18,6 +18,8 @@ Fork https://github.com/render-examples/fastai-v3 into your GitHub account.
 ### Create a Render account
 
 Sign up at [Render](https://dashboard.render.com/register?i=fastai-v3) using invite code `fastai-v3`.
+
+Render web services cost $5 per month and are prorated by the second. All new accounts start out with $25 in credits.
 
 ## Per-project setup
 
