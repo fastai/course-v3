@@ -13,7 +13,7 @@ The starter app is deployed at [https://fastai-v3.app.render.com](https://fastai
 
 ### Fork the starter app on GitHub.
 
-Fork https://github.com/render-examples/fastai-v3 into your GitHub account.
+Fork [https://github.com/render-examples/fastai-v3](https://github.com/render-examples/fastai-v3) into your GitHub account.
 
 ### Create a Render account
 
