@@ -146,7 +146,11 @@ gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 
 Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts (the passphrase is optional, if you aren't going to be using this key for anything too secure).
 
-If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
+If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environmentlike this one:
+
+<img alt="gcp-stop-instance" src="/images/gcp/jupyter.png" class="screenshot">
+
+Note that this only works while you maintain the ssh connection in your terminal.
 
 ### Preemptible instances:
 
@@ -161,21 +165,43 @@ These characteristics make preemptible instances a nice option for beginners, si
 
 ## Step 4: Access fast.ai materials and update packages
 
-Now your command line which should show a prompt along the lines of `jupyter@my-fastai-instance:`
+Open http://localhost:8080. From your Jupyter Lab open folder "tutorials":
 
-You should make sure Github is configured and pull from the repository. You can do this by typing the following lines:
+<img alt="gcp-stop-instance" src="/images/gcp/open_tutorials.png" class="screenshot">
 
-``` basg
-cd tutorials/fastai/course-v3
-git checkout .
-git pull
-```
+From there open: "fastai/cource-v3". Now you should see something like this:
 
-You should also update the fastai library:
+<img alt="gcp-stop-instance" src="/images/gcp/cource_v3_folder.png" class="screenshot">
+
+From here you can pull all the latest changes from the git, in order to do so press git tab:
+
+<img alt="gcp-stop-instance" src="/images/gcp/git_tab.png" class="screenshot">
+
+(OPTIONAL) If this is the first time you have connected to the instance, delete any local changes (if there any exist):
+
+<img alt="gcp-stop-instance" src="/images/gcp/delete_local_changes.png" class="screenshot">
+
+At this moment you can press pull button in order to pull the latest changes:
+
+<img alt="gcp-stop-instance" src="/images/gcp/pull.png" class="screenshot">
+
+This will take some time. In order to check the status you can switch to the history tab:
+
+<img alt="gcp-stop-instance" src="/images/gcp/hostory_tab.png" class="screenshot">
+
+You should also update the fastai library. In order to do so, on the home Jupyter screen press terminal tab:
+
+<img alt="gcp-stop-instance" src="/images/gcp/open_terminal.png" class="screenshot">
+
+And run the following command:
 
 ``` bash
-sudo /opt/anaconda3/bin/conda install -c fastai fastai
+conda install -c fastai fastai
 ```
+
+You should see something like this:
+
+<img alt="gcp-stop-instance" src="/images/gcp/fast_ai_update.png" class="screenshot">
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
 
