@@ -8,9 +8,9 @@ sidebar: home_sidebar
 ---
 # Welcome to Azure
 
-[Data Science Virtual Machine(DSVM)](https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/) are a family of Azure Virtual Machine images, pre-installed, configured and tested with several popular tools that are commonly used for data analytics, machine learning and AI development. 
+[Data Science Virtual Machines(DSVM)](https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/) are a family of Azure Virtual Machine images, pre-configured with several popular tools that are commonly used for data analytics, machine learning and AI development. 
 
-This tutorial explains how to set up a DSVM to use Pytorch 1.0.0 and fast.ai 1.0.2.
+This tutorial explains how to set up a DSVM to use Pytorch 1.x and fast.ai 1.x.
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_azure.html) section.
 
@@ -36,7 +36,7 @@ After your Azure account is created, you can login to the [Azure portal](https:/
 
 ## Using DSVM for fast.ai
 
-You can use fast.ai in Azure for both Linux (in a DSVM for Linux) and Windows (in a DSVM for Windows).
+You can run the fast.ai course notebooks in Azure on either Linux or Windows edition of the DSVM.
 
 * For Linux, go to [create Linux DSVM](http://aka.ms/dsvm/fastai).
 * For Windows, go to [create Windows DSVM](http://aka.ms/dsvm/fastai/windows).
@@ -55,31 +55,41 @@ The following input is needed:
 6. Vm Name - The name of the data science server you're creating.
 7. Vm Size - Select the desired DSVM size according to your requirements and [cost](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/).
 
-You can also create [lower cost pre-emptable instances](http://aka.ms/dsvm/fastai4cheap).
-You will see a page as below:
+
+
+### Lowering your cloud compute cost
+Azure offers pre-emptable instances at a significant discount on compute usage charges compared to standard instances. These instances maybe deallocated from your subscription at any time depending on factors like demand for the compute on Azure. Sometimes if you retry after a short period or choose a different VM size you may be able to get another pre-emptable instance. Your work from the deallocated VM is not saved by default.  
+
+If you are fine with these restrictions and want to take advantage of the lower cost, go to [pre-emptable Linux DSVM instance](http://aka.ms/dsvm/fastai4cheap). You will see a page as below:
+
 <img alt="CreatePreemptableLinuxDSVM" src="/images/azure/CreatePreemptableLinuxDSVM.png" class="screenshot">
 
+Click **Purchase** after filling in the fields in the page.  
 
 ## Connect to an instance
 
-To access the DSVM created above, find the DSVM instance name on the Azure portal. You will see the DSVM detail page as below:
+DSVM comes with Jupyter server pre-configured. All fast.ai course notebooks are preloaded on the DSVM.
+
+To access the DSVM created above and run the course notebooks, find the DSVM instance name on the Azure portal by typing the VM Name in the search box. You will see the DSVM detail page as below:
 
 <img alt="FindAndConnectToDSVM" src="/images/azure/FindAndConnectToDSVM.png" class="screenshot">
  
 * For Linux,
 	* Copy the IP address from the page above.
-	* Enter the IP address in a browser as https://<<ip address>>:8000 to access jupyter notebooks. Jupyter is supported on Chrome, Firefox or Safari.
+	* Enter the IP address in a browser as https://<<ip address>>:8000 to access Jupyter notebooks through the built-in Jupyterhub. Jupyter is supported on Chrome, Firefox or Safari. **Note**: You will see a certificate warning since the Jupyter server on the DSVM has a self signed certificate by default. You can skip through this certificate warning on your browser. 
 	* You will need to provide the usename and password you provided in the creation step.
-	* To access the notebooks, from the course-v3, click on fastai:
+	* To access the notebooks, navigate to fastai and then to course-v3 directory as shown below. 
 
 	<img alt="JupyterLinux" src="/images/azure/JupyterLinux.png" class="screenshot">
 
 * For Windows,
-	* Click the 'Connect' button on the DSVM page. This will open the Remote desktop application.
+	* Click the 'Connect' button on the DSVM page. This will open the Remote desktop (RDP) application. 
 	* Enter the username and password you provided in the creation step.
-	* Click on the Jupyter icon and then click on notebooks:
+	* Click on the Jupyter icon on the taskbar and then click on notebooks and then navigate to fastai\course-v3 directory in Jupyter.
 
 	<img alt="JupyterWindows" src="/images/azure/JupyterWindows.png" class="screenshot">
+
+**NOTE**: If you created a pre-emptable instance, it will appear on Azure portal as a "Virtual machine scale set" instead of a "Virtual Machine". This is expected. You can still find the IP address of these instance on the Portal and access Jupyter similar to the Linux case above. 
 
 ## Stop an instance
 When you are done, you can stop the instance by searching for the DSVM name on Azure portal and then clicking on the "Stop" button. You will be charged if you dont stop an instance.
@@ -88,9 +98,9 @@ When you are done, you can stop the instance by searching for the DSVM name on A
 
 
 ## References
-1. [Data Science VM fast.ai extension](https://github.com/Azure/DataScienceVM/tree/master/Extensions/fastaiv1)
-1. [Data Science VM documentation](http://aka.ms/dsvmdoc)
 
+1. [Data Science VM documentation](http://aka.ms/dsvmdoc)
+1. [Data Science VM fast.ai extension](https://github.com/Azure/DataScienceVM/tree/master/Extensions/fastaiv1)
 ---
 
 *Many thanks to Amanda Rapsang, Gopi Kumar, Daniel Schneider and Gregory Buehrer for writing the initial version of this guide.*
