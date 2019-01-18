@@ -37,6 +37,9 @@ entries:
       title: AWS EC2 (Advanced)
       url: /start_aws.html
     - output: web
+      title: Azure (Advanced)
+      url: /start_azure.html
+    - output: web
       title: Crestle.ai (testing)
       url: /start_crestle.html
   - title: Returning to work
@@ -63,6 +66,9 @@ entries:
     - output: web
       title: AWS EC2
       url: /update_aws.html
+    - output: web
+      title: Azure
+      url: /update_azure.html
     - output: web
       title: Crestle
       url: /update_crestle.html
