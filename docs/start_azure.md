@@ -1,21 +1,18 @@
 ---
-
 title: Azure
 keywords: 
 sidebar: home_sidebar
-
-
 ---
 # Welcome to Azure
 
 [Data Science Virtual Machines(DSVM)](https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/) are a family of Azure Virtual Machine images, pre-configured with several popular tools that are commonly used for data analytics, machine learning and AI development. 
 
-This tutorial explains how to set up a DSVM to use Pytorch 1.x and fast.ai 1.x.
+This tutorial explains how to set up a DSVM to use Pytorch v1 and fastai v1.
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_azure.html) section.
 
 ## Pricing
-We suggest using a Standard_NC6 instance in Azure which has one NVidia K80 GPU and six CPU cores. This instance will incur about $0.90 per hour of [compute charges](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/). We also offer [low priority pre-emptable Standard_NC6 instances](https://azure.microsoft.com/en-us/pricing/details/virtual-machine-scale-sets/linux/) for as low as **$0.18** per hour.
+We suggest using a Standard_NC6 instance in Azure which has one NVidia K80 GPU and six CPU cores. This instance will incur about $0.90 per hour of [compute charges](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/), or **$0.18** per hour if you use [low priority pre-emptable Standard_NC6 instances](https://azure.microsoft.com/en-us/pricing/details/virtual-machine-scale-sets/linux/) (see below for more information on this option).
 
 ## Azure Subscription
 
@@ -26,13 +23,11 @@ Before you can create a DSVM, you need access to an Azure subscription. An Azure
 If you are signing up you will also need to set your credit card details. This will be the credit card to which all the charges of the instance usage will be applied. Your sign up screen will look like:
 <img alt="CreatePaidAccount" src="/images/azure/CreatePaidAccount.png" class="screenshot">
 
-
 [Free trials Azure subscriptions](https://azure.microsoft.com/free) are also available though you will not be able to create a GPU based DSVM.
 
 After your Azure account is created, you can login to the [Azure portal](https://portal.azure.com/).
 
 <img alt="AzurePortal" src="/images/azure/AzurePortal.png" class="screenshot">
-
 
 ## Using DSVM for fast.ai
 
@@ -54,8 +49,6 @@ The following input is needed:
 5. Admin Password - The admin account password.
 6. Vm Name - The name of the data science server you're creating.
 7. Vm Size - Select the desired DSVM size according to your requirements and [cost](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/).
-
-
 
 ### Lowering your cloud compute cost
 Azure offers pre-emptable instances at a significant discount on compute usage charges compared to standard instances. These instances maybe deallocated from your subscription at any time depending on factors like demand for the compute on Azure. Sometimes if you retry after a short period or choose a different VM size you may be able to get another pre-emptable instance. Your work from the deallocated VM is not saved by default.  
