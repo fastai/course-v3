@@ -31,10 +31,10 @@ After your Azure account is created, you can login to the [Azure portal](https:/
 
 ## Using DSVM for fast.ai
 
-You can run the fast.ai course notebooks in Azure on either Linux or Windows edition of the DSVM.
+We recommend running the fast.ai course notebooks on the **Linux** edition of the DSVM.
 
-* For Linux, go to [create Linux DSVM](http://aka.ms/dsvm/fastai).
-* For Windows, go to [create Windows DSVM](http://aka.ms/dsvm/fastai/windows).
+* For Linux (recommended), go to [create Linux DSVM](http://aka.ms/dsvm/fastai).
+* For Windows (not supported by fast.ai), go to [create Windows DSVM](http://aka.ms/dsvm/fastai/windows).
  
 You will see a page as below:
 
