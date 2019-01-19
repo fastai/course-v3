@@ -16,14 +16,17 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: Crestle.ai (testing)
+      url: /start_crestle.html
+    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web
-      title: Salamander (Easy)
-      url: /start_salamander.html
-    - output: web
       title: FloydHub (Easy)
       url: /start_floydhub.html
+    - output: web
+      title: Salamander (Easy)
+      url: /start_salamander.html
     - output: web
       title: Colab (Harder)
       url: /start_colab.html
@@ -39,12 +42,12 @@ entries:
     - output: web
       title: Azure (Advanced)
       url: /start_azure.html
-    - output: web
-      title: Crestle.ai (testing)
-      url: /start_crestle.html
   - title: Returning to work
     output: web
     folderitems:
+    - output: web
+      title: Crestle
+      url: /update_crestle.html
     - output: web
       title: Gradient
       url: /update_gradient.html
@@ -69,9 +72,6 @@ entries:
     - output: web
       title: Azure
       url: /update_azure.html
-    - output: web
-      title: Crestle
-      url: /update_crestle.html
   - title: Production
     output: web
     folderitems:
