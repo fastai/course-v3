@@ -94,6 +94,7 @@ When you are done, you can stop the instance by searching for the DSVM name on A
 
 1. [Data Science VM documentation](http://aka.ms/dsvmdoc)
 1. [Data Science VM fast.ai extension](https://github.com/Azure/DataScienceVM/tree/master/Extensions/fastaiv1)
+
 ---
 
 *Many thanks to Amanda Rapsang, Gopi Kumar, Daniel Schneider and Gregory Buehrer for writing the initial version of this guide.*
