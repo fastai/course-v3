@@ -1,0 +1,111 @@
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.right .chapter-nav {
+  background-color: #202020;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right .chapter-nav .chapter {
+  flex: 1;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  background-color: #202020;
+  display: flex;
+  position: relative;
+  text-align: right;
+  flex-direction: column;
+  width: 10rem;
+  padding: 0 1%;
+  transition: width 0.4s ease-in-out;
+}
+
+.left .lessons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left .lessons .lesson {
+  height: 5rem;
+  width: 80%;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.5;
+  padding-top: 1.8rem;
+}
+
+.left .lessons .lesson.selected {
+  opacity: 1;
+}
+
+.left.closed {
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  width: 0rem;
+  padding: 0;
+}
+
+.chapter-nav .chapter {
+  cursor: pointer;
+}
+
+.TranscriptBrowser .top {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.TranscriptBrowser .bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100px;
+}
+
+.TranscriptBrowser .bottom .search-result {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.TranscriptBrowser .bottom .search-result:hover {
+  text-decoration: underline;
+}
+
+.TranscriptBrowser span {
+  flex: 1;
+  opacity: 0.5;
+  margin: auto;
+  text-align: center;
+}
+
+.TranscriptBrowser .Search {
+  flex: 8;
+  margin-right: 20%;
+}
+
+.TranscriptBrowser .Search input {
+  padding-left: 10px;
+  height: 2rem;
+}
+
+.Moment {
+  padding: 1rem;
+  margin: auto;
+  font-size: 3rem;
+}
