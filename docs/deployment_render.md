@@ -27,7 +27,7 @@ If you just want to test initial deployment on Render, the starter repo is set u
 
 ### Upload your trained model file
 
-Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file. 
+Upload the trained model file created with `learner.export` (for example `export.pkl`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file.
 
 **Note** the download link should start the file download directly&mdash;and is typically different from the share link (which presents you with a view to download the file). Use [this link generator](https://syncwithtech.blogspot.com/p/direct-download-link-generator.html) if you need help.
 
