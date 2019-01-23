@@ -14,15 +14,15 @@ const CloseX = styled.span`
   position: absolute;
 `
 
-const TRANSCRIPTS = [
-  lesson1Trans,
-  lesson2Trans,
-  lesson3Trans,
-  null,
-  lesson5Trans,
-  lesson6Trans,
-  null,
-];
+const TRANSCRIPTS = {
+  1: lesson1Trans,
+  2: lesson2Trans,
+  3: lesson3Trans,
+  4: null,
+  5: lesson5Trans,
+  6: lesson6Trans,
+  7: null,
+};
 
 class TranscriptBrowser extends Component {
   state = {

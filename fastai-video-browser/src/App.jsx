@@ -1,8 +1,10 @@
+/* global location */
 import React, { Component, Fragment } from 'react';
 import styled from 'styled-components'
 import FontAwesome from 'react-fontawesome';
 import VideoPlayer from './components/VideoPlayer';
 import TranscriptBrowser from './components/TranscriptBrowser';
+import qs from 'query-string';
 import './App.css';
 
 const StyledToggleWrapper = styled.span`
@@ -38,15 +40,16 @@ const StyledApp = styled.div`
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 `;
 
-const LESSONS = [
-  'Lesson 1',
-  'Lesson 2',
-  'Lesson 3',
-  'Lesson 4',
-  'Lesson 5',
-  'Lesson 6',
-  'Lesson 7',
-];
+const LESSONS = {
+  1: 'Lesson 1',
+  2: 'Lesson 2',
+  3: 'Lesson 3',
+  4: 'Lesson 4',
+  5: 'Lesson 5',
+  6: 'Lesson 6',
+  7: 'Lesson 7',
+}
+
 const CHAPTERS = null; // ['Chapter 1', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5']
 
 const getMinutes = (seconds) =>
@@ -72,9 +75,14 @@ class App extends Component {
     this.currentMomentInterval = null;
   }
 
+  static getDerivedStateFromProps(props, state) {
+    const parsed = qs.parse(window.location.search)
+    return { ...state, selectedLesson: parseInt(parsed.lesson) || 1 }
+  }
+
   state = {
     showLessons: true,
-    selectedLesson: 0,
+    selectedLesson: 1,
     currentMoment: '00:00',
   };
 
@@ -136,18 +144,12 @@ class App extends Component {
                 </h1>
               </header>
               <div className="lessons white">
-                {LESSONS.map((lesson, i) => {
-                  const onClick = () => {
-                    if (lesson !== 'Coming Soon!') {
-                      selectLesson(i);
-                    }
-                  };
-
+                {Object.keys(LESSONS).map((i) => {
+                  const lesson = LESSONS[i];
                   return (
                     <div
                       key={`lesson-${i}`} // eslint-disable-line react/no-array-index-key
-                      onClick={onClick}
-                      onKeyUp={onClick}
+                      onClick={() => selectLesson(i)}
                       role="button"
                       tabIndex="0"
                       className={`${
