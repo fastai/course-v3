@@ -1,6 +1,8 @@
 /* global location */
 import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
+import CodeBlock from './components/CodeBlock';
 import FontAwesome from 'react-fontawesome';
 import VideoPlayer from './components/VideoPlayer';
 import Toggler from './components/Toggler';
@@ -150,8 +152,25 @@ const StyledPanel = styled.section`
   display: flex;
   flex-direction: column;
   transition: width 0.4s ease-in-out;
-  color: white;
 `
+
+const source = `## HTML block below
+
+> This blockquote will change based on the HTML settings above.
+
+## How about some code ?
+\`\`\`js
+var React = require('react');
+var Markdown = require('react-markdown');
+console.log('hello')
+
+React.render(
+  <Markdown source="# Your markdown here" />,
+  document.getElementById('content')
+);
+\`\`\`
+`
+
 
 const NotesPanel = ({ showNotes, toggleNotes, ...rest }) => (
   <StyledPanel open={showNotes} {...rest}>
@@ -162,9 +181,9 @@ const NotesPanel = ({ showNotes, toggleNotes, ...rest }) => (
       iconTrue="fa-chevron-right"
       iconFalse="fa-chevron-left"
     />
-    <div>
-      Hello from panel
-    </div>
+    <ReactMarkdown source={source} renderers={{
+      code: CodeBlock
+    }} />
   </StyledPanel>
 )
 
