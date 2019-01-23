@@ -12,6 +12,30 @@ entries:
     - output: web
       title: Intro to GPUs
       url: /gpu_tutorial.html
+  - title: Lessons
+    output: web
+    folderitems:
+    - output: web
+      title: 1 - Practical image classification
+      url: /lesson1
+    - output: web
+      title: 2 - Practical image classification
+      url: /lesson2
+    - output: web
+      title: 3 - Practical image classification
+      url: /lesson3
+    - output: web
+      title: 4 - Practical image classification
+      url: /lesson4
+    - output: web
+      title: 5 - Practical image classification
+      url: /lesson5
+    - output: web
+      title: 6 - Practical image classification
+      url: /lesson6
+    - output: web
+      title: 7 - Practical image classification
+      url: /lesson7
   - title: Server setup
     output: web
     folderitems:
