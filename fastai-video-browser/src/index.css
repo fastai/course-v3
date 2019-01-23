@@ -1,6 +1,11 @@
+:root {
+  --fastai-blue: #347DBE;
+  font-family: Helvetica;
+}
+
 body {
   height: 100%;
-  background-color: #202020;
+  background-color: var(--fastai-blue);
 }
 
 a {

@@ -1,18 +1,18 @@
-.right {
+.center {
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
-.right .chapter-nav {
-  background-color: #202020;
+.center .chapter-nav {
+  background-color: var(--fastai-blue);
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.right .chapter-nav .chapter {
+.center .chapter-nav .chapter {
   flex: 1;
   text-align: center;
 }
@@ -23,7 +23,7 @@
 }
 
 .left {
-  background-color: #202020;
+  background-color: var(--fastai-blue);
   display: flex;
   position: relative;
   text-align: right;
@@ -33,27 +33,8 @@
   transition: width 0.4s ease-in-out;
 }
 
-.left .lessons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.left .lessons .lesson {
-  height: 5rem;
-  width: 80%;
-  text-align: center;
-  cursor: pointer;
-  opacity: 0.5;
-  padding-top: 1.8rem;
-}
-
-.left .lessons .lesson.selected {
-  opacity: 1;
-}
-
 .left.closed {
-  background-color: #202020;
+  background-color: var(--fastai-blue);
   display: flex;
   flex-direction: column;
   width: 0rem;
@@ -107,5 +88,5 @@
 .Moment {
   padding: 1rem;
   margin: auto;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }

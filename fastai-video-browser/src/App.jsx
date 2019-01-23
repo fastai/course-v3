@@ -1,37 +1,13 @@
 /* global location */
 import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 import VideoPlayer from './components/VideoPlayer';
+import Toggler from './components/Toggler';
+import Lessons from './components/Lessons';
 import TranscriptBrowser from './components/TranscriptBrowser';
 import qs from 'query-string';
 import './App.css';
-
-const StyledToggleWrapper = styled.span`
-  padding: 5% 0;
-  z-index: 20;
-  color: white;
-  cursor: pointer;
-  font-size: 2rem;
-  width: 30px;
-  position: absolute;
-  top: 1.7rem;
-  text-align: center;
-  right: -30px;
-  background-color: #202020;
-`
-
-const Icon = styled(FontAwesome)`
-  vertical-align: middle;
-  font-size: 1rem;
-`
-
-const Toggler = ({ onClick, condition, iconTrue, iconFalse }) => (
-  <StyledToggleWrapper onClick={onClick} role="button" tabIndex="0">
-    {condition ? <Icon size="1x" className={iconTrue} /> : <Icon className={iconFalse} size="1x" />}
-  </StyledToggleWrapper>
-)
 
 const StyledApp = styled.div`
   height: 100vh;
@@ -40,16 +16,6 @@ const StyledApp = styled.div`
   flex-direction: row;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 `;
-
-const LESSONS = {
-  1: 'Lesson 1',
-  2: 'Lesson 2',
-  3: 'Lesson 3',
-  4: 'Lesson 4',
-  5: 'Lesson 5',
-  6: 'Lesson 6',
-  7: 'Lesson 7',
-}
 
 const CHAPTERS = null; // ['Chapter 1', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5']
 
@@ -83,6 +49,7 @@ class App extends Component {
 
   state = {
     showLessons: true,
+    showNotes: false,
     selectedLesson: 1,
     currentMoment: '00:00',
   };
@@ -111,21 +78,22 @@ class App extends Component {
 
   toggleLessons = () => {
     const { showLessons } = this.state;
-
     this.setState({ showLessons: !showLessons });
   };
 
-  selectLesson = (selectedLesson) => {
-    this.setState({ selectedLesson });
-  };
+  toggleNotes = () => {
+    const { showNotes } = this.state;
+    this.setState({ showNotes: !showNotes })
+  }
 
   render() {
-    const { toggleLessons, selectLesson } = this;
-    const { showLessons, selectedLesson, currentMoment } = this.state;
+    const { toggleLessons, toggleNotes } = this;
+    const { showLessons, showNotes, selectedLesson, currentMoment } = this.state;
     return (
         <StyledApp>
           <section className={`left ${showLessons ? '' : 'closed'}`}>
             <Toggler
+              styles={{ right: '-30px' }}
               condition={showLessons}
               onClick={toggleLessons}
               iconTrue="fa-chevron-left"
@@ -133,41 +101,24 @@ class App extends Component {
             />
             {showLessons && (
               <Fragment>
-                <header className="App-header serif">
-                  <h1 className="f2 underline white tc">
+                <header>
+                <h1 style={{ fontSize: '1.125rem', textAlign: 'center', fontFamily: 'Helvetica', color: 'white' }}>
+                    <FontAwesome className="fa-home" />
                     <a
-                      href="http://fast.ai"
+                      href="/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      style={{ textDecoration: 'none', marginLeft: '0.5rem' }}
                     >
-                      fast.ai
+                      course
                     </a>
                   </h1>
                 </header>
-                <div className="lessons white">
-                  {Object.keys(LESSONS).map((i) => {
-                    const lesson = LESSONS[i];
-                    return (
-                        <Link
-                          key={`lesson-${i}`} // eslint-disable-line react/no-array-index-key
-                          role="button"
-                          tabIndex="0"
-                          className={`${
-                            i === selectedLesson ? 'selected' : ''
-                          } lesson ba ${
-                            lesson === 'Coming Soon!' ? 'disabled' : 'grow'
-                          }`}
-                          to={`?lesson=${i}`}
-                        >
-                          {lesson}
-                        </Link>
-                    );
-                  })}
-                </div>
+                <Lessons selectedLesson={selectedLesson} />
               </Fragment>
             )}
           </section>
-          <section className="right">
+          <section className="center">
             <div className="row">
               <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />
               {CHAPTERS && (
@@ -186,9 +137,35 @@ class App extends Component {
               currentMoment={currentMoment}
             />
           </section>
+          <NotesPanel toggleNotes={toggleNotes} showNotes={showNotes} />
         </StyledApp>
     );
   }
 }
+
+const StyledPanel = styled.section`
+  position: relative;
+  width: ${props => props.open ? '25vw' : '0'};;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.4s ease-in-out;
+  color: white;
+`
+
+const NotesPanel = ({ showNotes, toggleNotes, ...rest }) => (
+  <StyledPanel open={showNotes} {...rest}>
+    <Toggler
+      styles={{ left: '-30px' }}
+      condition={showNotes}
+      onClick={toggleNotes}
+      iconTrue="fa-chevron-right"
+      iconFalse="fa-chevron-left"
+    />
+    <div>
+      Hello from panel
+    </div>
+  </StyledPanel>
+)
 
 export default App;
