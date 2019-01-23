@@ -1,6 +1,7 @@
 /* global location */
 import React, { Component, Fragment } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 import VideoPlayer from './components/VideoPlayer';
 import TranscriptBrowser from './components/TranscriptBrowser';
@@ -122,70 +123,70 @@ class App extends Component {
     const { toggleLessons, selectLesson } = this;
     const { showLessons, selectedLesson, currentMoment } = this.state;
     return (
-      <StyledApp>
-        <section className={`left ${showLessons ? '' : 'closed'}`}>
-          <Toggler
-            condition={showLessons}
-            onClick={toggleLessons}
-            iconTrue="fa-chevron-left"
-            iconFalse="fa-chevron-right"
-          />
-          {showLessons && (
-            <Fragment>
-              <header className="App-header serif">
-                <h1 className="f2 underline white tc">
-                  <a
-                    href="http://fast.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    fast.ai
-                  </a>
-                </h1>
-              </header>
-              <div className="lessons white">
-                {Object.keys(LESSONS).map((i) => {
-                  const lesson = LESSONS[i];
-                  return (
-                    <div
-                      key={`lesson-${i}`} // eslint-disable-line react/no-array-index-key
-                      onClick={() => selectLesson(i)}
-                      role="button"
-                      tabIndex="0"
-                      className={`${
-                        i === selectedLesson ? 'selected' : ''
-                      } lesson ba ${
-                        lesson === 'Coming Soon!' ? 'disabled' : 'grow'
-                      }`}
+        <StyledApp>
+          <section className={`left ${showLessons ? '' : 'closed'}`}>
+            <Toggler
+              condition={showLessons}
+              onClick={toggleLessons}
+              iconTrue="fa-chevron-left"
+              iconFalse="fa-chevron-right"
+            />
+            {showLessons && (
+              <Fragment>
+                <header className="App-header serif">
+                  <h1 className="f2 underline white tc">
+                    <a
+                      href="http://fast.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      {lesson}
-                    </div>
-                  );
-                })}
-              </div>
-            </Fragment>
-          )}
-        </section>
-        <section className="right">
-          <div className="row">
-            <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />
-            {CHAPTERS && (
-              <div className="chapter-nav white">
-                {CHAPTERS.map((chap) => (
-                  <div key={chap} className="chapter ba grow">
-                    {chap}
-                  </div>
-                ))}
-              </div>
+                      fast.ai
+                    </a>
+                  </h1>
+                </header>
+                <div className="lessons white">
+                  {Object.keys(LESSONS).map((i) => {
+                    const lesson = LESSONS[i];
+                    return (
+                        <Link
+                          key={`lesson-${i}`} // eslint-disable-line react/no-array-index-key
+                          role="button"
+                          tabIndex="0"
+                          className={`${
+                            i === selectedLesson ? 'selected' : ''
+                          } lesson ba ${
+                            lesson === 'Coming Soon!' ? 'disabled' : 'grow'
+                          }`}
+                          to={`?lesson=${i}`}
+                        >
+                          {lesson}
+                        </Link>
+                    );
+                  })}
+                </div>
+              </Fragment>
             )}
-          </div>
-          <TranscriptBrowser
-            lesson={selectedLesson}
-            goToMoment={this.goToMoment}
-            currentMoment={currentMoment}
-          />
-        </section>
-      </StyledApp>
+          </section>
+          <section className="right">
+            <div className="row">
+              <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />
+              {CHAPTERS && (
+                <div className="chapter-nav white">
+                  {CHAPTERS.map((chap) => (
+                    <div key={chap} className="chapter ba grow">
+                      {chap}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <TranscriptBrowser
+              lesson={selectedLesson}
+              goToMoment={this.goToMoment}
+              currentMoment={currentMoment}
+            />
+          </section>
+        </StyledApp>
     );
   }
 }
