@@ -57,16 +57,11 @@ class App extends Component {
     const { showLessons, showNotes, selectedLesson } = this.state;
     return (
         <StyledApp>
-          <section className={`left ${showLessons ? '' : 'closed'}`}>
-            <Toggler
-              styles={{ right: '-30px' }}
-              condition={showLessons}
-              onClick={toggleLessons}
-              iconTrue="fa-chevron-left"
-              iconFalse="fa-chevron-right"
-            />
-            {showLessons && <LessonsPanel lesson={selectedLesson} />}
-          </section>
+          <LessonsPanel
+            showLessons={showLessons}
+            toggleLessons={toggleLessons}
+            lesson={selectedLesson}
+          />
           <section className="center">
             <div className="row">
               <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />

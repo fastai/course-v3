@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 import { Link } from 'react-router-dom';
+import Toggler from './Toggler';
 
 const LESSONS = {
   1: 'Lesson 1',
@@ -12,6 +13,28 @@ const LESSONS = {
   6: 'Lesson 6',
   7: 'Lesson 7',
 }
+
+const StyledPanel = styled.section`
+  background-color: var(--fastai-blue);
+  display: flex;
+  position: relative;
+  text-align: right;
+  flex-direction: column;
+  flex: 2;
+  width: 10rem;;
+  max-width: 10rem;
+  padding: 0 1%;
+  box-shadow: 2px 0 30px #444;
+  border-right: 1px solid black;
+
+  ${props => props.closed && css`
+    background-color: var(--fastai-blue);
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    padding: 0;
+  `}
+`
 
 const StyledLesson = styled(Link)`
   height: 3rem;
@@ -61,30 +84,45 @@ const Lesson = ({ num, lesson, selectedLesson }) => (
   </StyledLesson>
 )
 
-const LessonsPanel = ({ lesson }) => (
-  <Fragment>
-    <header>
-      <h1 style={{
-        fontSize: '1.125rem',
-        textAlign: 'center',
-        fontFamily: 'Helvetica',
-        color: 'white'
-      }}>
-        <FontAwesome className="fa-home" name="fa-home" />
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            textDecoration: 'none',
-            marginLeft: '0.5rem'
-          }}
-        >course</a>
-      </h1>
-    </header>
-    <LessonsList selectedLesson={lesson} />
-  </Fragment>
+const LessonsPanel = ({ showLessons, toggleLessons, lesson }) => (
+  <StyledPanel closed={!showLessons}>
+    <Toggler
+      styles={{
+        right: '-30px',
+        border: {
+          right: '1px solid black',
+          top: '1px solid black',
+          bottom: '1px solid black',
+        }
+      }}
+      condition={showLessons}
+      onClick={toggleLessons}
+      iconTrue="fa-chevron-left"
+      iconFalse="fa-chevron-right"
+    />
+      {showLessons && <Fragment>
+          <header>
+            <h1 style={{
+              fontSize: '1.125rem',
+              textAlign: 'center',
+              fontFamily: 'Helvetica',
+              color: 'white'
+            }}>
+              <FontAwesome className="fa-home" name="fa-home" />
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: 'none',
+                  marginLeft: '0.5rem'
+                }}
+              >course</a>
+            </h1>
+          </header>
+          <LessonsList selectedLesson={lesson} />
+        </Fragment>}
+    </StyledPanel>
 )
-
 
 export default LessonsPanel

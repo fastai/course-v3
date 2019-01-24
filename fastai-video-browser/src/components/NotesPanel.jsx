@@ -30,6 +30,7 @@ const StyledPanel = styled.section`
   flex: ${props => props.open ? '3' : 0};
   max-width: 35vw;
   background-color: white;
+  box-shadow: -1px 0 30px #444;
 `
 
 const StyledMarkdown = styled(ReactMarkdown)`
@@ -75,7 +76,14 @@ class MarkdownRenderer extends React.Component {
 const NotesPanel = ({ lesson, showNotes, toggleNotes, ...rest }) => (
   <StyledPanel open={showNotes} {...rest}>
     <Toggler
-      styles={{ left: "-30px" }}
+      styles={{
+        left: '-32px',
+        border: {
+          left: '1px solid black',
+          bottom: '1px solid black',
+          top: '1px solid black',
+        }
+      }}
       condition={showNotes}
       onClick={toggleNotes}
       iconTrue="fa-chevron-right"

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import FontAwesome from 'react-fontawesome'
 
 const StyledToggleWrapper = styled.span`
@@ -12,6 +12,13 @@ const StyledToggleWrapper = styled.span`
   position: absolute;
   top: 1.7rem;
   text-align: center;
+  ${props => props.border && css`
+    border-top: ${props.border.top || 0};
+    border-left: ${props.border.left || 0};
+    border-right: ${props.border.right || 0};
+    border-bottom: ${props.border.bottom || 0};
+
+  `}
   right: ${props => props.right || 'inherit'};
   left: ${props => props.left || 'inherit'};
   background-color: var(--fastai-blue);

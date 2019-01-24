@@ -22,26 +22,6 @@
   flex-direction: row;
 }
 
-.left {
-  background-color: var(--fastai-blue);
-  display: flex;
-  position: relative;
-  text-align: right;
-  flex-direction: column;
-  flex: 2;
-  width: 10rem;;
-  max-width: 10rem;
-  padding: 0 1%;
-}
-
-.left.closed {
-  background-color: var(--fastai-blue);
-  display: flex;
-  flex-direction: column;
-  flex: 0;
-  padding: 0;
-}
-
 .chapter-nav .chapter {
   cursor: pointer;
 }
