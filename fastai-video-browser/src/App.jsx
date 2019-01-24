@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import VideoPlayer from './components/VideoPlayer';
+import VideoPanel from './components/VideoPanel';
 import LessonsPanel from './components/LessonsPanel';
 import NotesPanel from './components/NotesPanel';
 import TranscriptBrowser from './components/TranscriptBrowser';
@@ -30,6 +30,7 @@ class App extends Component {
 
   state = {
     // We show both panels by default to illustrate UX to first-time users.
+    showSearch: true,
     showLessons: true,
     showNotes: true,
     selectedLesson: 1,
@@ -52,8 +53,16 @@ class App extends Component {
   }
 
   render() {
-    const { toggleLessons, toggleNotes } = this;
-    const { showLessons, showNotes, selectedLesson } = this.state;
+    const {
+      toggleLessons,
+      toggleNotes,
+    } = this;
+    const {
+      showLessons,
+      showNotes,
+      showSearch,
+      selectedLesson,
+    } = this.state;
     return (
         <StyledApp>
           <LessonsPanel
@@ -61,16 +70,20 @@ class App extends Component {
             toggleLessons={toggleLessons}
             lesson={selectedLesson}
           />
-          <section className="center">
-            <div className="row">
-              <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />
-            </div>
-            <TranscriptBrowser
-              lesson={selectedLesson}
-              goToMoment={this.goToMoment}
-            />
-          </section>
-          <NotesPanel lesson={selectedLesson} toggleNotes={toggleNotes} showNotes={showNotes} />
+          <VideoPanel
+            ref={this.videoPlayer}
+            lesson={selectedLesson}
+          />
+          <NotesPanel
+            showNotes={showNotes}
+            toggleNotes={toggleNotes}
+            lesson={selectedLesson}
+          />
+          <TranscriptBrowser
+            showSearch={showSearch}
+            goToMoment={this.goToMoment}
+            lesson={selectedLesson}
+          />
         </StyledApp>
     );
   }

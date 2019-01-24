@@ -21,7 +21,7 @@ const StyledPanel = styled.section`
   text-align: right;
   flex-direction: column;
   flex: 2;
-  width: 10rem;;
+  width: 10rem;
   max-width: 10rem;
   padding: 0 1%;
   box-shadow: 2px 0 30px #444;

@@ -17,7 +17,6 @@ const StyledToggleWrapper = styled.span`
     border-left: ${props.border.left || 0};
     border-right: ${props.border.right || 0};
     border-bottom: ${props.border.bottom || 0};
-
   `}
   right: ${props => props.right || 'inherit'};
   left: ${props => props.left || 'inherit'};

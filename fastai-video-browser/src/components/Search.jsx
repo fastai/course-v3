@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledSearch = styled.div`
-  flex: 8;
-  margin-right: 2%;
+  height: 1.5rem;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.875rem;
+  border: 1px solid black;
   input {
     padding-left: 5px;
-    margin-left: 5px;
     height: 1.5rem;
-    min-width: 11vw;
+    width: 8vw;
   }
 `
 

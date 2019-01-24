@@ -27,7 +27,7 @@ const StyledPanel = styled.section`
   flex-direction: column;
   position: relative;
   border-left: solid 1px var(--fastai-blue);
-  flex: ${props => props.open ? '3' : 0};
+  flex: ${props => props.open ? 3 : 0};
   max-width: 35vw;
   background-color: white;
   box-shadow: -1px 0 30px #444;

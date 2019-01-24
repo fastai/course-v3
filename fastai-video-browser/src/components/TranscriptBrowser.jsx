@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Search from './Search';
@@ -26,7 +26,52 @@ const SearchResults = styled.div`
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
-  width: 100%;
+  width: 85%;
+  border: solid 1px;
+  margin-right: 2vw;
+  padding: 1%;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px 2px #444;
+  background-color: white;
+`
+
+const StyledBrowser = styled.div`
+  display: flex;
+  bottom: -7px;
+  position: absolute;
+  z-index: 2;
+  flex-direction: row;
+  justify-content: flex-end;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: 20vh;
+  width: 100vw;
+`
+
+const StyledResult = styled.span`
+  cursor: pointer;
+  padding: 0 2% 0 0;
+  min-width: 7vw;
+  opacity: 0.5;
+  margin: auto;
+  :hover {
+    text-decoration: underline;
+  }
+  :nth-child(2) {
+    margin-left: 3vw;
+  }
+`
+
+const CloseX = styled.span`
+  font-weight: 700;
+  position: fixed;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.8;
+  :hover {
+    opacity: 1;
+  }
 `
 
 class TranscriptBrowser extends Component {
@@ -61,43 +106,48 @@ class TranscriptBrowser extends Component {
       .slice(0, 12);
   }
 
+  clearSearch = () => {
+    this.setState({ search: '' })
+  }
+
   handleChange = (e) => {
     const { value } = e.target;
     this.setState({ search: value.toLowerCase() });
   };
 
   render() {
-    const { goToMoment } = this.props;
+    const { goToMoment, showSearch } = this.props;
     const { search } = this.state;
     if (!this.currentTranscript) return 'Transcript coming soon...';
-    return (
-      <div className="TranscriptBrowser">
-        <div className="top">
-          <Search
-            search={search}
-            handleChange={this.handleChange}
-            transcript={this.getTranscript}
-          />
-          <SearchResults>
-            {search && this.searchResults.map((result) => {
-              const onClick = () => goToMoment(result.moment);
-              return (
-                <span
-                  key={result.moment}
-                  onClick={onClick}
-                  onKeyUp={onClick}
-                  role="button"
-                  tabIndex="0"
-                  className="search-result"
-                >
-                  {result.sentence}
-                </span>
-              );
-            })}
-          </SearchResults>
-        </div>
-      </div>
-    );
+    return showSearch && (
+      <Fragment>
+        <Search
+          search={search}
+          handleChange={this.handleChange}
+          transcript={this.getTranscript}
+        />
+        <StyledBrowser>
+          {search && <SearchResults>
+            <CloseX role="button" onClick={this.clearSearch}>X</CloseX>
+              {this.searchResults.length ?  this.searchResults.map((result) => {
+                const onClick = () => goToMoment(result.moment);
+                return (
+                  <StyledResult
+                    key={result.moment}
+                    onClick={onClick}
+                    onKeyUp={onClick}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    {result.sentence}
+                  </StyledResult>
+                );
+              }) : 'No results found!'}
+            </SearchResults>
+          }
+        </StyledBrowser>
+      </Fragment>
+    )
   }
 }
 
