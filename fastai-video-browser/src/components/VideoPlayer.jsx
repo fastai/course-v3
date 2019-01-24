@@ -14,8 +14,8 @@ const VIDEO_SOURCES = {
 };
 
 const Wrapper = styled.div`
-  flex: 5;
   max-width: 100vw;
+  height: 99vh;
 `
 
 const VideoPlayer = React.forwardRef((props, ref) => {

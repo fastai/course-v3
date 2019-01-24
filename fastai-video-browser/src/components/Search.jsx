@@ -6,7 +6,8 @@ const StyledSearch = styled.div`
   height: 1.5rem;
   z-index: 3;
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
+  left: 5px;
   font-size: 0.875rem;
   border: 1px solid black;
   input {
