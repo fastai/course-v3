@@ -38,7 +38,7 @@ Once this is done, you can access your jupyter notebook at [localhost:8080/tree]
 
 ``` bash
 cd tutorials/fastai/course-v3
-git pull
+sudo git pull
 ```
 
 This should give you the latest of the course notebooks. If you modified some of the notebooks in course-v3/nbs directly, GitHub will probably throw you an error. You should type `git stash` to remove your local changes. Remember you should always work on a copy of the lesson notebooks.
