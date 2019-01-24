@@ -24,7 +24,7 @@ const TRANSCRIPTS = {
 const SearchResults = styled.div`
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
 `
@@ -102,7 +102,6 @@ class TranscriptBrowser extends Component {
 }
 
 TranscriptBrowser.propTypes = {
-  currentMoment: PropTypes.string.isRequired,
   goToMoment: PropTypes.func.isRequired,
   lesson: PropTypes.number.isRequired,
 };

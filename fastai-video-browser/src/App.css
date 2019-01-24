@@ -33,7 +33,7 @@
   height: 5vh;
   flex-direction: row;
   justify-content: space-between;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
 }

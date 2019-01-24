@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import VideoPlayer from './components/VideoPlayer';
-import Toggler from './components/Toggler';
 import LessonsPanel from './components/LessonsPanel';
 import NotesPanel from './components/NotesPanel';
 import TranscriptBrowser from './components/TranscriptBrowser';
