@@ -60,4 +60,4 @@ We'll be coming back to each of these in lots more detail during the remaining l
 
 ---
 
-[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-4/notes.md).
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-4.md).

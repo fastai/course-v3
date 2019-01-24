@@ -42,4 +42,4 @@ In the second half of the lesson we'll train a simple model from scratch, creati
 
 ---
 
-[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-2/notes.md).
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-2.md).

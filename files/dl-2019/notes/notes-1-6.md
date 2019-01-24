@@ -21,4 +21,4 @@ Finally, we'll cover a topic that many students have told us is the most interes
 
 ---
 
-[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-6/notes.md).
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-6.md).

@@ -32,4 +32,4 @@ Although embeddings are most widely known in the context of word embeddings for 
 
 ---
 
-[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-5/notes.md).
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-5.md).

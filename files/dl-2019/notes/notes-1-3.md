@@ -50,4 +50,4 @@ What if your dependent variable is a continuous value, instead of a category? We
 
 ---
 
-[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-3/notes.md).
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-3.md).
