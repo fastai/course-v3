@@ -3,14 +3,14 @@ import styled, { css } from 'styled-components'
 import FontAwesome from 'react-fontawesome'
 
 const StyledToggleWrapper = styled.span`
-  padding: 2vw 0;
+  padding: 1vw 0;
   z-index: 20;
   color: white;
   cursor: pointer;
   font-size: 2rem;
   width: 30px;
   position: absolute;
-  top: 1.7rem;
+  top: 1.2rem;
   text-align: center;
   ${props => props.border && css`
     border-top: ${props.border.top || 0};

@@ -17,6 +17,7 @@ const LESSONS = {
 const StyledPanel = styled.section`
   background-color: var(--fastai-blue);
   display: flex;
+  z-index: 1;
   position: relative;
   text-align: right;
   flex-direction: column;

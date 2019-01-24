@@ -17,6 +17,7 @@ const NOTES = {
 const StyledPanel = styled.section`
   height: 100vh;
   display: flex;
+  z-index: 1;
   flex-direction: column;
   position: relative;
   border-left: solid 1px var(--fastai-blue);
@@ -74,6 +75,7 @@ const NotesPanel = ({ lesson, showNotes, toggleNotes, ...rest }) => (
     <Toggler
       styles={{
         left: '-32px',
+        zIndex: 1,
         border: {
           left: '1px solid black',
           bottom: '1px solid black',
