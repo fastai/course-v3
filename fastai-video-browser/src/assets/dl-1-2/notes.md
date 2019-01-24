@@ -1,4 +1,6 @@
-## Lesson 2: Data cleaning and production; SGD from scratch
+# Lesson 2: Data cleaning and production; SGD from scratch
+
+## Overview
 
 We start today's lesson learning how to build your own image classification model using your own data, including topics such as:
 
@@ -16,3 +18,24 @@ We've had some great additions since this lesson was recorded, so be sure to che
 
 In the second half of the lesson we'll train a simple model from scratch, creating our own *gradient descent* loop. In the process, we'll be learning lots of new jargon, so be sure you've got a good place to take notes, since we'll be referring to this new terminology throughout the course (and there will be lots more introduced in every lesson from here on).
 
+## Resources
+
+### Lesson resources
+
+- Notebooks:
+    - [lesson2-download.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb)
+    - [lesson2-sgd.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-sgd.ipynb)
+- [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson2.md) - thanks to @hiromi
+- [Lesson notes ](https://forums.fast.ai/t/deep-learning-lesson-2-notes/28772) - thanks to @PoonamV
+- [Lesson 2 in-class discussion](https://forums.fast.ai/t/lesson-2-chat/28722)
+- [Links to different parts in the video](https://forums.fast.ai/t/lesson-2-links-to-different-parts-in-video/28777) - thanks to @melonkernel
+
+### Other resources
+
+- [ How (and why) to create a good validation set](https://www.fast.ai/2017/11/13/validation-sets/) by @rachel
+- [There's no such thing as "not a math person"](https://www.youtube.com/watch?v=q6DGVGJ1WP4) by @rachel
+- [Responder](https://github.com/kennethreitz/responder) - a web app framework built on top of Starlette
+- Post about an [alternative image downloader/cleaner](https://www.christianwerner.net/tech/Build-your-image-dataset-faster/) by @cwerner
+- [A tool for excluding irrelevant images from Google Image Search results](https://forums.fast.ai/t/tool-for-deleting-files-on-the-google-image-search-page-before-downloading/28900) by @melonkernel
+- [ Machine Learning is Fun](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721) - source of image/number GIF animation shown in lesson
+- [A systematic study of the class imbalance problem in convolutional neural networks](https://arxiv.org/abs/1710.05381), mentioned by Jeremy as a way to solve imbalanced datasets.
