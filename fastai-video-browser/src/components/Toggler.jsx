@@ -24,7 +24,7 @@ const Icon = styled(FontAwesome)`
 
 const Toggler = ({ onClick, condition, iconTrue, iconFalse, styles }) => (
   <StyledToggleWrapper {...styles} onClick={onClick} role="button" tabIndex="0">
-    {condition ? <Icon size="1x" className={iconTrue} /> : <Icon className={iconFalse} size="1x" />}
+    {condition ? <Icon className={iconTrue} name={iconTrue}/> : <Icon className={iconFalse} name={iconFalse} />}
   </StyledToggleWrapper>
 )
 

@@ -1,13 +1,13 @@
 /* global location */
 import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from './components/CodeBlock';
 import FontAwesome from 'react-fontawesome';
 import VideoPlayer from './components/VideoPlayer';
 import Toggler from './components/Toggler';
 import Lessons from './components/Lessons';
+import NotesPanel from './components/NotesPanel';
 import TranscriptBrowser from './components/TranscriptBrowser';
+import { timestampToSeconds } from './utils/time'
 import qs from 'query-string';
 import './App.css';
 
@@ -19,29 +19,10 @@ const StyledApp = styled.div`
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 `;
 
-const CHAPTERS = null; // ['Chapter 1', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5']
-
-const getMinutes = (seconds) =>
-  (seconds.toFixed(0) / 60).toString().split('.')[0];
-
-const secondsToTimestamp = (totalSeconds) => {
-  let minutes = getMinutes(totalSeconds);
-  let remainder = (totalSeconds.toFixed(0) % 60).toString();
-  if (minutes.length < 2) minutes = `0${minutes}`;
-  if (remainder.length < 2) remainder = `0${remainder}`;
-  return `${minutes}:${remainder}`;
-};
-
-const timestampToSeconds = (moment) => {
-  const [minutes, seconds] = moment.split(':');
-  return Number(minutes) * 60 + Number(seconds);
-};
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.videoPlayer = React.createRef();
-    this.currentMomentInterval = null;
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -53,23 +34,6 @@ class App extends Component {
     showLessons: true,
     showNotes: false,
     selectedLesson: 1,
-    currentMoment: '00:00',
-  };
-
-  componentDidMount() {
-    this.pollForCurrentMoment();
-  }
-
-  pollForCurrentMoment = () => {
-    const { selectedLesson } = this.state;
-
-    if (this.currentMomentInterval) return;
-    this.currentMomentInterval = setInterval(() => {
-      const curTime = this.videoPlayer.current.getCurrentTime();
-      if (!curTime) return;
-      const timestamp = secondsToTimestamp(curTime);
-      this.setState({ currentMoment: timestamp });
-    }, 500);
   };
 
   goToMoment = (timestamp) => {
@@ -90,7 +54,7 @@ class App extends Component {
 
   render() {
     const { toggleLessons, toggleNotes } = this;
-    const { showLessons, showNotes, selectedLesson, currentMoment } = this.state;
+    const { showLessons, showNotes, selectedLesson } = this.state;
     return (
         <StyledApp>
           <section className={`left ${showLessons ? '' : 'closed'}`}>
@@ -105,7 +69,7 @@ class App extends Component {
               <Fragment>
                 <header>
                 <h1 style={{ fontSize: '1.125rem', textAlign: 'center', fontFamily: 'Helvetica', color: 'white' }}>
-                    <FontAwesome className="fa-home" />
+                    <FontAwesome className="fa-home" name="fa-home" />
                     <a
                       href="/"
                       target="_blank"
@@ -123,72 +87,16 @@ class App extends Component {
           <section className="center">
             <div className="row">
               <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />
-              {/* {CHAPTERS && (
-                <div className="chapter-nav white">
-                  {CHAPTERS.map((chap) => (
-                    <div key={chap} className="chapter ba grow">
-                      {chap}
-                    </div>
-                  ))}
-                </div>
-              )} */}
             </div>
             <TranscriptBrowser
               lesson={selectedLesson}
               goToMoment={this.goToMoment}
-              currentMoment={currentMoment}
             />
           </section>
-          <NotesPanel toggleNotes={toggleNotes} showNotes={showNotes} />
+          <NotesPanel lesson={selectedLesson} toggleNotes={toggleNotes} showNotes={showNotes} />
         </StyledApp>
     );
   }
 }
-
-const StyledPanel = styled.section`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  flex: ${props => props.open ? '3' : 0};
-  max-width: 35vw;
-  background-color: white;
-`
-
-const source = `## HTML block below
-
-> This blockquote will change based on the HTML settings above.
-
-## How about some code ?
-\`\`\`js
-var React = require('react');
-var Markdown = require('react-markdown');
-console.log('hello')
-
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
-\`\`\`
-`
-
-const StyledMarkdown = styled(ReactMarkdown)`
-  padding: 0 2%;
-`
-
-const NotesPanel = ({ showNotes, toggleNotes, ...rest }) => (
-  <StyledPanel open={showNotes} {...rest}>
-    <Toggler
-      styles={{ left: "-30px" }}
-      condition={showNotes}
-      onClick={toggleNotes}
-      iconTrue="fa-chevron-right"
-      iconFalse="fa-chevron-left"
-    />
-    {showNotes && (
-      <StyledMarkdown source={source} renderers={{ code: CodeBlock }} />
-    )}
-  </StyledPanel>
-)
 
 export default App;

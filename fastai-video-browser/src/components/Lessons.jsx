@@ -35,14 +35,13 @@ const StyledLessons = styled.div`
   align-items: center;
 `
 
-
 const Lessons = ({ selectedLesson }) => {
   return (
     <StyledLessons>
       {Object.keys(LESSONS).map((i) => {
         const lesson = LESSONS[i];
         return (
-          <Lesson selectedLesson={selectedLesson} lesson={lesson} num={i} />
+          <Lesson selectedLesson={selectedLesson} lesson={lesson} num={i} key={lesson} />
         );
       })}
     </StyledLessons>
