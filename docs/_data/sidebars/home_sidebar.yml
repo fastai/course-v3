@@ -12,6 +12,30 @@ entries:
     - output: web
       title: Intro to GPUs
       url: /gpu_tutorial.html
+  - title: Lessons
+    output: web
+    folderitems:
+    - output: web
+      title: 1 - Image classification
+      url: /videos?lesson=1
+    - output: web
+      title: 2 - Production; SGD from scratch
+      url: /videos?lesson=2
+    - output: web
+      title: 3 - Multi-label; Segmentation
+      url: /videos?lesson=3
+    - output: web
+      title: 4 - NLP; Tabular data; Recsys
+      url: /videos?lesson=4
+    - output: web
+      title: 5 - Backprop; Neural net from scratch
+      url: /videos?lesson=5
+    - output: web
+      title: 6 - Regularization; Convolutions; Ethics
+      url: /videos?lesson=6
+    - output: web
+      title: 7 -  Resnet; U-net; GANs
+      url: /videos?lesson=7
   - title: Server setup
     output: web
     folderitems:

@@ -1,0 +1,62 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+  background-color: white;
+}
+
+.center .chapter-nav {
+  background-color: var(--fastai-blue);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.center .chapter-nav .chapter {
+  flex: 1;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.chapter-nav .chapter {
+  cursor: pointer;
+}
+
+.TranscriptBrowser .top {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 5vh;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.TranscriptBrowser .top .search-result {
+  cursor: pointer;
+  padding: 0 2% 0 0;
+  width: 10vw;
+}
+
+.TranscriptBrowser .top .search-result:hover {
+  text-decoration: underline;
+}
+
+.TranscriptBrowser span {
+  flex: 1;
+  opacity: 0.5;
+  margin: auto;
+  text-align: center;
+}
+
+.Moment {
+  padding: 1rem;
+  margin: auto;
+  font-size: 1.5rem;
+}
