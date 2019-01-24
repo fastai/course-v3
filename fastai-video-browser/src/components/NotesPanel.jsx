@@ -30,9 +30,6 @@ const StyledPanel = styled.section`
 const StyledMarkdown = styled(ReactMarkdown)`
   padding: 0 2%;
   overflow-y: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
 `
 
 const CACHE = {}

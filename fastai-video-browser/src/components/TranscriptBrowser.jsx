@@ -29,7 +29,7 @@ const SearchResults = styled.div`
 
 const StyledBrowser = styled.div`
   display: flex;
-  bottom: -7px;
+  bottom: 0px;
   position: absolute;
   z-index: 2;
   flex-direction: row;
