@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import FontAwesome from 'react-fontawesome'
 
 const StyledToggleWrapper = styled.span`
-  padding: 5% 0;
+  padding: 2vw 0;
   z-index: 20;
   color: white;
   cursor: pointer;
