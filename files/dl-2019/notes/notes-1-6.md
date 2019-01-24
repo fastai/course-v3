@@ -18,3 +18,7 @@ Finally, we'll cover a topic that many students have told us is the most interes
 
 - [platform.ai discussion](https://forums.fast.ai/t/platform-ai-discussion/31445)
 - [50 Years of Test (Un)fairness: Lessons for Machine Learning](https://128.84.21.199/pdf/1811.10104.pdf)
+
+---
+
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-6.md).

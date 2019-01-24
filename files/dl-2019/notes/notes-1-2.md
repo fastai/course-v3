@@ -39,3 +39,7 @@ In the second half of the lesson we'll train a simple model from scratch, creati
 - [A tool for excluding irrelevant images from Google Image Search results](https://forums.fast.ai/t/tool-for-deleting-files-on-the-google-image-search-page-before-downloading/28900) by @melonkernel
 - [ Machine Learning is Fun](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721) - source of image/number GIF animation shown in lesson
 - [A systematic study of the class imbalance problem in convolutional neural networks](https://arxiv.org/abs/1710.05381), mentioned by Jeremy as a way to solve imbalanced datasets.
+
+---
+
+[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-2.md).
