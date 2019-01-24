@@ -47,3 +47,7 @@ What if your dependent variable is a continuous value, instead of a category? We
 - [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/abs/1506.01186) paper by Leslie Smith
 - [ULMFit fine-tuning for NLP Classification](http://nlp.fast.ai/category/classification.html) used in [`language_model_learner()`](https://docs.fast.ai/text.html)
 - [Michael Nielsen's book](http://neuralnetworksanddeeplearning.com/)
+
+---
+
+[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-3/notes.md).

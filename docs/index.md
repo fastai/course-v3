@@ -2,15 +2,19 @@
 title: Practical Deep Learning for Coders, v3
 ---
 
+**Looking for the older 2018 courses?**: This site covers the new 2019 deep learning course. The 2018 courses have been moved to: [course18.fast.ai](http://course18.fast.ai). Note that the 2019 edition of part 2 (*Cutting Edge Deep Learning*) is not yet available, so you'll need to use the 2018 course for now (the 2019 edition will be available in June 2019).
+
 ## Getting started
 
-Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;we'll take you through it all step by step. We do however assume that you've been coding for at least a year, and also that (if you haven't used Python before) you'll be putting in the extra time to learn whatever Python you need as you go. (For learning Python, we've heard good things about the [DataCamp](https://www.datacamp.com/courses/intro-to-python-for-data-science) course, as well as [Learn Python the Hard Way](https://learnpythonthehardway.org/).)
+Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;we'll take you through it all step by step. We do however assume that you've been coding for at least a year, and also that (if you haven't used Python before) you'll be putting in the extra time to learn whatever Python you need as you go. (For learning Python, we have a list of [python learning resources](https://forums.fast.ai/t/recommended-python-learning-resources/26888) available.)
 
 You might be surprised by what you *don't* need to become a top deep learning practitioner. You need one year coding experience, a GPU and appropriate software (see below), and that's it. You don't need much data, you don't need university-level math, and you don't need a giant data center. For more on this, see our article: [What you need to do deep learning](http://www.fast.ai/2017/11/16/what-you-need/).
 
+The easiest way to get started is to just start watching the first video right now! On the sidebar just click "Lessons" and then click on lesson 1, and you'll be on your way&hellip;
+
 ### Using a GPU
 
-To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs will generally be around US$0.36 to US$1.26 per hour while you're using it. 
+To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs will generally be around US$0.36 to US$1.26 per hour while you're using it.
 
  The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer, not running something on your own. It's not enough to close your browser, or turn off your own PC, those will merely sever the connection between your device and this distant server, not shut down the thing you're paying. You have to shut this server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs and get surprised with a nasty bill!
 
@@ -37,9 +41,9 @@ If you're comfortable at a command line, these options are fairly easy to get st
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
 
-* Notebooks are the easiest way to start writing python code and experimenting with deep learning.  
-* Renting a Cloud Server (Option 2) requires environment configuration and setup.  
-* Building a PC requires environment setup and more up-front money. 
+* Notebooks are the easiest way to start writing python code and experimenting with deep learning.
+* Renting a Cloud Server (Option 2) requires environment configuration and setup.
+* Building a PC requires environment setup and more up-front money.
 
 (When we release Part 2 of the course, we will go into more specific details and benefits on both building a PC and renting a server.)
 
@@ -51,11 +55,11 @@ Once you've finished the steps in one of the guide above, you'll be presented wi
 
  This is the jupyter notebook environment, where you'll be doing nearly all your work in the course, so you'll want to get very familiar with it! You'll be learning a bit about it during the course, but you should probably spend a moment to try out the notebook tutorial.
 
-Your first task, then, is to open this notebook tutorial! To do so, click `nbs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate. 
+Your first task, then, is to open this notebook tutorial! To do so, click `nbs` and then `dl1` in jupyter, where you'll then see all the lesson notebooks. First, tick the little box on the left of `00_notebook_tutorial.ipynb` then click duplicate.
 
 <img alt="" src="/images/duplicate.png" class="screenshot">
 
-You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). But we also want you to try a lot of variations of what is shown in class, which is why we encourage you to use duplicates of the course notebooks. 
+You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). But we also want you to try a lot of variations of what is shown in class, which is why we encourage you to use duplicates of the course notebooks.
 
 Launch you copy of `00_notebook_tutorial.ipynb` and follow the instructions!
 

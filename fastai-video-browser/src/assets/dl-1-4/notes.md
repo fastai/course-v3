@@ -57,3 +57,7 @@ We'll be coming back to each of these in lots more detail during the remaining l
 - [What HBR Gets Wrong About Algorithms and Bias](http://www.fast.ai/2018/08/07/hbr-bias-algorithms/)
 - [When Data Science Destabilizes Democracy and Facilitates Genocide](http://www.fast.ai/2017/11/02/ethics/)
 - [Vim and Ctags for fast function definition lookup](https://andrew.stwrt.ca/posts/vim-ctags/)
+
+---
+
+[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-4/notes.md).

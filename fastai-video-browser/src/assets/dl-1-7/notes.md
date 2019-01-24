@@ -25,3 +25,7 @@ The results are stunning, and train in just a couple of hours (compared to previ
 - [Interview with Jeremy at Github](https://www.youtube.com/watch?v=v16uzPYho4g)
 - [ipyexperiments](https://github.com/stas00/ipyexperiments/) - handy lib from @stas that is even better than `gc.collect` at reclaiming your GPU memory
 - [Documentation improvements thread](https://forums.fast.ai/t/documentation-improvements/32550) (please help us make the docs better!)
+
+---
+
+[Edit this page](https://github.com/fastai/course-v3/edit/master/fastai-video-browser/src/assets/dl-1-7/notes.md).
