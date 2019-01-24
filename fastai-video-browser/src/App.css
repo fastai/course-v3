@@ -1,7 +1,7 @@
 .center {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 6;
   background-color: white;
 }
 
@@ -28,16 +28,17 @@
   position: relative;
   text-align: right;
   flex-direction: column;
-  width: 10rem;
+  flex: 2;
+  width: 10rem;;
+  max-width: 10rem;
   padding: 0 1%;
-  transition: width 0.4s ease-in-out;
 }
 
 .left.closed {
   background-color: var(--fastai-blue);
   display: flex;
   flex-direction: column;
-  width: 0rem;
+  flex: 0;
   padding: 0;
 }
 
@@ -46,25 +47,24 @@
 }
 
 .TranscriptBrowser .top {
-  padding-top: 1rem;
   display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 5vh;
   flex-direction: row;
   justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-width: 100%;
 }
 
-.TranscriptBrowser .bottom {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  min-height: 100px;
-}
-
-.TranscriptBrowser .bottom .search-result {
-  padding: 1rem;
+.TranscriptBrowser .top .search-result {
   cursor: pointer;
+  padding: 0 2% 0 0;
+  width: 10vw;
 }
 
-.TranscriptBrowser .bottom .search-result:hover {
+.TranscriptBrowser .top .search-result:hover {
   text-decoration: underline;
 }
 
@@ -77,12 +77,14 @@
 
 .TranscriptBrowser .Search {
   flex: 8;
-  margin-right: 20%;
+  margin-right: 2%;
 }
 
 .TranscriptBrowser .Search input {
-  padding-left: 10px;
-  height: 2rem;
+  padding-left: 5px;
+  margin-left: 5px;
+  height: 1.5rem;
+  min-width: 11vw;
 }
 
 .Moment {

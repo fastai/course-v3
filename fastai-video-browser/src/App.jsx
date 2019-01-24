@@ -123,7 +123,7 @@ class App extends Component {
           <section className="center">
             <div className="row">
               <VideoPlayer lesson={selectedLesson} ref={this.videoPlayer} />
-              {CHAPTERS && (
+              {/* {CHAPTERS && (
                 <div className="chapter-nav white">
                   {CHAPTERS.map((chap) => (
                     <div key={chap} className="chapter ba grow">
@@ -131,7 +131,7 @@ class App extends Component {
                     </div>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
             <TranscriptBrowser
               lesson={selectedLesson}
@@ -146,12 +146,13 @@ class App extends Component {
 }
 
 const StyledPanel = styled.section`
-  position: relative;
-  width: ${props => props.open ? '25vw' : '0'};;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: width 0.4s ease-in-out;
+  position: relative;
+  flex: ${props => props.open ? '3' : 0};
+  max-width: 35vw;
+  background-color: white;
 `
 
 const source = `## HTML block below
@@ -171,19 +172,22 @@ React.render(
 \`\`\`
 `
 
+const StyledMarkdown = styled(ReactMarkdown)`
+  padding: 0 2%;
+`
 
 const NotesPanel = ({ showNotes, toggleNotes, ...rest }) => (
   <StyledPanel open={showNotes} {...rest}>
     <Toggler
-      styles={{ left: '-30px' }}
+      styles={{ left: "-30px" }}
       condition={showNotes}
       onClick={toggleNotes}
       iconTrue="fa-chevron-right"
       iconFalse="fa-chevron-left"
     />
-    <ReactMarkdown source={source} renderers={{
-      code: CodeBlock
-    }} />
+    {showNotes && (
+      <StyledMarkdown source={source} renderers={{ code: CodeBlock }} />
+    )}
   </StyledPanel>
 )
 

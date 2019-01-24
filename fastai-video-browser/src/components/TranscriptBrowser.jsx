@@ -10,9 +10,6 @@ import lesson5Trans from '../assets/dl-1-5/transcript.json';
 import lesson6Trans from '../assets/dl-1-6/transcript.json';
 // import lesson7Trans from '../assets/dl-1-7/transcript.json';
 
-const CloseX = styled.span`
-  position: absolute;
-`
 
 const TRANSCRIPTS = {
   1: lesson1Trans,
@@ -24,6 +21,14 @@ const TRANSCRIPTS = {
   7: null,
 };
 
+const SearchResults = styled.div`
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+`
+
 class TranscriptBrowser extends Component {
   state = {
     search: '',
@@ -33,9 +38,6 @@ class TranscriptBrowser extends Component {
   static getDerivedStateFromProps = (props, state) => {
     const transcript = TRANSCRIPTS[props.lesson];
     if (!transcript) return { ...state };
-    if (transcript[props.currentMoment]) {
-      return { ...state, currentMoment: transcript[props.currentMoment] };
-    }
     return { ...state };
   };
 
@@ -56,7 +58,7 @@ class TranscriptBrowser extends Component {
         moment: timestamp,
         sentence: transcript[timestamp],
       }))
-      .slice(0, 6);
+      .slice(0, 12);
   }
 
   handleChange = (e) => {
@@ -66,39 +68,33 @@ class TranscriptBrowser extends Component {
 
   render() {
     const { goToMoment } = this.props;
-    const { search, currentMoment } = this.state;
-    const { currentMoment: currentMomentProps } = this.props;
+    const { search } = this.state;
     if (!this.currentTranscript) return 'Transcript coming soon...';
     return (
       <div className="TranscriptBrowser">
-
         <div className="top">
-          <span>Transcript Browser</span>
           <Search
             search={search}
             handleChange={this.handleChange}
             transcript={this.getTranscript}
           />
-        </div>
-        <div className="bottom" key={currentMomentProps}>
-          {currentMoment && !search && (
-            <div className="Moment">{currentMoment}</div>
-          )}
-          {search && this.searchResults.map((result) => {
-            const onClick = () => goToMoment(result.moment);
+          <SearchResults>
+            {search && this.searchResults.map((result) => {
+              const onClick = () => goToMoment(result.moment);
               return (
-                <div
+                <span
                   key={result.moment}
                   onClick={onClick}
                   onKeyUp={onClick}
                   role="button"
                   tabIndex="0"
-                  className="search-result dim"
+                  className="search-result"
                 >
                   {result.sentence}
-                </div>
-            );
-          })}
+                </span>
+              );
+            })}
+          </SearchResults>
         </div>
       </div>
     );

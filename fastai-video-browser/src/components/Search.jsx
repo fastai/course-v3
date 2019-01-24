@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 const Search = ({ search, handleChange }) => (
   <div className="Search">
     <input
-      className="fl w-100"
       value={search}
       onChange={handleChange}
-      placeholder="search transcripts and chapter headings..."
+      placeholder="Search transcript"
     />
   </div>
 );

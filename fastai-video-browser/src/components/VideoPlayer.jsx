@@ -23,7 +23,7 @@ const VideoPlayer = React.forwardRef((props, ref) => {
   const { lesson } = props;
   return (
     <Wrapper>
-      <YouTubePlayer ref={ref} url={`https://www.youtube.com/embed/${VIDEO_SOURCES[lesson]}`} controls width="100%" height="100%" />
+      <YouTubePlayer ref={ref} url={`https://www.youtube.com/embed/${VIDEO_SOURCES[lesson]}`} controls width="100%" height="90vh" />
     </Wrapper>
   )
 })

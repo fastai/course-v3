@@ -13,14 +13,17 @@ const LESSONS = {
 }
 
 const StyledLesson = styled(Link)`
-  height: 5rem;
+  height: 3rem;
   width: 80%;
   text-align: center;
   color: white;
   cursor: pointer;
-  padding-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: solid 1px white;
   ${props => props.selected && css`
+    padding: 0.9rem 0;
     font-weight: 700;
     border: solid 2px white;
   `}
