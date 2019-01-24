@@ -1,10 +1,8 @@
-/* global location */
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import FontAwesome from 'react-fontawesome';
 import VideoPlayer from './components/VideoPlayer';
 import Toggler from './components/Toggler';
-import Lessons from './components/Lessons';
+import LessonsPanel from './components/LessonsPanel';
 import NotesPanel from './components/NotesPanel';
 import TranscriptBrowser from './components/TranscriptBrowser';
 import { timestampToSeconds } from './utils/time'
@@ -27,12 +25,14 @@ class App extends Component {
 
   static getDerivedStateFromProps(props, state) {
     const parsed = qs.parse(window.location.search)
+    // Parse selected lesson from query string, so we don't have to deal with real /routing.
     return { ...state, selectedLesson: parseInt(parsed.lesson) || 1 }
   }
 
   state = {
+    // We show both panels by default to illustrate UX to first-time users.
     showLessons: true,
-    showNotes: false,
+    showNotes: true,
     selectedLesson: 1,
   };
 
@@ -65,24 +65,7 @@ class App extends Component {
               iconTrue="fa-chevron-left"
               iconFalse="fa-chevron-right"
             />
-            {showLessons && (
-              <Fragment>
-                <header>
-                <h1 style={{ fontSize: '1.125rem', textAlign: 'center', fontFamily: 'Helvetica', color: 'white' }}>
-                    <FontAwesome className="fa-home" name="fa-home" />
-                    <a
-                      href="/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ textDecoration: 'none', marginLeft: '0.5rem' }}
-                    >
-                      course
-                    </a>
-                  </h1>
-                </header>
-                <Lessons selectedLesson={selectedLesson} />
-              </Fragment>
-            )}
+            {showLessons && <LessonsPanel lesson={selectedLesson} />}
           </section>
           <section className="center">
             <div className="row">

@@ -56,6 +56,10 @@ class MarkdownRenderer extends React.Component {
   fetchLesson() {
     const cachedNotes = CACHE[this.props.lesson]
     if (cachedNotes) return this.setState({ notes: cachedNotes, rendered: this.props.lesson })
+    /*
+     * We `fetch` our own resource (a Webpack-resolved relative URL) so that React can parse the contents of
+     * referenced markdown file without any fancy configuration in Webpack.
+     */
     fetch(NOTES[this.props.lesson])
       .then(res => res.text())
       .then(rawMd => CACHE[this.props.lesson] = rawMd)

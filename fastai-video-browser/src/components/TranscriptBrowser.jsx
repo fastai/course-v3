@@ -5,10 +5,10 @@ import Search from './Search';
 import lesson1Trans from '../assets/dl-1-1/transcript.json';
 import lesson2Trans from '../assets/dl-1-2/transcript.json';
 import lesson3Trans from '../assets/dl-1-3/transcript.json';
-// import lesson4Trans from '../assets/dl-1-4/transcript.json';
+// import lesson4Trans from '../assets/dl-1-4/transcript.json'; coming soon!
 import lesson5Trans from '../assets/dl-1-5/transcript.json';
 import lesson6Trans from '../assets/dl-1-6/transcript.json';
-// import lesson7Trans from '../assets/dl-1-7/transcript.json';
+// import lesson7Trans from '../assets/dl-1-7/transcript.json'; coming soon!
 
 
 const TRANSCRIPTS = {

@@ -75,18 +75,6 @@
   text-align: center;
 }
 
-.TranscriptBrowser .Search {
-  flex: 8;
-  margin-right: 2%;
-}
-
-.TranscriptBrowser .Search input {
-  padding-left: 5px;
-  margin-left: 5px;
-  height: 1.5rem;
-  min-width: 11vw;
-}
-
 .Moment {
   padding: 1rem;
   margin: auto;

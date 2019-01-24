@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
+import FontAwesome from 'react-fontawesome';
 import { Link } from 'react-router-dom';
 
 const LESSONS = {
@@ -35,7 +36,7 @@ const StyledLessons = styled.div`
   align-items: center;
 `
 
-const Lessons = ({ selectedLesson }) => {
+const LessonsList = ({ selectedLesson }) => {
   return (
     <StyledLessons>
       {Object.keys(LESSONS).map((i) => {
@@ -60,4 +61,30 @@ const Lesson = ({ num, lesson, selectedLesson }) => (
   </StyledLesson>
 )
 
-export default Lessons
+const LessonsPanel = ({ lesson }) => (
+  <Fragment>
+    <header>
+      <h1 style={{
+        fontSize: '1.125rem',
+        textAlign: 'center',
+        fontFamily: 'Helvetica',
+        color: 'white'
+      }}>
+        <FontAwesome className="fa-home" name="fa-home" />
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: 'none',
+            marginLeft: '0.5rem'
+          }}
+        >course</a>
+      </h1>
+    </header>
+    <LessonsList selectedLesson={lesson} />
+  </Fragment>
+)
+
+
+export default LessonsPanel
