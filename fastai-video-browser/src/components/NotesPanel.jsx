@@ -3,22 +3,15 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
 import Toggler from './Toggler';
-import lesson1Notes from '../assets/dl-1-1/notes.md';
-import lesson2Notes from '../assets/dl-1-2/notes.md';
-import lesson3Notes from '../assets/dl-1-3/notes.md';
-import lesson4Notes from '../assets/dl-1-4/notes.md';
-import lesson5Notes from '../assets/dl-1-5/notes.md';
-import lesson6Notes from '../assets/dl-1-6/notes.md';
-import lesson7Notes from '../assets/dl-1-7/notes.md';
 
 const NOTES = {
-  1: lesson1Notes,
-  2: lesson2Notes,
-  3: lesson3Notes,
-  4: lesson4Notes,
-  5: lesson5Notes,
-  6: lesson6Notes,
-  7: lesson7Notes,
+  1: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-1.md',
+  2: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-2.md',
+  3: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-3.md',
+  4: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-4.md',
+  5: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-5.md',
+  6: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-6.md',
+  7: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-6.md',
 }
 
 const StyledPanel = styled.section`

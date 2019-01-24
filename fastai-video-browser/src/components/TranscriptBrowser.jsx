@@ -2,22 +2,14 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Search from './Search';
-import lesson1Trans from '../assets/dl-1-1/transcript.json';
-import lesson2Trans from '../assets/dl-1-2/transcript.json';
-import lesson3Trans from '../assets/dl-1-3/transcript.json';
-// import lesson4Trans from '../assets/dl-1-4/transcript.json'; coming soon!
-import lesson5Trans from '../assets/dl-1-5/transcript.json';
-import lesson6Trans from '../assets/dl-1-6/transcript.json';
-// import lesson7Trans from '../assets/dl-1-7/transcript.json'; coming soon!
-
 
 const TRANSCRIPTS = {
-  1: lesson1Trans,
-  2: lesson2Trans,
-  3: lesson3Trans,
+  1: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-1.json',
+  2: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-2.json',
+  3: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-3.json',
   4: null,
-  5: lesson5Trans,
-  6: lesson6Trans,
+  5: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-5.json',
+  6: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-6.json',
   7: null,
 };
 
@@ -74,26 +66,48 @@ const CloseX = styled.span`
   }
 `
 
+const CACHE = {}
+
 class TranscriptBrowser extends Component {
   state = {
     search: '',
-    currentMoment: null,
+    transcript: '',
+    rendered: null,
   };
 
-  static getDerivedStateFromProps = (props, state) => {
-    const transcript = TRANSCRIPTS[props.lesson];
-    if (!transcript) return { ...state };
-    return { ...state };
-  };
-
-  get currentTranscript() {
-    const { lesson } = this.props;
-    return TRANSCRIPTS[lesson];
+  componentDidMount() {
+    this.fetchTranscript()
   }
 
+  componentDidUpdate() {
+    if (this.props.lesson !== this.state.rendered)this.fetchTranscript()
+  }
+
+  fetchTranscript() {
+    const cached = CACHE[this.props.lesson]
+    if (cached) return this.setState({ transcript: cached, rendered: this.props.lesson })
+    /*
+     * We `fetch` our own resource (a Webpack-resolved relative URL) so that React can parse the contents of
+     * referenced markdown file without any fancy configuration in Webpack.
+     */
+    const toFetch = TRANSCRIPTS[this.props.lesson]
+    if (!toFetch) return this.setState({
+      transcript: null,
+      rendered: this.props.lesson,
+    })
+    fetch(toFetch)
+      .then(res => res.json())
+      .then(rawMd => CACHE[this.props.lesson] = rawMd)
+      .then(transcript => this.setState({
+        transcript,
+        rendered: this.props.lesson
+      }))
+      .catch(console.error)
+  }
+
+
   get searchResults() {
-    const transcript = this.currentTranscript;
-    const { search } = this.state;
+    const { search, transcript } = this.state;
     if (!transcript) return []
     return Object.keys(transcript)
       .filter((timestamp) =>
@@ -115,10 +129,32 @@ class TranscriptBrowser extends Component {
     this.setState({ search: value.toLowerCase() });
   };
 
+  get results() {
+    const { goToMoment } = this.props;
+    const { transcript } = this.state;
+    if (!transcript) return <span style={{ marginLeft: '25%' }}>Transcript coming soon...</span>
+    if (this.searchResults.length) {
+      return this.searchResults.map((result) => {
+        const onClick = () => goToMoment(result.moment);
+        return (
+          <StyledResult
+            key={result.moment}
+            onClick={onClick}
+            onKeyUp={onClick}
+            role="button"
+            tabIndex="0"
+          >
+            {result.sentence}
+          </StyledResult>
+        );
+      })
+    }
+    return 'No results found.'
+  }
+
   render() {
-    const { goToMoment, showSearch } = this.props;
-    const { search } = this.state;
-    if (!this.currentTranscript) return 'Transcript coming soon...';
+    const { showSearch } = this.props;
+    const { search, transcript } = this.state;
     return showSearch && (
       <Fragment>
         <Search
@@ -128,22 +164,9 @@ class TranscriptBrowser extends Component {
         />
         <StyledBrowser>
           {search && <SearchResults>
-            <CloseX role="button" onClick={this.clearSearch}>X</CloseX>
-              {this.searchResults.length ?  this.searchResults.map((result) => {
-                const onClick = () => goToMoment(result.moment);
-                return (
-                  <StyledResult
-                    key={result.moment}
-                    onClick={onClick}
-                    onKeyUp={onClick}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    {result.sentence}
-                  </StyledResult>
-                );
-              }) : 'No results found!'}
-            </SearchResults>
+              {transcript && <CloseX role="button" onClick={this.clearSearch}>X</CloseX>}
+                {this.results}
+              </SearchResults>
           }
         </StyledBrowser>
       </Fragment>
