@@ -15,7 +15,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Pricing
 
-Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected. Notebooks must be stopped to end billing. See below for free GPU credit! 💰
+Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected. Notebooks must be stopped to end billing. See below for free GPU credit! 💰 **Note: Consider using new [Gradient "preemptible" instances](https://support.paperspace.com/hc/en-us/articles/360015388374-Preemptible-Instances-Overview) which can save you money during the course.**
 
 ## Step 1: Create an account
 
