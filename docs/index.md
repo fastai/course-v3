@@ -14,29 +14,35 @@ The easiest way to get started is to just start watching the first video right n
 
 ### Using a GPU
 
-To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs will generally be around US$0.36 to US$1.26 per hour while you're using it.
+To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs can be as little as US$0.25 per hour while you're using it.
 
  The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer, not running something on your own. It's not enough to close your browser, or turn off your own PC, those will merely sever the connection between your device and this distant server, not shut down the thing you're paying. You have to shut this server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs and get surprised with a nasty bill!
 
-Here are some great choices of platforms. Click the link for more information on each, and setup instructions.
+Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently our recommendations are (see below for details):
 
-#### Ready to run options
+- If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
+- If you want to avoid the command-line, try Crestle or Paperspace, which both work great and don't cost much
+- If you don't have a credit card to sign up for the above services, use Colab, which is free, but is a little more awkward to use because they haven't yet preinstalled the necessary software.
 
-These are the easiest to use; they've got all the software, data, and lessons preinstalled for you.
+#### Ready to run: "One-click" Jupyter
 
-- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour + storage, $10 free credit)
-- [Crestle](/start_crestle.html); (instant approval, no installation required, Free compute until Nov-15th-2018. After that $0.30 an hour for compute + storage costs from Jan-1-2019)
-- [Salamander](/start_salamander.html); (instant approval, no installation required, $0.36 an hour + storage, $1 free credit)
+These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. They're a little less flexible than "full servers" (below), but are the simplest way to get started.
+
+- [Crestle](/start_crestle.html); (instant approval, no installation required, $0.30 an hour)
+- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
-- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour + storage)
 - [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
+
+#### Ready to run: Full servers
+
+- [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
 - [Azure](/start_azure.html); (instant approval; no installation required; $0.90 an hour + storage for a VM OR $0.18 an hour + storage for [low priority preemptable instances](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority))
 
 #### Some installation required
 
-If you're comfortable at a command line, these options are fairly easy to get started with, and may be more flexible in the long term than the options above.
+We also have instructions for using these platforms, but they don't have everything preinstalled yet:
 
-- [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
+- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour + storage)
 - [Amazon Web Services EC2](/start_aws.html) ($0.9 an hour + storage)
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**
