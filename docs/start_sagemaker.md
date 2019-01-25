@@ -6,7 +6,7 @@ sidebar: home_sidebar
 
 This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using AWS SageMaker. 
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course.fast.ai/update_sagemaker.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_sagemaker.html) section.
 
 We will use [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to provision the SageMaker notebook lifecycle configuration and IAM role for the notebook instance. We will create the SageMaker notebook instance manually.
 

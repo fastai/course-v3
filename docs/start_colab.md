@@ -6,7 +6,7 @@ sidebar: home_sidebar
 
 This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using Colab. 
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course.fast.ai/update_colab.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_colab.html) section.
 
 **NB: This is a free service that may not always be available, and requires extra steps to ensure your work is saved. Be sure to read the docs on the Colab web-site to ensure you understand the limitations of the system.**
 

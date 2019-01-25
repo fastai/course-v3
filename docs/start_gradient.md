@@ -10,7 +10,7 @@ This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](http
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/), a GPU-accelerated cloud platform. 
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course.fast.ai/update_gradient.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_gradient.html) section.
 
 ## Pricing
 

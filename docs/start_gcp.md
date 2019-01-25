@@ -9,7 +9,7 @@ sidebar: home_sidebar
 
 This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0.0 and fastai 1.0.2. At the end of this tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environment.
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course.fast.ai/update_gcp.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_gcp.html) section.
 
 ## Pricing
 

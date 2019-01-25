@@ -9,7 +9,7 @@ sidebar: home_sidebar
 
 This tutorial explains how to set up a DSVM to use Pytorch v1 and fastai v1.
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course.fast.ai/update_azure.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_azure.html) section.
 
 ## Pricing
 We suggest using a Standard_NC6 instance in Azure which has one NVidia K80 GPU and six CPU cores. This instance will incur about $0.90 per hour of [compute charges](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/), or **$0.18** per hour if you use [low priority pre-emptable Standard_NC6 instances](https://azure.microsoft.com/en-us/pricing/details/virtual-machine-scale-sets/linux/) (see below for more information on this option).
