@@ -6,7 +6,7 @@ sidebar: home_sidebar
 
 This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using Colab. 
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_colab.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_colab.html) section.
 
 **NB: This is a free service that may not always be available, and requires extra steps to ensure your work is saved. Be sure to read the docs on the Colab web-site to ensure you understand the limitations of the system.**
 
@@ -32,7 +32,7 @@ If you are returning to work and have previously completed the steps below, plea
 1. Before you start using your notebook, you need to install the necessary packages. You can do this by creating a code cell, and running:
 
     ```bash
-     !curl https://course-v3.fast.ai/setup/colab | bash
+     !curl https://course.fast.ai/setup/colab | bash
     ```
 
     <img alt="create" src="/images/colab/05.png" class="screenshot">

@@ -4,7 +4,7 @@ You can click the blue arrow buttons on the left and right panes to hide them an
 
 ## Overview
 
-To follow along with the lessons, you'll need to connect to a cloud GPU provider which has the fastai library installed (recommended; it should take only 5 minutes or so, and cost under $0.50/hour), or set up a computer with a suitable GPU yourself (which can take days to get working if you're not familiar with the process, so we don't recommend it). You'll also need to be familiar with the basics of the *Jupyter Notebook* environment we use for running deep learning experiments. Up to date tutorials and recommendations for these are available from the [course website](http://course.fast.ai).
+To follow along with the lessons, you'll need to connect to a cloud GPU provider which has the fastai library installed (recommended; it should take only 5 minutes or so, and cost under $0.50/hour), or set up a computer with a suitable GPU yourself (which can take days to get working if you're not familiar with the process, so we don't recommend it). You'll also need to be familiar with the basics of the *Jupyter Notebook* environment we use for running deep learning experiments. Up to date tutorials and recommendations for these are available from the [course website](https://course.fast.ai).
 
 The key outcome of this lesson is that we'll have trained an image classifier which can recognize pet breeds at state of the art accuracy. The key to this success is the use of *transfer learning*, which will be a key platform for much of this course. We'll also see how to analyze the model to understand its failure modes. In this case, we'll see that the places where the model is making mistakes is in the same areas that even breeding experts can make mistakes.
 
@@ -18,10 +18,10 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 
 ### Lesson resources
 
-- [Course site](http://course.fast.ai), including setup guides for each platform
+- [Course site](https://course.fast.ai), including setup guides for each platform
 - [Course repo](https://github.com/fastai/course-v3)
 - [fastai docs](http://docs.fast.ai)
-- [fastai datasets](http://course.fast.ai/datasets)
+- [fastai datasets](https://course.fast.ai/datasets)
 - Notebooks:
   - [00_notebook_tutorial.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/00_notebook_tutorial.ipynb)
   - [lesson1-pets.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson1-pets.ipynb)

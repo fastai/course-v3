@@ -6,13 +6,13 @@ sidebar: home_sidebar
 
 This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using AWS SageMaker. 
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_sagemaker.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_sagemaker.html) section.
 
 We will use [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to provision the SageMaker notebook lifecycle configuration and IAM role for the notebook instance. We will create the SageMaker notebook instance manually.
 
 ## Pricing
 
-The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  You will need to explicitely request a limit request to use this instance or the ml.p3.2xlarge instance, [here](https://course-v3.fast.ai/start_aws.html#step-2-request-service-limit ) Instances must be stopped to end billing.
+The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is dependent on the instance type selected, see all available types [here](https://aws.amazon.com/sagemaker/pricing/).  You will need to explicitely request a limit request to use this instance or the ml.p3.2xlarge instance, [here](https://course.fast.ai/start_aws.html#step-2-request-service-limit ) Instances must be stopped to end billing.
 
 ## Getting Set Up
 
