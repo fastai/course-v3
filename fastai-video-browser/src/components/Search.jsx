@@ -13,7 +13,7 @@ const StyledSearch = styled.div`
   input {
     padding-left: 5px;
     height: 1.5rem;
-    width: 8vw;
+    width: 8rem;
   }
 `
 
