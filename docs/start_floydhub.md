@@ -6,7 +6,7 @@ sidebar: home_sidebar
 
 <img alt="" src="/images/floydhub/floydhubFastai.png">
 
-This is a quick guide to starting v3 of the Fast.ai course. With [FloydHub](https://www.floydhub.com), you get access to a dedicated JupyterLab instance. If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_floydhub.html) section.
+This is a quick guide to starting v3 of the Fast.ai course. With [FloydHub](https://www.floydhub.com), you get access to a dedicated JupyterLab instance. If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_floydhub.html) section.
 
 ## Pricing
 

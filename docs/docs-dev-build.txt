@@ -1,6 +1,6 @@
-*** How to maintain https://course-v3.fast.ai/ ***
+*** How to maintain https://course.fast.ai/ ***
 
-docs/ is automatically mapped to https://course-v3.fast.ai/ so any changes committed to git will instantly appear on https://course-v3.fast.ai/
+docs/ is automatically mapped to https://course.fast.ai/ so any changes committed to git will instantly appear on https://course.fast.ai/
 
 * When a file is added/removed/renamed adjust:
   1. docs/_data/sidebars/home_sidebar.yml (sidebar menu)
