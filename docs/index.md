@@ -10,7 +10,7 @@ Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;w
 
 You might be surprised by what you *don't* need to become a top deep learning practitioner. You need one year coding experience, a GPU and appropriate software (see below), and that's it. You don't need much data, you don't need university-level math, and you don't need a giant data center. For more on this, see our article: [What you need to do deep learning](http://www.fast.ai/2017/11/16/what-you-need/).
 
-The easiest way to get started is to just start watching the first video right now! On the sidebar just click "Lessons" and then click on lesson 1, and you'll be on your way&hellip;
+The easiest way to get started is to just start watching the first video right now! On the sidebar just click "Lessons" and then click on lesson 1, and you'll be on your way. If you want an overview of the topics that are covered in the course, have a look at [this article](https://www.fast.ai/2019/01/24/course-v3/).
 
 ### Using a GPU
 
