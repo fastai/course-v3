@@ -18,7 +18,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 1. Next, head on to the [Colab Welcome Page](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true) and click on 'Github'. In the 'Enter a GitHub URL or search by organization or user' line enter 'fastai/course-v3'. You will see all the courses notebooks listed there. Click on the one you are interested in using.
 
-    <img alt="stop" src="/images/colab/01.png" class="screenshot">
+    <img alt="stop" src="/images/colab/01.png" width="480" class="screenshot">
 
 1. You should see your notebook displayed now. Before running anything, you need to tell Colab that you are interested in using a GPU. You can do this by clicking on the 'Runtime' tab and selecting 'Change runtime type'. A pop-up window will open up with a drop-down menu. Select 'GPU' from the menu and click 'Save'.
 
