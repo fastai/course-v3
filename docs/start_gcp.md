@@ -129,6 +129,8 @@ gcloud compute instances create $INSTANCE_NAME \
         --preemptible
 ```
 
+If you get an error "Quota 'GPUS_ALL_REGIONS' exceeded. Limit: 0.0 globally", you will have to [request a quota increase from Google](https://stackoverflow.com/a/53678838/4490400). Processing this request typically takes 1-2 days.
+
 You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
 
 <img alt="" src="/images/gcp/pending.png" class="screenshot">
