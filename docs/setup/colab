@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -d /content/.fastai ]; then
+if [ ! -d /content/models ]; then
         #pip install pillow==4.1.1 --upgrade
 
         sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=1g 0 0' -i /etc/fstab
