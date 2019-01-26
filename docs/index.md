@@ -73,7 +73,7 @@ When you're done, **remember to shut down your server**.
 
 ### Our forums
 
-Got stuck? Want to know more about some topic? Your first port of call should be [forums.fast.ai](https://forums.fast.ai/). There are thousands of students and practitioners asking and answering questions there. That means that it's likely your question has already been answered! So click the little magnifying class in the top right there, and search for the information you need; for instance, if you have some error message, paste a bit of it into the search box.
+Got stuck? Want to know more about some topic? Your first port of call should be [forums.fast.ai](https://forums.fast.ai/). There are thousands of students and practitioners asking and answering questions there. That means that it's likely your question has already been answered! So click the little magnifying glass in the top right there, and search for the information you need; for instance, if you have some error message, paste a bit of it into the search box.
 
 The forum software we use is called [Discourse](https://www.discourse.org/about). When you first join, it will show you some tips and tricks. There is also this [handy walk-thru](https://forums.episodeinteractive.com/t/a-quick-how-to-for-discourse/48/1) provided by another Discourse forum (not affiliated with fast.ai).
 
