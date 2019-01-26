@@ -553,10 +553,6 @@ span.projectTitle {
     font-size: 12px;
 }
 
-img.screenshotSmall {
-    max-width: 300px;
-}
-
 
 dl dt p {
     margin-left: 20px;
@@ -1406,9 +1402,17 @@ h4 code {
     background-color: white;
 }
 
-.screenshot {
-    max-width: 90% !important;
-    border: 2px solid
+img.screenshot {
+    /* max-width: 90% !important; */
+    max-width: 640px !important;
+    max-height: 480px !important;
+    border: 2px solid;
+}
+
+img.screenshotSmall {
+    max-width: 300px !important;
+    max-height: 480px !important;
+    border: 2px solid;
 }
 
 .provider-logo {
