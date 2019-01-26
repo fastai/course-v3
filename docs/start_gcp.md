@@ -129,7 +129,9 @@ gcloud compute instances create $INSTANCE_NAME \
         --preemptible
 ```
 
-You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
+You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance).
+
+If you see ` - Quota 'GPUS_ALL_REGIONS' exceeded. Limit: 0.0 globally.`, you may need to request increasing your quota for GPUs over all regions from the default, 0. See [this](https://stackoverflow.com/questions/45227064/how-to-request-gpu-quota-increase-in-google-cloud) StackOverflow question for more.
 
 <img alt="" src="/images/gcp/pending.png" class="screenshot">
 
