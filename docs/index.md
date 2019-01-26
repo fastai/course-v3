@@ -22,7 +22,7 @@ Here are some great choices of platforms. Click the link for more information on
 
 - If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
 - If you want to avoid the command-line, try Crestle or Paperspace, which both work great and don't cost much
-- If you don't have a credit card to sign up for the above services, use Colab, which is free, but is a little more awkward to use because they haven't yet preinstalled the necessary software.
+- If you don't have a credit card to sign up for the above services, use Colab, which is free, but has a few minor rough edges and incompatibilities.
 
 #### Ready to run: "One-click" Jupyter
 

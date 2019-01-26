@@ -18,13 +18,13 @@ If you are returning to work and have previously completed the steps below, plea
 
 1. Next, head on to the [Colab Welcome Page](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true) and click on 'Github'. In the 'Enter a GitHub URL or search by organization or user' line enter 'fastai/course-v3'. You will see all the courses notebooks listed there. Click on the one you are interested in using.
 
-    <img alt="stop" src="/images/colab/01.png" class="screenshot">
+    <img alt="stop" src="/images/colab/01.png" width="640" class="screenshot">
 
 1. You should see your notebook displayed now. Before running anything, you need to tell Colab that you are interested in using a GPU. You can do this by clicking on the 'Runtime' tab and selecting 'Change runtime type'. A pop-up window will open up with a drop-down menu. Select 'GPU' from the menu and click 'Save'.
 
-    <img alt="stop" src="/images/colab/03.png" class="screenshot">
+    <img alt="stop" src="/images/colab/03.png" height="480" class="screenshot">
 
-    <img alt="stop" src="/images/colab/04.png" class="screenshot">
+    <img alt="stop" src="/images/colab/04.png" height="480" class="screenshot">
 
 
 ### Step 2: Configuring your notebook instance
@@ -32,32 +32,22 @@ If you are returning to work and have previously completed the steps below, plea
 1. Before you start using your notebook, you need to install the necessary packages. You can do this by creating a code cell, and running:
 
     ```bash
-     !curl https://course.fast.ai/setup/colab | bash
+     !curl -s https://course.fast.ai/setup/colab | bash
     ```
 
-    <img alt="create" src="/images/colab/05.png" class="screenshot">
+1. When you run the first cell, you will face a pop-up saying 'Warning: This notebook was not authored by Google'; you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
 
-1. If you a face a pop-up saying 'Warning: This notebook was not authored by Google' you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
-
-    <img alt="stop" src="/images/colab/02.png" class="screenshot">
+    <img alt="stop" src="/images/colab/02.png" height="480" class="screenshot">
 
 1. On the new window click 'Yes'.
 
-    <img alt="stop" src="/images/colab/08.png" class="screenshot">
-
-1. Delete, if any, cells that contain:
-
-    ```bash
-    %reload_ext autoreload
-    %autoreload 2
-    %matplotlib inline
-    ```
+    <img alt="stop" src="/images/colab/08.png" height="480" class="screenshot">
 
 ### Step 3: Saving your work
 
 If you opened a notebook from Github, you will need to save your work to Google Drive. You can do this by clicking on 'File' and then 'Save'. You should see a pop-up with the following message:
 
-<img alt="create" src="/images/colab/09.png" class="screenshot">
+<img alt="create" src="/images/colab/09.png" height="480" class="screenshot">
 
 Click on 'SAVE A COPY IN DRIVE'. This will open up a new tab with the same file, only this time located in your Drive. If you want to continue working after saving,  use the file in the new tab.
 

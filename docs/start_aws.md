@@ -136,7 +136,7 @@ Then run these commands to install the necessary packages for experimenting with
 ``` bash
 conda update conda
 conda install -c pytorch pytorch-nightly cuda92
-conda install -c fastai torchvision-nightly
+conda install -c pytorch torchvision
 conda install -c fastai fastai
 ```
 
