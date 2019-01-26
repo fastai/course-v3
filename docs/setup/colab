@@ -13,6 +13,8 @@ if [ ! -d /content/.fastai ]; then
         #git clone https://github.com/fastai/course-v3
 fi
 
-pip install fastai --upgrade
-cd course-v3
+echo Updating fastai...
+pip install fastai --upgrade > /dev/null
+echo Done.
+#cd course-v3
 #git pull
