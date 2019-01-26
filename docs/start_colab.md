@@ -37,21 +37,13 @@ If you are returning to work and have previously completed the steps below, plea
 
     <img alt="create" src="/images/colab/05.png" class="screenshot">
 
-1. If you a face a pop-up saying 'Warning: This notebook was not authored by Google' you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
+1. When you run the first cell, you will face a pop-up saying 'Warning: This notebook was not authored by Google'; you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
 
     <img alt="stop" src="/images/colab/02.png" class="screenshot">
 
 1. On the new window click 'Yes'.
 
     <img alt="stop" src="/images/colab/08.png" class="screenshot">
-
-1. Delete, if any, cells that contain:
-
-    ```bash
-    %reload_ext autoreload
-    %autoreload 2
-    %matplotlib inline
-    ```
 
 ### Step 3: Saving your work
 
