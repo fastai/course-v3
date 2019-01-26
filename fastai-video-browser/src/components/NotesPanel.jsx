@@ -11,7 +11,7 @@ const NOTES = {
   4: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-4.md',
   5: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-5.md',
   6: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-6.md',
-  7: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-6.md',
+  7: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-7.md',
 }
 
 const StyledPanel = styled.section`
