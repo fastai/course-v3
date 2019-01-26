@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ ! -d course-v3 ]; then
-        pip install pillow==4.1.1 --upgrade
+        #pip install pillow==4.1.1 --upgrade
 
         sed -n -e '/^tmpfs \/dev\/shm tmpfs defaults,size=/!p' -e '$atmpfs \/dev\/shm tmpfs defaults,size=1g 0 0' -i /etc/fstab
         mount -o remount /dev/shm
@@ -16,4 +16,3 @@ fi
 pip install fastai --upgrade
 cd course-v3
 git pull
-
