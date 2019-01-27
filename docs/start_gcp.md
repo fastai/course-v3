@@ -128,6 +128,16 @@ gcloud compute instances create $INSTANCE_NAME \
         --metadata="install-nvidia-driver=True" \
         --preemptible
 ```
+If you get an error saying:
+```bash
+ERROR: (gcloud.compute.instances.create) Could not fetch resource:
+ - Quota 'GPUS_ALL_REGIONS' exceeded. Limit: 0.0 globally.
+```
+You need to go to [Google Cloud Quotas Page](https://console.cloud.google.com/iam-admin/quotas) and adjust your GPU quotas. 
+1. From top left burger menu, select, IAM & admin -> Quotas. 
+2. In filter type, select metric to be GPUs(all regions) and Location as Global 
+3. Click edit quotas and select the quota to edit(GPUs All Regions). Set the new quota limit to 1 or more 
+Your request may require confirmation, which Google claims typically takes two business days to get.
 
 You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
 
@@ -199,6 +209,7 @@ To see how to open it again, update the course or the fastai library, go to the 
 + [Using the Google Cloud SDK installer](https://cloud.google.com/sdk/docs/downloads-interactive)
 + [Installing the latest Cloud SDK version](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version)
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
++ [GCP Error Quotas GPUs All Regions Exceeded(Stack Overflow question)](https://stackoverflow.com/questions/53415180/gcp-error-quota-gpus-all-regions-exceeded-limit-0-0-globally)
 
 ---
 
