@@ -8,7 +8,7 @@ title: Practical Deep Learning for Coders, v3
 
 Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;we'll take you through it all step by step. We do however assume that you've been coding for at least a year, and also that (if you haven't used Python before) you'll be putting in the extra time to learn whatever Python you need as you go. (For learning Python, we have a list of [python learning resources](https://forums.fast.ai/t/recommended-python-learning-resources/26888) available.)
 
-You might be surprised by what you *don't* need to become a top deep learning practitioner. You need one year coding experience, a GPU and appropriate software (see below), and that's it. You don't need much data, you don't need university-level math, and you don't need a giant data center. For more on this, see our article: [What you need to do deep learning](http://www.fast.ai/2017/11/16/what-you-need/).
+You might be surprised by what you *don't* need to become a top deep learning practitioner. You need one year of coding experience, a GPU and appropriate software (see below), and that's it. You don't need much data, you don't need university-level math, and you don't need a giant data center. For more on this, see our article: [What you need to do deep learning](http://www.fast.ai/2017/11/16/what-you-need/).
 
 The easiest way to get started is to just start watching the first video right now! On the sidebar just click "Lessons" and then click on lesson 1, and you'll be on your way. If you want an overview of the topics that are covered in the course, have a look at [this article](https://www.fast.ai/2019/01/24/course-v3/).
 
@@ -16,9 +16,9 @@ The easiest way to get started is to just start watching the first video right n
 
 To do nearly everything in this course, you'll need access to a computer with an NVIDIA GPU (unfortunately other brands of GPU are not fully supported by the main deep learning libraries). However, we don't recommend you buy one; in fact, even if you already have one, we don't suggest you use it just yet! Setting up a computer takes time and energy, and you want all your energy to focus on deep learning right now. Therefore, we instead suggest you rent access to a computer that already has everything you need preinstalled and ready to go. Costs can be as little as US$0.25 per hour while you're using it.
 
- The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer, not running something on your own. It's not enough to close your browser, or turn off your own PC, those will merely sever the connection between your device and this distant server, not shut down the thing you're paying. You have to shut this server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs and get surprised with a nasty bill!
+ The most important thing to remember: **when you're done, shut down your server**. You will be renting a distant computer, not running something on your own. It's not enough to close your browser or turn off your own PC, those will merely sever the connection between your device and this distant server, not shut down the thing for which you're paying. You have to shut this server down using the methods described in the guides below. Otherwise, you'll be charged for all the time it runs and get surprised with a nasty bill!
 
-Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently our recommendations are (see below for details):
+Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently, our recommendations are (see below for details):
 
 - If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
 - If you want to avoid the command-line, try Crestle or Paperspace, which both work great and don't cost much
@@ -55,7 +55,7 @@ We also have instructions for using these platforms, but they don't have everyth
 
 ### Jupyter notebook
 
-Once you've finished the steps in one of the guide above, you'll be presented with a screen like this.
+Once you've finished the steps in one of the guides above, you'll be presented with a screen like this.
 
 <img alt="" src="/images/jupyter.png" class="screenshot">
 
@@ -67,7 +67,7 @@ Your first task, then, is to open this notebook tutorial! To do so, click `nbs` 
 
 You want to avoid modifying the original course notebooks as you will get conflicts when you try to update this folder with GitHub (the place where the course is hosted). But we also want you to try a lot of variations of what is shown in class, which is why we encourage you to use duplicates of the course notebooks.
 
-Launch you copy of `00_notebook_tutorial.ipynb` and follow the instructions!
+Launch your copy of `00_notebook_tutorial.ipynb` and follow the instructions!
 
 When you're done, **remember to shut down your server**.
 
@@ -79,7 +79,7 @@ The forum software we use is called [Discourse](https://www.discourse.org/about)
 
 ### PyTorch and fastai
 
-We teach how to train [PyTorch](https://pytorch.org/) models using the [fastai](https://docs.fast.ai) library. These two pieces of software are deeply connected&mdash;you can't become really proficient at using fastai if you don't know PyTorch well too. Therefore, you will often need to refer to the [PyTorch docs](https://pytorch.org/docs/stable/index.html). And you may also want to check out the [PyTorch forums](https://discuss.pytorch.org/) (which also happen to use Discourse).
+We teach how to train [PyTorch](https://pytorch.org/) models using the [fastai](https://docs.fast.ai) library. These two pieces of software are deeply connected&mdash;you can't become really proficient at using fastai if you don't know PyTorch well, too. Therefore, you will often need to refer to the [PyTorch docs](https://pytorch.org/docs/stable/index.html). And you may also want to check out the [PyTorch forums](https://discuss.pytorch.org/) (which also happen to use Discourse).
 
 Of course, to discuss fastai, you can use our forums, and be sure to look through the [fastai docs](https://docs.fast.ai) too.
 
