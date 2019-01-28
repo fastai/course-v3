@@ -25,6 +25,9 @@ In the second half of the lesson we'll train a simple model from scratch, creati
 - Notebooks:
     - [lesson2-download.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb)
     - [lesson2-sgd.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-sgd.ipynb)
+- Kaggle Kernels:
+    - [lesson2-download](https://www.kaggle.com/init27/fastai-v3-lesson-2)
+    - [lesson2-sgd](https://www.kaggle.com/init27/fastai-v3-lesson-2-sgd)
 - [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson2.md) - thanks to @hiromi
 - [Lesson notes ](https://forums.fast.ai/t/deep-learning-lesson-2-notes/28772) - thanks to @PoonamV
 - [Lesson 2 in-class discussion](https://forums.fast.ai/t/lesson-2-chat/28722)

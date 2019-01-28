@@ -28,7 +28,7 @@ Here are some great choices of platforms. Click the link for more information on
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. They're a little less flexible than "full servers" (below), but are the simplest way to get started.
 
-- [Kaggle Kernels](/kaggle_kernel.html); (Instant Launch, No setup required, Free)
+- [Kaggle Kernels](/start_kaggle.html); (Instant Launch, No setup required, Free)
 - [Crestle](/start_crestle.html); (instant approval, no installation required, $0.30 an hour)
 - [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)

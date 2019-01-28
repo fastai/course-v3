@@ -40,6 +40,9 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: Kaggle.com (Easy)
+      url: /start_kaggle.html
+    - output: web
       title: Crestle.ai (Easy)
       url: /start_crestle.html
     - output: web
@@ -66,6 +69,9 @@ entries:
   - title: Returning to work
     output: web
     folderitems:
+    - output: web
+      title: Kaggle
+      url: /update_kaggle.html
     - output: web
       title: Crestle
       url: /update_crestle.html

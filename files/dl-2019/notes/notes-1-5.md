@@ -14,7 +14,9 @@ Although embeddings are most widely known in the context of word embeddings for 
 - [Lesson notes](https://forums.fast.ai/t/deep-learning-lesson-5-notes/31298) - thanks to @PoonamV
 - [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson5.md) - thanks to @hiromi
 - Notebooks:
-  - [lesson5-sgd-mnist.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson5-sgd-mnist.ipynb)
+  - [lesson5-sgd-mnist.ipynb](https://www.kaggle.com/hortonhearsafoo/fast-ai-v3-lesson-5-sgd-mnist)
+- Kaggle Kernels:
+  - [lesson5-sgd-mnist](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson5-sgd-mnist.ipynb)
 - Excel spreadsheets:
   - [collab_filter.xlsx](https://github.com/fastai/course-v3/blob/master/files/xl/collab_filter.xlsx);
 [Google Sheets full version](https://docs.google.com/spreadsheets/d/1oxY9bxgLPutRidhTrucFeg5Il0Jq7UdMJgR3igTtbPU/edit#gid=1748360111); To run solver, please use Google Sheets short-cut version and follow [instruction](https://forums.fast.ai/t/google-sheets-versions-of-spreadsheets/10424/7) by @Moody

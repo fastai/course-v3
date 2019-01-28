@@ -24,6 +24,11 @@ What if your dependent variable is a continuous value, instead of a category? We
   - [lesson3-camvid.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson3-camvid.ipynb)
   - [lesson3-imdb.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson3-imdb.ipynb)
   - [lesson3-head-pose.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson3-head-pose.ipynb)
+- Kaggle Kernels:
+  - [lesson3-planet](https://www.kaggle.com/hortonhearsafoo/fast-ai-v3-lesson-3-planet)
+  - [lesson3-camvid](https://www.kaggle.com/hortonhearsafoo/fast-ai-v3-lesson-3-camvid-tiramisu)
+  - [lesson3-imdb](https://www.kaggle.com/hortonhearsafoo/fast-ai-v3-lesson-3-imdb)
+  - [lesson3-head-pose](https://www.kaggle.com/hortonhearsafoo/fast-ai-v3-lesson-3-head-pose)
 - [Lesson 3 in-class discussion](https://forums.fast.ai/t/lesson-3-chat/29733)
 - [Links to different parts in video](https://forums.fast.ai/t/lesson-3-links-to-different-parts-in-video/30077) by @melonkernel
 
