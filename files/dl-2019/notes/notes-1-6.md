@@ -30,6 +30,7 @@ Finally, we'll cover a topic that many students have told us is the most interes
 
 ### Other Resources
 
+- [platform.ai discussion](https://forums.fast.ai/t/platform-ai-discussion/31445)
 - [50 Years of Test (Un)fairness: Lessons for Machine Learning](https://128.84.21.199/pdf/1811.10104.pdf)
 - Convolutions: http://www.cs.cornell.edu/courses/cs1114/2013sp/sections/S06_convolution.pdf
 - Convolution Arithmetic: https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md
