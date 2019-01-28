@@ -1,13 +1,28 @@
 ---
-title: Temas Selectos
-subtitle: Deep Learning for Coders, v3
+title: Tópicos Selectos en Aplicaciones Distribuidas Móviles
 ---
+---
+subtitle: Desarrollo de Aplicaciones Móviles con Jupyter
+---
+
 
 ## Introduccion
 
-Bienvenidos! 
+Bienvenidos al modulo **Tópicos Selectos en Aplicaciones Distribuidas Móviles** de la Maestria en Redes y Systemas Integrados del CEL del LANIA.
 
-**Looking for the older 2018 courses?**: This site covers the new 2019 deep learning course. The 2018 courses have been moved to: [course18.fast.ai](http://course18.fast.ai). Note that the 2019 edition of part 2 (*Cutting Edge Deep Learning*) is not yet available, so you'll need to use the 2018 course for now (the 2019 edition will be available in June 2019).
+Este sitio contiene el material del Diplomado de **Desarrollo de Aplicaciones Móviles con Jupyter**, modalidad presencial y en linea para el 2019. 
+
+El curso tiene como objetivo ofrecer un punto de entrada y una vista general del ecosistema de programacion y desarrollo de Jupyter para el prototipado de aplicaciones moviles distribuidas desplegadas en dispositivos moviles basados en Android.
+
+Android es tradicionalmente un sistema operativo exclusivamente dedicado a Java. Sin embargo, este lenguaje de programación no permite la flexibilidad que se requiere para un desarrollo ágil de prototipos sobre los sistemas Android.
+
+El Scripting Layer for Android (SL4A) es una librería para la plataforma de Android con soporte para una variedad de lenguajes interpretados con los que pueden ejecutarse scripts, tales como Perl, Python, JRuby, PHP etc.
+
+La tecnología que se utilizará durante el curso se basa en el ecosistema de programación de Jupyter a través de la cual aprenderán a interactuar directamente con el dispositivo, por medio de la SL4A, y a desarrollar aplicacioens que pueden ejecutarse completamente en el dispositivo.
+
+Ademas se utilizara el ecosistema de Jupyter utilizando el ambiente alojado en la nube para aprender los fundamentos del desarrollo de aplicaciones de Aprendizaje de Maqina que pueden desplegarse en los dispositivos moviles.
+
+## Estructura del curso
 
 ## Getting started
 
