@@ -27,10 +27,6 @@ The results are stunning, and train in just a couple of hours (compared to previ
   - [lesson7-superres.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres.ipynb)
   - [lesson7-wgan.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-wgan.ipynb)
   - [lesson7-human-numbers.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-human-numbers.ipynb)
-
-- Kaggle Kernels:
-  - [lesson7-resnet-mnist.ipynb](https://www.kaggle.com/init27/fastai-v3-lesson-7-resnet-mnist)
-  - [lesson7-human-numbers](https://www.kaggle.com/init27/fastai-v3-lesson-7-human-numbers)
 - [Lesson 7 in-class discussion thread](https://forums.fast.ai/t/lesson-7-in-class-chat/32554/118)
 - [Lesson 7 advanced discussion](https://forums.fast.ai/t/lesson-7-further-discussion/32555)
 
