@@ -41,7 +41,7 @@ Fill the form like below, by selecting 'Service Limit Increase', choose 'EC2 ins
 
 <img alt="limit" src="/images/aws/increase_limit.png" class="screenshot">
 
-Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automatic reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
+Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Submit'. You should have an automatic reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
 
 <img alt="limit" src="/images/aws/increase_limit2.png" class="screenshot">
 
@@ -135,9 +135,7 @@ Then run these commands to install the necessary packages for experimenting with
 
 ``` bash
 conda update conda
-conda install -c pytorch pytorch-nightly cuda92
-conda install -c pytorch torchvision
-conda install -c fastai fastai
+conda install -c pytorch -c fastai fastai pytorch torchvision cuda92
 ```
 
 Next move into the directory where you will find the materials for the course by running:
