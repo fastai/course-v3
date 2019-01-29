@@ -21,10 +21,6 @@ Finally, we'll cover a topic that many students have told us is the most interes
   - [lesson6-rossmann.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson6-rossmann.ipynb)
   - [rossman_data_clean.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/rossman_data_clean.ipynb)
   - [lesson6-pets-more.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson6-pets-more.ipynb)
-- Kaggle Kernels:
-  - [lesson6-rossmann](https://www.kaggle.com/init27/fastai-v3-lesson-6-rossman)
-  - [rossman_data_clean](https://www.kaggle.com/init27/fastai-v3-rossman-data-clean)
-  - [lesson6-pets-more](https://www.kaggle.com/init27/fastai-v3-lesson-6-pets)
 - [Lesson 6 in-class discussion thread](https://forums.fast.ai/t/lesson-6-in-class-discussion/31440)
 - [Lesson 6 advanced discussion](https://forums.fast.ai/t/lesson-6-advanced-discussion/31442)
 
