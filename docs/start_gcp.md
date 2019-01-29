@@ -139,11 +139,11 @@ You need to go to [Google Cloud Quotas Page](https://console.cloud.google.com/ia
 3. Click edit quotas and select the quota to edit(GPUs All Regions). Set the new quota limit to 1 or more 
 Your request may require confirmation, which Google claims typically takes two business days to get.
 
-You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
+You will have to wait a little bit until you see the text informing you the instance has been created. You can see the instance online [here](https://console.cloud.google.com/compute/) in your list of instances (note that this will be the page you have to go to later to stop your instance). 
 
 <img alt="" src="/images/gcp/pending.png" class="screenshot">
 
-Your instance will be ready when the little icon left to its name turns green.
+Your instance will be ready when the little icon to the left of its name turns green.
 
 <img alt="" src="/images/gcp/ready.png" class="screenshot">
 
