@@ -39,9 +39,6 @@ We'll be coming back to each of these in lots more detail during the remaining l
 - Notebooks:
   - [lesson4-collab.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson4-collab.ipynb)
   - [lesson4-tabular.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson4-tabular.ipynb)
-- Kaggle kernels:
-  - [lesson4-collab](https://www.kaggle.com/init27/fastai-v3-lesson4-collab)
-  - [lesson4-tabular](https://www.kaggle.com/init27/fastai-v3-lesson-4-tabular)
 - Excel spreadsheets:
   - [collab_filter.xlsx](https://github.com/fastai/course-v3/blob/master/files/xl/collab_filter.xlsx)
 - [Links to different parts in video](https://forums.fast.ai/t/lesson-4-links-to-different-parts-in-the-video/30338) by @melonkernel
