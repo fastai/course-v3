@@ -24,8 +24,6 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 - [fastai datasets](https://course.fast.ai/datasets)
   - [00_notebook_tutorial.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/00_notebook_tutorial.ipynb)
   - [lesson1-pets.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson1-pets.ipynb)
-- Kaggle Kernels:
-  - [lesson1-pets](https://www.kaggle.com/hortonhearsafoo/fast-ai-v3-lesson-1)
 - [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson1.md) - thanks to @hiromi
 - [Lesson notes](https://forums.fast.ai/t/deep-learning-lesson-1-notes/27748) - thanks to @PoonamV (wiki thread - please help contribute!)
 - [Lesson discussion thread](https://forums.fast.ai/t/lesson-1-discussion/27332)
