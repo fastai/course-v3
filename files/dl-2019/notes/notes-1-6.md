@@ -34,7 +34,7 @@ Finally, we'll cover a topic that many students have told us is the most interes
 - [Cross entropy loss:](https://gombru.github.io/2018/05/23/cross_entropy_loss/)
 - [How CNNs work:](https://brohrer.github.io/how_convolutional_neural_networks_work.html)
 - [Image processing and computer vision:](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html)
-- "Yes you should understand backprop":](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b)
+- ["Yes you should understand backprop":](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b)
 - [BERT state-of-the-art language model for NLP:](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
 - [Hubel and Wiesel:](https://knowingneurons.com/2014/10/29/hubel-and-wiesel-the-neural-basis-of-visual-perception/)
 - [Perception:](https://grey.colorado.edu/CompCogNeuro/index.php/CCNBook/Perception)
