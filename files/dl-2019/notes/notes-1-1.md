@@ -22,6 +22,7 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 - [Course repo](https://github.com/fastai/course-v3)
 - [fastai docs](http://docs.fast.ai)
 - [fastai datasets](https://course.fast.ai/datasets)
+- Notebooks:
   - [00_notebook_tutorial.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/00_notebook_tutorial.ipynb)
   - [lesson1-pets.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson1-pets.ipynb)
 - [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson1.md) - thanks to @hiromi
