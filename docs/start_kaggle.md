@@ -1,6 +1,6 @@
 ---
 
-title: Crestle.ai
+title: Kaggle.com
 keywords: neuralnets deeplearning
 sidebar: home_sidebar
 
@@ -9,6 +9,8 @@ sidebar: home_sidebar
 <img alt="" src="/images/kaggle/landing_page.png" class="screenshot">
 
 [Kaggle](https://kaggle.com/) is an online community of data scientists and machine learners, owned by Google, Inc. Kaggle allows users to find and publish data sets, explore and build models in a web-based data-science environment, work with other data scientists and machine learning engineers, and enter competitions to solve data science challenges. Kaggle got its start by offering machine learning competitions and now also offers a public data platform, a cloud-based workbench for data science. ([Read more here](https://en.wikipedia.org/wiki/Kaggle)
+
+Kaggle Kernels however, do have a few limitations imposed on them, please check the Resources & Limitations section below.
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_kaggle.html) section.
 
@@ -58,10 +60,11 @@ We have setup all of datasets and pre-req(s) for the lesson, you can start worki
 <img alt="" src="/images/kaggle/start_working.png" class="screenshot">
 
 
-## Resources
+## Resources & Limitations
 
-Kaggle kernels are run free of cost. 
-Resources:
-- GPU Time is limited to 6 hours (Per session). 
+- Kaggle kernels are run free of cost. 
+- Notebook aren't not updated at same frequency as in the [fastai repository](https://github.com/fastai/course-v3)
+- Not officially supported by the fastai team (These are being maintained by Sanyam Bhutani, relevant [discussion thread](https://forums.fast.ai/t/platform-kaggle-kernels/32569))
+- GPU Time (K-80 instance) is limited to 6 hours (Per session). 
 - Disk usage is limited to 5 GB per kernel.
 - RAM is limited to 14 GB per kernel.
