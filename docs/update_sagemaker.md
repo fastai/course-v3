@@ -33,7 +33,7 @@ When it turns green, just click on 'Open' and you'll be back to your notebooks.
 <img alt="ready" src="/images/sagemaker/17.png" class="screenshot">
 
 ### Running custom code on notebook instance start
-The SageMaker notebook will contain a custom script that will be run each time the notebook instance is started. The script can be at the path `/home/ec2-user/SageMaker/custom-start-script.sh`.
+The SageMaker notebook will contain a custom script that will be run each time the notebook instance is started. The script can be found at the path `/home/ec2-user/SageMaker/custom-start-script.sh`.
 
 The default behaviour is to update the fastai courses GitHub repository.
 
