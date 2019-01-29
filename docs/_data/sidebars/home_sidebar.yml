@@ -70,9 +70,6 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Kaggle
-      url: /update_kaggle.html
-    - output: web
       title: Crestle
       url: /update_crestle.html
     - output: web
@@ -84,6 +81,9 @@ entries:
     - output: web
       title: FloydHub
       url: /update_floydhub.html
+    - output: web
+      title: Kaggle
+      url: /update_kaggle.html
     - output: web
       title: Colab
       url: /update_colab.html
