@@ -40,9 +40,6 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Kaggle.com (Easy)
-      url: /start_kaggle.html
-    - output: web
       title: Crestle.ai (Easy)
       url: /start_crestle.html
     - output: web
@@ -51,6 +48,9 @@ entries:
     - output: web
       title: FloydHub (Easy)
       url: /start_floydhub.html
+    - output: web
+      title: Kaggle.com (Easy)
+      url: /start_kaggle.html
     - output: web
       title: Google Cloud (Intermediate)
       url: /start_gcp.html
