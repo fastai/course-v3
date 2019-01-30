@@ -63,7 +63,7 @@ We have setup all of datasets and pre-req(s) for the lesson, you can start worki
 ## Resources & Limitations
 
 - Kaggle kernels are run free of cost. 
-- Notebook aren't not updated at same frequency as in the [fastai repository](https://github.com/fastai/course-v3)
+- Notebook aren't updated at same frequency as in the [fastai repository](https://github.com/fastai/course-v3)
 - Not officially supported by the fastai team (These are being maintained by Sanyam Bhutani, relevant [discussion thread](https://forums.fast.ai/t/platform-kaggle-kernels/32569))
 - GPU Time (K-80 instance) is limited to 6 hours (Per session). 
 - Disk usage is limited to 5 GB per kernel.
