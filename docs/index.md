@@ -31,6 +31,7 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 - [Crestle](/start_crestle.html); (instant approval, no installation required, $0.30 an hour)
 - [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
+- [Kaggle Kernels](/start_kaggle.html); (Instant Launch, No setup required, Free)
 - [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
 
 #### Ready to run: Full servers

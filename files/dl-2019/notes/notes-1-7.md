@@ -17,7 +17,20 @@ The techniques we show in this lesson include some unpublished research that:
 
 The results are stunning, and train in just a couple of hours (compared to previous approaches that take a couple of days).
 
-## Resources
+### Lesson Resources
+
+- [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson7.md) - thanks to @hiromi
+- Notebooks:
+  - [lesson7-resnet-mnist.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-resnet-mnist.ipynb)
+  - [lesson7-superres-gan.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres-gan.ipynb)
+  - [lesson7-superres-imagenet.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres-imagenet.ipynb)
+  - [lesson7-superres.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-superres.ipynb)
+  - [lesson7-wgan.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-wgan.ipynb)
+  - [lesson7-human-numbers.ipynb](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson7-human-numbers.ipynb)
+- [Lesson 7 in-class discussion thread](https://forums.fast.ai/t/lesson-7-in-class-chat/32554/118)
+- [Lesson 7 advanced discussion](https://forums.fast.ai/t/lesson-7-further-discussion/32555)
+
+### Other Resources
 
 - [ Visualizing the Loss Landscape of Neural Nets](https://arxiv.org/abs/1712.09913)
 - [ Convolution arithmetic](https://github.com/vdumoulin/conv_arithmetic) paper shown in class
