@@ -8,7 +8,7 @@ sidebar: home_sidebar
 # Welcome to Kaggle kernels!
 <img alt="" src="/images/kaggle/landing_page.png" class="screenshot">
 
-[Kaggle](https://kaggle.com/) is an online community of data scientists and machine learners, owned by Google, Inc. Kaggle allows users to find and publish data sets, explore and build models in a web-based data-science environment, work with other data scientists and machine learning engineers, and enter competitions to solve data science challenges. Kaggle got its start by offering machine learning competitions and now also offers a public data platform, a cloud-based workbench for data science. ([Read more here](https://en.wikipedia.org/wiki/Kaggle)
+[Kaggle](https://kaggle.com/) is an online community of data scientists and machine learners, owned by Google, Inc. Kaggle allows users to find and publish data sets, explore and build models in a web-based data-science environment, work with other data scientists and machine learning engineers, and enter competitions to solve data science challenges. Kaggle got its start by offering machine learning competitions and now also offers a public data platform, a cloud-based workbench for data science ([Read more here](https://en.wikipedia.org/wiki/Kaggle)).
 
 Kaggle Kernels however, do have a few limitations imposed on them, please check the Resources & Limitations section below.
 
@@ -16,7 +16,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Using Kaggle kernels for fast.ai v3 course
 
-Kaggle kernels come with fastai library preinstalled, William Horton ```@wdhorton``` and Sanyam Bhutani ```@init_27``` have ported the lesson notebooks to the kernels. Sanyam Bhutani is maintaing the kaggle kernels, for any questions/issues please report in the [discussion thread here](https://forums.fast.ai/t/platform-kaggle-kernels/32569)
+Kaggle kernels come with fastai library preinstalled, William Horton ```@wdhorton``` and Sanyam Bhutani ```@init_27``` have ported the lesson notebooks to the kernels. Sanyam Bhutani is maintaing the kaggle kernels, for any questions/issues please report in the [discussion thread here](https://forums.fast.ai/t/platform-kaggle-kernels/32569).
 
 No setup steps are required, just click on "fork" and run it.
 
@@ -63,7 +63,7 @@ We have setup all of datasets and pre-req(s) for the lesson, you can start worki
 ## Resources & Limitations
 
 - Kaggle kernels are run free of cost. 
-- Notebook aren't not updated at same frequency as in the [fastai repository](https://github.com/fastai/course-v3)
+- Notebook aren't updated at same frequency as in the [fastai repository](https://github.com/fastai/course-v3)
 - Not officially supported by the fastai team (These are being maintained by Sanyam Bhutani, relevant [discussion thread](https://forums.fast.ai/t/platform-kaggle-kernels/32569))
 - GPU Time (K-80 instance) is limited to 6 hours (Per session). 
 - Disk usage is limited to 5 GB per kernel.
