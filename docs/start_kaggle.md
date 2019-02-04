@@ -42,7 +42,7 @@ No setup steps are required, just click on "fork" and run it.
 ## Getting started
 
 ### Step 1: Create a Kaggle account
-Sign up for Kaggle [here](https://www.crestle.ai/). Verify your email. Once you have verified, you can sign in to your account.
+Sign up for Kaggle [here](https://www.kaggle.com/). Verify your email. Once you have verified, you can sign in to your account.
 
 <img alt="" src="/images/kaggle/sign_up.png" class="screenshot">
 
