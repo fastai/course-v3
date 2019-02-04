@@ -50,7 +50,7 @@ The project on which you are going to run the image needs to be linked with your
 
 To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial.html) and follow the same instructions as Ubuntu users (see the link to learn how to paste into your terminal). 
 
-To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
+To install on Linux or Windows (in Ubuntu terminal), follow these four steps:
 ``` bash
 # Create environment variable for correct distribution
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
@@ -84,7 +84,7 @@ To continue, you must log in. Would you like to log in (Y/n)?
 ```
 Type Y then copy the link and paste it to your browser. Choose the google account you used duing step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
 
-Then, if you are more than one project, you'll be prompted to choose one:
+Then, if you have more than one project (if already created on your GCP account), you'll be prompted to choose one:
 ```
 Pick cloud project to use:
  [1] [my-project-1]
