@@ -87,6 +87,8 @@ To access the DSVM created above and run the course notebooks, find the DSVM ins
 ## Stop an instance
 When you are done, you can stop the instance by searching for the DSVM name on Azure portal and then clicking on the "Stop" button. You will be charged if you dont stop an instance.
 
+Azure can also stop your VM on a schedule - useful as a backstop in case you forget to stop. [Start/Stop VMs during off-hours solution in Azure Automation](https://docs.microsoft.com/en-us/azure/automation/automation-solution-vm-management)  The mobile client for Azure can also be useful for starting your VM so it is ready to go when you reach your home/office.
+
 <img alt="Stop" src="/images/azure/Stop.png" class="screenshot">
 
 
