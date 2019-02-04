@@ -82,7 +82,7 @@ You should then be prompted with this message:
 ```
 To continue, you must log in. Would you like to log in (Y/n)?
 ```
-Type Y then copy the link and paste it to your browser. Choose the google account you used duing step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
+Type Y then copy the link and paste it to your browser. Choose the google account you used during step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
 
 Then, if you have more than one project (if already created on your GCP account), you'll be prompted to choose one:
 ```
@@ -92,16 +92,19 @@ Pick cloud project to use:
  ...
  Please enter your numeric choice:
 ```
-Just enter the number next to the project you created on step 1. 
+Just enter the number next to the project you created on step 1. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
 
-Lastly, you'll be asked if you want to put a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
+Lastly, you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
 
 Once this is done, you should see this message on your terminal:
 ```
-gcloud has now been configured!
-You can use [gcloud config] to change more gcloud settings.
+Your Google Cloud SDK is configured and ready to use!
 
-Your active configuration is: [default]
+* Commands that require authentication will use your.email@gmail.com by default
+* Commands will reference project `my-project-1` by default
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default].
 ```
 
 ## Step 3: Create an instance
@@ -148,7 +151,7 @@ Your instance will be ready when the little icon to the left of its name turns g
 
 <img alt="" src="/images/gcp/ready.png" class="screenshot">
 
-You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
+You can also read more details about instance creation from the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
 Once this is done, you can connect to your instance from the terminal by typing:
 ```bash
