@@ -8,7 +8,7 @@ The basic steps are:
 
 1. Create (or, preferred, download a pre-trained) *language model* trained on a large corpus such as Wikipedia (a "language model" is any model that learns to predict the next word of a sentence)
 1. Fine-tune this language model using your *target corpus* (in this case, IMDb movie reviews)
-1. Remove the *encoder* in this fine tuned language model, and replace it with a *classifier*. Then fine-tune this model for the final classification task (in this case, sentiment analysis).
+1. Extract the *encoder* from this fine tuned language model, and pair it with a *classifier*. Then fine-tune this model for the final classification task (in this case, sentiment analysis).
 
 After our journey into NLP, we'll complete our practical applications for Practical Deep Learning for Coders by covering tabular data (such as spreadsheets and database tables), and collaborative filtering (recommendation systems).
 
