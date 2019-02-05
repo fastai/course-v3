@@ -26,10 +26,10 @@ You can also click on the three dots then start in the menu that pops up. Wait a
 Once this is done, open your terminal and execute the following instruction:
 
 ```bash
-gcloud compute ssh --zone=ZONE jupyter@INSTANCE_NAME -- -L 8080:localhost:8080
+gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 ```
 
-If your default zone is the same as the one of the instance, you can ommit the `--zone=ZONE` part. Otherwise replace ZONE by the zone of your instance. In any case, replace INSTANCE_NAME by the name of your instance.
+If your default zone is the same as the one of the instance, you can ommit the `--zone=$ZONE` part. Otherwise replace ZONE by the zone of your instance. In any case, replace INSTANCE_NAME by the name of your instance.
 
 Once this is done, you can access your jupyter notebook at [localhost:8080/tree](http://localhost:8080/tree).
 
