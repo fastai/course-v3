@@ -14,7 +14,7 @@ wget https://github.com/fastai/course-v3/raw/master/docs/production/google-app-e
 
 unzip google-app-engine.zip
 
-cd google-app-engine.zip
+cd google-app-engine/app
 ```
 
 ## Per-project setup
