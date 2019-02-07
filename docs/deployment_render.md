@@ -44,7 +44,7 @@ Make sure to keep the GitHub repo you created above current. Render integrates w
 
 1. Create a new **Web Service** on Render and use the repo you created above. You will need to grant Render permission to access your repo in this step.
 
-2. On the deployment screen, pick a name for your service and use `Docker` for the Environment. The URL for the service will be created based on this service name. While the service name itself can be changed later, the URL name is permanent.
+2. On the deployment screen, pick a name for your service and use `Docker` for the Environment. The URL will be created using this service name. The service name can be changed if necessary, but the URL initially created can't be edited.
 
 3. Click **Save Web Service**. That's it! Your service will begin building and should be live in a few minutes at the URL displayed in your Render dashboard. You can follow its progress in the deploy logs.
 
