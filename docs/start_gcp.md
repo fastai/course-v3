@@ -27,7 +27,7 @@ According to our benchmarks, a K80 is 84% slower than a P4 so this setup will ro
 
 ### Storage
 
-In both cases, by getting our suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of $9.60 a month**.
+In both cases, by getting the suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of $9.60 a month**.
 
 ### How much will you use this course
 
@@ -160,7 +160,7 @@ gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 
 Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts (the passphrase is optional, if you aren't going to be using this key for anything too secure).
 
-If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
+If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal. **Note**: *GCP also installs a system called "JupyterLab", which is still in beta, and doesn't support everything in the courses; therefore, you need to use "Jupyter Notebook", which is what the link above will take you to.*
 
 ### Preemptible instances:
 
