@@ -19,7 +19,7 @@ Fork [https://github.com/render-examples/fastai-v3](https://github.com/render-ex
 
 Sign up at [Render](https://render.com/i/fastai-v3) using invite code `fastai-v3`.
 
-Render web services cost $5 per month and are prorated by the second. All new accounts start out with $25 in credits.
+Render web services cost $5 per month and are prorated by the second. All new accounts start out with $5 in credits.
 
 ## Per-project setup
 
