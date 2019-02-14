@@ -29,7 +29,10 @@ If you just want to test initial deployment on Render, the starter repo is set u
 
 Upload the trained model file created with `learner.export` (for example `export.pkl`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file.
 
-**Note** the download link should start the file download directly&mdash;and is typically different from the share link (which presents you with a view to download the file). Use [this link generator](https://syncwithtech.blogspot.com/p/direct-download-link-generator.html) if you need help.
+**Note** the download link should start the file download directly&mdash;and is typically different from the share link (which presents you with a view to download the file).
+
+* Google Drive: Use [this link generator](https://www.wonderplugin.com/online-tools/google-drive-direct-link-generator/).
+* Dropbox: Use [this link generator](https://syncwithtech.blogspot.com/p/direct-download-link-generator.html)
 
 ### Customize the app for your model
 
