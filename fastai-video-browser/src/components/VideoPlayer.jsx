@@ -19,7 +19,6 @@ const Wrapper = styled.div`
 `
 
 const VideoPlayer = React.forwardRef((props, ref) => {
-  // "https://www.youtube.com/embed/XfoYk_Z5AkI",
   const { lesson } = props;
   return (
     <Wrapper>
