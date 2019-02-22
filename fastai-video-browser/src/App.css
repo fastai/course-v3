@@ -1,0 +1,13 @@
+:root {
+  --fastai-blue: #347DBE;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: var(--fastai-blue);
+}
+
+a {
+  color: inherit;
+}

@@ -10,7 +10,7 @@ sidebar: home_sidebar
 
 AWS EC2 provides preconfigured machine images called [DLAMI](https://aws.amazon.com/machine-learning/amis/), which are servers hosted by Amazon that are specially dedicated to Deep Learning tasks. Setting up an AWS EC2 instance, even with DLAMI, can be daunting. But don't worry, we got you covered. In fact, Amazon has a sweet [step by step guide](https://aws.amazon.com/getting-started/tutorials/get-started-dlami/) to set it up and we are going to draw heavily from their tutorial.
 
-If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_aws.html) section.
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_aws.html) section.
 
 ## Pricing
 A `p2.xlarge` instance in Amazon which is what we suggest, is [$0.9 an hour](https://aws.amazon.com/ec2/instance-types/p2/).
@@ -41,7 +41,7 @@ Fill the form like below, by selecting 'Service Limit Increase', choose 'EC2 ins
 
 <img alt="limit" src="/images/aws/increase_limit.png" class="screenshot">
 
-Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Sbumit'. You should have an automatic reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
+Type the message '[FastAI] Limit Increase Request' in the use case description box, then select your preferred language and contact method before clicking 'Submit'. You should have an automatic reply telling you they'll look in your case, then an approval notice (hopefully in just a couple of hours).
 
 <img alt="limit" src="/images/aws/increase_limit2.png" class="screenshot">
 
@@ -135,9 +135,7 @@ Then run these commands to install the necessary packages for experimenting with
 
 ``` bash
 conda update conda
-conda install -c pytorch pytorch-nightly cuda92
-conda install -c fastai torchvision-nightly
-conda install -c fastai fastai
+conda install -c pytorch -c fastai fastai pytorch torchvision cuda92
 ```
 
 Next move into the directory where you will find the materials for the course by running:

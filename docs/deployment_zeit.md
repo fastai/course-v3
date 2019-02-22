@@ -3,6 +3,10 @@ title: "Deploying on Zeit"
 sidebar: home_sidebar
 ---
 
+## THIS IS NOT WORKING
+
+*Unfortunately Zeit changed their API in a way that broke all fastai deployments. We suggest using an alternative service, such as render.com*
+
 <img alt="" src="/images/zeit/zeit_now.png" class="screenshot">
 
 This is quick guide to deploy your trained models using the [Now](https://zeit.co/now) service from [Zeit](https://zeit.co/).  This guide comes with a starter app deploying Jeremy's Bear Image Classification model form Lesson 2.
@@ -26,16 +30,15 @@ cd zeit
 
 ## Per-project setup
 
-### Upload your trained model file
+### Upload your learner file
 
-Upload your trained model file (for example `stage-2.pth`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file. **Note:** the download link is the one which starts the file download directly&mdash;and is normally different than the share link which presents you with a view to download the file (use [https://rawdownload.now.sh/](https://rawdownload.now.sh/) if needed)
+Upload your trained learner file (for example `export.pkl`) to a cloud service like Google Drive or Dropbox. Copy the download link for the file. **Note:** the download link is the one which starts the file download directly&mdash;and is normally different than the share link which presents you with a view to download the file (use [https://rawdownload.now.sh/](https://rawdownload.now.sh/) if needed)
 
 If you want to just test the deployment initially, you can use Jeremy's bear classification model from Lesson 2, you can skip this step, since that model's weights URL is already filled in the sample app.
 
 ### Customize the app for your model
 
-1. Open up the file `server.py` inside the `app` directory and update the `model_file_url` variable with the url copied above
-1. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you are expecting from your model
+1. Open up the file `server.py` inside the `app` directory and update the `learner_file_url` variable with the url copied above
 
 ### Deploy
 

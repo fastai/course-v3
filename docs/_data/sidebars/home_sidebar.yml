@@ -12,36 +12,66 @@ entries:
     - output: web
       title: Intro to GPUs
       url: /gpu_tutorial.html
+  - title: Lessons
+    output: web
+    folderitems:
+    - output: web
+      title: 1 - Image classification
+      url: /videos?lesson=1
+    - output: web
+      title: 2 - Production; SGD from scratch
+      url: /videos?lesson=2
+    - output: web
+      title: 3 - Multi-label; Segmentation
+      url: /videos?lesson=3
+    - output: web
+      title: 4 - NLP; Tabular data; Recsys
+      url: /videos?lesson=4
+    - output: web
+      title: 5 - Backprop; Neural net from scratch
+      url: /videos?lesson=5
+    - output: web
+      title: 6 - CNN deep dive; Ethics
+      url: /videos?lesson=6
+    - output: web
+      title: 7 - Resnet; U-net; GANs
+      url: /videos?lesson=7
   - title: Server setup
     output: web
     folderitems:
     - output: web
+      title: Crestle.ai (Easy)
+      url: /start_crestle.html
+    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
-    - output: web
-      title: Salamander (Easy)
-      url: /start_salamander.html
     - output: web
       title: FloydHub (Easy)
       url: /start_floydhub.html
     - output: web
-      title: Colab (Harder)
+      title: Kaggle.com (Easy)
+      url: /start_kaggle.html
+    - output: web
+      title: Google Cloud (Intermediate)
+      url: /start_gcp.html
+    - output: web
+      title: Azure (Intermediate)
+      url: /start_azure.html
+    - output: web
+      title: Colab (Intermediate)
       url: /start_colab.html
     - output: web
-      title: SageMaker (Harder)
+      title: SageMaker (Intermediate)
       url: /start_sagemaker.html
-    - output: web
-      title: Google Cloud (Advanced)
-      url: /start_gcp.html
     - output: web
       title: AWS EC2 (Advanced)
       url: /start_aws.html
-    - output: web
-      title: Crestle.ai (testing)
-      url: /start_crestle.html
   - title: Returning to work
     output: web
     folderitems:
+    - output: web
+      title: Crestle
+      url: /update_crestle.html
     - output: web
       title: Gradient
       url: /update_gradient.html
@@ -51,6 +81,9 @@ entries:
     - output: web
       title: FloydHub
       url: /update_floydhub.html
+    - output: web
+      title: Kaggle
+      url: /update_kaggle.html
     - output: web
       title: Colab
       url: /update_colab.html
@@ -64,14 +97,20 @@ entries:
       title: AWS EC2
       url: /update_aws.html
     - output: web
-      title: Crestle
-      url: /update_crestle.html
+      title: Azure
+      url: /update_azure.html
   - title: Production
     output: web
     folderitems:
     - output: web
-      title: Zeit
-      url: /deployment_zeit.html
+      title: Render
+      url: /deployment_render.html
+    - output: web
+      title: AWS BeanStalk
+      url: /deployment_aws_beanstalk.html
+    - output: web
+      title: Google App Engine
+      url: /deployment_google_app_engine.html
   - title: fastai v1
     output: web
     folderitems:

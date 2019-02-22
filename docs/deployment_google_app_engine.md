@@ -14,7 +14,7 @@ wget https://github.com/fastai/course-v3/raw/master/docs/production/google-app-e
 
 unzip google-app-engine.zip
 
-cd google-app-engine.zip
+cd google-app-engine/app
 ```
 
 ## Per-project setup
@@ -102,3 +102,7 @@ python app/server.py serve
 ```
 
 Go to http://localhost:8080/ to test your app.
+
+*Thanks to Pankaj Mathur for this guide, and Simon Willison for sample code.*
+
+---

@@ -2,7 +2,7 @@
 
 ## Do I need a GPU to do deep learning?
 
-Yes. GPU's are ~10/15 times faster than CPU's in running neural networks. You will need a GPU-enabled server but don't worry, we've got you covered. Check out our tutorials for renting deep learning servers or Jupyter Notebook Platforms [here](http://course-v3.fast.ai).
+Yes. GPU's are ~10/15 times faster than CPU's in running neural networks. You will need a GPU-enabled server but don't worry, we've got you covered. Check out our tutorials for renting deep learning servers or Jupyter Notebook Platforms [here](https://course.fast.ai).
 
 ## What is the difference between a Jupyter Notebook Platform and a Deep Learning Server?
 
