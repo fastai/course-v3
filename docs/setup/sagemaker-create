@@ -52,6 +52,8 @@ echo "Found Cuda version $cuda_version"
 # With selections Stable (1.0) / Linux / Conda / Python 3.6 / CUDA 9.0
 conda install -y pytorch torchvision cudatoolkit=${cuda_version} -c pytorch
 
+pip install --upgrade sagemaker
+
 python -m ipykernel install --name 'fastai' --display-name 'Python 3' --user
 echo "Install jupyter nbextension"
 source /home/ec2-user/anaconda3/bin/activate JupyterSystemEnv
