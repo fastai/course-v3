@@ -10,10 +10,7 @@ mkdir /home/ec2-user/SageMaker/.fastai && ln -s /home/ec2-user/SageMaker/.fastai
 # install the fastai library and dependencies
 echo "Install the fastai library and dependencies in new conda enviornment"
 cd /home/ec2-user/SageMaker
-<<<<<<< HEAD
-=======
 # for explanations of the -mqyp flags, check `conda create --help`
->>>>>>> upstream/master
 conda create -mqyp envs/fastai -c pytorch -c fastai fastai ipykernel
 echo "Finished installing environment"
 
@@ -47,8 +44,6 @@ cat > /home/ec2-user/SageMaker/.fastai/std-start-script.sh <<\EOF
 echo "Install the ipython fastai kernel"
 cd /home/ec2-user/SageMaker
 source activate envs/fastai
-<<<<<<< HEAD
-=======
 
 cuda_version=$(nvcc --version | awk 'match($0, /Cuda compilation tools, release [0-9]+\.[0-9]+/) { print substr($0, RSTART+32, RLENGTH-(RSTART+31))}')
 echo "Found Cuda version $cuda_version"
@@ -57,7 +52,6 @@ echo "Found Cuda version $cuda_version"
 # With selections Stable (1.0) / Linux / Conda / Python 3.6 / CUDA 9.0
 conda install -y pytorch torchvision cudatoolkit=${cuda_version} -c pytorch
 
->>>>>>> upstream/master
 python -m ipykernel install --name 'fastai' --display-name 'Python 3' --user
 echo "Install jupyter nbextension"
 source /home/ec2-user/anaconda3/bin/activate JupyterSystemEnv
