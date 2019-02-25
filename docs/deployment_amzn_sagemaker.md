@@ -14,13 +14,42 @@ Deploying a model in SageMaker is a three-step process:
 
 For more information on how models are deployed to Amazon SageMaker checkout the documentation [here](https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html).
 
-We will be using the [Amazon SageMaker Python SDK](https://sagemaker.readthedocs.io/en/stable/) which makes this easy.
+We will be using the [Amazon SageMaker Python SDK](https://sagemaker.readthedocs.io/en/stable/) which makes this easy and automates a few of the steps.
 
 ## Pricing
 
-With Amazon SageMaker, you pay only for what you use. Hosting is billed by the second, with no minimum fees and no upfront commitments. As part of the [AWS Free Tier](https://aws.amazon.com/free), you can get started with Amazon SageMaker for free. For the first two months after sign-up, you are offered a total of 125 hours of m4.xlarge for deploying your machine learning models for real-time inferencing and batch transform with Amazon SageMaker.
+With Amazon SageMaker, you pay only for what you use. Hosting is billed by the second, with no minimum fees and no upfront commitments. As part of the [AWS Free Tier](https://aws.amazon.com/free), you can get started with Amazon SageMaker for free. For the first two months after sign-up, you are offered a total of 125 hours of m4.xlarge for deploying your machine learning models for real-time inferencing and batch transform with Amazon SageMaker. The pricing for model deployment per region can be found [here](https://aws.amazon.com/sagemaker/pricing/).
 
-The pricing for model deployment per region can be found [here](https://aws.amazon.com/sagemaker/pricing/).
+### Example
+
+Say we have a vision based model which is expected to receive one inference call from clients per minute. We could deploy to two *ml.t2.medium* instances for reliable multi-AZ hosting. Each request submits a image of average size 100 KB and returns a response of 100 bytes. We will use the N. Virginia (*us-east-1*) region.
+
+
+    Hours per month of hosting = 24 * 31 * 2 = 1488
+    Hosting instances = ml.t2.medium
+    Cost per hour = $0.065
+
+    Monthly hosting cost = $96.72
+
+There is also a charge for data processing (i.e. the data pulled in and out of your model hosting instances). It is calculated at $0.016 per GB for the N. Virginia region. In this example if we assume a request each minute and each image is 100 KB and each response object is 100 bytes, then the data processing charges would be the following:
+
+    Total data IN = 0.0001 GB * 60 * 24 * 31 = 4.464 GB
+    Cost per GB IN =  $0.016
+    Cost for Data IN = $0.0714
+
+    Total data OUT = 1e-7 * 60 * 24 * 31 = 0.00044 GB
+    Cost per GB OUT =  $0.016
+    Cost for Data OUT = $0.000007
+
+    Monthly Data Processing cost = $0.0714
+
+There is also a charge for storing your model on S3. If we assume we are using the S3 Standard storage type then this is $0.023 per GB per month. If we assume a model size of 350 MB then the charges are as follows:
+
+    Total storage anount = 0.35 GB
+    Cost per GB = $0.023
+    Monthly Cost for S3 storage = $0.00805
+
+**Total monthly cost for hosting this model on SageMaker is $96.72 + $0.0714 + $0.00805 = $96.80**
 
 ## Setup your SageMaker notebook instance
 
