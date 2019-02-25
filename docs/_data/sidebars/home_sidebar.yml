@@ -109,6 +109,9 @@ entries:
       title: Render
       url: /deployment_render.html
     - output: web
+      title: Amazon SageMaker
+      url: /deployment_amzn_sagemaker.html      
+    - output: web
       title: AWS BeanStalk
       url: /deployment_aws_beanstalk.html
     - output: web
