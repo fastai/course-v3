@@ -21,7 +21,7 @@ To do nearly everything in this course, you'll need access to a computer with an
 Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently, our recommendations are (see below for details):
 
 - If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
-- If you want to avoid the command-line, try Crestle or Paperspace, which both work great and don't cost much
+- If you want to avoid the command-line, try Crestle, Salamander, or Paperspace, which all work great and don't cost much
 - If you don't have a credit card to sign up for the above services, use Colab, which is free, but has a few minor rough edges and incompatibilities.
 
 #### Ready to run: "One-click" Jupyter
@@ -36,6 +36,7 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 #### Ready to run: Full servers
 
+- [Salamander](/start_salamander.html) (includes "one-click" Jupyter; instant approval; no installation required; $0.38 an hour; $75 free credit for students)
 - [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
 - [Azure](/start_azure.html); (instant approval; no installation required; $0.90 an hour + storage for a VM OR $0.18 an hour + storage for [low priority preemptable instances](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority))
 
