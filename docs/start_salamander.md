@@ -37,7 +37,7 @@ Visit [https://salamander.ai](https://salamander.ai), click "Get Started", compl
 
 Students can claim their free credits at [https://salamander.ai/redeem-aws-coupon](https://salamander.ai/redeem-aws-coupon).
 
-<img alt="" src="/images/salamander/logo.png" class="screenshot">
+<img alt="" src="/images/salamander/coupon.png" class="screenshot">
 
 ## Step 2: Create your server
 
