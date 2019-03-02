@@ -87,9 +87,7 @@ model_artefact = sagemaker_session.upload_data(path=str(path_img/'models/model.t
 
 ## Create model serving script
 
-Now we are ready to deploy our model to the SageMaker model hosting service. We will use the SageMaker Pytthon SDK to do this.
-
-Since fast.ai is built on Pytorch we can use the built-in support SageMaker has for Pytorch. All we need to do is create a script for the model serving logic. For more information on how the PyTorch model serving works check the project page [here](https://github.com/aws/sagemaker-python-sdk/tree/master/src/sagemaker/pytorch#sagemaker-pytorch-model-server).
+Now we are ready to deploy our model to the SageMaker model hosting service. We will use the [SageMaker Python SDK](https://github.com/aws/sagemaker-python-sdk) with the Amazon SageMaker [open-source PyTorch container](https://github.com/aws/sagemaker-pytorch-container) as this container has support for the fast.ai library. Using one of the pre-defined Amazon SageMaker containers makes it easy to write a script and then run it in Amazon SageMaker in just a few steps.
 
 To serve models in SageMaker, we need a script that implements 4 methods: `model_fn`, `input_fn`, `predict_fn` & `output_fn`. 
 * The `model_fn` method needs to load the PyTorch model from the saved weights from disk. 
@@ -98,6 +96,8 @@ To serve models in SageMaker, we need a script that implements 4 methods: `model
 * The `output_fn` method takes the result of prediction and serializes this according to the response content type.
 
 The methods `input_fn` and `input_fn` are optional and if obmitted SageMaker will assume the input and output objects are of type [NPY](https://docs.scipy.org/doc/numpy/neps/npy-format.html) format with Content-Type `application/x-npy`.
+
+For more information on how the PyTorch model serving works check the project page [here](https://github.com/aws/sagemaker-python-sdk/tree/master/src/sagemaker/pytorch#sagemaker-pytorch-model-server).
 
 An example script to serve a vision resnet model can be found below:
 
@@ -111,6 +111,7 @@ logger.setLevel(logging.DEBUG)
 JSON_CONTENT_TYPE = 'application/json'
 JPEG_CONTENT_TYPE = 'image/jpeg'
 
+# loads the model into memory from disk and returns it
 def model_fn(model_dir):
     logger.info('model_fn')
     path = Path(model_dir)
