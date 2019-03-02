@@ -6,7 +6,7 @@ Parameters:
     Default: fastai
     Description: Enter the name of the SageMaker notebook instance. Deafault is fastai.
 
-  InstanceTypeParameter:
+  InstanceType:
     Type: String
     Default: ml.p2.xlarge
     AllowedValues:
