@@ -22,7 +22,7 @@ Sagemaker deployment pricing information can be found [here](https://aws.amazon.
 
 ## Setup your SageMaker notebook instance
 
-Setup your notebook instance where you have trained your fast.ai model on a SageMaker notebook instance. To setup a new SageMaker notebook instance with fast.ai installed follow the steps outlined [here](https://course.fast.ai/start_sagemaker.html).
+Setup your notebook instance where you have trained your fastai model on a SageMaker notebook instance. To setup a new SageMaker notebook instance with fastai installed follow the steps outlined [here](https://course.fast.ai/start_sagemaker.html).
 
 Ensure you have the Amazon SageMaker Python SDK installed in the kernel named *Python 3*. An example command to run is the following:
 
@@ -32,7 +32,7 @@ Ensure you have the Amazon SageMaker Python SDK installed in the kernel named *P
 
 **Train your model on your notebook instance**
 
-Create a Jupyter notebook on your SageMaker notebook instance for your project to train your fast.ai model. 
+Create a Jupyter notebook on your SageMaker notebook instance for your project to train your fastai model. 
 
 An example based on the pets lesson 1 exercise is the following:
 
