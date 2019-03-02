@@ -97,7 +97,7 @@ Resources:
   FastaiNotebookInstance:
     Type: "AWS::SageMaker::NotebookInstance"
     Properties:
-      InstanceType: !Ref InstanceTypeParameter
+      InstanceType: !Ref InstanceType
       LifecycleConfigName: !GetAtt FastaiNbLifecycleConfig.NotebookInstanceLifecycleConfigName
       NotebookInstanceName: !Ref NotebookName
       RoleArn: !GetAtt SageMakerIamRole.Arn
