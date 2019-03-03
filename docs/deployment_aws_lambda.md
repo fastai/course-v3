@@ -5,11 +5,11 @@ sidebar: home_sidebar
 
 # AWS Lambda Deployment
 
-This is a quick guide to deploy your fastai model into production using [Amazon API Gateway](https://aws.amazon.com/api-gateway/) & [AWS Lambda](https://aws.amazon.com/lambda/). We will also use the [Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) as the framework for building the application that will interfact with the Lambda and API Gateway services.
+This is a quick guide to deploy your fastai model into production using [Amazon API Gateway](https://aws.amazon.com/api-gateway/) & [AWS Lambda](https://aws.amazon.com/lambda/). This guide will use the [Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) as the framework for building the application that will interfact with the Lambda and API Gateway AWS services.
 
-**AWS Lambda** lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.
+**[AWS Lambda](https://aws.amazon.com/lambda/)** lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.
 
-**Amazon API Gateway** is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. 
+**[Amazon API Gateway](https://aws.amazon.com/api-gateway/)** is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. 
 
 ## Pricing
 
@@ -80,6 +80,12 @@ wget https://github.com/fastai/course-v3/raw/master/docs/production/aws-lambda.z
 unzip aws-lambda.zip
 ```
 
+## Application overview
+
+The example application makes inference calls on a computer vision model. When the lambda function is loaded it will download the PyTorch model from S3 and load the model into memory. 
+
+It takes a JSON object as input containing the URL of an image somewhere on the internet. The application downloads the image, converts the pixels into a PyTorch Tensor object and passes it through the PyTorch model. It then returns the class name with the highest output score from the model and also returns a confidence level.
+
 The structure of this application is the following:
 
 ```bash
@@ -94,14 +100,6 @@ The structure of this application is the following:
 For information on the SAM Templates view the documentation [here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-basics.html).
 
 For information on programming Lambda functions using the Python programming language see the documentation [here](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html).
-
-## Application overview
-
-The example application makes inference calls on a computer vision model. When the lambda function is loaded it will download the PyTorch model from S3 and load the model into memory. 
-
-It takes a JSON object as input containing the URL of an image somewhere on the internet. The application downloads the image, converts the pixels into a PyTorch Tensor object and passes it through the PyTorch model. It then returns the class name with the highest output score from the model and also returns a confidence level.
-
-The code for the application is stored in the file `pytorch/app.py`. 
 
 **Request Body format**
 
@@ -130,15 +128,13 @@ Example:
 
 You may modify this file based on your application to take different input/output formats.
 
-**Lambda Layers**
+**Lambda Layer**
 
-You can configure your Lambda function to pull in additional code and content in the form of [layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html). A layer is a ZIP archive that contains libraries, a custom runtime, or other dependencies. With layers, you can use libraries in your function without needing to include them in your deployment package.
+You can configure your Lambda function to pull in additional code and content in the form of [Lambda layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html). A layer is a ZIP archive that contains libraries, a custom runtime, or other dependencies. With layers, you can use libraries in your function without needing to include them in your deployment package.
 
-In this project we will be using a publically accessible layer that contains the necessary PyTorch libraries needed to run our application.
+In this project we will be using a publicly accessible Lambda layer that contains the necessary PyTorch libraries needed to run our application. These layers are deployed to the following regions: *us-west-2,us-east-1,us-east-2,eu-west-1,ap-southeast-1,ap-southeast-2,ap-northeast-1,eu-central-1*. The default region is *us-east-1*.
 
-There are publically accessible layers deployed to the following regions: *us-west-2,us-east-1,us-east-2,eu-west-1,ap-southeast-1,ap-southeast-2,ap-northeast-1,eu-central-1*. The default region is *us-east-1*.
-
-If you are not running your model in the default region (i.e. *us-east-1*) You will need to update the file `template.yaml` with the correct region code by replacing the text `AWS_REGION` with the correct region code (e.g. us-west-2).
+If you are not running your model in the default region (i.e. *us-east-1*) You will need to update the file `template.yaml` with the correct region code by replacing the text `AWS_REGION` with the correct region (e.g. us-west-2).
 
 ```yaml
 ...
@@ -225,7 +221,7 @@ sam package \
     --s3-bucket REPLACE_THIS_WITH_YOUR_S3_BUCKET_NAME
 ```
 
-Next, the following command will create a Cloudformation Stack and deploy your SAM resources. You will need to override the default parameters for the bucket name and key. This is done by passing the `--parameter-overrides` option to the `deploy` command.
+Next, the following command will create a Cloudformation Stack and deploy your SAM resources. You will need to override the default parameters for the bucket name and object key. This is done by passing the `--parameter-overrides` option to the `deploy` command as shown below.
 
 ```bash
 sam deploy \
@@ -265,9 +261,4 @@ In order to delete our Serverless Application recently deployed you can use the 
 
 ```bash
 aws cloudformation delete-stack --stack-name pytorch-sam-app
-
-
-
-
-
-
+```
