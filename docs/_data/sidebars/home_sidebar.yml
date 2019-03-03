@@ -109,10 +109,13 @@ entries:
       title: Render
       url: /deployment_render.html
     - output: web
+      title: AWS Lambda
+      url: /deployment_aws_lambda.html 
+      - output: web
       title: Amazon SageMaker
-      url: /deployment_amzn_sagemaker.html      
+      url: /deployment_amzn_sagemaker.html
     - output: web
-      title: AWS BeanStalk
+      title: AWS Elastic Beanstalk
       url: /deployment_aws_beanstalk.html
     - output: web
       title: Google App Engine
