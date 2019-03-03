@@ -4,11 +4,11 @@ keywords:
 sidebar: home_sidebar
 ---
 
-This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using AWS SageMaker. 
+This is a quick guide to starting v3 of the fast.ai course Practical Deep Learning for Coders using Amazon SageMaker. 
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_sagemaker.html) section.
 
-We will use [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to provision all of the SageMaker resources including the Notebook instance, Notebook Lifecyle configuration and IAM role. Be default it will provision a SageMaker notebook of instance type *ml.p2.xlarge* which has the Nvidia K80 GPU and 50 GB of EBS disk space.
+We will use [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to provision all of the SageMaker resources including the Notebook instance, Notebook Lifecyle configuration and IAM role. By default it will provision a SageMaker notebook instance of type *ml.p2.xlarge* which has the Nvidia K80 GPU and 50 GB of EBS disk space.
 
 ## Pricing
 
@@ -16,7 +16,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
 ## Getting Set Up
 
-### Creating the SageMaker Notebook Lifecycle Config and IAM role via CloudFormation
+### Creating the SageMaker Notebook Instance
 
 1. Visit the [AWS webpage](https://aws.amazon.com/) and click on 'Sign In to the Console'. Next, enter your credentials if you are signing in or e-mail, account name and password if you need to sign up.
 
@@ -35,8 +35,8 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
     Asia Pacific (Tokyo) Region | ap-northeast-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-northeast-1.console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)
     Asia Pacific (Seoul) Region | ap-northeast-2 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-northeast-2.console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)
     Asia Pacific (Sydney) Region | ap-southeast-2 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-southeast-2.console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)
-    Asia Pacific (Mumbai) Region | ap-south-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-south-1console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack) 
-    Asia Pacific (Singapore) Region | ap-southeast-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-south-1console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)           
+    Asia Pacific (Mumbai) Region | ap-south-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-south-1.console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack) 
+    Asia Pacific (Singapore) Region | ap-southeast-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ap-southeast-1.console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)           
     Canada (central) Region | ca-central-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://ca-central-1.console.aws.amazon.com/cloudformation/home?region=ca-central-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)       
     EU (Ireland) Region | eu-west-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)
     EU (Frankfurt) Region | eu-central-1 | [![CloudFormation](/images/aws/cfn-launch-stack.png)](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fmmcclean-public-files%2Fsagemaker-fastai-notebook%2Fsagemaker-cfn.yml&stackName=FastaiSageMakerStack)
@@ -50,11 +50,11 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
    <img alt="sage" src="/images/sagemaker/01.png" class="screenshot">
 
-1. On the left navigation bar, choose *Notebook instances*. This is where we create, manage, and access our notebook instances. You should see that your notebook instance named **fastai** status is *InService* as per the screenshot below.
+1. On the left navigation bar, choose *Notebook instances*. This is where we create, manage, and access our notebook instances. You should see that your notebook instance named **fastai** status has the status *InService* as per the screenshot below.
 
-   <img alt="pending" src="/images/sagemaker/16.png" class="screenshot">
+   <img alt="pending" src="/images/sagemaker/17.png" class="screenshot">
 
-1. Click on the *Open Jupyter* link to open your Jupyter web console as per the screenshot below.
+1. Click on the *Open Jupyter* link to open your Jupyter web console.
 
 ### Shutting down your instance
 
@@ -64,7 +64,7 @@ The instance we suggest, ml.p2.xlarge, is $1.26 an hour. The hourly rate is depe
 
   To see how to open it again, update the course or the fastai library, go to the [Returning to work page](update_sagemaker.html).
 
-### Troubleshooting installation problems
+## Troubleshooting installation problems
 
 - If you do not receive a notifcation email after more than 15 minutes then there may have been a problem installing the fast.ai libraries and dependencies on your notebook instance. To troubleshoot, open the [AWS console](https://aws.amazon.com/console/) then click on the **CloudWatch** link (type *cloudwatch* in the search bar). Once you are in the CloudWatch console, navigate to *Logs -> /aws/sagemaker/NotebookInstances -> fastai/LifecycleConfigOnStart* or *fastai/LifecycleConfigOnCreate* to view the output of the installation scripts.
 
