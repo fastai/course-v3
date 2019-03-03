@@ -40,7 +40,7 @@ aws s3 mb s3://REPLACE_WITH_YOUR_BUCKET_NAME
 
 You wil need to start with a pretrained model, most likely on a Jupyter notebook server. The SAM application expects a PyTorch model in [TorchScript](https://pytorch.org/docs/stable/jit.html?highlight=jit#module-torch.jit) format to be saved to S3 along with a classes text file with the output class names. 
 
-An example of how you can export your model to this format is the following:
+An example Python code snippet of how you can export a fastai vision model is shown below.
 
 ```python
 # export model to TorchScript format
