@@ -68,7 +68,7 @@ s3 = boto3.resource('s3')
 s3.meta.client.upload_file(tar_file, 'REPLACE_WITH_YOUR_BUCKET_NAME', 'fastai-models/lesson1/model.tar.gz')
 ```
 
-A full example of training a model, exporting it to the JIT format and uploading to S3 based on **Lesson 1 - Pets** can be found [here](https://github.com/fastai/course-v3/production/lesson-1-export-jit.ipynb).
+A full example of training a model, exporting it to the JIT format and uploading to S3 based on **Lesson 1** can be found [here](https://github.com/fastai/course-v3/blob/master/docs/production/lesson-1-export-jit.ipynb).
 
 ### Grab the SAM example project
 
