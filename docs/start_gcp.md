@@ -7,7 +7,7 @@ sidebar: home_sidebar
 
 <img alt="" src="/images/gcp/logo.jpg" class="screenshot">
 
-This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0.0 and fastai 1.0.2. At the end of this tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environment.
+This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch and fastai. At the end of this tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environment.
 
 If you are returning to work and have previously completed the steps below, please go to the [returning to work](https://course.fast.ai/update_gcp.html) section.
 
@@ -128,7 +128,8 @@ gcloud compute instances create $INSTANCE_NAME \
         --accelerator="type=nvidia-tesla-p4,count=1" \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
-        --metadata="install-nvidia-driver=True" \
+        --scopes=https://www.googleapis.com/auth/cloud-platform \
+        --metadata="install-nvidia-driver=True,proxy-mode=project_editors" \
         --preemptible
 ```
 If you get an error saying:
@@ -153,7 +154,35 @@ Your instance will be ready when the little icon to the left of its name turns g
 
 You can also read more details about instance creation from the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
-Once this is done, you can connect to your instance from the terminal by typing:
+Once this is done, there are two ways to connect to your Jupyter Notebook Server.
+
+### HTTPS Link
+
+Fetch the URL by calling the following command:
+
+```bash
+gcloud compute instances describe "${INSTANCE_NAME}" | grep datalab
+```
+
+If everything is ok the terminal will print out something similar to below:
+
+```
+    value: xxxxxxxxxxxxxxxx-dot-datalab-vm-us-west2.googleusercontent.com
+```
+
+Now you can access your Jupyter Notebook by simply going to
+
+````
+xxxxxxxxxxxxxxxx-dot-datalab-vm-us-west2.googleusercontent.com/tree
+```
+
+in your favorite browser.
+
+### SSH and Port Forwarding
+
+
+You can also connect to your instance from the terminal by typing:
+
 ```bash
 gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 ```
