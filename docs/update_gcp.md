@@ -23,17 +23,44 @@ You can also click on the three dots then start in the menu that pops up. Wait a
 
 <img alt="" src="/images/gcp/ready.png" class="screenshot">
 
-Once this is done, open your terminal and execute the following instruction:
+Once this is done, there are two ways to reconnect.
+
+#### Reconnect with HTTPS Link
+
+Simply open your terminal and type:
 
 ```bash
-gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
+gcloud compute instances describe "${INSTANCE_NAME}" | grep datalab
 ```
 
-If your default zone is the same as the one of the instance, you can ommit the `--zone=$ZONE` part. Otherwise replace ZONE by the zone of your instance. In any case, replace INSTANCE_NAME by the name of your instance.
+If everything is ok the terminal will print out something similar to below:
+
+```
+    value: xxxxxxxxxxxxxxxx-dot-datalab-vm-us-west2.googleusercontent.com
+```
+
+Now you can access your Jupyter Notebook by simply going to
+
+```
+xxxxxxxxxxxxxxxx-dot-datalab-vm-us-west2.googleusercontent.com/tree
+```
+
+in your favorite browser.
+
+#### Reconnect with SSH
+
+You can also reconnect with ssh. Open your terminal and execute the following instruction:
+
+```bash
+gcloud compute ssh --zone=$ZONE jupyter@"${INSTANCE_NAME}" -- -L 8080:localhost:8080
+```
+
+If your default zone is the same as the one of the instance, you can omit the `--zone=$ZONE` part. Otherwise replace ZONE by the zone of your instance. In any case, replace INSTANCE_NAME by the name of your instance.
 
 Once this is done, you can access your jupyter notebook at [localhost:8080/tree](http://localhost:8080/tree).
 
 ### Update the course repo
+
  To update the course repo, go in your terminal and run those two instructions:
 
 ``` bash
@@ -44,12 +71,14 @@ git pull
 This should give you the latest of the course notebooks. If you modified some of the notebooks in course-v3/nbs directly, GitHub will probably throw you an error. You should type `git stash` to remove your local changes. Remember you should always work on a copy of the lesson notebooks.
 
 ### Update the fastai library
+
 To update the fastai library, open the terminal like before and type
 ``` bash
-sudo /opt/anaconda3/bin/conda install -c fastai fastai
+sudo /opt/anaconda3/bin/conda install -c pytorch -c fastai fastai
 ```
 
 ### Stop your instance
+
 Once you're finished, go back to your [Google compute console](https://console.cloud.google.com/computes) and find your running instance. Either click on the three dots then on 'Stop' or tick the box next to its name and click on the 'Stop' button on top of the screen.
 
 <img alt="" src="/images/gcp/stop.png" class="screenshot">
