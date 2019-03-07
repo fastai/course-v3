@@ -21,7 +21,7 @@ To do nearly everything in this course, you'll need access to a computer with an
 Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently, our recommendations are (see below for details):
 
 - If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
-- If you want to avoid the command-line, try Crestle or Paperspace, which both work great and don't cost much
+- If you want to avoid the command-line, try Crestle, or Paperspace, which both work great and don't cost much
 - If you don't have a credit card to sign up for the above services, use Colab, which is free, but has a few minor rough edges and incompatibilities.
 
 #### Ready to run: "One-click" Jupyter
@@ -31,7 +31,9 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 - [Crestle](/start_crestle.html); (instant approval, no installation required, $0.30 an hour)
 - [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
-- [Kaggle Kernels](/start_kaggle.html); (Instant Launch, No setup required, Free)
+- [SageMaker](/start_sagemaker.html); (requires wait for approval, not quite "one click"... but pretty close, $1.26 an hour + storage)
+- [Kaggle Kernels](/start_kaggle.html); (Instant Launch, No setup required, Free, not always up to date and not as well supported by fast.ai)
+- [Salamander](/start_salamander.html) (instant approval; no installation required; includes full terminal access; $0.38 an hour; $75 free credit for students)
 - [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
 
 #### Ready to run: Full servers
@@ -43,7 +45,6 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 We also have instructions for using these platforms, but they don't have everything preinstalled yet:
 
-- [SageMaker](/start_sagemaker.html); (requires some installation, and wait for approval, $1.26 an hour + storage)
 - [Amazon Web Services EC2](/start_aws.html) ($0.9 an hour + storage)
 
 **For those starting out, we highly recommend a Jupyter Notebooks platform (Option 1)**

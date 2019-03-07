@@ -7,10 +7,10 @@ const TRANSCRIPTS = {
   1: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-1.json',
   2: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-2.json',
   3: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-3.json',
-  4: null,
+  4: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-4.json',
   5: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-5.json',
   6: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-6.json',
-  7: null,
+  7: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-7.json',
 };
 
 const SearchResults = styled.div`

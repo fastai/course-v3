@@ -35,7 +35,7 @@ You also get 1 hour of free GPU usage when you sign up.
 ## Getting started
 
 ### Step 1: Create a crestle.ai account
-Sign up for Crestle [here](https://www.crestle.ai/). Verify your email by clicking on the link Crestle emails you. Once you have verified, you can sing in to your account.
+Sign up for Crestle [here](https://www.crestle.ai/). Verify your email by clicking on the link Crestle emails you. Once you have verified, you can sign in to your account.
 
 <img alt="" src="/images/crestle/signup.png" class="screenshot">
 
