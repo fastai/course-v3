@@ -1,9 +1,7 @@
 ---
-layout: basic
-section_id: datasets
+title: fast.ai Datasets
+sidebar: home_sidebar
 ---
-
-# fast.ai Datasets
 
 In machine learning and deep learning we can't do anything without data. So the people that create datasets for us to train our models are the (often under-appreciated) heros. Some of the most useful and important datasets are those that become important "academic baselines"; that is, datasets that are widely studied by researchers and used to compare algorithmic changes. Some of these become household names (at least, among households that train models!), such as *MNIST*, *CIFAR 10*, and *Imagenet*.
 
