@@ -7,10 +7,10 @@ const VIDEO_SOURCES = {
   1: "XfoYk_Z5AkI",
   2: "ccMHJeQU4Qw",
   3: "MpZxV6DVsmM",
-  4: "9YK6AnqpuEA",
+  4: "qqt3aMPB81c",
   5: "CJKnDu2dxOE",
   6: "hkBa9pU-H48",
-  7: "DGdRC4h78_o",
+  7: "9spwoDYwW_I",
 };
 
 const Wrapper = styled.div`
@@ -19,7 +19,6 @@ const Wrapper = styled.div`
 `
 
 const VideoPlayer = React.forwardRef((props, ref) => {
-  // "https://www.youtube.com/embed/XfoYk_Z5AkI",
   const { lesson } = props;
   return (
     <Wrapper>

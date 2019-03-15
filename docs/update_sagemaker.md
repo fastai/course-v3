@@ -32,10 +32,8 @@ When it turns green, just click on 'Open' and you'll be back to your notebooks.
 
 <img alt="ready" src="/images/sagemaker/17.png" class="screenshot">
 
-### Running custom code on notebook instance start
-The SageMaker notebook will contain a custom script that will be run each time the notebook instance is started. The script can be found at the path `/home/ec2-user/SageMaker/custom-start-script.sh`.
-
-The default behaviour is to update the fastai courses GitHub repository.
+### Updating start script
+Every time the Notebook instance is started it will run a [Lifecycle Configuration](https://aws.amazon.com/blogs/machine-learning/customize-your-amazon-sagemaker-notebook-instances-with-lifecycle-configurations-and-the-option-to-disable-internet-access/) script. To update the start script, select 'Notebook instances' on the left menu and then select the Lifecycle configuration name that starts with *FastaiNbLifecycleConfig*. Select the **Edit** button and now you will be able to update the **Start notebook** script to perform custom actions.
 
 ### Stop your instance
 When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/sagemaker) and stop your instance manually to avoid getting extra charges. Just pick the notebook you want to stop and click on the 'Stop' button next to its name.
