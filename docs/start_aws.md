@@ -1,7 +1,7 @@
 ---
 
 title: AWS EC2
-keywords: 
+keywords:
 sidebar: home_sidebar
 
 
@@ -58,7 +58,7 @@ On Windows, you will need to copy this public key in a Windows directory to easi
 cp .ssh/id_rsa.pub /mnt/c/Temp/
 ```
 
-Once you have made your ssh key, go back to the AWS console and make sure you are in the region in which you have requested your service limit increase. You can tell where you are by looking at the web address of your console. 
+Once you have made your ssh key, go back to the AWS console and make sure you are in the region in which you have requested your service limit increase. You can tell where you are by looking at the web address of your console.
   For example https://us-west-2.console.aws.amazon.com/ is the Oregon region
   While:      https://ap-south-1.console.aws.amazon.com/ is the Mumbai region
 You can change your region by choosing from the dropdown list to the right of your username in the top right corner of your screen.
@@ -81,7 +81,7 @@ On the new screen:
 
 ## Step 4: Launch an instance
 
-Note that this step will fail at the end if you didn't get the approval for p2 instances, so you may have to wait a bit before starting it. 
+Note that this step will fail at the end if you didn't get the approval for p2 instances, so you may have to wait a bit before starting it.
 
 Log in to the AWS console then search for EC2 in the query bar or click 'EC2' in the services. Once on the EC2 screen, click launch instance.
 
@@ -117,9 +117,10 @@ When it turns green, copy your instance IP in the IPv4 column.
 It's time to connect! Open your command line [terminal](/terminal_tutorial_) and type the following command:
 
 ```
-ssh -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
+ssh -i ~/.ssh/<your_private_key_pair> -L localhost:8888:localhost:8888 ubuntu@<your instance IP>
 ```
-(Replace '\<your instance IP\>' with your the IP address of your instance as shown before.)
+(Replace '\<your instance IP\>' with your the IP address of your instance as shown before.
+Also note that you want to use '\<your_private_key_pair\>', not '\<your_private_key_pair.pub\>'.)
 
 You may have a question about trusting this address, to which you should reply 'yes'.
 
@@ -129,7 +130,7 @@ Run
 ``` bash
 git clone https://github.com/fastai/course-v3
 ```
-in your terminal to get a folder with all the fast.ai materials. 
+in your terminal to get a folder with all the fast.ai materials.
 
 Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
 
@@ -150,6 +151,11 @@ jupyter notebook
 ```
 in your terminal, and you can access the notebook at [localhost:8888](http://localhost:8888).
 
+If going to localhost:8888 doesn't work, or asks for a password/token return to your terminal window and look for this message after you typed 'jupyter notebook':
+ "Copy/paste this URL into your browser when you connect for the first time, to login with a token:"
+
+ Copy and paste that URL into your browser, and this should connect you to your jupyter notebook.
+
 Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 If you have any problem while using the `fastai` library try running
@@ -159,7 +165,7 @@ conda install -c fastai fastai
 
 ## Step 7: Stop your instance when you are done
 
-When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/ec2) and stop your instance manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it! 
+When you finish working you must go back to your [AWS console](https://us-west-2.console.aws.amazon.com/ec2) and stop your instance manually to avoid getting extra charges. A good practice is setting a reminder for yourself (when you close your computer or log off) so you never forget to do it!
 
 <img alt="stop" src="/images/aws/stop.png" class="screenshot">
 
