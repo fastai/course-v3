@@ -1,6 +1,8 @@
 # Lesson 2: Data cleaning and production; SGD from scratch
 
-## Overview
+[第二课：数据清洗和模型云端应用；手写SGD](https://forums.fast.ai/t/fast-ai-v3-2019/39325/79?u=daniel)
+
+## Overview 综述
 
 We start today's lesson learning how to build your own image classification model using your own data, including topics such as:
 
@@ -9,28 +11,40 @@ We start today's lesson learning how to build your own image classification mode
 - Creating a validation set, and
 - Data cleaning, using the model to help us find data problems.
 
+今天我们要用自己的数据构建属于你的图片分类器，涉及内容包括：
+- 图片搜集
+- 并行下载
+- 创建一个验证集
+- 数据清洗，让模型帮助我们找出数据内的瑕疵
+
 I'll demonstrate all these steps as I create a model that can take on the vital task of differentiating teddy bears from grizzly bears. Once we've got our data set in order, we'll then learn how to productionize our teddy-finder, and make it available online.
+我会演示以上步骤，通过一个创建一个模型来区分泰迪熊，棕熊和黑熊。一旦我们的模型训练到位，我们将让这个模型能在云端被调用。
 
 We've had some great additions since this lesson was recorded, so be sure to check out:
 
 - The *production starter kits* on the course web site, such as [this one](https://course.fast.ai/deployment_render.html) for deploying to Render.com
 - The new interactive GUI in the lesson notebook for using the model to find and fix mislabeled or incorrectly-collected images.
 
+课程录制之后，我们增加很多内容，请关注：
+- 云端调用模型平台，例如，[Render.com使用指南](https://course.fast.ai/deployment_render.html)
+- Notebook中的新互动界面能帮助我们寻找和修正错误标注的图片
+
 In the second half of the lesson we'll train a simple model from scratch, creating our own *gradient descent* loop. In the process, we'll be learning lots of new jargon, so be sure you've got a good place to take notes, since we'll be referring to this new terminology throughout the course (and there will be lots more introduced in every lesson from here on).
+在本节课的后半段，我们将手动创建和训练一个简单模型，并手写我们自己的*梯度下降*循环。在这个过程中，我们将学到很多新名词，请确保做好笔记，因为之后我们会反复使用这些名词。（之后还会学到更多新名词）
 
-## Resources
+## Resources 资源
 
-### Lesson resources
+### Lesson resources 课程资源
 
 - Notebooks:
     - [lesson2-download.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb)
     - [lesson2-sgd.ipynb](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-sgd.ipynb)
-- [Detailed lesson notes](https://github.com/hiromis/notes/blob/master/Lesson2.md) - thanks to @hiromi
-- [Lesson notes ](https://forums.fast.ai/t/deep-learning-lesson-2-notes/28772) - thanks to @PoonamV
-- [Lesson 2 in-class discussion](https://forums.fast.ai/t/lesson-2-chat/28722)
-- [Links to different parts in the video](https://forums.fast.ai/t/lesson-2-links-to-different-parts-in-video/28777) - thanks to @melonkernel
+- [第二课 详尽笔记](https://github.com/hiromis/notes/blob/master/Lesson2.md) - 感谢 @hiromi
+- [第二课 笔记 wiki ](https://forums.fast.ai/t/deep-learning-lesson-2-notes/28772) - 感谢@PoonamV
+- [课内讨论](https://forums.fast.ai/t/lesson-2-chat/28722)
+- [视频节点列表](https://forums.fast.ai/t/lesson-2-links-to-different-parts-in-video/28777) - 感谢 @melonkernel
 
-### Other resources
+### Other resources 其他资源
 
 - [ How (and why) to create a good validation set](https://www.fast.ai/2017/11/13/validation-sets/) by @rachel
 - [There's no such thing as "not a math person"](https://www.youtube.com/watch?v=q6DGVGJ1WP4) by @rachel
@@ -42,4 +56,4 @@ In the second half of the lesson we'll train a simple model from scratch, creati
 
 ---
 
-[Edit this page](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-2.md).
+[编辑此页面](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-2.md).
