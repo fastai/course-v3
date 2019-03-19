@@ -1,14 +1,6 @@
-# Lesson 6: Regularization; Convolutions; Data ethics
+# 第六课：正则化，卷积，数据伦理
 
-### 第六课：正则化，卷积，数据伦理
-
-## Overview 综述
-
-Today we discuss some powerful techniques for improving training and avoiding over-fitting:
-
-- **Dropout**: remove activations at random during training in order to regularize the model
-- **Data augmentation**: modify model inputs during training in order to effectively increase data size
-- **Batch normalization**: adjust the parameterization of a model in order to make the loss surface smoother.
+## 综述
 
 今天我们学习讨论一些帮助我们改进训练和避免过拟合的强大技巧：
 
@@ -16,19 +8,13 @@ Today we discuss some powerful techniques for improving training and avoiding ov
 - **Data augmentation数据增强**：对模型输入值做调整，目的是显著增加数据尺寸
 - **Batch normalization批量正常化**：规整模型参数值，目的是训练时让损失值变化更平滑
 
-Next up, we'll learn all about *convolutions*, which can be thought of as a variant of matrix multiplication with tied weights, and are the operation at the heart of modern computer vision models (and, increasingly, other types of models too).
-
 接下来，我们会学习*convolutions卷积*，这个概念可以被理解为一种数组乘法与多个捆绑参数扫描器合作的变体，是当下机器视觉的核心算法（同时也在不断为其他类别的模型所使用）。
-
-We'll use this knowledge to create a *class activated map*, which is a heat-map that shows which parts of an image were most important in making a prediction.
 
 我们将基于此创建一个类叫 *activated map*, 其功能是对图片做热力图处理，从而凸显展示图片中对预测最重要的部位。
 
-Finally, we'll cover a topic that many students have told us is the most interesting and surprising part of the course: data ethics. We'll learn about some of the ways in which models can go wrong, with a particular focus on *feedback loops*, why they cause problems, and how to avoid them. We'll also look at ways in which bias in data can lead to biased algorithms, and discuss questions that data scientists can and should be asking to help ensure that their work doesn't lead to unexpected negative outcomes.
-
 最后，我们将学习*数据伦理*, 许多学员认为这是一个非常有趣且出乎意料的课程内容。我们会了解到模型在什么情况下会出问题，会着重讲到*feedback loops 反馈循环*， 以及为什么这些会是问题，以及如何规避。我们还会看到数据中的偏差是如何导致算法偏差（歧视）的，还会探讨关于数据科学家能做什么，以及是否应该力争确保他们的工作不会导致意想不到的负面结果。
 
-### Lesson Resources 课程资源
+### 课程资源
 
 - [第六课详细笔记](https://github.com/hiromis/notes/blob/master/Lesson6.md) - 感谢 @hiromi
 - Notebooks:
@@ -38,7 +24,7 @@ Finally, we'll cover a topic that many students have told us is the most interes
 - [第六课 课内探讨 thread](https://forums.fast.ai/t/lesson-6-in-class-discussion/31440)
 - [第六课 深入探讨 (高级)](https://forums.fast.ai/t/lesson-6-advanced-discussion/31442)
 
-### Other Resources 其他资源
+### 其他资源
 
 - [platform.ai 平台讨论](https://forums.fast.ai/t/platform-ai-discussion/31445)
 - [50 Years of Test (Un)fairness: Lessons for Machine Learning](https://128.84.21.199/pdf/1811.10104.pdf)

@@ -1,23 +1,15 @@
-# Lesson 5: Back propagation; Accelerated SGD; Neural net from scratch
+# 第五课：反向传递，加速版随机梯度下降，手写神经网络
 
-[第五课：反向传递，加速版随机梯度下降，手写神经网络](https://forums.fast.ai/t/fast-ai-v3-2019/39325/72?u=daniel)
-
-## Overview 综述
-In lesson 5 we put all the pieces of training together to understand exactly what is going on when we talk about *back propagation*. We'll use this knowledge to create and train a simple neural network from scratch.
-
+## 综述
 在本课中我们会深入训练环节细节来讲解什么是反向传递。在此基础上，我们会手写一个简单的神经网络
-
-We'll also see how we can look inside the weights of an embedding layer, to find out what our model has learned about our categorical variables. This will let us get some insights into which movies we should probably avoid at all costs&hellip;
 
 我们还将深入观察embedding层的参数，看看模型学到了哪些关于类别变量的知识。这些知识将帮助我们识别那些需要权利回避的电影...
 
-Although embeddings are most widely known in the context of word embeddings for NLP, they are at least as important for categorical variables in general, such as for tabular data or collaborative filtering. They can even be used with non-neural models with great success.
-
 尽管embeddings的知名度在自然语言word embeddings领域里是最高的，但在广义的类别变量问题的背景下，如表格数据问题或者是推荐算法问题里，他们的重要性不容小觑。他们甚至在非神经网络模型里也有杰出表现。
 
-## Resources 资源
+## 资源
 
-### Lesson resources 课程资源
+### 课程资源
 
 - [第六课 笔记](https://forums.fast.ai/t/deep-learning-lesson-5-notes/31298) - 感谢 @PoonamV
 - [第六课 详尽笔记](https://github.com/hiromis/notes/blob/master/Lesson5.md) - 感谢 @hiromi
@@ -32,7 +24,7 @@ Although embeddings are most widely known in the context of word embeddings for 
 - [Lesson 5 advanced discussion](https://forums.fast.ai/t/lesson-5-further-discussion/30865)
 - [Links to different parts in video](https://forums.fast.ai/t/lesson-5-links-to-different-parts-in-video/30891) by @melonkernel
 
-### Other resources 其他资源
+### 其他资源
 
 - [NY Times Article - Finally, a Machine That Can Finish Your Sentence](https://www.nytimes.com/2018/11/18/technology/artificial-intelligence-language.html)
 - [Netflix and Chill: Building a Recommendation System in Excel - Latent Factor Visualization in Excel blog post](https://towardsdatascience.com/netflix-and-chill-building-a-recommendation-system-in-excel-c69b33c914f4)

@@ -1,29 +1,17 @@
 # Lesson 1: Image classification
-第一课 你的宠物图片分类
-
-You can click the blue arrow buttons on the left and right panes to hide them and make more room for the video. You can search the transcript using the text box at the bottom. Scroll down this page for links to many useful resources. If you have any other suggestions for links, edits, or anything else, you'll find an "edit" link at the bottom of this (and every) notes panel.
+# 第一课 你的宠物图片分类
 
 点击左侧和右侧的蓝色箭头按钮来隐藏panel给你更多观看视频的空间。你可以屏幕下方搜索字幕并进行视频时间跳跃。页面下方还有大量有用资源。如果你有任何建议，可以在最下方的“编辑”链接，增加你想添加的链接或编辑。
 
-## Overview 综述
-
-To follow along with the lessons, you'll need to connect to a cloud GPU provider which has the fastai library installed (recommended; it should take only 5 minutes or so, and cost under $0.50/hour), or set up a computer with a suitable GPU yourself (which can take days to get working if you're not familiar with the process, so we don't recommend it). You'll also need to be familiar with the basics of the *Jupyter Notebook* environment we use for running deep learning experiments. Up to date tutorials and recommendations for these are available from the [course website](https://course.fast.ai).
+## 综述
 
 跟随课程，你需要有一个云端GPU能运行fastai（推荐，目前最便宜的是每小时0.5美元），或者在本地设置自己的GPU（非常费时费事，不推荐）。你需要熟悉Jupyter Notebook的使用环境来做深度学习实验。更多最新的GPU指南可以在[课程官网](https://course.fast.ai)中查看。
 
-The key outcome of this lesson is that we'll have trained an image classifier which can recognize pet breeds at state of the art accuracy. The key to this success is the use of *transfer learning*, which will be a key platform for much of this course. We'll also see how to analyze the model to understand its failure modes. In this case, we'll see that the places where the model is making mistakes is in the same areas that even breeding experts can make mistakes.
-
 本课的核心目标是训练一个图片分类器，将宠物种类识别做到最专业级的精确度。实验成功的关键是迁移学习 *transfer learning*，也是本课程的核心平台或模型模版工具之一. 我们会学习如何分析模型以理解错误发生所在。在此过程中，我们将看到模型犯错的地方，就连宠物种类鉴定专家也会判断出错。
-
-We'll discuss the overall approach of the course, which is somewhat unusual in being *top-down* rather than *bottom-up*. So rather than starting with theory, and only getting to practical applications later, instead we start with practical applications, and then gradually dig deeper and deeper in to them, learning the theory as needed. This approach takes more work for teachers to develop, but it's been shown to help students a lot, for example in [education research at Harvard](https://www.gse.harvard.edu/news/uk/09/01/education-bat-seven-principles-educators) by David Perkins.
 
 我们还将探讨本课程的授课模式，即自上而下，而非自下而上。也就是说，我们是从实验开始，根据需求，逐步深入学习理论，而非传统方式，讲完理论，才慢慢开始实践。这种方法对老师挑战较大非常耗时，但对学生受益颇丰，例如 [education research at Harvard](https://www.gse.harvard.edu/news/uk/09/01/education-bat-seven-principles-educators) by David Perkins.
 
-We also discuss how to set the most important *hyper-parameter* when training neural networks: the *learning rate*, using Leslie Smith's fantastic *learning rate finder* method. Finally, we'll look at the important but rarely discussed topic of *labeling*, and learn about some of the features that fastai provides for allowing you to easily add labels to your images.
-
 我们还将讨论在训练模型时如何设置那些最重要的超参数*hyper-parameter*。我们将采用Leslie Smith's fantastic *learning rate finder* method来设置学习率。最后，我们将研究很少讨论但非常重要的*labeling*数据标记, 并学习fastai 库提供的轻松添加图片标注的功能
-
-If you want to more deeply understand how PyTorch really works, you may want to check out [this official PyTorch tutorial](https://pytorch.org/tutorials/beginner/nn_tutorial.html) by Jeremy&mdash;although we'd only suggest doing that once you've completed a few lessons.
 
 如果你想要深入理解pytorch的实际工作，可以参看 [this official PyTorch tutorial](https://pytorch.org/tutorials/beginner/nn_tutorial.html) by Jeremy，但先别急，建议你在学完本课程的几节课后再学
 
@@ -32,9 +20,9 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 
 
 
-## Links 链接
+## 链接
 
-### Lesson resources 课程资源
+### 课程资源
 
 - [Course site](https://course.fast.ai), 课程官网包含了所有平台的GPU设置指南
 - [Course repo](https://github.com/fastai/course-v3) 课程的github repo
@@ -47,7 +35,7 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 - [第一课笔记](https://forums.fast.ai/t/deep-learning-lesson-1-notes/27748) - 感谢 @PoonamV (wiki thread - 欢迎大家贡献共建!)
 - [课程探讨 thread](https://forums.fast.ai/t/lesson-1-discussion/27332)
 
-### Other resources 其他资源
+### 其他资源
 
 - [Thread on creating your own image dataset](https://forums.fast.ai/t/tips-for-building-large-image-datasets/26688)
 - [What you need to do deep learning](http://www.fast.ai/2017/11/16/what-you-need/) (fast.ai 博客讲解了什么是GPU以及它们的必要性)
@@ -61,7 +49,7 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 - [One-Cycle Policy Fitting paper](https://arxiv.org/abs/1803.09820)
 - [Visualizing and Understanding Convolutional Networks (paper)](https://arxiv.org/abs/1311.2901)
 
-### How to scrape images 如何从网页爬取图片
+### 如何从网页爬取图片
 
 - [官方课程指南](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb)
 - https://forums.fast.ai/t/tips-for-building-large-image-datasets/26688
