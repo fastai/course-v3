@@ -43,14 +43,31 @@ If you are returning to work and have previously completed the steps below, plea
 
     <img alt="stop" src="/images/colab/08.png" height="480" class="screenshot">
 
-### Step 3: Saving your work
+### Step 3: Saving your notebook
 
 If you opened a notebook from Github, you will need to save your work to Google Drive. You can do this by clicking on 'File' and then 'Save'. You should see a pop-up with the following message:
 
 <img alt="create" src="/images/colab/09.png" height="480" class="screenshot">
 
-Click on 'SAVE A COPY IN DRIVE'. This will open up a new tab with the same file, only this time located in your Drive. If you want to continue working after saving,  use the file in the new tab.
+Click on 'SAVE A COPY IN DRIVE'. This will open up a new tab with the same file, only this time located in your Drive. If you want to continue working after saving,  use the file in the new tab. Your notebook will be saved in a folder called `Colab Notebooks` in your Google Drive by default.
 
+### Step 4: Saving your data files
+If you run a script which creates/ downloads files, the files will NOT persist after the allocated instance is shutdown. To save files, you need to permit your Colaboratory instance to read and write files to your Google Drive. Add the following code snippet at the beginning of every notebook.
+```python 
+from google.colab import drive
+drive.mount('/content/gdrive', force_remount=True)
+root_dir = "/content/gdrive/My Drive/"
+base_dir = root_dir + 'fastai-v3/'
+```
+Now, you may access your Google Drive as a file sytem using standard python commands to both read and write files.
+Don't forget to append `base_dir` before root path(s) in all notebooks. For example, in `lesson2-download.ipynb` 5<sup>th</sup> cell, make the following changes:
+```python
+path = Path(base_dir + 'data/bears')
+dest = path/folder
+dest.mkdir(parents=True, exist_ok=True)
+```
+
+ 
 ## More help
 
 For questions or issues related to course content, we recommend posting in the [fast.ai forum](http://forums.fast.ai/).

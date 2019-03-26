@@ -14,7 +14,7 @@ wget https://github.com/fastai/course-v3/raw/master/docs/production/aws-beanstal
 
 unzip aws-beanstalk.zip
 
-cd aws-beanstalk.zip
+cd app
 ```
 
 ## Per-project setup

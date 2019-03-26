@@ -43,11 +43,17 @@ entries:
       title: Crestle.ai (Easy)
       url: /start_crestle.html
     - output: web
+      title: Salamander (Easy)
+      url: /start_salamander.html
+    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web
       title: FloydHub (Easy)
       url: /start_floydhub.html
+    - output: web
+      title: Kaggle.com (Easy)
+      url: /start_kaggle.html
     - output: web
       title: Google Cloud (Intermediate)
       url: /start_gcp.html
@@ -79,6 +85,9 @@ entries:
       title: FloydHub
       url: /update_floydhub.html
     - output: web
+      title: Kaggle
+      url: /update_kaggle.html
+    - output: web
       title: Colab
       url: /update_colab.html
     - output: web
@@ -100,11 +109,17 @@ entries:
       title: Render
       url: /deployment_render.html
     - output: web
-      title: AWS BeanStalk
-      url: /deployment_aws_beanstalk.html
-    - output: web
       title: Google App Engine
       url: /deployment_google_app_engine.html
+    - output: web
+      title: AWS Lambda
+      url: /deployment_aws_lambda.html 
+    - output: web
+      title: Amazon SageMaker
+      url: /deployment_amzn_sagemaker.html
+    - output: web
+      title: AWS Elastic Beanstalk
+      url: /deployment_aws_beanstalk.html
   - title: fastai v1
     output: web
     folderitems:

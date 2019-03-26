@@ -1,9 +1,7 @@
 ---
-layout: basic
-section_id: datasets
+title: fast.ai Datasets
+sidebar: home_sidebar
 ---
-
-# fast.ai Datasets
 
 In machine learning and deep learning we can't do anything without data. So the people that create datasets for us to train our models are the (often under-appreciated) heros. Some of the most useful and important datasets are those that become important "academic baselines"; that is, datasets that are widely studied by researchers and used to compare algorithmic changes. Some of these become household names (at least, among households that train models!), such as *MNIST*, *CIFAR 10*, and *Imagenet*.
 
@@ -26,6 +24,8 @@ Source | Citation | Download | Description
 [Oxford 102 Flowers](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/) | [Nilsback, M-E. and Zisserman, A., 2008](http://www.robots.ox.ac.uk/~vgg/publications/papers/nilsback08.pdf) | [download](https://s3.amazonaws.com/fast-ai-imageclas/oxford-102-flowers.tgz) | A 102 category dataset consisting of 102 flower categories, commonly occuring in the United Kingdom. Each class consists of 40 to 258 images. The images have large scale, pose and light variations.
 [Food-101](https://www.vision.ee.ethz.ch/datasets_extra/food-101/) | [Bossard, Lukas et al., 2014](https://pdfs.semanticscholar.org/8e3f/12804882b60ad5f59aad92755c5edb34860e.pdf) | [download](https://s3.amazonaws.com/fast-ai-imageclas/food-101.tgz) | 101 food categories, with 101,000 images; 250 test images and 750 training images per class. The training images were not cleaned. All images were rescaled to have a maximum side length of 512 pixels.
 [Stanford cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html) | [Jonathan Krause et al., 2013](https://ai.stanford.edu/~jkrause/papers/3drr13.pdf) | [download](https://s3.amazonaws.com/fast-ai-imageclas/stanford-cars.tgz) | 16,185 images of 196 classes of cars. The data is split into 8,144 training images and 8,041 testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year.
+[Imagenette](https://github.com/fastai/imagenette) | Based on [Deng et al., 2009](http://www.image-net.org/papers/imagenet_cvpr09.bib) | [Full size](https://s3.amazonaws.com/fast-ai-imageclas/imagenette.tgz) [320 px](https://s3.amazonaws.com/fast-ai-imageclas/imagenette-320.tgz) [160 px](https://s3.amazonaws.com/fast-ai-imageclas/imagenette-160.tgz) | A subset of 10 easily classified classes from Imagenet: tench, English springer, cassette player, chain saw, church, French horn, garbage truck, gas pump, golf ball, parachute
+[Imagewoof](https://github.com/fastai/imagenette) | Based on [Deng et al., 2009](http://www.image-net.org/papers/imagenet_cvpr09.bib) | [Full size](https://s3.amazonaws.com/fast-ai-imageclas/imagewoof.tgz) [320 px](https://s3.amazonaws.com/fast-ai-imageclas/imagewoof-320.tgz) [160 px](https://s3.amazonaws.com/fast-ai-imageclas/imagewoof-160.tgz) | A subset of 10 harder to classify classes from Imagenet (all dog breeds): Australian terrier, Border terrier, Samoyed, beagle, Shih-Tzu, English foxhound, Rhodesian ridgeback, dingo, golden retriever, Old English sheepdog
 
 ## [NLP](https://registry.opendata.aws/fast-ai-nlp/)
 
@@ -49,7 +49,7 @@ Source | Citation | Download | Description
 Source | Citation | Download | Description
 --- | --- | --- | ---
 [Camvid: Motion-based Segmentation and Recognition Dataset](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) | [Brostow et al., 2008](https://pdfs.semanticscholar.org/08f6/24f7ee5c3b05b1b604357fb1532241e208db.pdf) | [download](https://s3.amazonaws.com/fast-ai-imagelocal/camvid.tgz) | Segmentation dataset with per-pixel semantic segmentation of over 700 images, each inspected and confirmed by a second person for accuracy.
-[PASCAL Visual Object Classes (VOC)](http://host.robots.ox.ac.uk/pascal/VOC/) | [Everingham, M et al., 2010](http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham10.pdf) | [download](https://s3.amazonaws.com/fast-ai-imagelocal/pascal-voc.tgz) | Standardised image data sets for object class recognition - both 2007 and 2012 versions are provided here. The 2012 version has 20 classes. The train/val data has 11,530 images containing 27,450 ROI annotated objects and 6,929 segmentations.	
+[PASCAL Visual Object Classes (VOC)](http://host.robots.ox.ac.uk/pascal/VOC/) | [Everingham, M et al., 2010](http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham10.pdf) | [download](https://s3.amazonaws.com/fast-ai-imagelocal/pascal-voc.tgz) | Standardised image data sets for object class recognition - both 2007 and 2012 versions are provided here. The 2012 version has 20 classes. The train/val data has 11,530 images containing 27,450 ROI annotated objects and 6,929 segmentations. There are also simplifed version for the annotated objects of the [2007 version](https://s3.amazonaws.com/fast-ai-imagelocal/pascal_2007.tgz) and the [2012 version](https://s3.amazonaws.com/fast-ai-imagelocal/pascal_2012.tgz).
 
 ### [COCO](https://registry.opendata.aws/fast-ai-coco/)
 

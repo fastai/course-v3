@@ -22,7 +22,7 @@ To get started, create an account [here](https://www.paperspace.com/account/sign
 ## Step 2: Create Notebook
 1. Login and select Gradient > Notebooks.
 
-2. Select the *Fast.ai 1.0 / PyTorch 1.0 BETA* base container.
+2. Select the *Paperspace + Fast.AI 1.0 (V3)* base container.
 
 <img alt="" src="/images/gradient/createNotebook.png" class="screenshot">
 

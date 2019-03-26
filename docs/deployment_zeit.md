@@ -3,6 +3,10 @@ title: "Deploying on Zeit"
 sidebar: home_sidebar
 ---
 
+## THIS IS NOT WORKING
+
+*Unfortunately Zeit changed their API in a way that broke all fastai deployments. We suggest using an alternative service, such as render.com*
+
 <img alt="" src="/images/zeit/zeit_now.png" class="screenshot">
 
 This is quick guide to deploy your trained models using the [Now](https://zeit.co/now) service from [Zeit](https://zeit.co/).  This guide comes with a starter app deploying Jeremy's Bear Image Classification model form Lesson 2.

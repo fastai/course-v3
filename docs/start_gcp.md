@@ -27,7 +27,7 @@ According to our benchmarks, a K80 is 84% slower than a P4 so this setup will ro
 
 ### Storage
 
-In both cases, by getting our suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of $9.60 a month**.
+In both cases, by getting the suggested 200GB Standard Disk storage size ([less storage hampers experience](https://cloud.google.com/compute/docs/disks/)), there will be an **additional charge of $9.60 a month**.
 
 ### How much will you use this course
 
@@ -50,7 +50,7 @@ The project on which you are going to run the image needs to be linked with your
 
 To create then be able to connect to your instance, you'll need to install Google Cloud's command line interface (CLI) software from Google. For Windows user, we recommend that you use the [Ubuntu terminal](/terminal_tutorial.html) and follow the same instructions as Ubuntu users (see the link to learn how to paste into your terminal). 
 
-To install on Linux or Windows (in Ubuntu terminal), follow those four steps:
+To install on Linux or Windows (in Ubuntu terminal), follow these four steps:
 ``` bash
 # Create environment variable for correct distribution
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
@@ -82,9 +82,9 @@ You should then be prompted with this message:
 ```
 To continue, you must log in. Would you like to log in (Y/n)?
 ```
-Type Y then copy the link and paste it to your browser. Choose the google account you used duing step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
+Type Y then copy the link and paste it to your browser. Choose the google account you used during step 1, click 'Allow' and you will get a confirmation code to copy and paste to your terminal.
 
-Then, if you are more than one project, you'll be prompted to choose one:
+Then, if you have more than one project (if already created on your GCP account), you'll be prompted to choose one:
 ```
 Pick cloud project to use:
  [1] [my-project-1]
@@ -92,16 +92,19 @@ Pick cloud project to use:
  ...
  Please enter your numeric choice:
 ```
-Just enter the number next to the project you created on step 1. 
+Just enter the number next to the project you created on step 1. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
 
-Lastly, you'll be asked if you want to put a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
+Lastly, you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
 
 Once this is done, you should see this message on your terminal:
 ```
-gcloud has now been configured!
-You can use [gcloud config] to change more gcloud settings.
+Your Google Cloud SDK is configured and ready to use!
 
-Your active configuration is: [default]
+* Commands that require authentication will use your.email@gmail.com by default
+* Commands will reference project `my-project-1` by default
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default].
 ```
 
 ## Step 3: Create an instance
@@ -133,21 +136,22 @@ If you get an error saying:
 ERROR: (gcloud.compute.instances.create) Could not fetch resource:
  - Quota 'GPUS_ALL_REGIONS' exceeded. Limit: 0.0 globally.
 ```
-You need to go to [Google Cloud Quotas Page](https://console.cloud.google.com/iam-admin/quotas) and adjust your GPU quotas. 
-1. From top left burger menu, select, IAM & admin -> Quotas. 
-2. In filter type, select metric to be GPUs(all regions) and Location as Global 
-3. Click edit quotas and select the quota to edit(GPUs All Regions). Set the new quota limit to 1 or more 
+You need to adjust your GPU quotas.
+1. Go to [Google Cloud Quotas Page](https://console.cloud.google.com/iam-admin/quotas).
+2. If you signed up with a free tier account, you first need to upgrade to a paid account; do so by clicking the "Upgrade account" button at the top right of the page. This won't affect your $300 credit.
+3. In filter type, select metric to be GPUs(all regions) and Location as Global 
+4. Click edit quotas and select the quota to edit(GPUs All Regions). Set the new quota limit to 1 or more 
 Your request may require confirmation, which Google claims typically takes two business days to get.
 
-You will have to wait a little bit until you see informing you the instance has been created. You can see it online [there](https://console.cloud.google.com/compute/) (note that this will be the page you have to go to later to stop your instance). 
+You will have to wait a little bit until you see the text informing you the instance has been created. You can see the instance online [here](https://console.cloud.google.com/compute/) in your list of instances (note that this will be the page you have to go to later to stop your instance). 
 
 <img alt="" src="/images/gcp/pending.png" class="screenshot">
 
-Your instance will be ready when the little icon left to its name turns green.
+Your instance will be ready when the little icon to the left of its name turns green.
 
 <img alt="" src="/images/gcp/ready.png" class="screenshot">
 
-You can also read more details about instance creation form the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
+You can also read more details about instance creation from the command line [here](https://blog.kovalevskyi.com/deep-learning-images-for-google-cloud-engine-the-definitive-guide-bc74f5fb02bc).
 
 Once this is done, you can connect to your instance from the terminal by typing:
 ```bash
@@ -156,7 +160,7 @@ gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
 
 Before you are able to connect, Google Cloud may ask you to create an SSH key. Just follow the prompts (the passphrase is optional, if you aren't going to be using this key for anything too secure).
 
-If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal.
+If everything went ok, you should now be connected to your GCP instance! To use it, simply go to [localhost:8080/tree](http://localhost:8080/tree) and you will find yourself in a jupyter notebook environment. Note that this only works while you maintain the ssh connection in your terminal. **Note**: *GCP also installs a system called "JupyterLab", which is still in beta, and doesn't support everything in the courses; therefore, you need to use "Jupyter Notebook", which is what the link above will take you to.*
 
 ### Preemptible instances:
 

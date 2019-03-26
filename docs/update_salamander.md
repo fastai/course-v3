@@ -34,7 +34,7 @@ To update the course repo, you will need to be in terminal. If you used the `ssh
 This will open a new window, in which you should run those two instructions:
 
 ```bash
-cd fastai-courses/course-v3
+cd course-v3
 git pull
 ```
 
