@@ -20,7 +20,7 @@ Write in the terminal “cd” and the name of the folder you want to access.
 
 <img alt="cd" src="/images/terminal/terminal_cd_in.png" class="screenshot">
 
-On Windows, you can acces 'C:\' or 'D:\' by adding the prefix /mnt/ :
+On Windows, you can access 'C:\' or 'D:\' by adding the prefix /mnt/ :
 
 <img alt="mnt" src="/images/terminal/windows_term.png" class="screenshot">
 
@@ -33,7 +33,7 @@ Write in the terminal “cd ..”
 
 In order to move faster and avoid typo errors while navigating between folders, you should use Tab. You just need to start to type the file or directory name and once you wrote enough for it to be identified, you can press Tab.
 
-If there is only one folder or file that starts with the characters you wrote, the name will autocompleted. If there are many that start that way, you can press double Tab to list them; in order words, it is like using the command "ls" .
+If there is only one folder or file that starts with the characters you wrote, the name will be autocompleted. If there are many that start that way, you can press double Tab to list them; in order words, it is like using the command "ls" .
 
 ### How to copy and paste to/from the terminal?
 
@@ -93,7 +93,7 @@ If there are new missing files, you wil see this.
 
 #### Updating Conda 
 
-On more thing, if you want to update conda, you should write this in the terminal "conda update conda" and you are done.
+One more thing, if you want to update conda, you should write this in the terminal "conda update conda" and you are done.
 
 <img alt="update" src="/images/terminal/conda_update.png" class="screenshot">
 
