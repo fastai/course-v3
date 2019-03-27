@@ -93,7 +93,7 @@ To serve models in SageMaker, we need a script that implements 4 methods: `model
 * The `predict_fn` method takes the deserialized request object and performs inference against the loaded model.
 * The `output_fn` method takes the result of prediction and serializes this according to the response content type.
 
-The methods `input_fn` and `input_fn` are optional and if obmitted SageMaker will assume the input and output objects are of type [NPY](https://docs.scipy.org/doc/numpy/neps/npy-format.html) format with Content-Type `application/x-npy`.
+The methods `input_fn` and `output_fn` are optional and if obmitted SageMaker will assume the input and output objects are of type [NPY](https://docs.scipy.org/doc/numpy/neps/npy-format.html) format with Content-Type `application/x-npy`.
 
 For more information on how the PyTorch model serving works check the project page [here](https://github.com/aws/sagemaker-python-sdk/tree/master/src/sagemaker/pytorch#sagemaker-pytorch-model-server).
 
