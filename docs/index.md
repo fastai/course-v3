@@ -28,7 +28,7 @@ Here are some great choices of platforms. Click the link for more information on
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. They're a little less flexible than "full servers" (below), but are the simplest way to get started.
 
-- [Crestle](/start_crestle.html); (instant approval, no installation required, $0.30 an hour)
+- [Crestle](/start_crestle.html); (instant approval, no installation required, $0.78 an hour (CPU), $2.40 an hour (GPU)
 - [Salamander](/start_salamander.html) (instant approval; no installation required; includes full terminal access; $0.38 an hour; $75 free credit for students)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
 - [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
