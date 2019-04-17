@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone', '--recurse-submodules', 'https://github.com/b0noI/course-v3']
+  args: ['clone', '--recurse-submodules', 'https://github.com/fastai/course-v3.git']
   id: 'clone'
 - name: 'gcr.io/cloud-builders/git'
   args: ['checkout', '$COMMIT_SHA']
