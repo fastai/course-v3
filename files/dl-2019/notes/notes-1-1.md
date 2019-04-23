@@ -50,6 +50,10 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 - https://forums.fast.ai/t/generating-image-datasets-quickly/19079
 - https://forums.fast.ai/t/how-to-scrape-the-web-for-images/7446/8
 
+## Suggested Practice
+
+Create a model that can correctly classify images. Use lesson2-download.ipynb as a means of guidance. Remember, the more you practice the better you will get!
+
 ---
 
 ## Edit this page
