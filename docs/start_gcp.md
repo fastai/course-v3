@@ -139,8 +139,8 @@ ERROR: (gcloud.compute.instances.create) Could not fetch resource:
 You need to adjust your GPU quotas.
 1. Go to [Google Cloud Quotas Page](https://console.cloud.google.com/iam-admin/quotas).
 2. If you signed up with a free tier account, you first need to upgrade to a paid account; do so by clicking the "Upgrade account" button at the top right of the page. This won't affect your $300 credit.
-3. In filter type, select metric to be GPUs(all regions) and Location as Global 
-4. Click edit quotas and select the quota to edit(GPUs All Regions). Set the new quota limit to 1 or more 
+3. In filter type, select metric to be GPUs (all regions) and Location as Global.
+4. Click edit quotas and select the quota to edit (GPUs All Regions). Set the new quota limit to 1 or more.
 Your request may require confirmation, which Google claims typically takes two business days to get.
 
 You will have to wait a little bit until you see the text informing you the instance has been created. You can see the instance online [here](https://console.cloud.google.com/compute/) in your list of instances (note that this will be the page you have to go to later to stop your instance). 
@@ -191,7 +191,7 @@ You should also update the fastai library:
 sudo /opt/anaconda3/bin/conda install -c fastai fastai
 ```
 
-Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
+Next, from your [jupyter notebook](http://localhost:8080/tree): click on 'tutorials', 'fastai', 'course-v3', and you should see something like this:
 
 <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
