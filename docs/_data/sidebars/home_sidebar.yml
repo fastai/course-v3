@@ -120,6 +120,9 @@ entries:
     - output: web
       title: AWS Elastic Beanstalk
       url: /deployment_aws_beanstalk.html
+    - output: web
+      title: Microsoft Azure Functions
+      url: /deployment_azure_functions.html
   - title: fastai v1
     output: web
     folderitems:
