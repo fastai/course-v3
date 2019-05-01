@@ -71,7 +71,7 @@ Write in the terminal “cp” with the file you want to copy and add the final 
 
 #### Cloning fastai repository (Download the fastai files)
 
-Go to this url: https://github.com/fastai/fastai, and copy the git url. Click on the number 1 and 2 to have it on your clipboard.
+Go to this url: <https://github.com/fastai/fastai]>, and copy the git url. Click on the number 1 and 2 to have it on your clipboard.
 
 
 <img alt="clone" src="/images/terminal/git_copy_url.png" class="screenshot">
