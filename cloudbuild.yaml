@@ -1,0 +1,23 @@
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', '--recurse-submodules', 'https://github.com/fastai/course-v3.git']
+  id: 'clone'
+- name: 'gcr.io/cloud-builders/git'
+  args: ['checkout', '$COMMIT_SHA']
+  dir: 'course-v3'
+  id: 'checkout'
+# For simple Notebooks we can use Cloud Build with the consisten Deep Learning environment
+- name: 'gcr.io/deeplearning-platform-release/pytorch-cpu.1-0'
+  args: ['-c', 'papermill lesson2-sgd.ipynb gs://dl-platform-fastai/$COMMIT_SHA/00_notebook_tutorial_output.ipynb --log-output']
+  dir: 'course-v3/nbs/dl1'
+  entrypoint: '/bin/bash'
+  id: 'lesson2-sgd.ipynb'
+  waitFor: ['checkout']
+# For more complex Notebooks we need to use gcp-notebbok-executor that will schedule execution on the VM that has required resources (Cloud Build has only limited resources)
+- name: 'google/cloud-sdk:237.0.0'
+  args: ['-c', 'source gcp-notebook-executor/utils.sh && execute_notebook -i nbs/dl1/lesson3-head-pose.ipynb -o gs://dl-platform-fastai/$COMMIT_SHA -g t4 -c 2 -f pytorch-latest-gpu']
+  dir: 'course-v3'
+  entrypoint: '/bin/bash'
+  id: 'lesson3-head-pose.ipynb'
+  waitFor: ['checkout']
+timeout: 90m
