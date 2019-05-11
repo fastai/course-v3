@@ -1416,5 +1416,6 @@ img.screenshotSmall {
 }
 
 .provider-logo {
-    width: 109px;
+    width: 180px;
+    margin: 20px 0;
 }

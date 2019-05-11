@@ -9,11 +9,12 @@ const StyledPanel = styled.div`
   background-color: white;
 `
 
-const VideoPanel = React.forwardRef(({ lesson }, ref) => (
+const VideoPanel = React.forwardRef(({ lesson, startAt }, ref) => (
   <StyledPanel>
     <VideoPlayer
       lesson={lesson}
       ref={ref}
+      startAt={startAt}
     />
   </StyledPanel>
 ))
