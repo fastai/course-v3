@@ -51,8 +51,7 @@ Make sure to keep the GitHub repo you created above current. Render integrates w
 
 3. Click **Save Web Service**. That's it! Your service will begin building and should be live in a few minutes at the URL displayed in your Render dashboard. You can follow its progress in the deploy logs.
 
-
-## Test your app
+## Testing
 
 Your app's URL will look like `https://service-name.onrender.com`. You can also monitor the service logs as you test your app.
 
@@ -63,8 +62,13 @@ To run the app server locally, run this command in your terminal:
 ```bash
 python app/server.py serve
 ```
+If you have Docker installed, you can test your app in the same environment as Render's by running the following command at the root of your repo:
 
-Go to [http://localhost:5042/](http://localhost:5042/) to test your app.
+```bash
+docker build -t fastai-v3 . && docker run --rm -it -p 5000:5000 fastai-v3
+```
+
+Go to [http://localhost:5000/](http://localhost:5000/) to test your app.
 
 ---
 
