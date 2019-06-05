@@ -66,7 +66,8 @@ Before you start working you will need to update the fastai library. To do this 
 Once you click on 'Terminal' a new window should open with a terminal. Type:
 
 ```bash
-source activate fastai
+(cd course-v3 && git pull)
+conda update conda
 conda install -c fastai fastai
 ```
 

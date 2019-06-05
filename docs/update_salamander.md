@@ -47,7 +47,7 @@ This should give you the latest of the course notebooks. If you modified some of
 To update the fastai library, open the terminal like before and type
 
 ```bash
-source activate fastai
+conda update conda
 conda install -c fastai fastai
 ```
 
