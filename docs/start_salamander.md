@@ -71,7 +71,7 @@ cd course-v3/
 git pull
 ```
 
-These steps may take a couple of minutes to complete. When done, you should close the browser tab containing the terminal. You can now click on the first course notebook and get started!
+These steps may take a couple of minutes to complete. When done, you should close the browser tab containing the terminal. You can now click on "course-v3", and then the first course notebook, and get started!
 
 ## Step 5: Stop your server
 
