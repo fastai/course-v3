@@ -8,7 +8,7 @@ One important feature of the Planet dataset is that it is a *multi-label* datase
 
 Next, we will look at *image segmentation*, which is the process of labeling every pixel in an image with a category that shows what kind of object is portrayed by that pixel. We will use similar techniques to the earlier image classification models, with a few tweaks. fastai makes image segmentation modeling and interpretation just as easy as image classification, so there won't be too many tweaks required.
 
-We will be using the popular Camvid dataset for this part of the lesson. In future lessons, we will come back to it and show a few extra tricks. Our final Camvid model will have dramatically lower error than an model we've been able to find in the academic literature!
+We will be using the popular Camvid dataset for this part of the lesson. In future lessons, we will come back to it and show a few extra tricks. Our final Camvid model will have dramatically lower error than any model we've been able to find in the academic literature!
 
 What if your dependent variable is a continuous value, instead of a category? We answer that question next, looking at a [keypoint](https://stackoverflow.com/questions/29133085/what-are-keypoints-in-image-processing) dataset, and building a model that predicts face keypoints with high accuracy.
 
