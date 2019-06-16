@@ -273,7 +273,7 @@ az storage account create \
 
 ```bash
 az appservice plan create \
---name <LOCATION_ID> \
+--name <APP_PLAN_NAME> \
 --resource-group <RESOURCE_GROUP> \
 --sku B1 \
 --is-linux
@@ -286,7 +286,7 @@ az functionapp create \
 --resource-group <RESOURCE_GROUP> \
 --name <FUNCTION_APP> \
 --storage-account  <STORAGE_ACCOUNT> \
---plan <LOCATION_ID> \
+--plan <APP_PLAN_NAME> \
 --deployment-container-image-name <DOCKER_HUB_ID>/<DOCKER_IMAGE_NAME>:<TAG>
 ```
 
