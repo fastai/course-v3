@@ -13,7 +13,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Pricing
 
-We reccomend the "Accelerated Computing" configuration which costs **\$0.45 per hour**.
+We recommend the "Accelerated Computing" configuration which costs **\$0.45 per hour**.
 
 ### Storage
 
