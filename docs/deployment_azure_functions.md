@@ -194,6 +194,15 @@ You can now build the Docker image that will contain your app and all the python
 ```bash
 docker build --tag <DOCKER_HUB_ID>/<DOCKER_IMAGE_NAME>:<TAG> .
 ```
+If the build throws error like 
+```
+unable to execute 'gcc': No such file or directory
+```
+Add following codes into Dockerfile **before** the last RUN command.
+```
+RUN apt-get update && \
+    apt-get install -y build-essential
+```
 
 ### Test Docker image
 
