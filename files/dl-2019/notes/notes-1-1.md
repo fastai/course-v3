@@ -43,6 +43,7 @@ If you want to more deeply understand how PyTorch really works, you may want to 
 - [One-Cycle Policy Fitting paper](https://arxiv.org/abs/1803.09820)
 - [Visualizing and Understanding Convolutional Networks (paper)](https://arxiv.org/abs/1311.2901)
 - [Splunk and Tensorflow for Security] (https://www.splunk.com/blog/2017/04/18/deep-learning-with-splunk-and-tensorflow-for-security-catching-the-fraudster-in-neural-networks-with-behavioral-biometrics.html)
+- [Learning Rate Finder Paper](https://arxiv.org/pdf/1506.01186.pdf)
 
 ### How to scrape images
 
