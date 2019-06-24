@@ -13,7 +13,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Pricing
 
-We reccomend the "Accelerated Computing" configuration which costs **\$0.38 per hour**.
+We recommend the "Accelerated Computing" configuration which costs **\$0.45 per hour**.
 
 ### Storage
 
@@ -59,18 +59,19 @@ See [here](index.html) for instructions on running the Jupyter Notebook tutorial
 
 ## Step 4: Update the fastai library
 
-Before you start working you will need to update the fastai library. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'.
+Before you start working it's a good idea ot update the pytorch and fastai libraries, and the course notebooks. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'.
 
 <img alt="terminal" src="/images/terminal.png" class="screenshot">
 
-Once you click on 'Terminal' a new window should open with a terminal. Type:
+Once you click on 'Terminal' a new window should open with a terminal. Type (or copy and paste):
 
 ```bash
-source activate fastai
-conda install -c fastai fastai
+conda install -c fastai -c pytorch fastai pytorch
+cd course-v3/
+git pull
 ```
 
-Now you should close the terminal window.
+These steps may take a couple of minutes to complete. When done, you should close the browser tab containing the terminal. You can now click on "course-v3", and then the first course notebook, and get started!
 
 ## Step 5: Stop your server
 
