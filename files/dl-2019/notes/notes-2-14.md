@@ -1,4 +1,4 @@
-# Lesson 14:
+# Lesson 14: C interop; Protocols; Putting it all together
 
 Today's lesson starts with a discussion of the ways that Swift programmers will be able to write high performance GPU code in plain Swift. Chris Lattner discusses kernel fusion, XLA, and MLIR, which are exciting technologies coming soon to Swift programmers.
 
@@ -8,7 +8,7 @@ Next up, we implement the Data Block API in Swift! Well... actually in some ways
 
 We now have enough Swift knowledge to implement a complete fully connect network forward pass in Swift&mdash;so that's what we do! Then we start looking at the backward pass, and use Swift's optional *reference semantics* to replicate the PyTorch approach. But then we learn how to do the same thing in a more "Swifty" way, using *value semantics* to do the backward pass in a really concise and flexible manner.
 
-Finally, we put it all together, to train Imagenette from scratch! The final notebooks in Swift show how to build and use much of the fastai.vision library in Swift, even although in these two lessons there wasn't time to cover everything. So be sure to study the notebooks to see lots more Swift tricks...
+Finally, we put it all together, implementing our generic optimizer, Learner, callbacks, etc, to train Imagenette from scratch! The final notebooks in Swift show how to build and use much of the fastai.vision library in Swift, even although in these two lessons there wasn't time to cover everything. So be sure to study the notebooks to see lots more Swift tricks...
 
 ## Lesson resources
 
@@ -21,3 +21,7 @@ Finally, we put it all together, to train Imagenette from scratch! The final not
 - [Value Semantics](https://academy.realm.io/posts/swift-gallagher-value-semantics/) talk by @AlexisGallagher
 - [Tensor Comprehensions: Framework-Agnostic
 High-Performance Machine Learning Abstractions](https://arxiv.org/pdf/1802.04730.pdf)
+
+## Edit this page
+
+To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-2-14.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.

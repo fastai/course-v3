@@ -35,3 +35,7 @@ Once we have those basic pieces in place, we'll look closely at some key buildin
 ## Errata
 
 * in nb `02b_initializing.ipynb` a few minor corrections were made where a variance and std were mixed up. Thanks to [Aman Madaan](https://madaan.github.io/init) for pointing those out.
+
+## Edit this page
+
+To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-2-9.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.

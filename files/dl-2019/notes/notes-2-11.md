@@ -29,3 +29,7 @@ Finally, we look at data augmentation, and benchmark various data augmentation t
 
 ## Resources
 - [Blog post on the interaction between L2 Regularization and Batchnorm, including experiments](https://blog.janestreet.com/l2-regularization-and-batch-norm/)
+
+## Edit this page
+
+To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-2-11.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.

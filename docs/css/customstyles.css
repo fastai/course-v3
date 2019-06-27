@@ -161,6 +161,18 @@ dt[id]*/
     box-sizing: border-box;
 }
 
+.image-caption {
+    text-align:center;
+}
+
+.image {
+    margin:auto !important;
+    display:block;
+    border:black;
+    border-style:solid;
+    border-width: 1px; 
+}
+
 .post-content img {
     margin: 12px 0px 3px 0px;
     width: auto;
@@ -170,7 +182,7 @@ dt[id]*/
 }
 
 .post-content ol li, .post-content ul li {
-    margin: 10px 0px;
+    margin: 2px 0px;
 }
 
 .pageSummary {
