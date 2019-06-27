@@ -27,7 +27,7 @@ When you click that 'start' button, the following screen will appear. It should 
 
 If you want to change the machine type, select from the dropdown:
 
-<img alt="" src="/images/gradient/selectedMachine.png" class="screenshot">
+<img alt="" src="/images/gradient/changeMachineType.png" class="screenshot">
 
 
  (See [Gradient pricing](https://support.paperspace.com/hc/en-us/articles/360002484474-Gradient-Pricing) for more information.) 
