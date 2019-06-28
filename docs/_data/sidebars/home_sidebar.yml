@@ -55,10 +55,10 @@ entries:
       title: 12 - Advanced training; ULMFiT
       url: /videos?lesson=12
     - output: web
-      title: 13 - Swift: Deep Learning Basics
+      title: "13 - Swift: Deep Learning Basics"
       url: /videos?lesson=13
     - output: web
-      title: 14 - Swift: Putting it all together
+      title: "14 - Swift: Putting it all together"
       url: /videos?lesson=14
   - title: Server setup
     output: web
