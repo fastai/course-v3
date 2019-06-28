@@ -2,7 +2,7 @@
 title: Practical Deep Learning for Coders, v3
 ---
 
-**Looking for the older 2018 courses?**: This site covers the new 2019 deep learning course. The 2018 courses have been moved to: [course18.fast.ai](http://course18.fast.ai). Note that the 2019 edition of part 2 (*Cutting Edge Deep Learning*) is not yet available, so you'll need to use the 2018 course for now (the 2019 edition will be available in June 2019).
+**Note**: This site covers the new 2019 deep learning course. The 2018 courses have been moved to: [course18.fast.ai](http://course18.fast.ai).
 
 ## Getting started
 
