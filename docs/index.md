@@ -6,7 +6,7 @@ title: Practical Deep Learning for Coders, v3
 
 ## Getting started
 
-Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;we'll take you through it all step by step. We do however assume that you've been coding for at least a year, and also that (if you haven't used Python before) you'll be putting in the extra time to learn whatever Python you need as you go. (For learning Python, we have a list of [python learning resources](https://forums.fast.ai/t/recommended-python-learning-resources/26888) available.)
+Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;we'll take you through it all step by step. (And if you're an old hand, then you may want to check out our advanced course: [Deep Learning From The Foundations](/part2).) We do however assume that you've been coding for at least a year, and also that (if you haven't used Python before) you'll be putting in the extra time to learn whatever Python you need as you go. (For learning Python, we have a list of [python learning resources](https://forums.fast.ai/t/recommended-python-learning-resources/26888) available.)
 
 You might be surprised by what you *don't* need to become a top deep learning practitioner. You need one year of coding experience, a GPU and appropriate software (see below), and that's it. You don't need much data, you don't need university-level math, and you don't need a giant data center. For more on this, see our article: [What you need to do deep learning](http://www.fast.ai/2017/11/16/what-you-need/).
 
