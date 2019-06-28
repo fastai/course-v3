@@ -40,6 +40,9 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: Part 2 overview
+      url: /part2
+    - output: web
       title: 8 - Backprop from the foundations
       url: /videos?lesson=8
     - output: web
