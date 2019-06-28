@@ -29,3 +29,7 @@ Finally, we looked at different ways of calculating matrix products in Swift, in
 
 - S4TF [notebook tutorials](https://github.com/tensorflow/swift#tutorials-) (rather out of date at the moment)
 - Why [fastai is embracing S4TF](https://www.fast.ai/2019/03/06/fastai-swift/)?
+
+## Edit this page
+
+To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-2-13.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.

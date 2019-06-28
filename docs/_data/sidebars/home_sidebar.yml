@@ -12,7 +12,7 @@ entries:
     - output: web
       title: Intro to GPUs
       url: /gpu_tutorial.html
-  - title: Lessons
+  - title: Lessons (Part 1)
     output: web
     folderitems:
     - output: web

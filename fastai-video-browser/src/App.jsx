@@ -69,12 +69,14 @@ class App extends Component {
       selectedLesson,
       startAt
     } = this.state;
+    var selectedPart = selectedLesson<8 ? 0 : 1;
     return (
         <StyledApp>
           <LessonsPanel
             showLessons={showLessons}
             toggleLessons={toggleLessons}
             lesson={selectedLesson}
+            part={selectedPart}
           />
           <VideoPanel
             ref={this.videoPlayer}

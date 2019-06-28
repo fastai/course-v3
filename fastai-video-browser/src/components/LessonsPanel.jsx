@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 import { Link } from 'react-router-dom';
 import Toggler from './Toggler';
 
-const LESSONS = {
+const LESSONS = [{
   1: 'Lesson 1',
   2: 'Lesson 2',
   3: 'Lesson 3',
@@ -12,7 +12,17 @@ const LESSONS = {
   5: 'Lesson 5',
   6: 'Lesson 6',
   7: 'Lesson 7',
-}
+  8: 'Go to part 2',
+}, {
+  8:  'Lesson 8',
+  9:  'Lesson 9',
+  10: 'Lesson 10',
+  11: 'Lesson 11',
+  12: 'Lesson 12',
+  13: 'Lesson 13',
+  14: 'Lesson 14',
+  1: 'Go to part 1',
+}]
 
 const StyledPanel = styled.section`
   background-color: var(--fastai-blue);
@@ -60,11 +70,12 @@ const StyledLessons = styled.div`
   align-items: center;
 `
 
-const LessonsList = ({ selectedLesson }) => {
+const LessonsList = ({ selectedLesson, selectedPart }) => {
+  var partLessons = LESSONS[selectedPart]
   return (
     <StyledLessons>
-      {Object.keys(LESSONS).map((i) => {
-        const lesson = LESSONS[i];
+      {Object.keys(partLessons).map((i) => {
+        const lesson = partLessons[i];
         return (
           <Lesson selectedLesson={selectedLesson} lesson={lesson} num={i} key={lesson} />
         );
@@ -85,7 +96,7 @@ const Lesson = ({ num, lesson, selectedLesson }) => (
   </StyledLesson>
 )
 
-const LessonsPanel = ({ showLessons, toggleLessons, lesson }) => (
+const LessonsPanel = ({ showLessons, toggleLessons, lesson, part }) => (
   <StyledPanel closed={!showLessons}>
     <Toggler
       styles={{
@@ -121,7 +132,7 @@ const LessonsPanel = ({ showLessons, toggleLessons, lesson }) => (
               >course</a>
             </h1>
           </header>
-          <LessonsList selectedLesson={lesson} />
+          <LessonsList selectedLesson={lesson} selectedPart={part} />
         </Fragment>}
     </StyledPanel>
 )

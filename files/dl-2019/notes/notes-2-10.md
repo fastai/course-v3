@@ -31,3 +31,7 @@ In order to fix the problems we see, we try changing our activation function, an
 
 - The layer and instance norm code in the video use `std` instead of `var`. This is fixed in the notebook
 - Jeremy said `binomial` when he meant `binary`.
+
+## Edit this page
+
+To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-2-10.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.

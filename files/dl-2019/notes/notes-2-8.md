@@ -2,6 +2,14 @@
 
 In this course, we will learn to implement a lot of things that are inside Fastai and PyTorch. We will learn things that we could use to build our own deep learning libraries. Along the way, we will learn to implement papers, which is an important skill to master when making state of the art models.
 
+## Lesson resources
+
+- [Course notebooks](https://github.com/fastai/course-v3/tree/master/nbs/dl2)
+- [Slides](https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view?usp=sharing)
+- [Excel spreadsheets](https://github.com/fastai/course-v3/tree/master/files/xl) (today's is called `broadcasting.xlsx`). There's also a [Google Sheet version](https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit?usp=sharing) thanks to @Moody
+
+## Lesson overview
+
 In today's lesson we'll discuss the purpose of this course, which is, in some ways, the opposite of part 1. This time, we're not learning practical things that we will use right away, but are learning foundations that you can build on. This is particularly important nowadays because this field is moving so fast. We'll also talk about why the last two lessons of this course are about Swift, not Python (Chris Lattner, the original creator of Swift, and now lead of Swift for TensorFlow, will be joining Jeremy to co-teach these lessons).
 
 We'll also discuss the structure of this course, which is extremely "bottom up" (whereas part 1 was extremely "top down"). We'll start from the lowest level foundations (matrix multiplication) and gradually build back up to state of the art models.
@@ -9,12 +17,6 @@ We'll also discuss the structure of this course, which is extremely "bottom up" 
 We'll gradually refactor and accelerate our first, pure python, matrix multiplication, and in the process will learn about broadcasting and einstein summation. We'll then use this to create a basic neural net forward pass, and in the process will start looking at how neural networks are initialized (a topic we'll be going into in great depth in the coming lessons).
 
 Then we will implement the backwards pass, including a brief refresher of the chain rule (which is really all the backwards pass is). We'll then refactor the backwards path to make it more flexible and concise, and finally we'll see how this translates to how PyTorch actually works.
-
-## Lesson resources
-
-- [Course notebooks](https://github.com/fastai/course-v3/tree/master/nbs/dl2)
-- [Slides](https://drive.google.com/file/d/18QwDI25Lf0ld0-cEugu7LxjwTc2NRkha/view?usp=sharing)
-- [Excel spreadsheets](https://github.com/fastai/course-v3/tree/master/files/xl) (today's is called `broadcasting.xlsx`). There's also a [Google Sheet version](https://docs.google.com/spreadsheets/d/1bIPBcf-p9iqNG8BGmIVlJCFa4jEsbOZvcPXGTYe5pjI/edit?usp=sharing) thanks to @Moody
 
 ## Lesson notes
 * [1](https://medium.com/@lankinen/fast-ai-lesson-8-notes-part-2-v3-8965a6532f51) by  @Lankinen
@@ -74,4 +76,4 @@ for i in range(ar):
 
 ## Edit this page
 
-To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-1-1.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.
+To edit this page, [click here](https://github.com/fastai/course-v3/edit/master/files/dl-2019/notes/notes-2-8.md). This will take you to a edit window at GitHub where you can submit your suggested changes. They will automatically be turned in to a [pull request](https://help.github.com/articles/about-pull-requests/) which will be reviewed by an admin prior to publication.
