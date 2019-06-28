@@ -1,5 +1,11 @@
 # Lesson 13: Basics of Swift for Deep Learning
 
+- [Lesson notebooks](https://github.com/fastai/course-v3/tree/master/nbs/swift) **NB: this is a different folder to the Python lesson notebooks**
+- [Slides for the lesson](https://docs.google.com/presentation/d/1dc6o2o-uYGnJeCeyvgsgyk05dBMneArxdICW5vF75oU/edit#slide=id.p)
+- [Lesson Notes](https://medium.com/@lankinen/fast-ai-lesson-13-notes-part-2-v3-2d62ef11d2db) @Lankinen
+
+## Overview
+
 We've just completed building much of the fastai library for Python from scratch. Now we're going to try to repeat the process for Swift! These next two lessons are co-taught by Jeremy along with Chris Lattner, the original developer of Swift, and the lead of the Swift for TensorFlow project at Google Brain.
 
 In today's lesson, Chris explains what Swift is, and what it's designed to do. He shares insights on its development history, and why he thinks it's a great fit for deep learning and numeric programming more generally. He also provides some background on how Swift and TensorFlow fit together, both now and in the future. Next up, Chris shows a bit about using types to ensure your code has less errors, whilst letting Swift figure out most of your types for you. And he explains some of the key pieces of syntax we'll need to get started.
@@ -7,12 +13,6 @@ In today's lesson, Chris explains what Swift is, and what it's designed to do. H
 Chris also explains what a compiler is, and how LLVM makes compiler development easier. Then he shows how we can actually access and change LLVM builtin types directly from Swift! Thanks to the compilation and language design, basic code runs very fast indeed - about 8000 times faster than Python in the simple example Chris showed in class.
 
 Finally, we looked at different ways of calculating matrix products in Swift, including using Swift for TensorFlow's `Tensor` class.
-
-## Lesson resources
-
-- [Slides for the lesson](https://docs.google.com/presentation/d/1dc6o2o-uYGnJeCeyvgsgyk05dBMneArxdICW5vF75oU/edit#slide=id.p)
-- [Lesson notebooks ](https://github.com/fastai/course-v3/tree/master/nbs/swift)
-- [Lesson Notes](https://medium.com/@lankinen/fast-ai-lesson-13-notes-part-2-v3-2d62ef11d2db) @Lankinen
 
 ## Software requirements
 

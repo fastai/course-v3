@@ -1,0 +1,2 @@
+#include <vips/vips.h>
+

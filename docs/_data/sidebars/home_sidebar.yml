@@ -36,6 +36,33 @@ entries:
     - output: web
       title: 7 - Resnet; U-net; GANs
       url: /videos?lesson=7
+  - title: Lessons (Part 2)
+    output: web
+    folderitems:
+    - output: web
+      title: Part 2 overview
+      url: /part2
+    - output: web
+      title: 8 - Backprop from the foundations
+      url: /videos?lesson=8
+    - output: web
+      title: 9 - The training in depth
+      url: /videos?lesson=9
+    - output: web
+      title: 10 - Looking inside the model
+      url: /videos?lesson=10
+    - output: web
+      title: 11 - Data Block API; generic optimizer
+      url: /videos?lesson=11
+    - output: web
+      title: 12 - Advanced training; ULMFiT
+      url: /videos?lesson=12
+    - output: web
+      title: "13 - Swift: Deep Learning Basics"
+      url: /videos?lesson=13
+    - output: web
+      title: "14 - Swift: Putting it all together"
+      url: /videos?lesson=14
   - title: Server setup
     output: web
     folderitems:
