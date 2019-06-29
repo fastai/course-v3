@@ -140,9 +140,8 @@ windows: P:/PublicData_1/fast.ai/fast.ai_datasets
 
 [ fast ai ](https://docs.fast.ai/)
 
-Can I use Windows to learn fastai?
 
-### 可以用Windows来学习fastai吗？
+### Can I use Windows to learn fastai? 可以用Windows来学习fastai吗？
 
 <span id="warning"> </span>Windows isn't recommended for learning fastai. Because Windows is much slower for running PyTorch than Linux and Windows system grabs more GPU memory.
 
