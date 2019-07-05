@@ -25,7 +25,11 @@ class App extends Component {
   static getDerivedStateFromProps(props, state) {
     const parsed = qs.parse(window.location.search)
     // Parse selected lesson from query string, so we don't have to deal with real /routing.
-    return { ...state, selectedLesson: parseInt(parsed.lesson) || 1 }
+    return { 
+      ...state, 
+      selectedLesson: parseInt(parsed.lesson) || 1,
+      startAt: parseInt(parsed.t, 10) 
+    }
   }
 
   state = {
@@ -34,6 +38,7 @@ class App extends Component {
     showLessons: true,
     showNotes: true,
     selectedLesson: 1,
+    startAt: null
   };
 
   goToMoment = (timestamp) => {
@@ -62,17 +67,21 @@ class App extends Component {
       showNotes,
       showSearch,
       selectedLesson,
+      startAt
     } = this.state;
+    var selectedPart = selectedLesson<8 ? 0 : 1;
     return (
         <StyledApp>
           <LessonsPanel
             showLessons={showLessons}
             toggleLessons={toggleLessons}
             lesson={selectedLesson}
+            part={selectedPart}
           />
           <VideoPanel
             ref={this.videoPlayer}
             lesson={selectedLesson}
+            startAt={startAt}
           />
           <NotesPanel
             showNotes={showNotes}

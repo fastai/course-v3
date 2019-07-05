@@ -6,7 +6,7 @@ sidebar: home_sidebar
 
 <img alt="" src="/images/gradient/gradientFastAIv3.png" class="screenshot">
 
-This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](https://www.paperspace.com/gradient), you get access to a Jupyter Notebook instance without complicated installs or configuration in less than 2 minutes.
+This is a quick guide to starting v3 of the Fast.ai course. With [Gradient](https://www.paperspace.com/gradient), you get access to a Jupyter Notebook instance in less than 2 minutes, without complicated installs or configuration.
 
 [Gradient](https://www.paperspace.com/gradient) is built on top of [Paperspace](https://www.paperspace.com/), a GPU-accelerated cloud platform. 
 
@@ -26,8 +26,9 @@ To get started, create an account [here](https://www.paperspace.com/account/sign
 
 <img alt="" src="/images/gradient/createNotebook.png" class="screenshot">
 
-3. Select the type of machine you want to run on.
+3. Select the type of machine you want to run on. 
 
+Important note: remember that you can change the machine type *at any time.* This means you can start out running on an inexpensive machine, and then, whenever you want, switch to a much more powerful (and more expensive) one to execute code as efficiently as possible.  *Machine type is independent of your notebook. When you return to work, the machine type should self-select to whatever you type you last used. But it's a good idea always to check! This will prevent billing and performance surprises.*  For more information, please see [returning to work](https://course.fast.ai/update_gradient.html).
 <img alt="" src="/images/gradient/chooseMachineType.png" class="screenshot">
 
 4. Name your Notebook (optional)

@@ -11,6 +11,13 @@ const VIDEO_SOURCES = {
   5: "CJKnDu2dxOE",
   6: "hkBa9pU-H48",
   7: "9spwoDYwW_I",
+  8:  "4u8FxNEDUeg",
+  9:  "AcA8HAYh7IE",
+  10: "HR0lt1hlR6U",
+  11: "hPQKzsjTyyQ",
+  12: "vnOpEwmtFJ8",
+  13: "3TqN_M1L4ts",
+  14: "8wd8zFzTG38",
 };
 
 const Wrapper = styled.div`
@@ -19,16 +26,23 @@ const Wrapper = styled.div`
 `
 
 const VideoPlayer = React.forwardRef((props, ref) => {
-  const { lesson } = props;
+  const { lesson, startAt } = props;
+  let url = `https://www.youtube.com/embed/${VIDEO_SOURCES[lesson]}`;
+
+  if (startAt) {
+    url = `${url}?t=${startAt}`
+  }
+  
   return (
     <Wrapper>
-      <YouTubePlayer ref={ref} url={`https://www.youtube.com/embed/${VIDEO_SOURCES[lesson]}`} controls width="100%" height="100%" />
+      <YouTubePlayer ref={ref} url={url} controls width="100%" height="100%" />
     </Wrapper>
   )
 })
 
 VideoPlayer.propTypes = {
   lesson: PropTypes.number.isRequired,
+  startAt: PropTypes.number
 };
 
 export default VideoPlayer;
