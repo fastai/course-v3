@@ -36,7 +36,7 @@ Then we will implement the backwards pass, including a brief refresher of the ch
 
 ## Papers
 - [Understanding the difficulty of training deep feedforward neural networks](http://proceedings.mlr.press/v9/glorot10a.html) -- paper that introduced Xavier initialization
-- [Fixup Initialization: Residual Learning Without Normalization](https://arxiv.org/abs/1901.09321) -- paper highlighting importance of normalisation - training 10,000 layer network without regularisation
+- [Fixup Initialization: Residual Learning Without Normalization](https://arxiv.org/abs/1901.09321) -- paper highlighting importance of normalisation - training 10,000 layer network without normalization
 
 ## Other helpful resources
 

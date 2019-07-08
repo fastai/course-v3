@@ -90,7 +90,7 @@ Then we look at one of the jewels of fastai: the Data Block API. We already saw 
 - Split and label: we create flexible functions for each
 - DataBunch: we'll see that `DataBunch` is a very simple container for our `DataLoader`s
 
-Next up, we build a new `StatefulOptimizer` class, and show that nearly all optimizers used in modern deep learning training are just special cases of this one class. We use it to add weight decay, momentum, Adam, and LAMB optimizers, and take a look a detailed look at how momentum changes training.
+Next up, we build a new `StatefulOptimizer` class, and show that nearly all optimizers used in modern deep learning training are just special cases of this one class. We use it to add weight decay, momentum, Adam, and LAMB optimizers, and take a detailed look at how momentum changes training.
 
 {% include img.html w="480" url="part2_3/9a_mom.png" description="The impact of varying momentum on a synthetic training example" %}
 
