@@ -9,7 +9,7 @@ Once we have those basic pieces in place, we'll look closely at some key buildin
 ## Lesson resources
 
 - [fastai docs on Callbacks](https://docs.fast.ai/callbacks.html)
-- [Lesson notebooks](https://github.com/fastai/fastai_docs/tree/master/dev_course/dl2)
+- [Lesson notebooks](https://github.com/msrdinesh/course-v3/tree/master/nbs/dl2)
 - [Lesson notes](https://medium.com/@lankinen/fast-ai-lesson-9-notes-part-2-v3-ca046a1a62ef) by @Lankinen
 
 ## Papers
