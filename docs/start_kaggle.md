@@ -18,7 +18,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 Kaggle kernels come with fastai library preinstalled, William Horton ```@wdhorton``` and Sanyam Bhutani ```@init_27``` have ported the lesson notebooks to the kernels. Sanyam Bhutani is maintaing the kaggle kernels, for any questions/issues please report in the [discussion thread here](https://forums.fast.ai/t/platform-kaggle-kernels/32569).
 
-No setup steps are required, just click on "fork" and run it.
+No setup steps are required, just click on "Copy and Edit" to fork and run it.
 
 ## Index of Kernels 
 
