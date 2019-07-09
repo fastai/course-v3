@@ -50,7 +50,6 @@ Sign up for Kaggle [here](https://www.kaggle.com/). Verify your email. Once you 
 
 Click on the lesson from the index above, it should open up the lesson kernel. Click on fork.
 
-
 <img alt="" src="/images/kaggle/fork.png" class="screenshot">
 
 ### Step 3: Everything is set, start working!
@@ -59,6 +58,7 @@ We have setup all of datasets and pre-req(s) for the lesson, you can start worki
 
 <img alt="" src="/images/kaggle/start_working.png" class="screenshot">
 
+Note that the first time you access a dataset, Kaggle will require you to verify your phone number by sending a text message.
 
 ## Resources & Limitations
 
