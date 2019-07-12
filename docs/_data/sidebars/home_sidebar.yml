@@ -82,6 +82,9 @@ entries:
       title: Kaggle.com (Easy)
       url: /start_kaggle.html
     - output: web
+      title: 易学智能 (Easy)
+      url: /start_easyaiforum.html
+    - output: web
       title: Google Cloud (Intermediate)
       url: /start_gcp.html
     - output: web
@@ -129,6 +132,9 @@ entries:
     - output: web
       title: Azure
       url: /update_azure.html
+    - output: web
+      title: 易学智能 
+      url: /update_easyaiforum.html
   - title: Production
     output: web
     folderitems:
