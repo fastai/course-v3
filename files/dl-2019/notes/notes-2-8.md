@@ -25,7 +25,7 @@ Then we will implement the backwards pass, including a brief refresher of the ch
 
 ## Things mentioned in the lesson
 
-- Ensure your fastai and pytorch libs are up to date (`conda install -c fastai -c pytorch torch fastai`)
+- Ensure your fastai and pytorch libs are up to date (`conda install -c fastai -c pytorch pytorch fastai`)
 - You'll also need to: `conda install nbconvert` and `conda install fire -c conda-forge`
 - Jeremy's blog posts about Swift: [fast.ai Embracing Swift for Deep Learning](https://www.fast.ai/2019/03/06/fastai-swift/) and [High Performance Numeric Programming with Swift: Explorations and Reflections](https://www.fast.ai/2019/01/10/swift-numerics/)
 - Rachel's post on starting to blog: [Why you (yes, you) should blog](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045)
