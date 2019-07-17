@@ -20,7 +20,7 @@ Write in the terminal “cd” and the name of the folder you want to access.
 
 <img alt="cd" src="/images/terminal/terminal_cd_in.png" class="screenshot">
 
-On Windows, you can acces 'C:\' or 'D:\' by adding the prefix /mnt/ :
+On Windows, you can access 'C:\' or 'D:\' by adding the prefix /mnt/ :
 
 <img alt="mnt" src="/images/terminal/windows_term.png" class="screenshot">
 
@@ -33,7 +33,7 @@ Write in the terminal “cd ..”
 
 In order to move faster and avoid typo errors while navigating between folders, you should use Tab. You just need to start to type the file or directory name and once you wrote enough for it to be identified, you can press Tab.
 
-If there is only one folder or file that starts with the characters you wrote, the name will autocompleted. If there are many that start that way, you can press double Tab to list them; in order words, it is like using the command "ls" .
+If there is only one folder or file that starts with the characters you wrote, the name will be autocompleted. If there are many that start that way, you can press double Tab to list them; in order words, it is like using the command "ls" .
 
 ### How to copy and paste to/from the terminal?
 
@@ -71,19 +71,19 @@ Write in the terminal “cp” with the file you want to copy and add the final 
 
 #### Cloning fastai repository (Download the fastai files)
 
-Go to this url: https://github.com/fastai/fastai, and copy the git url. Click on the number 1 and 2 to have it on your clipboard.
+Go to this url: [https://github.com/fastai/fastai](https://github.com/fastai/fastai), and copy the git url. Click on the number 1 and 2 to have it on your clipboard.
 
 
 <img alt="clone" src="/images/terminal/git_copy_url.png" class="screenshot">
 
 Then, in order to clone the fastai repo, use the friendly command "git clone” and 
-then paste the url your terminal.
+then paste the url your terminal.(If you're using Colab, you need to add "!" before the command to use Shell)
 
 <img alt="paste" src="/images/terminal/git_clone_repo_.png" class="screenshot">
 
 #### Updating your fastai repository (Downloading the missing files)
 
-When your repo is up-to-date, you should see this message.
+Enter the "/fastai" directory you've just cloned, when your repo is up-to-date, you should see this message.
 
 <img alt="pull1" src="/images/terminal/git_pull_up_to_date.png" class="screenshot">
 
@@ -93,7 +93,7 @@ If there are new missing files, you wil see this.
 
 #### Updating Conda 
 
-On more thing, if you want to update conda, you should write this in the terminal "conda update conda" and you are done.
+One more thing, if you want to update conda, you should write this in the terminal "conda update conda" and you are done.
 
 <img alt="update" src="/images/terminal/conda_update.png" class="screenshot">
 

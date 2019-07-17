@@ -19,9 +19,20 @@ In your [console notebooks](https://www.paperspace.com/console/notebooks) choose
 
 <img alt="" src="/images/gradient/start.png" class="screenshot">
 
-You can choose a different Virtual Machine type on which you'd like to run your Notebook. This can be extremely useful when you want to start on a lower-end machine type, test everything is okay, then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
+_**Each time that you start your notebook, you can choose a different virtual machine type on which it runs.**_ Make sure you're running it on the  machine you want! Prices vary enormously. This can be extremely useful when you want to start on a lower-end machine type, test that everything is okay, then move to a more powerful GPU. Also, sometimes the GPU type that you started the notebook on will be unavailable, in which case you can easily fire it up on a different GPU.
 
-<img alt="" src="/images/gradient/restartNotebook.png" class="screenshot">
+When you click that 'start' button, the following screen will appear. It should default to the last machine type you used, but it's a good idea to check!
+
+<img alt="" src="/images/gradient/selectedMachine.png" class="screenshot">
+
+If you want to change the machine type, select from the dropdown:
+
+<img alt="" src="/images/gradient/changeMachineType.png" class="screenshot">
+
+
+ (See [Gradient pricing](https://support.paperspace.com/hc/en-us/articles/360002484474-Gradient-Pricing) for more information.) 
+
+
 
 Click on 'Start notebook' when you're ready and wait a few seconds for it to be ready.
 

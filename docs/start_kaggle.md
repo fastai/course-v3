@@ -18,7 +18,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 Kaggle kernels come with fastai library preinstalled, William Horton ```@wdhorton``` and Sanyam Bhutani ```@init_27``` have ported the lesson notebooks to the kernels. Sanyam Bhutani is maintaing the kaggle kernels, for any questions/issues please report in the [discussion thread here](https://forums.fast.ai/t/platform-kaggle-kernels/32569).
 
-No setup steps are required, just click on "fork" and run it.
+No setup steps are required, just click on "Copy and Edit" to fork and run it.
 
 ## Index of Kernels 
 
@@ -50,7 +50,6 @@ Sign up for Kaggle [here](https://www.kaggle.com/). Verify your email. Once you 
 
 Click on the lesson from the index above, it should open up the lesson kernel. Click on fork.
 
-
 <img alt="" src="/images/kaggle/fork.png" class="screenshot">
 
 ### Step 3: Everything is set, start working!
@@ -59,6 +58,7 @@ We have setup all of datasets and pre-req(s) for the lesson, you can start worki
 
 <img alt="" src="/images/kaggle/start_working.png" class="screenshot">
 
+Note that the first time you access a dataset, Kaggle will require you to verify your phone number by sending a text message.
 
 ## Resources & Limitations
 
