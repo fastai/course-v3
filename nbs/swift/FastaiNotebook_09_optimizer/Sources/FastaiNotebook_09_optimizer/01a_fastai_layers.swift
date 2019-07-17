@@ -58,15 +58,15 @@ public extension FALayer {
     //    TF-476: https://bugs.swift.org/browse/TF-476
     func callGrad(_ input: Input) ->
         (Output, (Self.Output.TangentVector) -> (Self.TangentVector, Self.Input.TangentVector)) {
-        return Swift.valueWithPullback(at: self, input) { (m, i) in m(i) }
+        return Swift.valueWithPullback(at: self, input) { (m, i) in m.forward(i) }
     }
     
     //We also add a default init to our `delegates` variable, so that we don't have to define it each time, as
     //well as a function to easily add a delegate.
-    var delegates: [(Output) -> ()] { 
-        get { return [] }
-        set {}
-    }
+    //var delegates: [(Output) -> ()] { 
+    //    get { return [] }
+    //    set {}
+    //}
     
     mutating func addDelegate(_ d: @escaping (Output) -> ()) { delegates.append(d) }
 }
@@ -81,6 +81,7 @@ public struct FADense<Scalar: TensorFlowFloatingPoint>: FALayer {
     public var weight: Tensor<Scalar>
     public var bias: Tensor<Scalar>
     public typealias Activation = @differentiable (Tensor<Scalar>) -> Tensor<Scalar>
+    @noDerivative public var delegates: [(Output) -> ()] = []
     @noDerivative public let activation: Activation
 
     public init(
@@ -119,6 +120,7 @@ public struct FANoBiasConv2D<Scalar: TensorFlowFloatingPoint>: FALayer {
     @noDerivative public let activation: Activation
     @noDerivative public let strides: (Int, Int)
     @noDerivative public let padding: Padding
+    @noDerivative public var delegates: [(Output) -> ()] = []
 
     public init(
         filter: Tensor<Scalar>,
@@ -181,6 +183,7 @@ public struct FAConv2D<Scalar: TensorFlowFloatingPoint>: FALayer {
     @noDerivative public let activation: Activation
     @noDerivative public let strides: (Int, Int)
     @noDerivative public let padding: Padding
+    @noDerivative public var delegates: [(Output) -> ()] = []
 
     public init(
         filter: Tensor<Scalar>,
@@ -243,6 +246,7 @@ public struct FAAvgPool2D<Scalar: TensorFlowFloatingPoint>: FALayer {
     @noDerivative let poolSize: (Int, Int, Int, Int)
     @noDerivative let strides: (Int, Int, Int, Int)
     @noDerivative let padding: Padding
+    @noDerivative public var delegates: [(Output) -> ()] = []
 
     public init(
         poolSize: (Int, Int, Int, Int),
@@ -278,6 +282,7 @@ public struct FAGlobalAvgPool2D<Scalar: TensorFlowFloatingPoint>: FALayer {
     // TF-603 workaround.
     public typealias Input = Tensor<Scalar>
     public typealias Output = Tensor<Scalar>
+    @noDerivative public var delegates: [(Output) -> ()] = []
     
     public init() {}
 

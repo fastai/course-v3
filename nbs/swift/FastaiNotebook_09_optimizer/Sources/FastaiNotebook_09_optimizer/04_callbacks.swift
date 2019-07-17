@@ -162,7 +162,7 @@ extension Learner {
         let (xb,yb) = (currentInput!,currentTarget!) //We still have to force-unwrap those for AD...
         (currentLoss, currentGradient) = model.valueWithGradient { model -> Loss in 
             let y = model(xb)                                      
-            currentOutput = y
+            //currentOutput = y
             return lossFunc.f(y, yb)
         }
         for d in delegates { try d.didProduceNewGradient(learner: self) }

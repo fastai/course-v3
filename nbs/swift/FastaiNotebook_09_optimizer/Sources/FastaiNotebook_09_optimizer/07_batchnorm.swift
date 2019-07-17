@@ -55,6 +55,11 @@ public protocol Norm: Layer where Input == Tensor<Scalar>, Output == Tensor<Scal
 }
 
 public struct FABatchNorm<Scalar: TensorFlowFloatingPoint>: LearningPhaseDependent, Norm {
+    // TF-603 workaround.
+    public typealias Input = Tensor<Scalar>
+    public typealias Output = Tensor<Scalar>
+    @noDerivative public var delegates: [(Self.Output) -> ()] = []
+    
     // Configuration hyperparameters
     @noDerivative var momentum, epsilon: Scalar
     // Running statistics
@@ -105,6 +110,7 @@ public struct TFBatchNorm<Scalar: TensorFlowFloatingPoint>: LearningPhaseDepende
     @noDerivative let runningMean, runningVariance: Reference<Tensor<Scalar>>
     // Trainable parameters
     public var scale, offset: Tensor<Scalar>
+    @noDerivative public var delegates: [(Self.Output) -> ()] = []
     
     public init(featureCount: Int, momentum: Scalar, epsilon: Scalar = 1e-5) {
         self.momentum = momentum
@@ -173,8 +179,10 @@ public struct TFBatchNorm<Scalar: TensorFlowFloatingPoint>: LearningPhaseDepende
 }
 
 public struct ConvBN<Scalar: TensorFlowFloatingPoint>: FALayer {
+    // TF-603 workaround.
     public typealias Input = Tensor<Scalar>
     public typealias Output = Tensor<Scalar>
+    @noDerivative public var delegates: [(Self.Output) -> ()] = []
     public var conv: FANoBiasConv2D<Scalar>
     public var norm: FABatchNorm<Scalar>
     
@@ -194,6 +202,7 @@ public struct CnnModelBN: Layer {
     public var convs: [ConvBN<Float>]
     public var pool = FAGlobalAvgPool2D<Float>()
     public var linear: FADense<Float>
+    @noDerivative public var delegates: [(Self.Output) -> ()] = []
     
     public init(channelIn: Int, nOut: Int, filters: [Int]){
         let allFilters = [channelIn] + filters
