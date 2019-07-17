@@ -72,6 +72,26 @@ for i in range(ar):
     c[i] = (a[i,:,None]*b).sum(dim=0)
 ```
 
+2. Equation in video 1:51:02 is typo.
+```python
+
+
+yhat = mse ( lin2 ( relu ( lin1 ( x ) ) ), y )
+y = f ( u )
+u = f ( x ) 
+
+should be
+
+
+yhat = lin2 ( relu ( lin1 ( x ) ) )
+loss = mse ( yhat , y )
+y = g ( u )
+u = f ( x )
+which is y = g ( f ( x ) )
+
+
+```
+
 ---
 
 ## Edit this page
