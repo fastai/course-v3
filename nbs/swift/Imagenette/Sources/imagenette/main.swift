@@ -4,9 +4,6 @@ import Foundation
 import FastaiNotebook_11_imagenette
 
 let path = downloadImagenette(sz:"-160")
-let allNames = fetchFiles(path: path/"train", recurse: true, extensions: ["jpeg", "jpg"])
-
-let path = downloadImagenette()
 let il = ItemList(fromFolder: path, extensions: ["jpeg", "jpg"])
 let sd = SplitData(il) {grandParentSplitter(fName: $0, valid: "val")}
 var procLabel = CategoryProcessor()
@@ -21,7 +18,5 @@ let recorder = learner.makeDefaultDelegates(metrics: [accuracy])
 learner.addDelegate(learner.makeNormalize(mean: imagenetStats.mean, std: imagenetStats.std))
 
 learner.addOneCycleDelegates(1e-3, pctStart: 0.5)
-time {
-  learner.fit(5)
-}
+time { try! learner.fit(5) }
 
