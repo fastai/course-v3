@@ -67,9 +67,6 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Crestle.ai (Easy)
-      url: /start_crestle.html
-    - output: web
       title: Salamander (Easy)
       url: /start_salamander.html
     - output: web
@@ -78,6 +75,9 @@ entries:
     - output: web
       title: FloydHub (Easy)
       url: /start_floydhub.html
+    - output: web
+      title: Crestle.ai (Easy)
+      url: /start_crestle.html
     - output: web
       title: Kaggle.com (Easy)
       url: /start_kaggle.html
