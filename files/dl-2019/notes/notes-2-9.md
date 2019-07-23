@@ -11,6 +11,7 @@ Once we have those basic pieces in place, we'll look closely at some key buildin
 - [fastai docs on Callbacks](https://docs.fast.ai/callbacks.html)
 - [Lesson notebooks](https://github.com/fastai/course-v3/tree/master/nbs/dl2)
 - [Lesson notes](https://medium.com/@lankinen/fast-ai-lesson-9-notes-part-2-v3-ca046a1a62ef) by @Lankinen
+- [Discussion thread](https://forums.fast.ai/t/lesson-9-discussion-wiki-2019/41969/16)
 
 ## Papers
 - [Self-Normalizing Neural Networks](https://arxiv.org/abs/1706.02515) (SELU)
