@@ -132,11 +132,10 @@ git clone https://github.com/fastai/course-v3
 ```
 in your terminal to get a folder with all the fast.ai materials.
 
-Then run these commands to install the necessary packages for experimenting with fast.ai and PyTorch:
+Then activate the python virtual environment with:
 
 ``` bash
-conda update conda
-conda install -c pytorch -c fastai fastai pytorch torchvision cuda92
+source activate pytorch_p36
 ```
 
 Next move into the directory where you will find the materials for the course by running:
