@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Just",
+        "repositoryURL": "https://github.com/saeta/Just",
+        "state": {
+          "branch": null,
+          "revision": "2b4aec55d7808a43526bef89341f8c3f962be89a",
+          "version": "0.7.2"
+        }
+      },
+      {
+        "package": "NotebookExport",
+        "repositoryURL": "https://github.com/latenitesoft/NotebookExport",
+        "state": {
+          "branch": null,
+          "revision": "9102631248217cc8ef405e92edae7bdcebcb7166",
+          "version": "0.6.0"
+        }
+      },
+      {
+        "package": "Path.swift",
+        "repositoryURL": "https://github.com/mxcl/Path.swift",
+        "state": {
+          "branch": null,
+          "revision": "f324b4a562ca421fd2905414a10fb0fc91d58b67",
+          "version": "0.16.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
