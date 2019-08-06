@@ -7,7 +7,7 @@
 from exp.nb_12 import *
 
 def dropout_mask(x, sz, p):
-    return x.new(*sz).bernoulli_(1-p).div_(1-p)
+    return x.new(*sz).bernoulli_(1-p).div_(math.sqrt(1-p))
 
 class RNNDropout(nn.Module):
     def __init__(self, p=0.5):
