@@ -66,7 +66,6 @@ Before you start working it's a good idea ot update the pytorch and fastai libra
 Once you click on 'Terminal' a new window should open with a terminal. Type (or copy and paste):
 
 ```bash
-conda install -c fastai -c pytorch fastai pytorch
 cd course-v3/
 git pull
 ```
