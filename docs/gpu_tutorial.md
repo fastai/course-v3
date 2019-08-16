@@ -50,6 +50,8 @@ We recommend you to use an NVIDIA GPU since they are currently the best out ther
 
 3. Highly optimized for deep learning with cuDNN
 
+4. CUDA powered Edge devices (AI in IOT)
+
 ---
 
 *Many thanks to Andrew Shaw for writing this guide.*
