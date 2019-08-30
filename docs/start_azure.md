@@ -45,7 +45,7 @@ The following input is needed:
 1. Subscription - If you have more than one subscription, select the one on which the machine is to be created and billed.
 2. Resource group - you can create a new one or use an existing group.
 3. Location - Select the data center that's most appropriate. For fastest network access, it's the data center that has most of your data or is closest to your physical location. Standard_NC6 GPU instances are available in WestUS2, SouthCentral, NorthCentral and WestEurope.
-4. Admin Username - The admin account ID to sign in to the DSVM.
+4. Admin Username - The admin account ID to sign in to the DSVM (make lowercase or Jupyter Hub login will fail with '500 Internal Server Error').
 5. Admin Password - The admin account password.
 6. Vm Name - The name of the data science server you're creating.
 7. Vm Size - Select the desired DSVM size according to your requirements and [cost](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/).

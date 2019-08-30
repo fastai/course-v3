@@ -76,9 +76,6 @@ entries:
       title: FloydHub (Easy)
       url: /start_floydhub.html
     - output: web
-      title: Crestle.ai (Easy)
-      url: /start_crestle.html
-    - output: web
       title: Kaggle.com (Easy)
       url: /start_kaggle.html
     - output: web
@@ -103,17 +100,11 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Crestle
-      url: /update_crestle.html
-    - output: web
-      title: Gradient
-      url: /update_gradient.html
-    - output: web
       title: Salamander
       url: /update_salamander.html
     - output: web
-      title: FloydHub
-      url: /update_floydhub.html
+      title: Gradient
+      url: /update_gradient.html
     - output: web
       title: Kaggle
       url: /update_kaggle.html
@@ -123,6 +114,9 @@ entries:
     - output: web
       title: SageMaker
       url: /update_sagemaker.html
+    - output: web
+      title: FloydHub
+      url: /update_floydhub.html
     - output: web
       title: Google Cloud
       url: /update_gcp.html
