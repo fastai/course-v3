@@ -26,7 +26,6 @@ To update packages and the course repo, create a code cell in your notebook and 
 !curl https://course.fast.ai/setup/colab | bash
 ```
 
-<img alt="" src="/images/colab/07.png" class="screenshot">
 
 Colab terminates your instance after 90 minutes of idle time or after 12 hours of runtime (see [here](https://help.clouderizer.com/running-on-cloud/google-colab/google-colab-faqs)). This script will check if your instance has been terminated and install packages and clone repository again if it has. If it has not (you have been away for less than 90 minutes) the script will just update the packages and repository.
 
