@@ -69,9 +69,10 @@ To access the DSVM created above and run the course notebooks, find the DSVM ins
  
 * For Linux,
 	* Copy the IP address from the page above.
-	* Enter the IP address in a browser as https://<<ip address>>:8000 to access Jupyter notebooks through the built-in Jupyterhub. Jupyter is supported on Chrome, Firefox or Safari. **Note**: You will see a certificate warning since the Jupyter server on the DSVM has a self signed certificate by default. You can skip through this certificate warning on your browser. 
+	* Enter the IP address in a browser as ``https://<<ip address>>:8000`` to access Jupyter notebooks through the built-in Jupyterhub. Jupyter is supported on Chrome, Firefox or Safari. **Note**: You will see a certificate warning since the Jupyter server on the DSVM has a self signed certificate by default. You can skip through this certificate warning on your browser. 
 	* You will need to provide the usename and password you provided in the creation step.
 	* To access the notebooks, navigate to fastai and then to course-v3 directory as shown below. 
+	* If you don't see the ``/fastai/`` dir after connecting to Jupyterhub, please wait. The extension may still be installing. 
 
 	<img alt="JupyterLinux" src="/images/azure/JupyterLinux.png" class="screenshot">
 
