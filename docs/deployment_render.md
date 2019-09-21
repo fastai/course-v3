@@ -36,7 +36,7 @@ Upload the trained model file created with `learner.export` (for example `export
 
 ### Customize the app for your model
 
-1. Edit the file `server.py` inside the `app` directory and update the `model_file_url` variable with the URL copied above.
+1. Edit the file `server.py` inside the `app` directory and update the `export_file_url` variable with the URL copied above.
 2. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you expect from your model.
 
 ### Commit and push your changes to GitHub.
