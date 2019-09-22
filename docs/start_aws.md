@@ -158,9 +158,20 @@ If going to localhost:8888 doesn't work, or asks for a password/token return to 
 
 Go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
-If you have any problem while using the `fastai` library try running
+If you have any problem while using the `fastai` library try running:
 ```
 conda install -c fastai fastai
+```
+
+You may also sometimes find that you need a more recent version of the fastai library than is available on conda. In that case, try running:
+
+```
+# Show the current version of the packages installed
+pip list | grep fastai 
+
+# Compare to the latest at: https://pypi.org/project/fastai/
+# update if needed
+pip install --upgrade fastai
 ```
 
 ## Step 7: Stop your instance when you are done
