@@ -254,3 +254,26 @@ public func prevPow2(_ x: Int) -> Int {
     while res <= x { res *= 2 }
     return res / 2
 }
+
+public struct CNNModel: Layer {
+    public var convs: [ConvBN<Float>]
+    public var pool = FAGlobalAvgPool2D<Float>()
+    public var linear: FADense<Float>
+    
+    public init(channelIn: Int, nOut: Int, filters: [Int]){
+        convs = []
+        let (l1,l2) = (channelIn, prevPow2(channelIn * 9))
+        convs = [ConvBN(l1,   l2,   stride: 1),
+                 ConvBN(l2,   l2*2, stride: 2),
+                 ConvBN(l2*2, l2*4, stride: 2)]
+        let allFilters = [l2*4] + filters
+        for i in 0..<filters.count { convs.append(ConvBN(allFilters[i], allFilters[i+1], stride: 2)) }
+        linear = FADense<Float>(filters.last!, nOut)
+    }
+    
+    @differentiable
+    public func callAsFunction(_ input: TF) -> TF {
+        // TODO: Work around https://bugs.swift.org/browse/TF-606
+        return linear.forward(pool.forward(convs(input)))
+    }
+}

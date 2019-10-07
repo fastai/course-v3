@@ -64,7 +64,8 @@ When you select an environment, verify that it contains python packages like fas
 <img alt="" src="/images/easyaiforum/start.png" class="screenshot">
 
 ## Step 4: Open Jupyter Notebook
-
+    华中一区:/home/ubuntu/MyFiles/PublicData_1/fast.ai/
+	华东二区:/home/ubuntu/MyFiles/PublicData/data_extent_1/fast.ai/
 <img alt="" src="/images/easyaiforum/jupyter_open.jpg" class="screenshot">
 ### Windows Server  [Use Warining](#warining)
 
@@ -132,7 +133,9 @@ If you have trouble using the platform, you can contact customer service to help
 
 ### The dataset location of fast.ai(fast.ai 的数据集的位置)
 
-ubuntu: /home/ubuntu/MyFiles/PublicData_1/fast.ai/fast.ai_datasets
+ubuntu: 
+    华中一区 /home/ubuntu/MyFiles/PublicData_1/fast.ai/fast.ai_datasets
+	华东二区 /home/ubuntu/MyFiles/PublicData/data_extent_1/fast.ai/fast.ai_datasets
 
 windows: P:/PublicData_1/fast.ai/fast.ai_datasets
 
