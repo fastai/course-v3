@@ -15,6 +15,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Pricing
 
+**Note: Paperspace introduced a [Free Tier of free GPU and CPU instances](https://docs.paperspace.com/gradient/instances/free-instances).** To use them choose Free-GPU or Free-P5000 (recommended) in step 2.6 Create Notebook.  
 Notebooks are billed while they're running (per second!) and the rate is dependent on the [Instance Type](https://support.paperspace.com/hc/en-us/articles/360007742114-Gradient-Instance-Types) selected. Notebooks must be stopped to end billing. See below for free GPU credit! 💰 **Note: Consider using new [Gradient "preemptible" instances](https://support.paperspace.com/hc/en-us/articles/360015388374-Preemptible-Instances-Overview) which can save you money during the course.**
 
 ## Step 1: Create an account
@@ -48,7 +49,7 @@ When you click Create Notebook, that will start your Notebook and your billing f
 
 ## Step 3 : Update the fastai library
 
-Before you start working you will need to update the fastai library. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'.
+Before you start working you will need to update the fastai library and lesson notebooks. To do this you will have to access the terminal. You can do this by clicking in 'New', 'Terminal'.
 
 <img alt="terminal" src="/images/terminal.png" class="screenshot">
 
@@ -56,6 +57,12 @@ Once you click on 'Terminal' a new window should open with a terminal. Type:
 
 ```bash
 pip install fastai --upgrade
+```
+then
+
+```bash
+cd course-v3
+git pull
 ```
 
 Now you should close the terminal window.
