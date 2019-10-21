@@ -16,6 +16,7 @@ In order to fix the problems we see, we try changing our activation function, an
 
 ## Lesson resources
 
+- [Lesson notebooks](https://github.com/fastai/course-v3/tree/master/nbs/dl2)
 - [Lesson notes](https://medium.com/@lankinen/fast-ai-lesson-10-notes-part-2-v3-aa733216b70d) by @Lankinen
 - [Interpreting the colorful histograms used in this lesson](https://forums.fast.ai/t/the-colorful-dimension/42908)
 
