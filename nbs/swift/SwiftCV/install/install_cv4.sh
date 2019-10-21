@@ -1,7 +1,10 @@
 set -ex
 
 OPENCV_VERSION='4.1.0'
-
+CMAKE_OPTS=""
+if [ ! -z ${INSTALL_PREFIX} ]; then
+  CMAKE_OPTS="-D CMAKE_INSTALL_PREFIX=${INSTALL_PREFIX}"
+fi
 APT_PROGRAM="apt-fast"
 command -v $APT_PROGRAM > /dev/null 2>&1 || {
   echo "Falling back to apt-get as apt-fast is not installed..."
@@ -23,6 +26,7 @@ cd OpenCV
 mkdir build
 cd build
 cmake \
+  ${CMAKE_OPTS} \
   -D BUILD_LIST=core,imgproc,imgcodecs \
   -D CMAKE_BUILD_TYPE=Release \
   -D OPENCV_GENERATE_PKGCONFIG=YES \
