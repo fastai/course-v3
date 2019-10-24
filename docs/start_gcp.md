@@ -225,6 +225,7 @@ To see how to open it again, update the course or the fastai library, go to the 
 + [Installing the latest Cloud SDK version](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_tools_version_cloudsdk_current_version)
 + [Installing Google Cloud SDK (StackOverflow question)](https://stackoverflow.com/questions/46822766/sudo-apt-get-update-sudo-apt-get-install-google-cloud-sdk-cannot-be-done)
 + [GCP Error Quotas GPUs All Regions Exceeded(Stack Overflow question)](https://stackoverflow.com/questions/53415180/gcp-error-quota-gpus-all-regions-exceeded-limit-0-0-globally)
++ [Google Compute Engine can't find GPU even though quota exists](https://stackoverflow.com/questions/51685387/google-compute-engine-cant-find-gpu-even-though-quota-exists)
 
 ---
 
