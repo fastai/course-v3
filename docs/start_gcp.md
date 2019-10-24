@@ -94,7 +94,7 @@ Pick cloud project to use:
 ```
 Just enter the number next to the project you created on step 1. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
 
-Lastly, you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
+Lastly, you'll be asked if you want to choose a default region, choose us-west2-b if you don't have any particular preference, as it will make the command to connect to this server easier.
 
 Once this is done, you should see this message on your terminal:
 ```
@@ -115,7 +115,7 @@ If you choose the budget compute option, please replace the values of the parame
 
 ```bash
 export IMAGE_FAMILY="pytorch-latest-gpu" # or "pytorch-latest-cpu" for non-GPU instances
-export ZONE="us-west1-b"
+export ZONE="us-west2-b"
 export INSTANCE_NAME="my-fastai-instance"
 export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"
 
@@ -142,6 +142,17 @@ You need to adjust your GPU quotas.
 3. In the "Metrics" dropdown, select "GPUs (all regions)" and under "Locations" select "Global" (or "All locations").
 4. Click edit quotas and select the quota to edit (GPUs All Regions). Set the new quota limit to 1 or more.
 Your request may require confirmation, which Google claims typically takes two business days to get.
+
+```
+If you get an error saying:
+```bash
+ERROR: (gcloud.compute.instances.create) Could not fetch resource:
+ - The resource 'projects/fastai-256902/zones/us-west2-b/acceleratorTypes/nvidia-tesla-p4' was not found
+```
+You need to change the zone.
+1. Go to [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus).
+2. Look for the GPU you are using (default to `nvidia-tesla-p4` - NVIDIA® Tesla® P4) and choose one of the available zones.
+3. Run again the whole command above, replacing the `export ZONE="us-west2-b"` for the chosen available zone (if `europe-west4-b`, then `export ZONE="europe-west4-b"`).
 
 You will have to wait a little bit until you see the text informing you the instance has been created. You can see the instance online [here](https://console.cloud.google.com/compute/) in your list of instances (note that this will be the page you have to go to later to stop your instance). 
 
