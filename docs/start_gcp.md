@@ -92,9 +92,11 @@ Pick cloud project to use:
  ...
  Please enter your numeric choice:
 ```
-Just enter the number next to the project you created on step 1. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
+Just enter the number next to the project you created on step 1. If you just created your account it will likely have a generated random name for its Project ID. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
 
-Lastly, you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
+In order to set a default region you'll need to enable the Compute Engine API, the CLI will output a link you can follow to do this.
+
+If you've enabled the Compute Engine API you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
 
 Once this is done, you should see this message on your terminal:
 ```
