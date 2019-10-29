@@ -98,6 +98,8 @@ In order to set a default region you'll need to enable the Compute Engine API, t
 
 If you've enabled the Compute Engine API you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
 
+You can modify this later with `gcloud config set compute/zone NAME`
+
 Once this is done, you should see this message on your terminal:
 ```
 Your Google Cloud SDK is configured and ready to use!
