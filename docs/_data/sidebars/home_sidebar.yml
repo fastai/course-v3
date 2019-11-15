@@ -67,9 +67,6 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Salamander (Easy)
-      url: /start_salamander.html
-    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web

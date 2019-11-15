@@ -21,14 +21,13 @@ To do nearly everything in this course, you'll need access to a computer with an
 Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently, our recommendations are (see below for details):
 
 - If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
-- If you want to avoid the command-line, try Salamander, which works great and doesn't cost much
+- If you want to avoid the command-line, try Paperspace Gradient, which works great and doesn't cost much - in fact they even have a free option!
 - If you don't have a credit card to sign up for the above services, use Colab, which is free, but has a few minor rough edges and incompatibilities.
 
 #### Ready to run: "One-click" Jupyter
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. They're a little less flexible than "full servers" (below), but are the simplest way to get started.
 
-- [Salamander](/start_salamander.html) (instant approval; no installation required; includes full terminal access; $0.38 an hour; $75 free credit for students)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
 - [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
 - [SageMaker](/start_sagemaker.html); (requires wait for approval, not quite "one click"... but pretty close, $1.26 an hour + storage)
