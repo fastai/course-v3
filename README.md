@@ -8,6 +8,16 @@
 
 ![](/docs/images/billings2.png)
 
+
+### Tips from part1
+
+* Don’t try to stop and understand everything.
+* Don’t waste your time, learn Jupyter keyboard shortcuts. Learn 4 to 5 each day.
+* Please run the code, really run the code. Don’t go deep on theory. Play with the code, see what goes in and what comes out.
+* Pick one project. Do it really well. Make it fantastic.
+* Run this notebook (lesson1-pets.ipynb), but then get your own dataset and run it! (extra emphasis: do this!)
+
+
 deep learning from foundations, note and jupyter notebook practicing repo
 
 To keep my files in my own repo, updates in class are cherrypicked ..😉
