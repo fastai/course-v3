@@ -1,10 +1,7 @@
 ---
-
 title: Onepanel
 keywords:
 sidebar: home_sidebar
-
-
 ---
 
 # Welcome to Onepanel
@@ -16,15 +13,15 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Pricing
 
-We recommend the “Nvidia K80 GPU” configuration which costs $0.29 per hour.  We also offer Nvidia T4 and V100.  Here’s our full [pricing page](https://www.onepanel.io/pricing)
+We recommend the `Nvidia K80 GPU` configuration which costs **$0.29** per hour.  We also offer Nvidia T4 and V100.  Here’s our full [pricing page](https://www.onepanel.io/pricing)
 
 ### Storage
-You should use the suggested 80GB disk size, which is an additional $0.0139 per hour You can increase the disk size later if you need more space.
+You should use the suggested 80GB disk size, which is an additional **$0.0139 per hour**. You can increase the disk size later if you need more space.
 
 ### How much will you use this course
 Considering that the course requires, over 2 months, 80 hours of homework plus the 2 hours of working through each lesson, we calculated roughly how much you would spend in the course.
 
-* Nvidia K80 GPU + Storage: (80+2*7)*$0.29 + (80+2*7)*$0.0139*2 = **$29.88**
+- **Nvidia K80 GPU** + **Storage**: (80+2\*7)\*$0.29 + (80+2\*7)\*$0.0139\*2 = **$29.88**
 
 
 ## Step 1: Login with Github and add a Credit Card
@@ -52,16 +49,16 @@ Click the tab near the top of the browser and a dialog box should pop up:
 
 Once you select the GPU you want to use you can select the Spot option which is the lowest cost but occasionally the GPU will pause when demand is really high.  Your data will persist - so no worries.
 
-Click “RESTART” and your Notebook will reboot in under 5 mins.
+Click 'RESTART' and your Notebook will reboot in under 5 mins.
 
 
-## Step 3: Pausing your workspace
+## Step 3: Pausing your Notebook
 
 Click the tab near the top of the browser and a dialog box should pop up:
 
 <img alt="workspace" src="/images/onepanel/upgrade_workspace_1.png" class="screenshot">
 
-Click "Pause"
+Click 'Pause'
 
 <img alt="pause workspace" src="/images/onepanel/workspace_pause.png" class="screenshot">
 
