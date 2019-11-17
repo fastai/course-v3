@@ -61,37 +61,3 @@ Click the tab near the top of the browser and a dialog box should pop up:
 Click 'Pause'
 
 <img alt="pause workspace" src="/images/onepanel/workspace_pause.png" class="screenshot">
-
-## Advanced Features: Full AI Workflow Automation Platform
-
-### SSH Terminal and System Status
-
-<img alt="workspace terminal and system" src="/images/onepanel/workspace_system_terminal_actions.png" class="screenshot">
-
-System Status:
-
-<img alt="workspace system status" src="/images/onepanel/workspace_system_status.png" class="screenshot">
-
-SSH Terminal:
-
-<img alt="workspace terminal and system" src="/images/onepanel/workspace_terminal.png" class="screenshot">
-
-### Account Settings:
-
-You can change your account settings here:  
-
-<img alt="account menu" src="/images/onepanel/account_menu.png" class="screenshot">
-
-
-Some features include:
-
-* Setting up the auto-pause feature
-* Notifications
-* Tokens and Variables
-* Git credential management
-
-### AI Workflow Automation Menus:
-
-You will find all of the other AI workflow automation here:
-
-<img alt="automation menu" src="/images/onepanel/automation_menu.png" class="screenshot">
