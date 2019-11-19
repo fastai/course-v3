@@ -13,7 +13,7 @@ If you are returning to work and have previously completed the steps below, plea
 
 ## Pricing
 
-We recommend the `Nvidia K80 GPU` configuration which costs **$0.29** per hour.  We also offer Nvidia T4 and V100.  Here’s our full [pricing page](https://www.onepanel.io/pricing)
+We recommend the `Nvidia K80 GPU` configuration which costs **$0.29** per hour.  We also offer Nvidia T4 and V100.  Here’s our full [pricing page](https://www.onepanel.io/fastai-pricing).
 
 ### Storage
 You should use the suggested 80GB disk size, which is an additional **$0.0139 per hour**. You can increase the disk size later if you need more space.
