@@ -29,6 +29,8 @@ Finally, we looked at different ways of calculating matrix products in Swift, in
 
 - S4TF [notebook tutorials](https://github.com/tensorflow/swift#tutorials-) (rather out of date at the moment)
 - Why [fastai is embracing S4TF](https://www.fast.ai/2019/03/06/fastai-swift/)?
+- [Your first Swift for TensorFlow model](https://rickwierenga.com/blog/s4tf/s4tf-mnist.html) (updated for 0.6)
+- [An introduction to Generative Adversarial Networks in Swift for TensorFlow](https://rickwierenga.com/blog/s4tf/s4tf-gan.html) (updated for 0.6)
 
 ## Edit this page
 
