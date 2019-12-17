@@ -13,6 +13,7 @@ So I decided to do some research into you know kind of two research, one is like
 and then at the same time trying to get in touch with the Pytorch team about asking them where this *math.sqrt(5)* comes from.<br />
 So let me show you how I went about doing that research.<br />
 ~~~python
+
 #export
 from exp.nb_02 import *
 
@@ -66,7 +67,7 @@ and let's do a **5x5x5** kernel, and we will talk more about why 5x5x5 might be 
 ~~~python
 x = x_valid[:100]
 x.shape
-torch.Size([100, 1, 28, 28])
+>>> torch.Size([100, 1, 28, 28])
 ~~~
 And just for testing, let's just grab the first hundred elements of the validation set.<br />
 so we've now got a tensor of **(100, 1, 28, 28)**,<br />
