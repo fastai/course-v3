@@ -2,23 +2,23 @@
 
 This is the notes of the [fast.ai courses-v3](https://course.fast.ai/index.html), which contains version1 and version2.
 
-Other notes will be in my [blog.](https://spellonyou.github.io/)
+Other notes and projects will be in my [blog.](https://spellonyou.github.io/)
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg){:height="80%" width="80%" align-items: center;}
+![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg){:height="50%" width="50%" align-items: center;}
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png){:height="80%" width="80%" align-items: center;}
+![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png){:height="50%" width="50%" align-items: center;}
 
 Things with courses.
 {: style="color:grey; font-size: 90%;"}
 
 
 Not sure, but mosts of my GPUs are from colab.
-(I'm a little girl who happy with ![P-100](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/p100.png))
-### branch explanation
+(I'm a little girl who happy with ![P-100](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/p100.png){:height="50%" width="50%" align-items: center;})
 
-- Dionne: To include my own notes with main branch. Original would be substituted by my own notebooks.
+## materials
 
-- Jeremy: To stay tuned original [repo](https://github.com/fastai/course-v3)
+* [](https://forums.fast.ai/t/getting-comfortable-with-pytorch-projects/28371)
+- [What is torch.nn really?](https://colab.research.google.com/drive/1npcdtaKZtsWbPQKSXSBGlcDhPryy5lfQ#scrollTo=2hDDD8ibX3Lq)
 
 
 ### Tips from part1
