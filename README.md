@@ -4,7 +4,7 @@ This is the notes of the [fast.ai courses-v3](https://course.fast.ai/index.html)
 
 Other notes and projects will be in my [blog.](https://spellonyou.github.io/)
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg){:height="50%" width="50%" align-items: center;}
+<src="https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg" height="50%" width="50%" align-items: center;>
 
 ![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png){:height="50%" width="50%" align-items: center;}
 
