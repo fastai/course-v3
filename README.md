@@ -12,7 +12,7 @@ Things with courses.{: style="color:grey; font-size: 90%;"}
 
 
 Not sure, but mosts of my GPUs are from colab.
-(I'm a little girl who happy with ![P-100](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/p100.png){:height="50%" width="50%" align-items: center;})
+(I'm a little girl who happy with ![P-100](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/p100.png){:height=250 width=250 align-items: center;})
 
 ## materials
 
