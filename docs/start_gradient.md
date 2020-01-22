@@ -73,7 +73,7 @@ You should now have a running fast.ai notebook. It might take a few minutes to p
 
 <img alt="ready" src="/images/gradient/ready.png" class="screenshot">
 
-Next from your your jupyter notebook, click on 'course-v3' and you should look at something like this:
+Next from your jupyter notebook, click on 'course-v3' and you should look at something like this:
 
 <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
