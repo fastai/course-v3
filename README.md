@@ -4,9 +4,9 @@ This is the notes of the [fast.ai courses-v3](https://course.fast.ai/index.html)
 
 Other notes and projects will be in my [blog.](https://spellonyou.github.io/)
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg){:height="250" width="250"}
+![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg =100x20)
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png){:height="250" width="250"}
+![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png =100x20)
 
 Things with courses.{: style="color:grey; font-size: 90%;"}
 
