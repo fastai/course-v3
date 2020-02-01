@@ -4,15 +4,16 @@ This is the notes of the [fast.ai courses-v3](https://course.fast.ai/index.html)
 
 Other notes and projects will be in my [blog.](https://spellonyou.github.io/)
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg width="200")
 
-![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png =100x20)
+![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0-cycle.jpg | width=100)
 
-Things with courses.{: style="color:grey; font-size: 90%;"}
+![](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/0%20copy%202.png | width=100)
+
+### Things with courses.
 
 
 Not sure, but mosts of my GPUs are from colab.
-(I'm a little girl who happy with ![P-100](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/p100.png){:height="250" width="250" align-items: center;})
+(I'm a little girl who happy with ![P-100](https://github.com/SpellOnYou/SpellOnYou.github.io/blob/master/assets/images/p100.png)
 
 ## materials
 
