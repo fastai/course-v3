@@ -67,7 +67,7 @@ const Tab = styled.div`
 `;
 
 export default ({ children }) => {
-  const [openedTab, setOpenedTab] = useState(1);
+  const [openedTab, setOpenedTab] = useState(0);
 
   return (
     <Container>
