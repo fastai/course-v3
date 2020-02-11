@@ -1,70 +1,54 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Search from './Search';
+import { TiArrowRight } from 'react-icons/ti';
 
-const TRANSCRIPTS = {
-  1: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-1.json',
-  2: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-2.json',
-  3: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-3.json',
-  4: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-4.json',
-  5: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-5.json',
-  6: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-6.json',
-  7: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/transcripts/transcript-1-7.json',
-};
+import Search from './Search';
+import { TRANSCRIPT_URLS } from '../data';
+import { standard } from '../utils/easing';
 
 const SearchResults = styled.div`
   display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 85%;
-  border: solid 1px;
-  margin-right: 2vw;
-  padding: 1%;
-  border-radius: 5px;
-  box-shadow: 0 15px 20px 2px #444;
-  background-color: white;
-`
+  flex-direction: column;
+  justify-content: center;
+`;
 
 const StyledBrowser = styled.div`
-  display: flex;
-  bottom: 0px;
-  position: absolute;
-  z-index: 2;
-  flex-direction: row;
-  justify-content: flex-end;
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-height: 20vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
 `
 
 const StyledResult = styled.span`
   cursor: pointer;
-  padding: 0 2% 0 0;
-  min-width: 7vw;
-  opacity: 0.5;
-  margin: auto;
-  :hover {
-    text-decoration: underline;
-  }
-  :nth-child(2) {
-    margin-left: 3vw;
-  }
-`
+  padding: 23px 18px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-const CloseX = styled.span`
-  font-weight: 700;
-  position: fixed;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 1;
-  opacity: 0.8;
-  :hover {
-    opacity: 1;
+  div > p {
+    margin: 4px 0;
   }
-`
+  
+  div:first-child > span {
+    opacity: 0.4;
+  }
+
+  div:last-child {
+    opacity: 0;
+    transition: all 0.4s ${standard};
+    transform: translateX(-40px);
+  }
+  
+  &:hover {
+    background: linear-gradient(90deg, #347DBE, #2FB4D6);
+    color: #fff;
+    div:last-child {
+      opacity: 1.0;
+      transform: translateX(0px);
+    }
+  }
+`;
 
 const CACHE = {}
 
@@ -90,7 +74,7 @@ class TranscriptBrowser extends Component {
      * We `fetch` our own resource (a Webpack-resolved relative URL) so that React can parse the contents of
      * referenced markdown file without any fancy configuration in Webpack.
      */
-    const toFetch = TRANSCRIPTS[this.props.lesson]
+    const toFetch = TRANSCRIPT_URLS[this.props.lesson]
     if (!toFetch) return this.setState({
       transcript: null,
       rendered: this.props.lesson,
@@ -144,7 +128,11 @@ class TranscriptBrowser extends Component {
             role="button"
             tabIndex="0"
           >
-            {result.sentence}
+            <div>
+              <p>{ result.sentence }</p>
+              <span>{ result.moment }</span>
+            </div>
+            <div>Seek <TiArrowRight /></div>
           </StyledResult>
         );
       })
@@ -153,9 +141,8 @@ class TranscriptBrowser extends Component {
   }
 
   render() {
-    const { showSearch } = this.props;
     const { search, transcript } = this.state;
-    return showSearch && (
+    return (
       <Fragment>
         <Search
           search={search}
@@ -163,11 +150,9 @@ class TranscriptBrowser extends Component {
           transcript={this.getTranscript}
         />
         <StyledBrowser>
-          {search && <SearchResults>
-              {transcript && <CloseX role="button" onClick={this.clearSearch}>X</CloseX>}
-                {this.results}
-              </SearchResults>
-          }
+          { transcript && <SearchResults>
+            {this.results}
+          </SearchResults> }
         </StyledBrowser>
       </Fragment>
     )
