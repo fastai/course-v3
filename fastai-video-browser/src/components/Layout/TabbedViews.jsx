@@ -90,7 +90,7 @@ const TabbedViews = ({ children }) => {
 }
 
 TabbedViews.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.arrayOf(PropTypes.element)
 }
 
 export default TabbedViews;
