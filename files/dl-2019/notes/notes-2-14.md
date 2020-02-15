@@ -13,6 +13,7 @@ Finally, we put it all together, implementing our generic optimizer, Learner, ca
 ## Lesson resources
 
 - [Slides for the lesson - from slide 41 ](https://docs.google.com/presentation/d/1dc6o2o-uYGnJeCeyvgsgyk05dBMneArxdICW5vF75oU/edit#slide=id.p)
+- [Lesson Notebooks](https://github.com/fastai/course-v3/tree/master/nbs/swift)
 - [Lesson Notes](https://medium.com/@lankinen/fast-ai-lesson-14-notes-part-2-v3-be4667394295) @Lankinen
 
 ## Links

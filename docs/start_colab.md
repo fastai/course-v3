@@ -60,7 +60,7 @@ root_dir = "/content/gdrive/My Drive/"
 base_dir = root_dir + 'fastai-v3/'
 ```
 Now, you may access your Google Drive as a file sytem using standard python commands to both read and write files.
-Don't forget to append `base_dir` before root path(s) in all notebooks. For example, in `lesson2-download.ipynb` 5<sup>th</sup> cell, make the following changes:
+Don't forget to add `base_dir` before root path(s) in all notebooks. For example, in `lesson2-download.ipynb` 5<sup>th</sup> cell, make the following changes:
 ```python
 path = Path(base_dir + 'data/bears')
 dest = path/folder

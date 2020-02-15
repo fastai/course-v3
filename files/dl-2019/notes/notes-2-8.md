@@ -49,7 +49,7 @@ Then we will implement the backwards pass, including a brief refresher of the ch
 
 ## "Assigned" Homework
 * Review concepts from Course 1 (lessons 1 - 7): Affine Functions & non-linearities; Parameters & activations; Random initialization & transfer learning; SGD Momentum Adam (not sure what this one is, Jeremy's head covers it in the video); Convolutions; Batch-norm; Dropout; Data augmentation; Weight decay; Res/dense blocks; Image classification and regression; Embeddings; Continuous & Categorical variables; Collaborative filtering; Language models; NLP classification; Segmentation; U-net; GANS
-* Make sure you understand broadcasting
+* Make sure you understand broadcasting (a useful resource is [Computation on Arrays: Broadcasting by Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html))
 * Read section 2.2 in [Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/abs/1502.01852)
 * Try to replicate as much of the notebooks as you can without peeking; when you get stuck, peek at the lesson notebook, but then close it and try to do it yourself
 

@@ -6,7 +6,7 @@ sidebar: home_sidebar
 ---
 ## What is a GPU?
 
-GPUs are specialized hardware originally created to render games in high frame rates. Graphics texturing and shading require a lot of matrix and vector operations executed in parallel and those chips have been created to take the heat off the CPU while doing that. 
+GPUs (Graphics Processing Units) are specialized computer hardware originally created to render images at high frame rates (most commonly images in video games). Since graphics texturing and shading require more matrix and vector operations executed in parallel than a CPU (Central Processing Unit) can reasonably handle, GPUs were made to perform these calculations more efficiently. 
 
 ## Why a GPU?
 

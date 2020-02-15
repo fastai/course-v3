@@ -2,8 +2,6 @@
 title: Practical Deep Learning for Coders, v3
 ---
 
-**Note**: This site covers the new 2019 deep learning course. The 2018 courses have been moved to: [course18.fast.ai](http://course18.fast.ai).
-
 ## Getting started
 
 Welcome! If you're new to all this deep learning stuff, then don't worry&mdash;we'll take you through it all step by step. (And if you're an old hand, then you may want to check out our advanced course: [Deep Learning From The Foundations](/part2).) We do however assume that you've been coding for at least a year, and also that (if you haven't used Python before) you'll be putting in the extra time to learn whatever Python you need as you go. (For learning Python, we have a list of [python learning resources](https://forums.fast.ai/t/recommended-python-learning-resources/26888) available.)
@@ -21,20 +19,19 @@ To do nearly everything in this course, you'll need access to a computer with an
 Here are some great choices of platforms. Click the link for more information on each, and setup instructions. Currently, our recommendations are (see below for details):
 
 - If you've used a command line before: Google Compute Platform, because they provide $300 free credit, and have everything pre-installed for you
-- If you want to avoid the command-line, try Salamander, which works great and doesn't cost much
+- If you want to avoid the command-line, try Paperspace Gradient, which works great and doesn't cost much - in fact they even have a free option!
 - If you don't have a credit card to sign up for the above services, use Colab, which is free, but has a few minor rough edges and incompatibilities.
 
 #### Ready to run: "One-click" Jupyter
 
 These are the easiest to use; they've got all the software, data, and lessons preinstalled for you. They're a little less flexible than "full servers" (below), but are the simplest way to get started.
 
-- [Salamander](/start_salamander.html) (instant approval; no installation required; includes full terminal access; $0.38 an hour; $75 free credit for students)
+- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, free and paid options)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
-- [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, $0.59 an hour; $10 free credit)
+- [Onepanel](/start_onepanel.html); (no installation required, $0.29/hour + storage)
 - [SageMaker](/start_sagemaker.html); (requires wait for approval, not quite "one click"... but pretty close, $1.26 an hour + storage)
 - [Kaggle Kernels](/start_kaggle.html); (Instant Launch, No setup required, Free, not always up to date and not as well supported by fast.ai)
 - [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
-- [Crestle](/start_crestle.html); (instant approval, no installation required, $0.78 an hour (CPU), $2.40 an hour (GPU)
 - [易学智能](/start_easyaiforum.html); (实时可用，无需安装，￥1/h(CPU)，￥2/h(1050ti)，￥5/h(1080ti)，内置大量数据集，专为AI开发设计)
 
 #### Ready to run: Full servers

@@ -92,9 +92,13 @@ Pick cloud project to use:
  ...
  Please enter your numeric choice:
 ```
-Just enter the number next to the project you created on step 1. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
+Just enter the number next to the project you created on step 1. If you just created your account it will likely have a generated random name for its Project ID. If you select the choice "Create a new project", you will be reminded you also have to run "gcloud projects create my-project-3".
 
-Lastly, you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
+In order to set a default region you'll need to enable the Compute Engine API, the CLI will output a link you can follow to do this.
+
+If you've enabled the Compute Engine API you'll be asked if you want to choose a default region, choose us-west1-b if you don't have any particular preference, as it will make the command to connect to this server easier.
+
+You can modify this later with `gcloud config set compute/zone NAME`
 
 Once this is done, you should see this message on your terminal:
 ```
@@ -115,7 +119,7 @@ If you choose the budget compute option, please replace the values of the parame
 
 ```bash
 export IMAGE_FAMILY="pytorch-latest-gpu" # or "pytorch-latest-cpu" for non-GPU instances
-export ZONE="us-west2-b" # budget: "us-west1-b"
+export ZONE="us-west1-b"
 export INSTANCE_NAME="my-fastai-instance"
 export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"
 
@@ -125,7 +129,7 @@ gcloud compute instances create $INSTANCE_NAME \
         --image-family=$IMAGE_FAMILY \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-        --accelerator="type=nvidia-tesla-p4,count=1" \
+        --accelerator="type=nvidia-tesla-p100,count=1" \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=200GB \
         --metadata="install-nvidia-driver=True" \
@@ -139,7 +143,7 @@ ERROR: (gcloud.compute.instances.create) Could not fetch resource:
 You need to adjust your GPU quotas.
 1. Go to [Google Cloud Quotas Page](https://console.cloud.google.com/iam-admin/quotas).
 2. If you signed up with a free tier account, you first need to upgrade to a paid account; do so by clicking the "Upgrade account" button at the top right of the page. This won't affect your $300 credit.
-3. In filter type, select metric to be GPUs (all regions) and Location as Global.
+3. In the "Metrics" dropdown, select "GPUs (all regions)" and under "Locations" select "Global" (or "All locations").
 4. Click edit quotas and select the quota to edit (GPUs All Regions). Set the new quota limit to 1 or more.
 Your request may require confirmation, which Google claims typically takes two business days to get.
 

@@ -45,7 +45,7 @@ The following input is needed:
 1. Subscription - If you have more than one subscription, select the one on which the machine is to be created and billed.
 2. Resource group - you can create a new one or use an existing group.
 3. Location - Select the data center that's most appropriate. For fastest network access, it's the data center that has most of your data or is closest to your physical location. Standard_NC6 GPU instances are available in WestUS2, SouthCentral, NorthCentral and WestEurope.
-4. Admin Username - The admin account ID to sign in to the DSVM.
+4. Admin Username - The admin account ID to sign in to the DSVM (make lowercase or Jupyter Hub login will fail with '500 Internal Server Error').
 5. Admin Password - The admin account password.
 6. Vm Name - The name of the data science server you're creating.
 7. Vm Size - Select the desired DSVM size according to your requirements and [cost](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/).
@@ -69,9 +69,10 @@ To access the DSVM created above and run the course notebooks, find the DSVM ins
  
 * For Linux,
 	* Copy the IP address from the page above.
-	* Enter the IP address in a browser as https://<<ip address>>:8000 to access Jupyter notebooks through the built-in Jupyterhub. Jupyter is supported on Chrome, Firefox or Safari. **Note**: You will see a certificate warning since the Jupyter server on the DSVM has a self signed certificate by default. You can skip through this certificate warning on your browser. 
+	* Enter the IP address in a browser as ``https://<<ip address>>:8000`` to access Jupyter notebooks through the built-in Jupyterhub. Jupyter is supported on Chrome, Firefox or Safari. **Note**: You will see a certificate warning since the Jupyter server on the DSVM has a self signed certificate by default. You can skip through this certificate warning on your browser. 
 	* You will need to provide the usename and password you provided in the creation step.
 	* To access the notebooks, navigate to fastai and then to course-v3 directory as shown below. 
+	* If you don't see the ``/fastai/`` dir after connecting to Jupyterhub, please wait. The extension may still be installing. 
 
 	<img alt="JupyterLinux" src="/images/azure/JupyterLinux.png" class="screenshot">
 
