@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { TiArrowRight } from 'react-icons/ti';
@@ -52,113 +52,96 @@ const StyledResult = styled.span`
 
 const CACHE = {}
 
-class TranscriptBrowser extends Component {
-  state = {
-    search: '',
-    transcript: '',
-    rendered: null,
-  };
+const fetchTranscript = async (lesson) => {
+  const cache = CACHE[lesson];
+  if (cache) return cache;
+  
+  const url = TRANSCRIPT_URLS[lesson]
+  if (!url) return null;
+  
+  const res = await fetch(url)
+  const text = await res.json();
+  CACHE[lesson] = text;
+  
+  return text;
+}
 
-  componentDidMount() {
-    this.fetchTranscript()
-  }
+const TranscriptUnavailable = () => (
+  <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+    <p style={{ color: '#444' }}>The transcript for this lesson is currently unavailable</p>
+  </div>
+)
 
-  componentDidUpdate() {
-    if (this.props.lesson !== this.state.rendered)this.fetchTranscript()
-  }
+const ResultText = ({ result }) => {
+  const [occurenceStart, occurenceLength] = result.occurence;
+  const occurenceEnd = occurenceStart + occurenceLength;
+  
+  const start = result.sentence.slice(0, occurenceStart);
+  const occurence = result.sentence.slice(occurenceStart, occurenceEnd);
+  const end = result.sentence.slice(occurenceEnd, result.sentence.length-1);
+  
+  return <p>{ start }<b>{ occurence }</b>{ end }</p>
+ }
 
-  fetchTranscript() {
-    const cached = CACHE[this.props.lesson]
-    if (cached) return this.setState({ transcript: cached, rendered: this.props.lesson })
-    /*
-     * We `fetch` our own resource (a Webpack-resolved relative URL) so that React can parse the contents of
-     * referenced markdown file without any fancy configuration in Webpack.
-     */
-    const toFetch = TRANSCRIPT_URLS[this.props.lesson]
-    if (!toFetch) return this.setState({
-      transcript: null,
-      rendered: this.props.lesson,
-    })
-    fetch(toFetch)
-      .then(res => res.json())
-      .then(rawMd => CACHE[this.props.lesson] = rawMd)
-      .then(transcript => this.setState({
-        transcript,
-        rendered: this.props.lesson
-      }))
-      .catch(console.error)
-  }
+const Result = ({ result }) => (
+  <StyledResult
+    onClick={result.goto}
+    onKeyUp={result.goto}
+    role="button"
+    tabIndex="0">
+    <div>
+      <ResultText result={result} />
+      <span>{ result.moment }</span>
+    </div>
+    <div>Seek <TiArrowRight /></div>
+  </StyledResult>
+);
 
+const TranscriptBrowser = ({ lesson, goToMoment }) => {
+  const [search, setSearch] = useState('');
+  const [transcript, setTranscript] = useState(null);
+  
+  useEffect(() => {
+    fetchTranscript(lesson).then(text => {
+      setTranscript(text);
+    }).catch(err => console.error(err))
+  }, [lesson]);
 
-  get searchResults() {
-    const { search, transcript } = this.state;
-    if (!transcript) return []
+  const handleChange = useCallback(evt => setSearch(evt.target.value), []);
+  
+  const results = useMemo(() => {
+    if (!transcript) return [];
     return Object.keys(transcript)
-      .filter((timestamp) =>
-        transcript[timestamp].toLowerCase().includes(search),
-      )
-      .map((timestamp) => ({
-        moment: timestamp,
-        sentence: transcript[timestamp],
+      .map(timestamp => ({
+        timestamp,
+        occurence: [transcript[timestamp].toLowerCase().indexOf(search), search.length]
+      }))
+      .filter(result => result.occurence[0] !== -1)
+      .map(result => ({
+        moment: result.timestamp,
+        sentence: transcript[result.timestamp],
+        goto: () => goToMoment(result.timestamp),
+        occurence: result.occurence
       }))
       .slice(0, 12);
-  }
+  }, [search]);
 
-  clearSearch = () => {
-    this.setState({ search: '' })
-  }
-
-  handleChange = (e) => {
-    const { value } = e.target;
-    this.setState({ search: value.toLowerCase() });
-  };
-
-  get results() {
-    const { goToMoment } = this.props;
-    const { transcript } = this.state;
-    if (!transcript) return <span style={{ marginLeft: '25%' }}>Transcript coming soon...</span>
-    if (this.searchResults.length) {
-      return this.searchResults.map((result) => {
-        const onClick = () => goToMoment(result.moment);
-        return (
-          <StyledResult
-            key={result.moment}
-            onClick={onClick}
-            onKeyUp={onClick}
-            role="button"
-            tabIndex="0"
-          >
-            <div>
-              <p>{ result.sentence }</p>
-              <span>{ result.moment }</span>
-            </div>
-            <div>Seek <TiArrowRight /></div>
-          </StyledResult>
-        );
-      })
-    }
-    return (
-      'No results found.'
-    )
-  }
-
-  render() {
-    const { search, transcript } = this.state;
-    return (
-      <Fragment>
-        <Search
-          search={search}
-          handleChange={this.handleChange}
-          transcript={this.getTranscript}
-        />
-        <StyledBrowser>
-          { transcript && <SearchResults>
-            {this.results}
-          </SearchResults> }
-        </StyledBrowser>
-      </Fragment>
-    )
-  }
+  return (
+    <>
+      <Search
+        search={search}
+        handleChange={handleChange}
+        disabled={!transcript} />
+      <StyledBrowser>
+        { !transcript && <TranscriptUnavailable /> }
+        { (transcript && search.length > 0) && (
+          <SearchResults>
+            { results.map(result => <Result key={result.moment} result={result} /> ) }
+          </SearchResults>
+        )}
+      </StyledBrowser>
+    </>
+  )
 }
 
 TranscriptBrowser.propTypes = {

@@ -19,15 +19,19 @@ const SearchContainer = styled.div`
       font-weight: normal;
       font-family: 'Karla', sans-serif;
     }
+    &[disabled]::placeholder {
+      color: transparent;
+    }
   }
 `
 
-const Search = ({ search, handleChange }) => (
+const Search = ({ search, handleChange, ...rest }) => (
   <SearchContainer>
     <input
       value={search}
       onChange={handleChange}
       placeholder="Search transcript"
+      {...rest}
     />
   </SearchContainer>
 );
