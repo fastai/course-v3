@@ -104,6 +104,7 @@ const TranscriptBrowser = ({ lesson, goToMoment }) => {
   useEffect(() => {
     fetchTranscript(lesson).then(text => {
       setTranscript(text);
+      setSearch('')
     }).catch(err => console.error(err))
   }, [lesson]);
 
