@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { FiExternalLink } from 'react-icons/fi';
 
 import logo from '../images/logo.png'
-// https://undraw.co/license
-import robot from '../images/undraw_Artificial_intelligence_oyxx.svg'; 
 import { LESSONS_NAMES, quickLinks } from '../data';
 import { standard } from '../utils/easing';
 
@@ -51,10 +49,6 @@ const QuickLinks = styled.div`
   h2 {
     margin: 8px 0;
   }
-  background-image: url(${robot});
-  background-size: 250px;
-  background-position: 20px 20px;
-  background-repeat: no-repeat;
 `;
 
 const LessonsList = ({ selectedLesson, selectedPart }) => {
