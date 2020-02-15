@@ -91,7 +91,7 @@ const LessonsPanel = ({ lesson, part }) => (
     <QuickLinks>
       <h2>Quick Links</h2>
         {quickLinks.map(link => (
-          <a href={link.href} target="_blank" rel="noopener noreferrer">
+          <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
             <p>{link.title} <FiExternalLink /></p>
           </a>
         ))}
