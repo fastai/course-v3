@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai';
 
 import Panel from './Panel';
@@ -46,7 +47,7 @@ const RightToggleBtn = (props) => (
     {...props} />
 );
 
-export const Layout = ({ LeftPanelContent, RightPanelContent, children }) => {
+const Layout = ({ LeftPanelContent, RightPanelContent, children }) => {
   const [leftOpened, setLeftOpened] = useState(true);
   const [rightOpened, setRightOpened] = useState(true);
   
@@ -71,3 +72,11 @@ export const Layout = ({ LeftPanelContent, RightPanelContent, children }) => {
     </Container>
   )
 }
+
+Layout.propTypes = {
+  LeftPanelContent: PropTypes.element,
+  RightPanelContent: PropTypes.element,
+  children: PropTypes.element
+}
+
+export default Layout

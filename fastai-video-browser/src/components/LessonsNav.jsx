@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FiExternalLink } from 'react-icons/fi';
 
@@ -97,5 +98,10 @@ const LessonsPanel = ({ lesson, part }) => (
     </QuickLinks>
   </div>
 )
+
+LessonsPanel.propTypes = {
+  lesson: PropTypes.number.isRequired,
+  part: PropTypes.oneOf([0, 1]).isRequired
+}
 
 export default LessonsPanel

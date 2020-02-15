@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+import PropTypes from 'prop-types';
 
 import CodeBlock from './CodeBlock';
 import { NOTES_URLS } from '../data';
@@ -42,6 +43,10 @@ const Notes = ({ lesson }) => {
   return (
     <StyledMarkdown linkTarget="_blank" source={notes} renderers={{ code: CodeBlock }} />
   )
+}
+
+Notes.propTypes = {
+  lesson: PropTypes.number.isRequired
 }
 
 export default Notes

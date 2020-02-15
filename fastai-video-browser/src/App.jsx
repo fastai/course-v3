@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import qs from 'query-string';
 
+import TranscriptBrowser from './components/TranscriptBrowser';
+import TabbedViews from './components/Layout/TabbedViews';
 import VideoPlayer from './components/VideoPlayer';
 import LessonsNav from './components/LessonsNav';
+import Layout from './components/Layout';
 import Notes from './components/Notes';
-import TranscriptBrowser from './components/TranscriptBrowser';
 import { timestampToSeconds } from './utils/time'
-import qs from 'query-string';
-import { Layout } from './components/Layout';
 import './App.css';
-import TabbedViews from './components/Layout/TabbedViews';
 
 
 const App = () => {

@@ -137,7 +137,9 @@ class TranscriptBrowser extends Component {
         );
       })
     }
-    return 'No results found.'
+    return (
+      'No results found.'
+    )
   }
 
   render() {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { standard } from '../../utils/easing';
 
@@ -66,7 +67,7 @@ const Tab = styled.div`
   `}
 `;
 
-export default ({ children }) => {
+const TabbedViews = ({ children }) => {
   const [openedTab, setOpenedTab] = useState(0);
 
   return (
@@ -87,3 +88,9 @@ export default ({ children }) => {
     </Container>
   )
 }
+
+TabbedViews.propTypes = {
+  children: PropTypes.element
+}
+
+export default TabbedViews;
