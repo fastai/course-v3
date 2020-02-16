@@ -72,15 +72,16 @@ const TranscriptUnavailable = () => (
   </div>
 )
 
+// Bolden the first occurence of the query in the search result 
 const ResultText = ({ result }) => {
-  const [occurenceStart, occurenceLength] = result.occurence;
-  const occurenceEnd = occurenceStart + occurenceLength;
+  const [start, length] = result.occurence;
+  const end = start + length;
   
-  const start = result.sentence.slice(0, occurenceStart);
-  const occurence = result.sentence.slice(occurenceStart, occurenceEnd);
-  const end = result.sentence.slice(occurenceEnd, result.sentence.length-1);
+  const startSlice = result.sentence.slice(0, start);
+  const occurence = result.sentence.slice(start, end);
+  const endSlice = result.sentence.slice(end, result.sentence.length);
   
-  return <p>{ start }<b>{ occurence }</b>{ end }</p>
+  return <p>{ startSlice }<b>{ occurence }</b>{ endSlice }</p>
  }
 
 const Result = ({ result }) => (
