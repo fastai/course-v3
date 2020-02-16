@@ -126,7 +126,7 @@ const TranscriptBrowser = ({ lesson, goToMoment }) => {
         occurence: result.occurence
       }))
       .slice(0, 12);
-  }, [search]);
+  }, [search, goToMoment, transcript]);
 
   return (
     <>
