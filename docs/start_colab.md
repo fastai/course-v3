@@ -56,11 +56,11 @@ If you run a script which creates/ downloads files, the files will NOT persist a
 
 Look for the "Mount Drive" button on the Files sidebar:
 
-    <img alt="Mount Drive" src="/images/colab/11.png" height="480" class="screenshot">
+<img alt="Mount Drive" src="/images/colab/11.png" height="480" class="screenshot">
 
 After clicking the button you'll be asked to authorize Colaboratory to access your Google Drive. Once you do, your notebook will automatically mount that drive whenever the runtime is loaded, and the sidebar will show the contents of your drive. You can always choose to unmount the drive if you wish:
 
-    <img alt="Mount Drive" src="/images/colab/12.png" height="480" class="screenshot">
+<img alt="Unmount Drive" src="/images/colab/12.png" height="480" class="screenshot">
 
 Accessing data on your drive is then simply a matter of pointing at the right path. Add the following code snippet at the beginning of every notebook.
 ```python 
