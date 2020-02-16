@@ -1,7 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai';
+import { useLocalStorage } from 'react-use';
 
 import Panel from './Panel';
 import ToggleBtn from './ToggleBtn';
@@ -48,25 +49,24 @@ const RightToggleBtn = (props) => (
 );
 
 const Layout = ({ LeftPanelContent, RightPanelContent, children }) => {
-  const [leftOpened, setLeftOpened] = useState(true);
-  const [rightOpened, setRightOpened] = useState(true);
+  const [panelState, setPanelState] = useLocalStorage('panel-state', { left: true, right: true })
   
-  const toggleLeft = useCallback(() => setLeftOpened(!leftOpened), [leftOpened]);
-  const toggleRight = useCallback(() => setRightOpened(!rightOpened), [rightOpened]);
+  const toggleLeft = useCallback(() => setPanelState({ ...panelState, left: !panelState.left }), [panelState, setPanelState]);
+  const toggleRight = useCallback(() => setPanelState({ ...panelState, right: !panelState.right }), [panelState, setPanelState]);
 
   return (
     <Container>
-      <Panel shown={leftOpened} width={'12rem'}>
+      <Panel shown={panelState.left} width={'12rem'}>
         { LeftPanelContent }
       </Panel>
       <MainContentContainer>
-        <LeftToggleBtn shown={leftOpened} onClick={toggleLeft} />
+        <LeftToggleBtn shown={panelState.left} onClick={toggleLeft} />
         <MainContent>
           { children }
         </MainContent>
-        <RightToggleBtn shown={rightOpened} onClick={toggleRight} />
+        <RightToggleBtn shown={panelState.right} onClick={toggleRight} />
       </MainContentContainer>
-      <Panel shown={rightOpened} width={'35rem'}>
+      <Panel shown={panelState.right} width={'35rem'}>
         { RightPanelContent }
       </Panel>
     </Container>
