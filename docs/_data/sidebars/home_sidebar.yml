@@ -12,7 +12,7 @@ entries:
     - output: web
       title: Intro to GPUs
       url: /gpu_tutorial.html
-  - title: Lessons
+  - title: Lessons (Part 1)
     output: web
     folderitems:
     - output: web
@@ -36,24 +36,51 @@ entries:
     - output: web
       title: 7 - Resnet; U-net; GANs
       url: /videos?lesson=7
+  - title: Lessons (Part 2)
+    output: web
+    folderitems:
+    - output: web
+      title: Part 2 overview
+      url: /part2
+    - output: web
+      title: 8 - Backprop from the foundations
+      url: /videos?lesson=8
+    - output: web
+      title: 9 - The training in depth
+      url: /videos?lesson=9
+    - output: web
+      title: 10 - Looking inside the model
+      url: /videos?lesson=10
+    - output: web
+      title: 11 - Data Block API; generic optimizer
+      url: /videos?lesson=11
+    - output: web
+      title: 12 - Advanced training; ULMFiT
+      url: /videos?lesson=12
+    - output: web
+      title: "13 - Swift: Deep Learning Basics"
+      url: /videos?lesson=13
+    - output: web
+      title: "14 - Swift: Putting it all together"
+      url: /videos?lesson=14
   - title: Server setup
     output: web
     folderitems:
     - output: web
-      title: Crestle.ai (Easy)
-      url: /start_crestle.html
-    - output: web
-      title: Salamander (Easy)
-      url: /start_salamander.html
-    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
+    - output: web
+      title: Onepanel (Easy)
+      url: /start_onepanel.html
     - output: web
       title: FloydHub (Easy)
       url: /start_floydhub.html
     - output: web
       title: Kaggle.com (Easy)
       url: /start_kaggle.html
+    - output: web
+      title: 易学智能 (Easy)
+      url: /start_easyaiforum.html
     - output: web
       title: Google Cloud (Intermediate)
       url: /start_gcp.html
@@ -73,17 +100,14 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: Crestle
-      url: /update_crestle.html
-    - output: web
       title: Gradient
       url: /update_gradient.html
     - output: web
+      title: Onepanel
+      url: /update_onepanel.html
+    - output: web
       title: Salamander
       url: /update_salamander.html
-    - output: web
-      title: FloydHub
-      url: /update_floydhub.html
     - output: web
       title: Kaggle
       url: /update_kaggle.html
@@ -94,6 +118,9 @@ entries:
       title: SageMaker
       url: /update_sagemaker.html
     - output: web
+      title: FloydHub
+      url: /update_floydhub.html
+    - output: web
       title: Google Cloud
       url: /update_gcp.html
     - output: web
@@ -102,6 +129,9 @@ entries:
     - output: web
       title: Azure
       url: /update_azure.html
+    - output: web
+      title: 易学智能 
+      url: /update_easyaiforum.html
   - title: Production
     output: web
     folderitems:

@@ -9,4 +9,5 @@ fi
 
 echo Updating fastai...
 pip install fastai --upgrade > /dev/null
+
 echo Done.

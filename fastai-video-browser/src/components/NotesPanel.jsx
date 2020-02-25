@@ -12,6 +12,13 @@ const NOTES = {
   5: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-5.md',
   6: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-6.md',
   7: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-1-7.md',
+  8: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-8.md',
+  9: 'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-9.md',
+  10:'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-10.md',
+  11:'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-11.md',
+  12:'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-12.md',
+  13:'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-13.md',
+  14:'https://raw.githubusercontent.com/fastai/course-v3/master/files/dl-2019/notes/notes-2-14.md',
 }
 
 const StyledPanel = styled.section`

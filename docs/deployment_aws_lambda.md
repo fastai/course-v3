@@ -132,7 +132,12 @@ You may modify this file based on your application to take different input/outpu
 
 You can configure your Lambda function to pull in additional code and content in the form of [Lambda layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html). A layer is a ZIP archive that contains libraries, a custom runtime, or other dependencies. With layers, you can use libraries in your function without needing to include them in your deployment package.
 
-In this project we will be using a publicly accessible Lambda layer that contains the necessary PyTorch libraries needed to run our application. These layers are deployed to the following regions: *us-west-2,us-east-1,us-east-2,eu-west-1,ap-southeast-1,ap-southeast-2,ap-northeast-1,eu-central-1*. The default region is *us-east-1*.
+In this project we will be using a publicly accessible Lambda layer that contains the necessary PyTorch libraries needed to run our application. These layers are deployed to the following regions: *us-west-2,us-east-1,us-east-2,eu-west-1,ap-southeast-1,ap-southeast-2,ap-northeast-1,eu-central-1*. The default region is *us-east-1*. There are 2 versions of the PyTorch lambda layer with different versions of PyTorch shown in the table below.
+
+| Layer ARN | PyTorch Version |
+|-----------|-----------------|
+| arn:aws:lambda:AWS_REGION:934676248949:layer:pytorchv1-py36:1 | PyTorch 1.0.1 |
+| arn:aws:lambda:AWS_REGION:934676248949:layer:pytorchv1-py36:2 | PyTorch 1.1.0 |
 
 If you are not running your model in the default region (i.e. *us-east-1*) You will need to update the file `template.yaml` with the correct region code by replacing the text `AWS_REGION` with the correct region (e.g. us-west-2).
 
@@ -140,7 +145,7 @@ If you are not running your model in the default region (i.e. *us-east-1*) You w
 ...
   LambdaLayerArn:
     Type: String
-    Default: "arn:aws:lambda:AWS_REGION:934676248949:layer:pytorchv1-py36:1"
+    Default: "arn:aws:lambda:AWS_REGION:934676248949:layer:pytorchv1-py36:2"
         ...
 ```
 

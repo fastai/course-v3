@@ -1,0 +1,3 @@
+[submodule "gcp-notebook-executor"]
+	path = gcp-notebook-executor
+	url = https://github.com/gclouduniverse/gcp-notebook-executor

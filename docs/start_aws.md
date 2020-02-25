@@ -87,7 +87,7 @@ Log in to the AWS console then search for EC2 in the query bar or click 'EC2' in
 
 <img alt="launch instance" src="/images/aws/launch_instance.png" class="screenshot">
 
-Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 16.0
+Search for 'deep learning' and select the first option: Deep Learning AMI (Ubuntu) Version 24.1
 
 <img alt="amiubuntu" src="/images/aws/amiubuntu.png" class="screenshot">
 
@@ -136,7 +136,7 @@ Then run these commands to install the necessary packages for experimenting with
 
 ``` bash
 conda update conda
-conda install -c pytorch -c fastai fastai pytorch torchvision cuda92
+conda install -c pytorch -c fastai fastai pytorch 
 ```
 
 Next move into the directory where you will find the materials for the course by running:
