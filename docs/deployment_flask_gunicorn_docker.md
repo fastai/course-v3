@@ -3,7 +3,7 @@ title: "Deploying on a server using Flask, Gunicorn and a domain name with SSL c
 sidebar: home_sidebar
 ---
 
-This is a guide to deploy your trained models create with Fast.ai v2 by combining Flask, the Gunicorn server and a domain name with an SSL certificate. An example using Fast.ai v2 is available at this repo](https://github.com/javismiles/bear-detector-flask-deploy) that uses Jeremy's Bear Image Classification model from Lesson 2. 
+This is a guide to deploy your trained models created with Fast.ai v2 by combining Flask, the Gunicorn server and a domain name with an SSL certificate. An example using Fast.ai v2 is available at this repo](https://github.com/javismiles/bear-detector-flask-deploy) that uses Jeremy's Bear Image Classification model from Lesson 2. 
 
 **An example jupyter notebook that trains the model used by the flask app can be accessed here:**
 [Jupyter Notebook](https://github.com/javismiles/bear-detector-flask-deploy/blob/master/resources/model.ipynb)
@@ -301,9 +301,11 @@ docker image pull  javismiles/beardetector:latest  (this is the example one)
 docker container run -d --rm -p 8500:8500 javismiles/beardetector:latest
 
 
-**Then you can access it on:**
+**Then you can access your dockerized app on:**
 
 http://localhost:8500
+
+
 
 ---
 
