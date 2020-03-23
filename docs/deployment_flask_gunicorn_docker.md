@@ -8,7 +8,7 @@ This is a guide to deploy your trained models created with Fast.ai v2 by combini
 **An example jupyter notebook that trains the model used by the flask app can be accessed here:**
 [Jupyter Notebook](https://github.com/javismiles/bear-detector-flask-deploy/blob/master/resources/model.ipynb)
 
-![Image of cute bear](/images/flask_gunicorn_nginx/cutebear.jpg)
+![Image of cute bear](/docs/images/flask_gunicorn_nginx/cutebear.jpg)
 
 The objective of this project is to deploy a Flask app that uses a model trained with the Fast.ai v2 library following an example in the upcoming book &quot;Deep Learning for Coders with fastai and PyTorch: AI Applications Without a PhD&quot; by Jeremy Howard and Sylvain Gugger.
 
