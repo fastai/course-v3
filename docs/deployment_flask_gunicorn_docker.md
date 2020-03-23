@@ -3,16 +3,16 @@ title: "Deploying on a server using Flask, Gunicorn and a domain name with SSL c
 sidebar: home_sidebar
 ---
 
-This is a guide to deploy your trained models by combining Flask, the Gunicorn server and a domain name with an SSL certificate. An example using Fast.ai v2 is available at this repo](https://github.com/javismiles/bear-detector-flask-deploy) that uses Jeremy's Bear Image Classification model from Lesson 2. 
+This is a guide to deploy your trained models create with Fast.ai v2 by combining Flask, the Gunicorn server and a domain name with an SSL certificate. An example using Fast.ai v2 is available at this repo](https://github.com/javismiles/bear-detector-flask-deploy) that uses Jeremy's Bear Image Classification model from Lesson 2. 
 
 **An example jupyter notebook that trains the model used by the flask app can be accessed here:**
 [Jupyter Notebook](https://github.com/javismiles/bear-detector-flask-deploy/blob/master/resources/model.ipynb)
 
-![Image of cute bear](https://github.com/javismiles/bear-detector-flask-deploy/blob/master/resources/bears/cutebear.jpg?raw=true)
+![Image of cute bear](/images/flask_gunicorn_nginx/cutebear.jpg)
 
 The objective of this project is to deploy a Flask app that uses a model trained with the Fast.ai v2 library following an example in the upcoming book &quot;Deep Learning for Coders with fastai and PyTorch: AI Applications Without a PhD&quot; by Jeremy Howard and Sylvain Gugger.
 
-The most important part of the project is testing a deployment process that combines a Flask app, the Gunicorn server, the Nginx server and a custom domain name with an SSL certificate, all installed on a dedicated server. Finally, you can also dockerize your app to make it portable and instructions to dockerize the app are also at the end of this article.
+The most important part of the project is testing a deployment process that combines a Flask app, the Gunicorn server, the Nginx server and a custom domain name with an SSL certificate, all installed on a dedicated server. (See the app deployed at: https://bear.volandino.com). Finally, you can also dockerize your app to make it portable and instructions to dockerize the app are also at the end of this article (docker image for testing is available at Docker Hub "docker image pull javismiles/beardetector:latest").
 
 Below I explain the different deployment stages to deploy this repo combining the pieces mentioned above.
 
@@ -23,6 +23,15 @@ This workflow has been tested on:
 **Name of your flask app:** app
 
 **User installing this:** root (you can use any other and it is better to use a non-root user)
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+**Requirements:**
+- SSH access to a machine where you will install the app and its dependencies.
+- A domain name with an SSL certificate if you want to connect your app to a domain. You can get free SSL domains at letsencrypt.org
+- Docker installed in your server if you want to dockerize your app as well.
+
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -214,7 +223,13 @@ ___________________________________________________________
 
 You can also dockerize your bear app.
 
-This allows you to quickly launch it in any environment or operating system, making it truly portable. (In the instructions below, I use the dockerhub repo and image name "javismiles/beardetector:latest", you should use your own dockerhub repo and image name instead.)
+This allows you to quickly launch it in any environment or operating system, making it truly portable. (In the instructions below, I use as an example the dockerhub repo and image name "javismiles/beardetector:latest", you should use your own dockerhub repo and image name instead.)
+
+
+**Requirements:**
+- Docker installed in your server
+- A hub.docker.com account if you want to upload your image to Docker Hub 
+
 
 **To dockerize the app, create a Dockerfile at the root of the project:**
 ```
@@ -231,7 +246,6 @@ COPY *.py ./
 COPY templates ./templates/
 
 RUN mkdir resources/tmp
-RUN mkdir resources/tmp2
 
 CMD ["gunicorn"  , "-b", "0.0.0.0:8500", "wsgi"]
 
@@ -269,10 +283,10 @@ http://localhost:8500
 
 **Attach the app to a domain with an ssl certificate**
 
-If you want to attach the app to a domain name with an ssl certificate, you can do the same we did in the deployment instructions for Flask and Gunicorn, editing the nginx.conf file of the domain name you want to use, pointing it to the port where you have launched the docker container.
+If you want to attach the app to a domain name with an ssl certificate, you can do the same we did in the deployment instructions for Flask and Gunicorn, editing the nginx.conf file of the domain name you want to use, pointing it to the port where you have launched the docker container (see instructions above for the same procedure done in detail for the flask deployment)
 
 
-**Upload the image to your account un hub.docker.com, so that you can pull it from anywhere else and launch it anywhere else:**
+**Upload the image to your account on hub.docker.com, so that you can pull it from anywhere else and launch it anywhere else:**
 
 docker image push nameOfYourDockerhubRepo/NameOfYourImage:ImageTag  
 
