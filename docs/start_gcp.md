@@ -119,7 +119,7 @@ If you choose the budget compute option, please replace the values of the parame
 export IMAGE_FAMILY="pytorch-latest-gpu" # or "pytorch-latest-cpu" for non-GPU instances
 export ZONE="us-west1-b"
 export INSTANCE_NAME="my-fastai-instance"
-export INSTANCE_TYPE="n2d-highmem-8" # budget: "n2d-highmem-4"
+export INSTANCE_TYPE="n1d-highmem-8" # budget: "n1d-highmem-4"
 
 # budget: 'type=nvidia-tesla-T4,count=1'
 gcloud compute instances create $INSTANCE_NAME \
@@ -133,6 +133,10 @@ gcloud compute instances create $INSTANCE_NAME \
         --metadata="install-nvidia-driver=True" \
         --preemptible
 ```
+Note that not all instance types and GPUs are available in all regions. You may need to consult availability zones for both [CPUs](https://cloud.google.com/compute/docs/regions-zones) and [GPUs](https://cloud.google.com/compute/docs/gpus) to find an available combination.
+
+Also, [GPUs can currently only be attached to N1 machine types.](https://cloud.google.com/compute/docs/machine-types#gpus)
+
 If you get an error saying:
 ```bash
 ERROR: (gcloud.compute.instances.create) Could not fetch resource:
