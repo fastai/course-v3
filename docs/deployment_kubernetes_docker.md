@@ -6,12 +6,14 @@ sidebar: home_sidebar
 
 # Kubernetes Deployment
 
-In this guide, you will deploy the pet classification model from lesson one as a REST
+This guide demonstrates how to deploy the pet classification model from lesson one as a REST
 API server to a Kubernetes cluster using BentoML.
 
 ## Setup
 
-1. A Kubernetes enabled cluster or machine.
+Before starting this tutorial, make sure you have the following:
+
+* A Kubernetes enabled cluster or machine.
     * This guide uses Kubernetes' recommend learning environment, `minikube`.
     `minikube` installation: https://kubernetes.io/docs/setup/learning-environment/minikube/
     * learn more about kubernetes installation: https://kubernetes.io/docs/setup/
@@ -20,15 +22,40 @@ API server to a Kubernetes cluster using BentoML.
          * Google: https://cloud.google.com/kubernetes-engine/
          * Azure: https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes
     * `kubectl` CLI tool: https://kubernetes.io/docs/tasks/tools/install-kubectl/
-2. Docker and Docker Hub is properly installed and configured on your local system
+* Docker and Docker Hub is properly installed and configured on your local system
     * Docker installation instruction: https://www.docker.com/get-started
     * Docker Hub: https://hub.docker.com
-3. Python (3.6 or above) and required packages: `bentoml`, `fastai`, `torch`, and `torchvision`
+* Python (3.6 or above) and required packages: `bentoml`, `fastai`, `torch`, and `torchvision`
     * ```pip install bentoml fastai==1.0.57 torch==1.4.0 torchvision=0.5.0```
 
 ## Build model API server with BentoML
 
-Run the following code from the Fastai lesson one notebook:
+The following code defines a model server using `Fastai` model, asks BentoML to figure out
+the required PyPi packages automatically. It also defines an API called `predict`, that
+is the entry point to access this model server. The API expects a `Fastai`
+`ImageData` object as its input data.
+
+```python
+# pet_classification.py file
+
+from bentoml import BentoService, api, env, artifacts
+from bentoml.artifact import FastaiModelArtifact
+from bentoml.handlers import FastaiImageHandler
+
+@artifacts([FastaiModelArtifact('pet_classifier')])
+@env((auto_pip_dependencies=True)
+class PetClassification(BentoService):
+
+    @api(FastaiImageHandler)
+    def predict(self, image):
+        result = self.artifacts.pet_classifier.predict(image)
+        return str(result)
+```
+
+Run the following code to create a BentoService SavedBundle with the pet classification
+model from Fastai lesson one notebook. A BentoService SavedBundle is a versioned file archive
+ready for production deployment. The archive contains the model service defined above, python code
+dependencies, PyPi dependencies, and the trained pet classification model:
 
 ```python
 from fastai.vision import *
@@ -52,40 +79,10 @@ learn = create_cnn(data, models.resnet50, metrics=error_rate)
 learn.fit_one_cycle(8)
 learn.unfreeze()
 learn.fit_one_cycle(3, max_lr=slice(1e-6,1e-4))
-```
 
-Use BentoML to create an API model server for the pet classification model:
-
-```python
-# pet_classification.py file
-
-from bentoml import BentoService, api, env, artifacts
-from bentoml.artifact import FastaiModelArtifact
-from bentoml.handlers import FastaiImageHandler
-
-@artifacts([FastaiModelArtifact('pet_classifier')])
-@env((auto_pip_dependencies=True)
-class PetClassification(BentoService):
-
-    @api(FastaiImageHandler)
-    def predict(self, image):
-        result = self.artifacts.pet_classifier.predict(image)
-        return str(result)
-```
-
-This code defines a model server using `Fastai` model, asks BentoML to figure out
-the required PyPi packages automatically. It also defines an API called `predict`, that
-is the entry point to access this model server. The API expects a `Fastai`
-`ImageData` object as its input data.
-
-Run the following code to create a BentoService SavedBundle with the pet classification
-model. A BentoService SavedBundle is a versioned file archive ready for production
-deployment. The archive contains the model service defined above, python code
-dependencies and PyPi dependencies, and the trained pet classification model:
-
-```python
-# Create a PetClassification instance
 from pet_classification import PetClassification
+
+# Create a PetClassification instance
 service = PetClassification()
 
 #  Pack the newly trained model artifact
@@ -94,19 +91,18 @@ service.pack('pet_classifier', learn)
 # Save the prediction service to disk for model serving
 service.save()
 ```
-Use BentoML CLI to start a local API model server:
+
+After saving the BentoService instance, you can now start a REST API server with the
+model trained and test the API server locally:
 
 ```bash
+# Start BentoML API server:
 bentoml serve PetClassification:latest
 ```
 
-BentoML automatically process the incoming data into required data format defined in the
-API. For the pet classifier BentoService defined above, incoming data will transform to
-fastai `ImageData` object.
-
-Use `curl` request in another terminal to get the prediction result:
-
 ```bash
+# Send test request
+
 # Replace PATH_TO_TEST_IMAGE_FILE with one of the image from {path_img}
 # An example path: /Users/user_name/.fastai/data/oxford-iiit-pet/images/shiba_inu_122.jpg
 curl -i \
@@ -120,16 +116,18 @@ curl -i \
 
 ### Build model server image
 
-Find the file directory of the SavedBundle with `bentoml get` command, which is
-directory structured as a docker build context. Running docker build with this
-directory produces a docker image containing the model API server. Replace
-docker_username with your Docker Hub username and run the following code:
+BentoML provides a convenient way of containerizing the model API model server with Docker.
+To create a docker container image for the sample model above:
+
+1. Find the file directory of the SavedBundle with `bentoml get` command, which is
+directory structured as a docker build context.
+2. Running docker build with this directory produces a docker image containing the model API server.
 
 ```bash
 saved_path=$(bentoml get PetClassifier:latest -q | jq -r ".uri.uri")
 
+# Replace {docker_username} with your Docker Hub username
 docker build -t {docker_username}/pet-classifier .
-
 docker push {docker_username}/pet-classifier
 ```
 
@@ -222,6 +220,9 @@ kubectl delete -f pet-classifier.yaml
 ## Monitor model server metrics with Prometheus
 
 ### Setup
+
+Before starting this section, make sure you have the following:
+
   * A cluster with Prometheus installed.
     * For Kubernetes installation: https://github.com/coreos/kube-prometheus
     * For Prometheus installation in other environments: https://prometheus.io/docs/introduction/first_steps/#starting-prometheus
