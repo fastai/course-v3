@@ -116,14 +116,16 @@ curl -i \
 
 ### Build model server image
 
-BentoML provides a convenient way of containerizing the model API model server with Docker.
-To create a docker container image for the sample model above:
+BentoML provides a convenient way to containerize the model API server with Docker:
 
-1. Find the file directory of the SavedBundle with `bentoml get` command, which is
-directory structured as a docker build context.
-2. Running docker build with this directory produces a docker image containing the model API server.
+1. Find the SavedBundle directory with bentoml get command
+
+2 .Run docker build with the SavedBundle directory which contains a generated Dockerfile
+
+3. Run the generated docker image to start a docker container serving the model
 
 ```bash
+# Download and install jq, the JSON processor: https://stedolan.github.io/jq/download/
 saved_path=$(bentoml get PetClassifier:latest -q | jq -r ".uri.uri")
 
 # Replace {docker_username} with your Docker Hub username
