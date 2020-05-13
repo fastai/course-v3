@@ -120,7 +120,7 @@ BentoML provides a convenient way to containerize the model API server with Dock
 
 1. Find the SavedBundle directory with bentoml get command
 
-2 .Run docker build with the SavedBundle directory which contains a generated Dockerfile
+2. Run docker build with the SavedBundle directory which contains a generated Dockerfile
 
 3. Run the generated docker image to start a docker container serving the model
 
