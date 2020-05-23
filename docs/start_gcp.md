@@ -121,7 +121,7 @@ export ZONE="us-west1-b"
 export INSTANCE_NAME="my-fastai-instance"
 export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"
 
-# budget: 'type=nvidia-tesla-T4,count=1'
+# budget: 'type=nvidia-tesla-t4,count=1'
 gcloud compute instances create $INSTANCE_NAME \
         --zone=$ZONE \
         --image-family=$IMAGE_FAMILY \
