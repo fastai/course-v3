@@ -147,6 +147,9 @@ entries:
     - output: web
       title: Microsoft Azure Functions
       url: /deployment_azure_functions.html
+    - output: web
+      title: Docker and Kubernetes
+      url: /deployment_docker_kubernetes.html
   - title: fastai v1
     output: web
     folderitems:
