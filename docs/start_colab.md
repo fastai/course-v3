@@ -52,11 +52,19 @@ If you opened a notebook from Github, you will need to save your work to Google 
 Click on 'SAVE A COPY IN DRIVE'. This will open up a new tab with the same file, only this time located in your Drive. If you want to continue working after saving,  use the file in the new tab. Your notebook will be saved in a folder called `Colab Notebooks` in your Google Drive by default.
 
 ### Step 4: Saving your data files
-If you run a script which creates/ downloads files, the files will NOT persist after the allocated instance is shutdown. To save files, you need to permit your Colaboratory instance to read and write files to your Google Drive. Add the following code snippet at the beginning of every notebook.
+If you run a script which creates/ downloads files, the files will NOT persist after the allocated instance is shutdown. To save files, you need to permit your Colaboratory instance to read and write files to your Google Drive. Luckily, Colaboratory has a UI for permanently mounting your Google Drive.
+
+Look for the "Mount Drive" button on the Files sidebar:
+
+<img alt="Mount Drive" src="/images/colab/11.png" height="480" class="screenshot">
+
+After clicking the button you'll be asked to authorize Colaboratory to access your Google Drive. Once you do, your notebook will automatically mount that drive whenever the runtime is loaded, and the sidebar will show the contents of your drive. You can always choose to unmount the drive if you wish:
+
+<img alt="Unmount Drive" src="/images/colab/12.png" height="480" class="screenshot">
+
+Accessing data on your drive is then simply a matter of pointing at the right path. Add the following code snippet at the beginning of every notebook.
 ```python 
-from google.colab import drive
-drive.mount('/content/gdrive', force_remount=True)
-root_dir = "/content/gdrive/My Drive/"
+root_dir = "drive/My Drive/"
 base_dir = root_dir + 'fastai-v3/'
 ```
 Now, you may access your Google Drive as a file sytem using standard python commands to both read and write files.
@@ -67,6 +75,9 @@ dest = path/folder
 dest.mkdir(parents=True, exist_ok=True)
 ```
 
+### Migrating from using "drive.mount":
+* The previous method of mounting google drive, using `drive.mount` is still avaiable.
+* If you wish to migrate a notebook from using `python drive.mount` to the UI, you'll need to change `root_dir` from `/content/gdrive/My Drive/` to `drive/My Drive/`.
  
 ## More help
 
