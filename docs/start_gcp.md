@@ -143,7 +143,7 @@ You need to adjust your GPU quotas.
 2. If you signed up with a free tier account, you first need to upgrade to a paid account; do so by clicking the "Upgrade account" button at the top right of the page. This won't affect your $300 credit.
 3. In the "Metrics" dropdown, select "GPUs (all regions)" and under "Locations" select "Global" (or "All locations").
 4. Click edit quotas and select the quota to edit (GPUs All Regions). Set the new quota limit to 1 or more.
-Your request may require confirmation, which Google claims typically takes two business days to get.
+Your request may require confirmation, which Google claims typically takes two business days to get. If your account has been recently created, Google will not accept your request due to insufficient service usage history within your project. You can make use of any of the other available resources in your project to build usage history. 
 
 You will have to wait a little bit until you see the text informing you the instance has been created. You can see the instance online [here](https://console.cloud.google.com/compute/) in your list of instances (note that this will be the page you have to go to later to stop your instance). 
 
