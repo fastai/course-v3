@@ -23,7 +23,7 @@ Deep Learning really only cares about the number of Floating Point Operations (F
 
 <img alt="gpu_cpu_comparison" src="/images/gpu/gpu_cpu_comparison.png" class="screenshot">
 
-In the chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But do not take our word for it!**  
+In the log scale chart above, you can see that GPUs (red/green) can theoretically do 10-15x the operations of CPUs (in blue).  This speedup very much applies in practice too. **But do not take our word for it!**  
 
 Try running this inside a Jupyter Notebook:
 
