@@ -54,7 +54,7 @@ save_texts(path_img/'models/classes.txt', data.classes)
 tar_file=path_img/'models/model.tar.gz'
 classes_file='classes.txt'
 # create a tarfile with the exported model and classes text file
-with tarfile.open(tar_file, 'w:gz') as f:
+with tar_file.open(tar_file, 'w:gz') as f:
     f.add(path_img/f'models/{model_file}', arcname=model_file)
     f.add(path_img/f'models/{classes_file}', arcname=classes_file)
 ```
