@@ -67,6 +67,9 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: Deepnote (Easy)
+      url: /start_deepnote.html
+    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web
@@ -96,6 +99,9 @@ entries:
   - title: Returning to work
     output: web
     folderitems:
+    - output: web
+      title: Deepnote
+      url: /update_deepnote.html
     - output: web
       title: Gradient
       url: /update_gradient.html
