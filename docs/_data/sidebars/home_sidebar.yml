@@ -67,6 +67,9 @@ entries:
     output: web
     folderitems:
     - output: web
+      title: DataCrunch.io (Easy)
+      url: /start_datacrunch.html
+    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web
