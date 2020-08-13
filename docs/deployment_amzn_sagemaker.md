@@ -135,7 +135,7 @@ def predict_fn(input_object, model):
     print("--- Inference time: %s seconds ---" % (time.time() - start_time))
     print(f'Predicted class is {str(predict_class)}')
     print(f'Predict confidence score is {predict_values[predict_idx.item()].item()}')
-    return dict(class = str(predict_class),
+    return dict(class_name = str(predict_class),
         confidence = predict_values[predict_idx.item()].item())
 
 # Serialize the prediction result into the desired response content type
