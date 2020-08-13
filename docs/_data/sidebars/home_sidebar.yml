@@ -67,17 +67,17 @@ entries:
     output: web
     folderitems:
     - output: web
-      title: DataCrunch.io (Easy)
-      url: /start_datacrunch.html
-    - output: web
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web
-      title: FloydHub (Easy)
-      url: /start_floydhub.html
+      title: DataCrunch.io (Easy)
+      url: /start_datacrunch.html
     - output: web
       title: Kaggle.com (Easy)
       url: /start_kaggle.html
+    - output: web
+      title: FloydHub (Easy)
+      url: /start_floydhub.html
     - output: web
       title: 易学智能 (Easy)
       url: /start_easyaiforum.html
