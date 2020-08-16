@@ -26,7 +26,8 @@ All you need to deploy your model is the Python SDK:
 pip install --upgrade seeme
 ```
 
-or in your Jupyter Notebook
+or in your Jupyter Notebook:
+
 ```bash
 !pip install --upgrade seeme
 ```
