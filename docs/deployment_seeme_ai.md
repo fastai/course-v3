@@ -77,7 +77,7 @@ learn.model.eval();
 # Export your model (by default your model will be exported to `export.pkl`)
 learn.export()
 
-## Or, if you want to give the exported file a name
+## Alternatively, if you want to give the exported file a name
 
 my_custom_filename = "a_filename_to_remember.pkl"
 
