@@ -6,7 +6,7 @@ sidebar: home_sidebar
 # SeeMe.ai Deployment.
 
 <div class="provider-logo">
-<img alt="SeeMe.ai" src="images/seeme_ai/seeme_ai.svg">
+  <img alt="SeeMe.ai" src="images/seeme_ai/seeme_ai.svg">
 </div>
 
 
@@ -41,12 +41,12 @@ client = Client()
 
 ### Register an account
 
-If you haven't done so already, create an account
+If you have not done so already, create an account
 
 ```Python
 my_password =  # example: "supersecurepassword"
 my_username =  # example: "janvdp"
-my_email =  # example: "jan@seeme.ai"
+my_email =  # example: "jan.vandepoel@seeme.ai"
 my_firstname =  # example: "Jan"
 my_name =  # example: "Van de Poel"
 
@@ -76,14 +76,18 @@ learn.model.eval();
 # Export your model (by default your model will be exported to `export.pkl`)
 learn.export()
 
-# Or, if you want to give the exported file a name
-my_custom_filename = "so_i_know_what_i_saved.pkl"
+## Or, if you want to give the exported file a name
+
+my_custom_filename = "a_filename_to_remember.pkl"
+
 learn.export(my_custom_filename)
 ```
 
 ### Create a model on SeeMe.ai
 
-With SeeMe.ai we support different types of AI applications with different frameworks and framework versions. All you need to do is add the application_id to your model like this:
+With SeeMe.ai we support different types of AI applications with different frameworks and framework versions.
+
+All you need to do is get the application_id like this:
 
 ```Python
 import torch
@@ -99,7 +103,7 @@ application_id = client.get_application_id(
 )
 ```
 
-Create your model on SeeMe.ai
+Next, you create your model on SeeMe.ai
 
 ```Python
 model_name = "My Model name"
@@ -114,11 +118,17 @@ my_model = client.create_full_model({
 })
 ```
 
-### Upload your model
-
+Quick note: to see all the supported applications, platforms and versions:
 
 ```Python
-client.upload_model(my_model["ID"], "folder/to/export.pkl")
+from pprint import pprint
+pprint(client.applications)
+```
+
+### Upload your model
+
+```Python
+client.upload_model(my_model["ID"], "folder/to/model")
 
 # Or, if you exported the model with a custom filename
 client.upload_model(
@@ -134,7 +144,7 @@ client.upload_model(
 client.upload_logo(
   my_model["ID"],
   folder="folder/to/image",
-  filename="image_name.png") # or "*.jpg"
+  filename="image_name.png") # or ".jpg"
 ```
 
 ## Use your model
@@ -157,8 +167,9 @@ You can now use the [Python SDK](https://pypi.org/project/seeme/) to make predic
 - An image to classiy
 
 ```Python
-
 # Here, we will use the Python SDK to classify our test image
+image_location = "data/images/image_to_predict.png"
+
 result = client.inference(my_model["ID"], image_location)
 ```
 
@@ -171,11 +182,9 @@ print(result["confidence"])
 
 ### On the web
 
-You can open the web app via [app.seeme.ai](https://app.seeme.ai)
+You can also open the web app via [app.seeme.ai](https://app.seeme.ai) and log in with your credentials.
 
-Log in if you need to with the credentials used to register (my_username, my_password).
-
-If you've followed the steps above without changing anything, this is what you will see after logging in, your model name, description and logo will obviously not be the same.
+You will see an overview of all your models as well as the public models that can be used by anyone.
 
 Click on the model to start making predictions.
 
@@ -194,25 +203,43 @@ Next:
 
 ![SeeMe.ai model prediction example](images/seeme_ai/seeme-ai-model-prediction-example.png)
 
-
-
 ### iOS/Android
 
-You can access the models on:
+You can also access all models - yours, shared, and public - on our native mobile apps. You can install them from the [iOS App Store](https://apps.apple.com/us/app/id1443724639) and [Android Play Store](https://play.google.com/store/apps/details?id=ai.seeme).
 
-* [iOS](https://apps.apple.com/us/app/id1443724639)
+Once you have logged in, you see the overview of models:
 
-For iOS, we have added automatic conversion to [CoreML](https://developer.apple.com/documentation/coreml) and [ONNX](https://onnx.ai/), when you upload your *.pkl. CoreML allows you to install and use the model on your device.
+![SeeMe.ai mobile list of models](images/seeme_ai/seeme-ai-mobile-list-of-models.png)
 
-* [Android](https://play.google.com/store/apps/details?id=ai.seeme)
+On the model detail, you can take pictures with the camera or select from the gallery:
 
-Support for local Android models will arrive in a later version. 
+![SeeMe.ai model detail](images/seeme_ai/seeme-ai-mobile-model-detail.png)
 
-### Other platforms
+And see what your model thinks:
 
-If there is a particular platform you would live to use to make predictions and the above options don't work for you, we would be happy to hear from you. 
+![SeeMe.ai model prediction](images/seeme_ai/seeme-ai-model-prediction.png)
 
-We offer API and Docker support as well.
+Once your model has made a prediction, you will see a green button name "Action". When clicking that button, you have a number of choices:
+
+* search Google for your prediction
+* search Wikipedia for your prediction
+* Report a wrong prediction
+
+![SeeMe.ai follow up action](images/seeme_ai/seeme-ai-mobile-action-selection.png)
+
+On [iOS](https://apps.apple.com/us/app/id1443724639), we have added automatic conversion to [CoreML](https://developer.apple.com/documentation/coreml) and [ONNX](https://onnx.ai/), when you upload your *.pkl.
+
+This allows you to install and use the model on your device, even when you are offline. 
+
+When the model is available to be installed, you will see the install button on the top right:
+
+![SeeMe.ai install model offline](images/seeme_ai/seeme-ai-mobile-model-install-offline.png)
+
+Once installed, you can still switch between using the offline or online version of your model:
+
+![SeeMe.ai switch between online and offline model](images/seeme_ai/seeme-ai-mobile-switch-online-offline.png)
+
+The screenshots above are all taken on iOS, however, on [Android](https://play.google.com/store/apps/details?id=ai.seeme) all these features work similarly, with one exception for the moment. On Android we do not yet support offline models.
 
 ## Share your model
 
@@ -228,11 +255,13 @@ You will go to the model detail screen:
 
 There you can invite people by entering their email address.
 
-Once invited, they will receive an email to either register (if that email is not yet associated to an account) or to notify of your model being shared with them.
+Once invited, they will receive an email to either register (if that email is not yet associated to an account) or to notify them of your model being shared with them.
 
 # Support / Feedback
 
 We would be happy to hear from you or help if something goes wrong or is unclear.
+
+If there is a particular platform you would love to use to make predictions and the above options do not work for you, we would be happy to hear from you. We offer API and local Docker support as well.
 
 Just send a mail to [jan.vandepoel@seeme.ai](mailto:jan.vandepoel@seeme.ai).
 
