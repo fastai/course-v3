@@ -79,9 +79,9 @@ learn.export()
 
 ## Alternatively, if you want to give the exported file a name
 
-my_custom_filename = "a_filename_to_remember.pkl"
+# my_custom_filename = "a_filename_to_remember.pkl"
 
-learn.export(my_custom_filename)
+# learn.export(my_custom_filename)
 ```
 
 ### Create a model on SeeMe.ai
@@ -240,7 +240,7 @@ Once installed, you can still switch between using the offline or online version
 
 ![SeeMe.ai switch between online and offline model](images/seeme_ai/seeme-ai-mobile-switch-online-offline.png)
 
-The screenshots above are all taken on iOS, however, on [Android](https://play.google.com/store/apps/details?id=ai.seeme) all these features work similarly, with one exception for the moment. On Android we do not yet support offline models.
+The screenshots above are all taken on iOS, however, on [Android](https://play.google.com/store/apps/details?id=ai.seeme) all these features work similarly, with one exception for the moment. On Android offline models are still in development.
 
 ## Share your model
 
