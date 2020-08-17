@@ -94,7 +94,7 @@ All you need to do is get the application_id like this:
 import torch
 import fastai
 
-# Get the applicationID for your framework (version).
+# Get the application_id for your framework (version).
 application_id = client.get_application_id(
   base_framework="pytorch",
   framework="fastai",
@@ -129,11 +129,11 @@ pprint(client.applications)
 ### Upload your model
 
 ```Python
-client.upload_model(my_model["ID"], "folder/to/model")
+client.upload_model(my_model["id"], "folder/to/model")
 
 # Or, if you exported the model with a custom filename
 client.upload_model(
-  my_model["ID"],
+  my_model["id"],
   folder="folder/to/model/",
   filename=my_custom_filename
 )
@@ -143,7 +143,7 @@ client.upload_model(
 
 ```Python
 client.upload_logo(
-  my_model["ID"],
+  my_model["id"],
   folder="folder/to/image",
   filename="image_name.png") # or ".jpg"
 ```
@@ -164,14 +164,14 @@ You can now use the [Python SDK](https://pypi.org/project/seeme/) to make predic
 
 - SeeMe SDK installed
 - Login credentials
-- The ID of a deployed model
+- The 'id' of a deployed model
 - An image to classiy
 
 ```Python
 # Here, we will use the Python SDK to classify our test image
 image_location = "data/images/image_to_predict.png"
 
-result = client.inference(my_model["ID"], image_location)
+result = client.inference(my_model["id"], image_location)
 ```
 
 Print the results
