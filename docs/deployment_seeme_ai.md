@@ -228,9 +228,7 @@ Once your model has made a prediction, you will see a green button name "Action"
 
 ![SeeMe.ai follow up action](images/seeme_ai/seeme-ai-mobile-action-selection.png)
 
-On [iOS](https://apps.apple.com/us/app/id1443724639), we have added automatic conversion to [CoreML](https://developer.apple.com/documentation/coreml) and [ONNX](https://onnx.ai/), when you upload your *.pkl.
-
-This allows you to install and use the model on your device, even when you are offline. 
+When you upload your trained model, we automatically convert it to [ONNX](https://onnx.ai/) and [Core ML](https://developer.apple.com/documentation/coreml), which enables you to install and use your AI Model on your device, even when you are offline. This feature is currently in preview.
 
 When the model is available to be installed, you will see the install button on the top right:
 
@@ -240,7 +238,7 @@ Once installed, you can still switch between using the offline or online version
 
 ![SeeMe.ai switch between online and offline model](images/seeme_ai/seeme-ai-mobile-switch-online-offline.png)
 
-The screenshots above are all taken on iOS, however, on [Android](https://play.google.com/store/apps/details?id=ai.seeme) all these features work similarly, with one exception for the moment. On Android offline models are still in development.
+The screenshots above are all taken on iOS, however, on [Android](https://play.google.com/store/apps/details?id=ai.seeme) all these features work similarly, with one exception: Android offline models are still in development.
 
 ## Share your model
 
