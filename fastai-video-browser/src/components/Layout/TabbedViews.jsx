@@ -14,7 +14,7 @@ const Container = styled.div`
 const ContentContainer = styled.div`
   max-height: 100%;
   flex: 1;
-  overflow: scroll;
+  /*overflow: scroll;*/
 `;
 
 const TabContainer = styled.div`
