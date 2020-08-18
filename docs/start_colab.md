@@ -35,13 +35,9 @@ If you are returning to work and have previously completed the steps below, plea
      !curl -s https://course.fast.ai/setup/colab | bash
     ```
 
-1. When you run the first cell, you will face a pop-up saying 'Warning: This notebook was not authored by Google'; you should leave the default tick in the 'Reset all runtimes before running' check box and click on 'Run Anyway'.
+1. When you run the first cell, you will face a pop-up saying 'Warning: This notebook was not authored by Google'; you should click on 'Run Anyway' to get rid of the warning.
 
     <img alt="stop" src="/images/colab/02.png" height="480" class="screenshot">
-
-1. On the new window click 'Yes'.
-
-    <img alt="stop" src="/images/colab/08.png" height="480" class="screenshot">
 
 ### Step 3: Saving your notebook
 
