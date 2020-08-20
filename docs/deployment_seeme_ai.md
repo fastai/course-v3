@@ -9,10 +9,9 @@ sidebar: home_sidebar
   <img alt="SeeMe.ai" src="images/seeme_ai/seeme_ai.svg">
 </div>
 
-
 This is a quick guide to deploy your trained models in just a few steps using [SeeMe.ai](https://seeme.ai), which allows you to easily deploy, use and share your models.
 
-## Before we begin
+## Before you begin
 
 If you prefer to have these steps in a Jupyter Notebook, have a look at our [Fast.ai Quick guides on Github](https://github.com/SeeMe-ai/fastai-quick-guides).
 
@@ -86,7 +85,7 @@ learn.export()
 
 ### Create a model on SeeMe.ai
 
-With SeeMe.ai we support different types of AI applications with different frameworks and framework versions.
+SeeMe.ai supports different types of AI applications with different frameworks and framework versions.
 
 All you need to do is get the application_id like this:
 
@@ -168,7 +167,6 @@ You can now use the [Python SDK](https://pypi.org/project/seeme/) to make predic
 - An image to classiy
 
 ```Python
-# Here, we will use the Python SDK to classify our test image
 image_location = "data/images/image_to_predict.png"
 
 result = client.inference(my_model["id"], image_location)
@@ -228,7 +226,7 @@ Once your model has made a prediction, you will see a green button name "Action"
 
 ![SeeMe.ai follow up action](images/seeme_ai/seeme-ai-mobile-action-selection.png)
 
-When you upload your trained model, we automatically convert it to [ONNX](https://onnx.ai/) and [Core ML](https://developer.apple.com/documentation/coreml), which enables you to install and use your AI Model on your device, even when you are offline. This feature is currently in preview.
+When you upload your trained model, SeeMe.ai automatically converts it to [ONNX](https://onnx.ai/) and [Core ML](https://developer.apple.com/documentation/coreml), which enables you to install and use your AI Model on your device, even when you are offline. This feature is currently in preview.
 
 When the model is available to be installed, you will see the install button on the top right:
 
@@ -256,14 +254,11 @@ There you can invite people by entering their email address.
 
 Once invited, they will receive an email to either register (if that email is not yet associated to an account) or to notify them of your model being shared with them.
 
-# Support / Feedback
+## Pricing
 
-We would be happy to hear from you or help if something goes wrong or is unclear.
-
-If there is a particular platform you would love to use to make predictions and the above options do not work for you, we would be happy to hear from you. We offer API and local Docker support as well.
-
-Just send a mail to [jan.vandepoel@seeme.ai](mailto:jan.vandepoel@seeme.ai).
+For pricing details, check the [pricing page](https://www.seeme.ai/pricing/).
 
 
+## Support / Feedback
 
-
+For feedback, questions or problems, just send an email to [jan.vandepoel@seeme.ai](mailto:jan.vandepoel@seeme.ai).
