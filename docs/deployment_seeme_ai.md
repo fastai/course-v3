@@ -254,6 +254,11 @@ There you can invite people by entering their email address.
 
 Once invited, they will receive an email to either register (if that email is not yet associated to an account) or to notify them of your model being shared with them.
 
-# Support / Feedback
+## Pricing
+
+For pricing details, check the [pricing page](https://www.seeme.ai/pricing/).
+
+
+## Support / Feedback
 
 For feedback, questions or problems, just send an email to [jan.vandepoel@seeme.ai](mailto:jan.vandepoel@seeme.ai).
