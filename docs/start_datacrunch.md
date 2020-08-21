@@ -61,7 +61,7 @@ You can 'git clone' your desired repo, either by using your SSH key for username
 
 <img alt="Jupyter terminal" src="/images/datacrunch/jupyter_terminal.png" class="screenshot">
 
-'git clone' your desired repository, for fastai v2 we run 'git clone https://github.com/fastai/fastai2.git'
+'git clone' your desired repository, for fastai we run 'git clone https://github.com/fastai/fastai.git'
 
 <img alt="Jupyter terminal git" src="/images/datacrunch/jupyter_terminal_git.png" class="screenshot">
 
