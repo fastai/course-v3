@@ -98,7 +98,7 @@ application_id = client.get_application_id(
   base_framework="pytorch",
   framework="fastai",
   base_framework_version=str(torch.__version__), # or pass the version like a string: "1.6.0"
-  framework_version=str(fastai2.__version__), # or pass the version like a string: "0.0.26"
+  framework_version=str(fastai.__version__), # or pass the version like a string: "0.0.26"
   application="image_classification"
 )
 ```
