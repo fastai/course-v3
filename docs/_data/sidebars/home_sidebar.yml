@@ -153,6 +153,9 @@ entries:
     - output: web
       title: Docker and Kubernetes
       url: /deployment_docker_kubernetes.html
+    - output: web
+      title: SeeMe.ai
+      url: /deployment_seeme_ai.html
   - title: fastai v1
     output: web
     folderitems:

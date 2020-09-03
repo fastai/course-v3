@@ -6,4 +6,8 @@ npm run build
 rm -rf ../docs/videos/*
 cp -r build/* ../docs/videos/
 rm -rf ../docs/static
-mv ../docs/videos/static ../docs/
+cd ../docs
+mv videos/static ./
+git add -A .
+git commit -am rebuild
+
