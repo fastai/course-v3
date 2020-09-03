@@ -37,7 +37,7 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 - [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
 - [Azure](/start_azure.html); (instant approval; no installation required; $0.90 an hour + storage for a VM OR $0.18 an hour + storage for [low priority preemptable instances](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority))
-- [DataCrunch.io](/start_datacrunch.html); (Instant approval, no setup required, $0.45/h Tesla V100 dedicated hardware, no additional storage cost)
+- [DataCrunch.io](/start_datacrunch.html); (Instant approval, no setup required, $0.52/h Tesla V100 dedicated hardware, no additional storage cost)
 
 #### Some installation required
 
