@@ -1,11 +1,15 @@
 {
-  "parser": "babel-eslint",
   "extends": [
     "react-app"
+  ],
+  "plugins": [
+    "react-hooks"
   ],
   "rules": {
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "no-restricted-globals": ["off"]
+    "no-restricted-globals": ["off"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

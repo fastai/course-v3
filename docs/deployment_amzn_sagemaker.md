@@ -135,7 +135,7 @@ def predict_fn(input_object, model):
     print("--- Inference time: %s seconds ---" % (time.time() - start_time))
     print(f'Predicted class is {str(predict_class)}')
     print(f'Predict confidence score is {predict_values[predict_idx.item()].item()}')
-    return dict(class = str(predict_class),
+    return dict(class_name = str(predict_class),
         confidence = predict_values[predict_idx.item()].item())
 
 # Serialize the prediction result into the desired response content type
@@ -149,10 +149,12 @@ Save the script into a python such as `serve.py`
 
 ## Deploy to SageMaker
 
-First we need to create a RealTimePredictor class to accept jpeg images as input and output JSON. The default behaviour is to accept a numpy array.
+First we need to create a Predictor class to accept jpeg images as input and output JSON. The default behaviour is to accept a numpy array.
 
 ```python
-class ImagePredictor(RealTimePredictor):
+from sagemaker.predictor import Predictor
+
+class ImagePredictor(Predictor):
     def __init__(self, endpoint_name, sagemaker_session):
         super().__init__(endpoint_name, sagemaker_session=sagemaker_session, serializer=None, 
                          deserializer=json_deserializer, content_type='image/jpeg')
@@ -167,8 +169,10 @@ role = sagemaker.get_execution_role()
 In this example we will deploy our model to the instance type `ml.m4.xlarge`. We will pass in the name of our serving script e.g. `serve.py`. We will also pass in the S3 path of our model that we uploaded earlier.
 
 ```python
+from sagemaker.pytorch import PyTorchModel
+
 model=PyTorchModel(model_data=model_artefact, name=name_from_base("fastai-pets-model"),
-    role=role, framework_version='1.0.0', entry_point='serve.py', predictor_cls=ImagePredictor)
+    role=role, framework_version='1.0.0', py_version='py3', entry_point='serve.py', predictor_cls=ImagePredictor)
 
 predictor = model.deploy(initial_instance_count=1, instance_type='ml.m4.xlarge')
 ```

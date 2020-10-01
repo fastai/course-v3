@@ -70,14 +70,14 @@ entries:
       title: Gradient (Easy)
       url: /start_gradient.html
     - output: web
-      title: Onepanel (Easy)
-      url: /start_onepanel.html
-    - output: web
-      title: FloydHub (Easy)
-      url: /start_floydhub.html
+      title: DataCrunch.io (Easy)
+      url: /start_datacrunch.html
     - output: web
       title: Kaggle.com (Easy)
       url: /start_kaggle.html
+    - output: web
+      title: FloydHub (Easy)
+      url: /start_floydhub.html
     - output: web
       title: 易学智能 (Easy)
       url: /start_easyaiforum.html
@@ -102,9 +102,6 @@ entries:
     - output: web
       title: Gradient
       url: /update_gradient.html
-    - output: web
-      title: Onepanel
-      url: /update_onepanel.html
     - output: web
       title: Salamander
       url: /update_salamander.html
@@ -153,6 +150,12 @@ entries:
     - output: web
       title: Microsoft Azure Functions
       url: /deployment_azure_functions.html
+    - output: web
+      title: Docker and Kubernetes
+      url: /deployment_docker_kubernetes.html
+    - output: web
+      title: SeeMe.ai
+      url: /deployment_seeme_ai.html
   - title: fastai v1
     output: web
     folderitems:

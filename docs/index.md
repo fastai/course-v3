@@ -28,7 +28,6 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 - [Paperspace Gradient](/start_gradient.html); (instant approval, no installation required, free and paid options)
 - [Colab](/start_colab.html); (instant approval, requires minimal installation, free)
-- [Onepanel](/start_onepanel.html); (no installation required, $0.29/hour + storage)
 - [SageMaker](/start_sagemaker.html); (requires wait for approval, not quite "one click"... but pretty close, $1.26 an hour + storage)
 - [Kaggle Kernels](/start_kaggle.html); (Instant Launch, No setup required, Free, not always up to date and not as well supported by fast.ai)
 - [Floydhub](/start_floydhub.html); (instant approval, no installation required, $1.20/hour + $9.00/month (100GB storage), 2 hours free credit)
@@ -38,6 +37,7 @@ These are the easiest to use; they've got all the software, data, and lessons pr
 
 - [Google Compute Platform](/start_gcp.html) ($0.38 an hour + storage, $300 free credit)
 - [Azure](/start_azure.html); (instant approval; no installation required; $0.90 an hour + storage for a VM OR $0.18 an hour + storage for [low priority preemptable instances](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-low-priority))
+- [DataCrunch.io](/start_datacrunch.html); (Instant approval, no setup required, $0.45/h Tesla V100 dedicated hardware, no additional storage cost)
 
 #### Some installation required
 

@@ -32,6 +32,8 @@ In order to fix the problems we see, we try changing our activation function, an
 
 - The layer and instance norm code in the video use `std` instead of `var`. This is fixed in the notebook
 - Jeremy said `binomial` when he meant `binary`.
+- Jeremy said "Variance of Batch of 1 is infinite," when he meant zero. The normalized output value will become infinite if the batch 
+  size is 1.
 
 ## Edit this page
 

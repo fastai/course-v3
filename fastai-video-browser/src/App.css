@@ -1,13 +1,78 @@
 :root {
   --fastai-blue: #347DBE;
+  --text-dark: #232425;
+  --text-light: #fff;
+  --background: #FFF;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#root {
+  height: 100%;
 }
 
 body {
   height: 100%;
-  background-color: var(--fastai-blue);
+  background-color: #222;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  font-family: 'Karla', sans-serif;
+  position: fixed;
+  overflow: hidden;
 }
 
 a {
   color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*--- HEADINGS from https://www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/ ---*/
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+ul, ol {
+  margin-bottom: 24px;
+  line-height: 1.35em;
+}
+
+ul li, ol li {
+  margin-bottom: 6px;
+}
+
+ul {
+  list-style: square outside;
+}
+
+ul ul,
+ol ol {
+  margin: 0 0 0 16px;
+}
+
+h1 {
+  font-size: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+  line-height: 1em; /* 24px --> 24 ÷ 24 = 1 */
+}
+
+h2 {
+  font-size: 1.375em; /* 22px --> 22 ÷ 16 = 1.375 */
+  line-height: 1.0909em; /* 24px --> 24 ÷ 22 = 1.090909(09) */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px --> 20 ÷ 16 = 1.25 */
+  line-height: 1.2em; /* 24px --> 24 ÷ 20 = 1.2 */
+}
+
+h4 {
+  font-size: 1.125em; /* 18px --> 18 ÷ 16 = 1.125 */
+  line-height: 1.333em; /* 24px --> 24 ÷ 18 = 1.3333333(3) */
+}
+
+h5, h6 {
+  font-size: 1em; /* 16px --> 16 ÷ 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
 }

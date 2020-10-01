@@ -2,29 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledSearch = styled.div`
-  height: 1.5rem;
-  z-index: 3;
-  position: absolute;
-  bottom: 8px;
-  left: 5px;
-  font-size: 0.875rem;
-  border: 1px solid black;
+const SearchContainer = styled.div`
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: stretch;
   input {
-    padding-left: 5px;
-    height: 1.5rem;
-    width: 8rem;
+    background: #efefef;
+    padding: 12px 24px;
+    flex: 1;
+    font-size: 2.5rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+    &::placeholder {
+      color: #777;
+      font-weight: normal;
+      font-family: 'Karla', sans-serif;
+    }
+    &[disabled]::placeholder {
+      color: transparent;
+    }
   }
 `
 
-const Search = ({ search, handleChange }) => (
-  <StyledSearch>
+const Search = ({ search, handleChange, ...rest }) => (
+  <SearchContainer>
     <input
       value={search}
       onChange={handleChange}
       placeholder="Search transcript"
+      {...rest}
     />
-  </StyledSearch>
+  </SearchContainer>
 );
 
 Search.defaultProps = {

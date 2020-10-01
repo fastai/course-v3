@@ -36,8 +36,10 @@ Upload the trained model file created with `learner.export` (for example `export
 
 ### Customize the app for your model
 
-1. Edit the file `server.py` inside the `app` directory and update the `export_file_url` variable with the URL copied above.
-2. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you expect from your model.
+1. Check what versions of packages you are using with following command in the Jupyter Notebook you built your model in: `! pip list`
+2. Edit the file `requirements.txt` inside the repo and update the package versions so that they correspond to the ones used by your Jupyter Notebook.
+3. Edit the file `server.py` inside the `app` directory and update the `export_file_url` variable with the URL copied above.
+4. In the same file, update the line `classes = ['black', 'grizzly', 'teddys']` with the classes you expect from your model.
 
 ### Commit and push your changes to GitHub.
 
