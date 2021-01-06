@@ -32,7 +32,7 @@ If you are returning to work and have previously completed the steps below, plea
 1. Before you start using your notebook, you need to install the necessary packages. You can do this by creating a code cell, and running:
 
     ```bash
-     !curl -s https://course.fast.ai/setup/colab | bash
+     !curl -s https://course19.fast.ai/setup/colab | bash
     ```
 
 1. When you run the first cell, you will face a pop-up saying 'Warning: This notebook was not authored by Google'; you should click on 'Run Anyway' to get rid of the warning.
