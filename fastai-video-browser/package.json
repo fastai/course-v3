@@ -4,7 +4,7 @@
   "private": true,
   "license": "BSD-3-Clause",
   "dependencies": {
-    "crypto-js": "^3.2.0",
+    "crypto-js": "^4.2.0",
     "history": "^4.10.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -14,11 +14,11 @@
     "react-fontawesome": "^1.7.1",
     "react-grid-system": "^4.4.11",
     "react-icons": "^3.9.0",
-    "react-markdown": "^4.3.1",
+    "react-markdown": "^8.0.5",
     "react-player": "^1.15.2",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.8",
-    "react-syntax-highlighter": "^10.3.5",
+    "react-scripts": "^5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "react-use": "^13.26.1",
     "styled-components": "^4.4.1"
   },
